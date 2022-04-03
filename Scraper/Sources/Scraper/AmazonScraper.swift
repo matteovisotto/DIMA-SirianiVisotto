@@ -26,8 +26,11 @@ class AmazonScraper {
     
     var completionHandler: (_ printable: String) -> () = {_ in}
     
-    init(urlString: String, completionHandler: @escaping (_ printable: String) -> ()) {
+    private var priceOnly: Bool
+    
+    init(urlString: String, priceOnly: Bool, completionHandler: @escaping (_ printable: String) -> ()) {
         self.completionHandler = completionHandler
+        self.priceOnly = priceOnly
         let downloader: DownloadManager = DownloadManager(urlString: urlString)
         downloader.delegate = self
         downloader.execute()
@@ -44,7 +47,7 @@ extension AmazonScraper: DownloadManagerDelegate {
                 
             }
         } else {
-            print("{\"exception\":\""+contentString+"\"}")
+            completionHandler("{\"exception\":\""+contentString+"\"}")
         }
         exit(0)
     }

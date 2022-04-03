@@ -6,6 +6,9 @@
 //
 
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 protocol DownloadManagerDelegate {
     func downloadManager(_ downloadManager: DownloadManager, didFinishWithResult result: Bool, contentString: String) -> Void
