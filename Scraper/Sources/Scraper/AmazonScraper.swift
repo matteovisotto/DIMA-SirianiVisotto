@@ -15,7 +15,7 @@ struct AmazonProduct {
     var images: [String]
 }
 
-class Parser {
+class AmazonHTMLParser {
     
     public static func parseString(str: String, completionHandler: @escaping (_ product: AmazonProduct) -> ()){
         
@@ -43,7 +43,7 @@ class AmazonScraper {
 extension AmazonScraper: DownloadManagerDelegate {
     func downloadManager(_ downloadManager: DownloadManager, didFinishWithResult result: Bool, contentString: String) {
         if result {
-            Parser.parseString(str: contentString) { product in
+            AmazonHTMLParser.parseString(str: contentString) { product in
                 
             }
         } else {

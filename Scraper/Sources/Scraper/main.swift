@@ -11,7 +11,7 @@ struct Scraper: ParsableCommand {
     @Option(name: [.customShort("w"), .customLong("website")], help: "The website from which scrape data")
     var website: String = "Amazon"
 
-    @Argument(help: "Amazon link to be parser")
+    @Argument(help: "Amazon link to be parsed")
     var url: String
 
     mutating func run() throws {
