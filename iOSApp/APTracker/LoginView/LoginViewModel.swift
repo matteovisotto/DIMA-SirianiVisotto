@@ -29,6 +29,9 @@ class LoginViewModel: ObservableObject {
     
     func authLocal() -> Void {
         self.isLoading = true
+        let localAuth = LocalAuth()
+        localAuth.delegate = self
+        localAuth.login(email: self.email, password: self.password)
     }
     
     func isNotCredentialInserted() -> Bool {
@@ -41,6 +44,8 @@ extension LoginViewModel: LoginDelegate {
     func didFinishLogin(withSuccessCredential credential: LoginCredential) {
         KeychainHelper.standard.save(credential, service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain)
         self.isLoading = false
+        self.email = ""
+        self.password = ""
     }
     
     func didFinishLogin(withError error: String) {

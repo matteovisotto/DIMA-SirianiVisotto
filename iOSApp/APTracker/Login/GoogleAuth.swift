@@ -29,18 +29,9 @@ class GoogleAuth {
                             guard let authentication = authentication else {self.delegate?.didFinishLogin(withError: NSLocalizedString("googleAuthError", comment: "An error occurred in google authentication")); return }
 
                             if let idToken = authentication.idToken {
-                                let appAuth = AppSocialAuth(token: idToken, social: .google)
-                                appAuth.backendLogin { error, message, credential in
-                                    if error {
-                                        self.delegate?.didFinishLogin(withError: message ?? NSLocalizedString("socialBackendUnknownError", comment: "Unknown error while authenticating in the backend"))
-                                        return
-                                    }
-                                    guard let credential = credential else {
-                                        self.delegate?.didFinishLogin(withError: message ?? NSLocalizedString("socialBackendUnknownError", comment: "Unknown error while authenticating in the backend"))
-                                        return
-                                    }
-                                    self.delegate?.didFinishLogin(withSuccessCredential: credential)
-
+                                let taskManager = TaskManager(urlString: AppConstant.googleLoginURL, method: .POST, parameters: ["gToken": idToken])
+                                taskManager.execute { result, content, data in
+                                    LoginCredential.parseAndDelegate(self.delegate, result: result, content: content, data: data)
                                 }
                             } else {
                                 self.delegate?.didFinishLogin(withError: NSLocalizedString("googleTokenError", comment: "An error occurred in google authentication"))

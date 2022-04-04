@@ -21,18 +21,9 @@ class FacebookAuth {
                         self.delegate?.didFinishLogin(withError: NSLocalizedString("facebookAuthCancel", comment: "You have canceled the authentication process"))
                     case .success(granted: _, declined: _, token: _):
                         if let token = AccessToken.current {
-                            let appAuth = AppSocialAuth(token: token.tokenString, social: .facebook)
-                            appAuth.backendLogin { error, message, credential in
-                                if error {
-                                    self.delegate?.didFinishLogin(withError: message ?? NSLocalizedString("socialBackendUnknownError", comment: "Unknown error while authenticating in the backend"))
-                                    return
-                                }
-                                guard let credential = credential else {
-                                    self.delegate?.didFinishLogin(withError: message ?? NSLocalizedString("socialBackendUnknownError", comment: "Unknown error while authenticating in the backend"))
-                                    return
-                                }
-                                self.delegate?.didFinishLogin(withSuccessCredential: credential)
-
+                            let taskManager = TaskManager(urlString: AppConstant.facebookLoginURL, method: .POST, parameters: ["fbToken": token.tokenString])
+                            taskManager.execute { result, content, data in
+                                LoginCredential.parseAndDelegate(self.delegate, result: result, content: content, data: data)
                             }
                         }
                     }

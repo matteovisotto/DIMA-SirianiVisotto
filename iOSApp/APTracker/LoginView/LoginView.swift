@@ -14,7 +14,10 @@ struct LoginView: View {
             VStack{
                 Spacer()
                 VStack{
-                    TextField("Email", text: $viewModel.email).textFieldStyle(.roundedBorder).keyboardType(.emailAddress)
+                    
+                        // Fallback on earlier versions
+                        TextField("Email", text: $viewModel.email).textFieldStyle(.roundedBorder).keyboardType(.emailAddress).autocapitalization(.none)
+                    
                     SecureField("Password", text: $viewModel.password).textFieldStyle(.roundedBorder)
                     Button{
                         viewModel.authLocal()
@@ -52,7 +55,7 @@ struct LoginView: View {
                     ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color("BackgroundColor"))).scaleEffect(x: 2, y: 2, anchor: .center)
                 }.ignoresSafeArea()
             }
-        }
+        }.viewBackground(Color("BackgroundColor")).ignoresSafeArea()
     }
 }
 
