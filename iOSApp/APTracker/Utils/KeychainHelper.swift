@@ -99,32 +99,3 @@ extension KeychainHelper {
     }
     
 }
-/*
- 
- 
- struct Auth: Codable {
-     let accessToken: String
-     let refreshToken: String
- }
-
- // Create an object to save
- let auth = Auth(accessToken: "dummy-access-token",
-                  refreshToken: "dummy-refresh-token")
-
- let account = "domain.com"
- let service = "token"
-
- // Save `auth` to keychain
- KeychainHelper.standard.save(auth, service: service, account: account)
-
- // Read `auth` from keychain
- let result = KeychainHelper.standard.read(service: service,
-                                           account: account,
-                                           type: Auth.self)!
-
- print(result.accessToken)   // Output: "dummy-access-token"
- print(result.refreshToken)  // Output: "dummy-refresh-token"
- 
- 
- 
- */

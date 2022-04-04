@@ -66,8 +66,10 @@ class AppSocialAuth {
                         completionHandler(false, nil, credential)
                     }
                 } catch {
+                    let errorStr = NSLocalizedString("jsonDecodeError", comment: "Unable to convert data")
+                    //convert received data into error json
                     DispatchQueue.main.async {
-                        completionHandler(true, NSLocalizedString("jsonDecodeError", comment: "Unable to convert data"), nil)
+                        completionHandler(true, errorStr , nil)
                     }
                 }
             } else {
