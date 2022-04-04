@@ -17,6 +17,13 @@ struct Scraper: ParsableCommand {
     mutating func run() throws {
         let wSite = website.lowercased()
         if(wSite == "amazon"){
+            var substring: String = ""
+            var urlSubstring: String = ""
+            if let index = url.range(of: "?")?.lowerBound {
+                substring = String(url[..<index])
+                urlSubstring = String(substring)
+            }
+            url = urlSubstring
             let _ = AmazonScraper(urlString: url, priceOnly: priceOnly) { printable in
                 print(printable)
             }

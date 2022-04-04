@@ -34,7 +34,6 @@ class AmazonHTMLParser {
             guard let pName = name, let pI = priceWhole, let pD = priceDecimal, let pS = priceSymbol else {completionHandler(nil); return}
             let descriptionBullets = try doc.select("#feature-bullets li")
             var descriptionArray: [String] = []
-            print(descriptionBullets.size())
             for bullet in descriptionBullets {
                 let description = try bullet.select("span.a-list-item").text()
                 descriptionArray.append(description)
@@ -61,7 +60,7 @@ class AmazonScraper {
         self.completionHandler = completionHandler
         self.priceOnly = priceOnly
         
-        guard let url = URL(string: urlString) else {completionHandler("{\"exception\":\"Invalid URL\"}"); return}
+        guard let url = URL(string: urlString) else {completionHandler(urlString + "{\"exception\":\"Invalid URL\"}"); return}
        
         do {
             let contentString = try String(contentsOf: url, encoding: .utf8)
