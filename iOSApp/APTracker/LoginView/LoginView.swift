@@ -10,39 +10,48 @@ import SwiftUI
 struct LoginView: View {
     @ObservedObject var viewModel = LoginViewModel()
     var body: some View {
-        VStack{
-            Spacer()
+        ZStack{
             VStack{
-                TextField("Email", text: $viewModel.email).textFieldStyle(.roundedBorder).keyboardType(.emailAddress)
-                SecureField("Password", text: $viewModel.password).textFieldStyle(.roundedBorder)
-                Button{
+                Spacer()
+                VStack{
+                    TextField("Email", text: $viewModel.email).textFieldStyle(.roundedBorder).keyboardType(.emailAddress)
+                    SecureField("Password", text: $viewModel.password).textFieldStyle(.roundedBorder)
+                    Button{
+                        viewModel.authLocal()
+                    } label: {
+                            HStack{
+                                Image(systemName: "lock.fill")
+                                Text("Login").bold()
+                            }
+                        
+                    }.frame(maxWidth: .infinity).padding(.horizontal)
+                .padding(.vertical, 7)
+                .background(Color.orange)
+                .foregroundColor(Color.white)
+                .disabled(viewModel.isNotCredentialInserted())
                     
-                } label: {
-                        HStack{
-                            Image(systemName: "lock.fill")
-                            Text("Login").bold()
-                        }
-                    
-                }.frame(maxWidth: .infinity).padding(.horizontal)
-            .padding(.vertical, 7)
-            .background(Color.orange)
-            .foregroundColor(Color.white)
-                
-            }.padding()
-            //Spacer()
-            ZStack{
-                Divider().frame(height: 1.5)
-                Text("OR").padding(.horizontal,5).background(Color("BackgroundColor"))
-            }.padding(.horizontal)
-            HStack{
-                SocialButton(icon: Image("google"), name: "Sign in with Google", background: .red, foreground: .white) {
-                    viewModel.authWithGoogle()
-                }
-                SocialButton(icon: Image("facebook"), name: "Sign in with Facebook", background: Color("FacebookColor"), foreground: .white) {
-                    
-                }
-            }.padding(.horizontal)
-            Spacer()
+                }.padding()
+                //Spacer()
+                ZStack{
+                    Divider().frame(height: 1.5)
+                    Text("OR").padding(.horizontal,5).background(Color("BackgroundColor"))
+                }.padding(.horizontal)
+                HStack{
+                    SocialButton(icon: Image("google"), name: "Sign in with Google", background: .red, foreground: .white) {
+                        viewModel.authWithGoogle()
+                    }
+                    SocialButton(icon: Image("facebook"), name: "Sign in with Facebook", background: Color("FacebookColor"), foreground: .white) {
+                        viewModel.authWithFacebook()
+                    }
+                }.padding(.horizontal)
+                Spacer()
+            }
+            if(viewModel.isLoading){
+                ZStack{
+                    Color("LabelColor").opacity(0.4)
+                    ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color("BackgroundColor"))).scaleEffect(x: 2, y: 2, anchor: .center)
+                }.ignoresSafeArea()
+            }
         }
     }
 }

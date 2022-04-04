@@ -9,7 +9,7 @@ import Foundation
 
 protocol LoginDelegate {
     func didFinishLogin(withError error: String) -> Void
-    func didFinishLogin(withSuccessCredential: LoginCredential) -> Void
+    func didFinishLogin(withSuccessCredential credential: LoginCredential) -> Void
 }
 
 extension LoginDelegate {

@@ -10,5 +10,6 @@ import Foundation
 struct LoginCredential: Codable {
     var accessToken: String
     var refreshToken: String?
-    var expireAt: Date
+    var expireAt: String
+    
 }

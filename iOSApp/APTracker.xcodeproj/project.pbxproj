@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524CF27FB35F9005C73F3 /* FacebookAuth.swift */; };
+		666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D227FB3BF8005C73F3 /* AppConstant.swift */; };
+		666524D527FB3E4E005C73F3 /* AppSocialAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D427FB3E4E005C73F3 /* AppSocialAuth.swift */; };
+		666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */; };
 		66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC027FAFD88004B2077 /* APTrackerApp.swift */; };
 		66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC227FAFD88004B2077 /* ContentView.swift */; };
 		66D13CC527FAFD95004B2077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC427FAFD95004B2077 /* Assets.xcassets */; };
@@ -44,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		666524CF27FB35F9005C73F3 /* FacebookAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
+		666524D227FB3BF8005C73F3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		666524D427FB3E4E005C73F3 /* AppSocialAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSocialAuth.swift; sourceTree = "<group>"; };
+		666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		66D13CBD27FAFD88004B2077 /* APTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D13CC027FAFD88004B2077 /* APTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerApp.swift; sourceTree = "<group>"; };
 		66D13CC227FAFD88004B2077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +100,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		666524D127FB3AAD005C73F3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CFC27FB280E004B2077 /* LoginDelegate.swift */,
+				66D13CFE27FB287F004B2077 /* LoginCredential.swift */,
+				66D13D0127FB2958004B2077 /* GoogleAuth.swift */,
+				666524CF27FB35F9005C73F3 /* FacebookAuth.swift */,
+				666524D427FB3E4E005C73F3 /* AppSocialAuth.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		666524D627FB418E005C73F3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		66D13CB427FAFD88004B2077 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +143,8 @@
 		66D13CBF27FAFD88004B2077 /* APTracker */ = {
 			isa = PBXGroup;
 			children = (
+				666524D627FB418E005C73F3 /* Extension */,
+				666524D127FB3AAD005C73F3 /* Login */,
 				66D13D0327FB2D1D004B2077 /* Utils */,
 				66D13D0027FB293A004B2077 /* Network */,
 				66D13CF727FB1E9B004B2077 /* UIComponents */,
@@ -125,6 +155,7 @@
 				66D13CC427FAFD95004B2077 /* Assets.xcassets */,
 				66D13CC627FAFD95004B2077 /* Preview Content */,
 				66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */,
+				666524D227FB3BF8005C73F3 /* AppConstant.swift */,
 			);
 			path = APTracker;
 			sourceTree = "<group>";
@@ -174,9 +205,6 @@
 		66D13D0027FB293A004B2077 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				66D13CFC27FB280E004B2077 /* LoginDelegate.swift */,
-				66D13CFE27FB287F004B2077 /* LoginCredential.swift */,
-				66D13D0127FB2958004B2077 /* GoogleAuth.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -328,10 +356,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */,
+				666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
 				66D13CFB27FB230F004B2077 /* LoginViewModel.swift in Sources */,
+				666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */,
+				666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */,
 				66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */,
 				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,
+				666524D527FB3E4E005C73F3 /* AppSocialAuth.swift in Sources */,
 				66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */,
 				66D13D0227FB2958004B2077 /* GoogleAuth.swift in Sources */,
 				66D13CF627FB1E74004B2077 /* LoginView.swift in Sources */,
