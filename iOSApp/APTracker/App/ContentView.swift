@@ -12,7 +12,7 @@ import GoogleSignIn
 
 struct ContentView: View {
     var body: some View {
-        LoginView()
+        MainView()
     }
 }
 

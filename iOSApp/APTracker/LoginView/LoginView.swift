@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject var viewModel = LoginViewModel()
+    @ObservedObject var viewModel:LoginViewModel
+    
+    init(_ isPresented: Binding<Bool>){
+        self.viewModel = LoginViewModel(isPresented)
+    }
+    
     var body: some View {
         ZStack{
             VStack{
@@ -61,6 +66,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(.constant(true))
     }
 }

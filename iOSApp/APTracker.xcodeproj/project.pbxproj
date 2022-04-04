@@ -10,6 +10,8 @@
 		666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524CF27FB35F9005C73F3 /* FacebookAuth.swift */; };
 		666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D227FB3BF8005C73F3 /* AppConstant.swift */; };
 		666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */; };
+		667BF40127FB8A300000B7EB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BF40027FB8A300000B7EB /* AppState.swift */; };
+		667BF40427FB8B2A0000B7EB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BF40327FB8B2A0000B7EB /* MainView.swift */; };
 		66934AF827FB793B004DC396 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AF727FB793B004DC396 /* TaskManager.swift */; };
 		66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AF927FB7F82004DC396 /* LocalAuth.swift */; };
 		66934AFC27FB8311004DC396 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AFB27FB8311004DC396 /* View+Extension.swift */; };
@@ -53,6 +55,8 @@
 		666524CF27FB35F9005C73F3 /* FacebookAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
 		666524D227FB3BF8005C73F3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		667BF40027FB8A300000B7EB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		667BF40327FB8B2A0000B7EB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		66934AF727FB793B004DC396 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		66934AF927FB7F82004DC396 /* LocalAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuth.swift; sourceTree = "<group>"; };
 		66934AFB27FB8311004DC396 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -66,7 +70,7 @@
 		66D13CD727FAFD97004B2077 /* APTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITests.swift; sourceTree = "<group>"; };
 		66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		66D13CEA27FAFE2B004B2077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		66D13CEA27FAFE2B004B2077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D13CF527FB1E74004B2077 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66D13CF827FB1EB7004B2077 /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
@@ -125,6 +129,34 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		667BF40227FB8B200000B7EB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				667BF40327FB8B2A0000B7EB /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		667BF40527FB8E580000B7EB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CC027FAFD88004B2077 /* APTrackerApp.swift */,
+				66D13CC227FAFD88004B2077 /* ContentView.swift */,
+				66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */,
+				666524D227FB3BF8005C73F3 /* AppConstant.swift */,
+				667BF40027FB8A300000B7EB /* AppState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		667BF40627FB8E650000B7EB /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CC427FAFD95004B2077 /* Assets.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 		66934AF627FB792F004DC396 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,19 +188,17 @@
 		66D13CBF27FAFD88004B2077 /* APTracker */ = {
 			isa = PBXGroup;
 			children = (
+				66D13CEA27FAFE2B004B2077 /* Info.plist */,
+				667BF40627FB8E650000B7EB /* Asset */,
+				667BF40527FB8E580000B7EB /* App */,
+				667BF40227FB8B200000B7EB /* MainView */,
 				66934AF627FB792F004DC396 /* Network */,
 				666524D627FB418E005C73F3 /* Extension */,
 				666524D127FB3AAD005C73F3 /* Login */,
 				66D13D0327FB2D1D004B2077 /* Utils */,
 				66D13CF727FB1E9B004B2077 /* UIComponents */,
 				66D13CF427FB1E68004B2077 /* LoginView */,
-				66D13CEA27FAFE2B004B2077 /* Info.plist */,
-				66D13CC027FAFD88004B2077 /* APTrackerApp.swift */,
-				66D13CC227FAFD88004B2077 /* ContentView.swift */,
-				66D13CC427FAFD95004B2077 /* Assets.xcassets */,
 				66D13CC627FAFD95004B2077 /* Preview Content */,
-				66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */,
-				666524D227FB3BF8005C73F3 /* AppConstant.swift */,
 			);
 			path = APTracker;
 			sourceTree = "<group>";
@@ -362,11 +392,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */,
+				667BF40427FB8B2A0000B7EB /* MainView.swift in Sources */,
 				666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */,
 				66934AFC27FB8311004DC396 /* View+Extension.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
 				66D13CFB27FB230F004B2077 /* LoginViewModel.swift in Sources */,
 				666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */,
+				667BF40127FB8A300000B7EB /* AppState.swift in Sources */,
 				666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */,
 				66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */,
 				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,

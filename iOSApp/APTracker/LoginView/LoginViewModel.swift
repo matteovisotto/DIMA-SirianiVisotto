@@ -13,6 +13,12 @@ class LoginViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var isLoading: Bool = false
     
+    private var isPresented: Binding<Bool>
+    
+    init(_ isPresented: Binding<Bool>) {
+        self.isPresented = isPresented
+    }
+    
     func authWithGoogle() -> Void {
         self.isLoading = true
         let googleAuth = GoogleAuth()
@@ -46,6 +52,8 @@ extension LoginViewModel: LoginDelegate {
         self.isLoading = false
         self.email = ""
         self.password = ""
+        AppState.shared.reloadState()
+        isPresented.wrappedValue = false
     }
     
     func didFinishLogin(withError error: String) {
