@@ -32,8 +32,16 @@ class AmazonHTMLParser {
             let priceDecimal = try doc.select("span.a-price-fraction").first?.text()
             let priceSymbol = try doc.select("span.a-price-symbol").first?.text()
             guard let pName = name, let pI = priceWhole, let pD = priceDecimal, let pS = priceSymbol else {completionHandler(nil); return}
-            
-            let product = AmazonProduct(name: pName, price: pI+"."+pD+pS, description: "", images: imgArray)
+            let descriptionBullets = try doc.select("#feature-bullets li")
+            var descriptionArray: [String] = []
+            print(descriptionBullets.size())
+            for bullet in descriptionBullets {
+                let description = try bullet.select("span.a-list-item").text()
+                descriptionArray.append(description)
+            }
+            var description = descriptionArray.joined(separator: ". ")
+            description = description + "."
+            let product = AmazonProduct(name: pName, price: pI+"."+pD+pS, description: description, images: imgArray)
             
             completionHandler(product)
             
