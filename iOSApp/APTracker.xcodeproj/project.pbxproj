@@ -1,0 +1,702 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC027FAFD88004B2077 /* APTrackerApp.swift */; };
+		66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC227FAFD88004B2077 /* ContentView.swift */; };
+		66D13CC527FAFD95004B2077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC427FAFD95004B2077 /* Assets.xcassets */; };
+		66D13CC827FAFD95004B2077 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC727FAFD95004B2077 /* Preview Assets.xcassets */; };
+		66D13CD227FAFD96004B2077 /* APTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CD127FAFD96004B2077 /* APTrackerTests.swift */; };
+		66D13CDC27FAFD97004B2077 /* APTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */; };
+		66D13CDE27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */; };
+		66D13CED27FAFE6A004B2077 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 66D13CEC27FAFE6A004B2077 /* GoogleSignIn */; };
+		66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */; };
+		66D13CF327FB0AD3004B2077 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 66D13CF227FB0AD3004B2077 /* FacebookLogin */; };
+		66D13CF627FB1E74004B2077 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CF527FB1E74004B2077 /* LoginView.swift */; };
+		66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CF827FB1EB7004B2077 /* SocialButton.swift */; };
+		66D13CFB27FB230F004B2077 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CFA27FB230F004B2077 /* LoginViewModel.swift */; };
+		66D13CFD27FB280E004B2077 /* LoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CFC27FB280E004B2077 /* LoginDelegate.swift */; };
+		66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CFE27FB287F004B2077 /* LoginCredential.swift */; };
+		66D13D0227FB2958004B2077 /* GoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13D0127FB2958004B2077 /* GoogleAuth.swift */; };
+		66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66D13CCE27FAFD96004B2077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D13CB527FAFD88004B2077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D13CBC27FAFD88004B2077;
+			remoteInfo = APTracker;
+		};
+		66D13CD827FAFD97004B2077 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D13CB527FAFD88004B2077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D13CBC27FAFD88004B2077;
+			remoteInfo = APTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		66D13CBD27FAFD88004B2077 /* APTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D13CC027FAFD88004B2077 /* APTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerApp.swift; sourceTree = "<group>"; };
+		66D13CC227FAFD88004B2077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66D13CC427FAFD95004B2077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66D13CC727FAFD95004B2077 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		66D13CCD27FAFD96004B2077 /* APTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D13CD127FAFD96004B2077 /* APTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerTests.swift; sourceTree = "<group>"; };
+		66D13CD727FAFD97004B2077 /* APTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITests.swift; sourceTree = "<group>"; };
+		66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		66D13CEA27FAFE2B004B2077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66D13CF527FB1E74004B2077 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		66D13CF827FB1EB7004B2077 /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
+		66D13CFA27FB230F004B2077 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		66D13CFC27FB280E004B2077 /* LoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDelegate.swift; sourceTree = "<group>"; };
+		66D13CFE27FB287F004B2077 /* LoginCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredential.swift; sourceTree = "<group>"; };
+		66D13D0127FB2958004B2077 /* GoogleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
+		66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66D13CBA27FAFD88004B2077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D13CF327FB0AD3004B2077 /* FacebookLogin in Frameworks */,
+				66D13CED27FAFE6A004B2077 /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D13CCA27FAFD96004B2077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D13CD427FAFD97004B2077 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66D13CB427FAFD88004B2077 = {
+			isa = PBXGroup;
+			children = (
+				66D13CBF27FAFD88004B2077 /* APTracker */,
+				66D13CD027FAFD96004B2077 /* APTrackerTests */,
+				66D13CDA27FAFD97004B2077 /* APTrackerUITests */,
+				66D13CBE27FAFD88004B2077 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66D13CBE27FAFD88004B2077 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CBD27FAFD88004B2077 /* APTracker.app */,
+				66D13CCD27FAFD96004B2077 /* APTrackerTests.xctest */,
+				66D13CD727FAFD97004B2077 /* APTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66D13CBF27FAFD88004B2077 /* APTracker */ = {
+			isa = PBXGroup;
+			children = (
+				66D13D0327FB2D1D004B2077 /* Utils */,
+				66D13D0027FB293A004B2077 /* Network */,
+				66D13CF727FB1E9B004B2077 /* UIComponents */,
+				66D13CF427FB1E68004B2077 /* LoginView */,
+				66D13CEA27FAFE2B004B2077 /* Info.plist */,
+				66D13CC027FAFD88004B2077 /* APTrackerApp.swift */,
+				66D13CC227FAFD88004B2077 /* ContentView.swift */,
+				66D13CC427FAFD95004B2077 /* Assets.xcassets */,
+				66D13CC627FAFD95004B2077 /* Preview Content */,
+				66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */,
+			);
+			path = APTracker;
+			sourceTree = "<group>";
+		};
+		66D13CC627FAFD95004B2077 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CC727FAFD95004B2077 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		66D13CD027FAFD96004B2077 /* APTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CD127FAFD96004B2077 /* APTrackerTests.swift */,
+			);
+			path = APTrackerTests;
+			sourceTree = "<group>";
+		};
+		66D13CDA27FAFD97004B2077 /* APTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */,
+				66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */,
+			);
+			path = APTrackerUITests;
+			sourceTree = "<group>";
+		};
+		66D13CF427FB1E68004B2077 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CF527FB1E74004B2077 /* LoginView.swift */,
+				66D13CFA27FB230F004B2077 /* LoginViewModel.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		66D13CF727FB1E9B004B2077 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CF827FB1EB7004B2077 /* SocialButton.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		66D13D0027FB293A004B2077 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				66D13CFC27FB280E004B2077 /* LoginDelegate.swift */,
+				66D13CFE27FB287F004B2077 /* LoginCredential.swift */,
+				66D13D0127FB2958004B2077 /* GoogleAuth.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		66D13D0327FB2D1D004B2077 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66D13CBC27FAFD88004B2077 /* APTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D13CE127FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTracker" */;
+			buildPhases = (
+				66D13CB927FAFD88004B2077 /* Sources */,
+				66D13CBA27FAFD88004B2077 /* Frameworks */,
+				66D13CBB27FAFD88004B2077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APTracker;
+			packageProductDependencies = (
+				66D13CEC27FAFE6A004B2077 /* GoogleSignIn */,
+				66D13CF227FB0AD3004B2077 /* FacebookLogin */,
+			);
+			productName = APTracker;
+			productReference = 66D13CBD27FAFD88004B2077 /* APTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66D13CCC27FAFD96004B2077 /* APTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D13CE427FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerTests" */;
+			buildPhases = (
+				66D13CC927FAFD96004B2077 /* Sources */,
+				66D13CCA27FAFD96004B2077 /* Frameworks */,
+				66D13CCB27FAFD96004B2077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66D13CCF27FAFD96004B2077 /* PBXTargetDependency */,
+			);
+			name = APTrackerTests;
+			productName = APTrackerTests;
+			productReference = 66D13CCD27FAFD96004B2077 /* APTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66D13CD627FAFD97004B2077 /* APTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D13CE727FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerUITests" */;
+			buildPhases = (
+				66D13CD327FAFD97004B2077 /* Sources */,
+				66D13CD427FAFD97004B2077 /* Frameworks */,
+				66D13CD527FAFD97004B2077 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66D13CD927FAFD97004B2077 /* PBXTargetDependency */,
+			);
+			name = APTrackerUITests;
+			productName = APTrackerUITests;
+			productReference = 66D13CD727FAFD97004B2077 /* APTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66D13CB527FAFD88004B2077 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					66D13CBC27FAFD88004B2077 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					66D13CCC27FAFD96004B2077 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 66D13CBC27FAFD88004B2077;
+					};
+					66D13CD627FAFD97004B2077 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 66D13CBC27FAFD88004B2077;
+					};
+				};
+			};
+			buildConfigurationList = 66D13CB827FAFD88004B2077 /* Build configuration list for PBXProject "APTracker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66D13CB427FAFD88004B2077;
+			packageReferences = (
+				66D13CEB27FAFE6A004B2077 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				66D13CF127FB0AD3004B2077 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
+			productRefGroup = 66D13CBE27FAFD88004B2077 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66D13CBC27FAFD88004B2077 /* APTracker */,
+				66D13CCC27FAFD96004B2077 /* APTrackerTests */,
+				66D13CD627FAFD97004B2077 /* APTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66D13CBB27FAFD88004B2077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D13CC827FAFD95004B2077 /* Preview Assets.xcassets in Resources */,
+				66D13CC527FAFD95004B2077 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D13CCB27FAFD96004B2077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D13CD527FAFD97004B2077 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66D13CB927FAFD88004B2077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */,
+				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
+				66D13CFB27FB230F004B2077 /* LoginViewModel.swift in Sources */,
+				66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */,
+				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,
+				66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */,
+				66D13D0227FB2958004B2077 /* GoogleAuth.swift in Sources */,
+				66D13CF627FB1E74004B2077 /* LoginView.swift in Sources */,
+				66D13CFD27FB280E004B2077 /* LoginDelegate.swift in Sources */,
+				66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D13CC927FAFD96004B2077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D13CD227FAFD96004B2077 /* APTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D13CD327FAFD97004B2077 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D13CDE27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift in Sources */,
+				66D13CDC27FAFD97004B2077 /* APTrackerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66D13CCF27FAFD96004B2077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D13CBC27FAFD88004B2077 /* APTracker */;
+			targetProxy = 66D13CCE27FAFD96004B2077 /* PBXContainerItemProxy */;
+		};
+		66D13CD927FAFD97004B2077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D13CBC27FAFD88004B2077 /* APTracker */;
+			targetProxy = 66D13CD827FAFD97004B2077 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		66D13CDF27FAFD97004B2077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66D13CE027FAFD97004B2077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66D13CE227FAFD97004B2077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"APTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = APTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66D13CE327FAFD97004B2077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"APTracker/Preview Content\"";
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = APTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66D13CE527FAFD97004B2077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.APTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APTracker.app/APTracker";
+			};
+			name = Debug;
+		};
+		66D13CE627FAFD97004B2077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.APTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APTracker.app/APTracker";
+			};
+			name = Release;
+		};
+		66D13CE827FAFD97004B2077 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.APTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = APTracker;
+			};
+			name = Debug;
+		};
+		66D13CE927FAFD97004B2077 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.APTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = APTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66D13CB827FAFD88004B2077 /* Build configuration list for PBXProject "APTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D13CDF27FAFD97004B2077 /* Debug */,
+				66D13CE027FAFD97004B2077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D13CE127FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D13CE227FAFD97004B2077 /* Debug */,
+				66D13CE327FAFD97004B2077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D13CE427FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D13CE527FAFD97004B2077 /* Debug */,
+				66D13CE627FAFD97004B2077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D13CE727FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D13CE827FAFD97004B2077 /* Debug */,
+				66D13CE927FAFD97004B2077 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		66D13CEB27FAFE6A004B2077 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		66D13CF127FB0AD3004B2077 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 13.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		66D13CEC27FAFE6A004B2077 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66D13CEB27FAFE6A004B2077 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		66D13CF227FB0AD3004B2077 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66D13CF127FB0AD3004B2077 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 66D13CB527FAFD88004B2077 /* Project object */;
+}
