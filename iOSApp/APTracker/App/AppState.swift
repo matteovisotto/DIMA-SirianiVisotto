@@ -101,8 +101,16 @@ class AppState: ObservableObject {
     }
     
     func riseError(title: String, message: String) -> Void {
-        print("Error")
-        print(message)
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        if var topController = keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            let alert = ErrorAlertController()
+            alert.setContent(title: title, message: message)
+            alert.modalPresentationStyle = .overFullScreen
+            topController.present(alert, animated: true, completion: nil)
+        }
     }
     
 }

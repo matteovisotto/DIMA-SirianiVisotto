@@ -28,6 +28,11 @@ struct RegisterView: View {
                     }
                     
                     Spacer()
+                    Button{
+                        AppState.shared.riseError(title: "", message: "")
+                    } label: {
+                        Text("Display error")
+                    }
                 }.padding()
                 .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
            

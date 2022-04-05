@@ -14,6 +14,11 @@ struct MainView: View {
     
     var body: some View {
         VStack{
+            Button{
+                appState.riseError(title: "", message: "")
+            } label: {
+                Text("Display error")
+            }
             Text(appState.isUserLoggedIn ? "Logged" : "Unlogged")
             
             if(appState.isUserLoggedIn){
