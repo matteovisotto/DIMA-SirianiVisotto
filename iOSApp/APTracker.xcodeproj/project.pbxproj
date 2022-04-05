@@ -15,6 +15,8 @@
 		66934AF827FB793B004DC396 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AF727FB793B004DC396 /* TaskManager.swift */; };
 		66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AF927FB7F82004DC396 /* LocalAuth.swift */; };
 		66934AFC27FB8311004DC396 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AFB27FB8311004DC396 /* View+Extension.swift */; };
+		66C552E827FC41BF00F5715E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C552E727FC41BF00F5715E /* Launch Screen.storyboard */; };
+		66C552EA27FC428E00F5715E /* SocialSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C552E927FC428E00F5715E /* SocialSmallButton.swift */; };
 		66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC027FAFD88004B2077 /* APTrackerApp.swift */; };
 		66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC227FAFD88004B2077 /* ContentView.swift */; };
 		66D13CC527FAFD95004B2077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC427FAFD95004B2077 /* Assets.xcassets */; };
@@ -60,6 +62,8 @@
 		66934AF727FB793B004DC396 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		66934AF927FB7F82004DC396 /* LocalAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuth.swift; sourceTree = "<group>"; };
 		66934AFB27FB8311004DC396 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		66C552E727FC41BF00F5715E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		66C552E927FC428E00F5715E /* SocialSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSmallButton.swift; sourceTree = "<group>"; };
 		66D13CBD27FAFD88004B2077 /* APTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D13CC027FAFD88004B2077 /* APTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerApp.swift; sourceTree = "<group>"; };
 		66D13CC227FAFD88004B2077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				66D13CC427FAFD95004B2077 /* Assets.xcassets */,
+				66C552E727FC41BF00F5715E /* Launch Screen.storyboard */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				66D13CF827FB1EB7004B2077 /* SocialButton.swift */,
+				66C552E927FC428E00F5715E /* SocialSmallButton.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C552E827FC41BF00F5715E /* Launch Screen.storyboard in Resources */,
 				66D13CC827FAFD95004B2077 /* Preview Assets.xcassets in Resources */,
 				66D13CC527FAFD95004B2077 /* Assets.xcassets in Resources */,
 			);
@@ -404,6 +411,7 @@
 				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,
 				66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */,
 				66D13D0227FB2958004B2077 /* GoogleAuth.swift in Sources */,
+				66C552EA27FC428E00F5715E /* SocialSmallButton.swift in Sources */,
 				66D13CF627FB1E74004B2077 /* LoginView.swift in Sources */,
 				66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */,
 				66934AF827FB793B004DC396 /* TaskManager.swift in Sources */,
@@ -574,6 +582,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -605,6 +614,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

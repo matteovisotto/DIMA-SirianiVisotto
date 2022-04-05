@@ -29,7 +29,10 @@ struct MainView: View {
                     Text("Login")
                 }
             }
-        }.sheet(isPresented: $showLogin) {
+        }
+        .viewBackground(Color("BackgroundColor"))
+        .ignoresSafeArea()
+        .fullScreenCover(isPresented: $showLogin) {
             LoginView($showLogin)
         }
         

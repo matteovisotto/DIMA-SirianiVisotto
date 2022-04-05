@@ -12,18 +12,18 @@
 				<string>com.googleusercontent.apps.69497537086-q9peoqc9d892p0ps5jv95fmut3h7v9dh</string>
 			</array>
 		</dict>
-        <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb515370529987552</string>
-        </array>
-        </dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb515370529987552</string>
+			</array>
+		</dict>
 	</array>
-    <key>FacebookAppID</key>
-    <string>515370529987552</string>
-    <key>FacebookClientToken</key>
-    <string>5e408dc25d0743a8eb0e4670bf87db4b</string>
-    <key>FacebookDisplayName</key>
-    <string>APTracker</string>
+	<key>FacebookAppID</key>
+	<string>515370529987552</string>
+	<key>FacebookClientToken</key>
+	<string>5e408dc25d0743a8eb0e4670bf87db4b</string>
+	<key>FacebookDisplayName</key>
+	<string>APTracker</string>
 </dict>
 </plist>

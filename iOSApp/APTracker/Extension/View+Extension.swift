@@ -15,4 +15,16 @@ extension View {
             self
         }
     }
+    
+    func toTopLeft(withPadding padding: CGFloat = 0) -> some View {
+        return VStack{
+            HStack{
+               self
+                Spacer()
+            }
+            Spacer()
+        }.padding(.horizontal)
+            .padding(.leading, padding)
+            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0 ) + padding)
+    }
 }

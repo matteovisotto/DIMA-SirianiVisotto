@@ -44,16 +44,34 @@ struct LoginView: View {
                     Divider().frame(height: 1.5)
                     Text("OR").padding(.horizontal,5).background(Color("BackgroundColor"))
                 }.padding(.horizontal)
-                HStack{
-                    SocialButton(icon: Image("google"), name: "Sign in with Google", background: .red, foreground: .white) {
+                
+                HStack(spacing: 20){
+                    Spacer()
+                    SocialSmallButton(icon: Image("google-logo"), borderColor: Color("BackgroundColorInverse")) {
                         viewModel.authWithGoogle()
                     }
-                    SocialButton(icon: Image("facebook"), name: "Sign in with Facebook", background: Color("FacebookColor"), foreground: .white) {
+                    
+                    SocialSmallButton(icon: Image("apple-logo"), borderColor: Color("BackgroundColorInverse")
+                    ) {
+                        viewModel.authWithApple()
+                    }
+                    
+                    SocialSmallButton(icon: Image("facebook-logo"), borderColor: Color("BackgroundColorInverse")) {
                         viewModel.authWithFacebook()
                     }
-                }.padding(.horizontal)
+                    
+                    Spacer()
+                }.frame(maxWidth: .infinity, maxHeight: 55)
+                    .padding(.horizontal)
+                    
                 Spacer()
             }
+            Button{
+                viewModel.dismiss()
+            } label: {
+                Image(systemName: "xmark").font(.title3.bold())
+            }.foregroundColor(Color("BackgroundColorInverse"))
+                .toTopLeft()
             if(viewModel.isLoading){
                 ZStack{
                     Color("LabelColor").opacity(0.4)

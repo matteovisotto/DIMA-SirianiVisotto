@@ -33,6 +33,10 @@ class LoginViewModel: ObservableObject {
         facebookAuth.login()
     }
     
+    func authWithApple() -> Void {
+        
+    }
+    
     func authLocal() -> Void {
         self.isLoading = true
         let localAuth = LocalAuth()
@@ -42,6 +46,10 @@ class LoginViewModel: ObservableObject {
     
     func isNotCredentialInserted() -> Bool {
         return (self.email.isEmpty || self.email == "" || self.password.isEmpty || self.password == "")
+    }
+    
+    func dismiss() -> Void {
+        self.isPresented.wrappedValue = false
     }
 }
 
