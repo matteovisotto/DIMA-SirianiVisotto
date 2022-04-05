@@ -10,6 +10,13 @@
 		666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524CF27FB35F9005C73F3 /* FacebookAuth.swift */; };
 		666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D227FB3BF8005C73F3 /* AppConstant.swift */; };
 		666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */; };
+		66742C6927FCAA3A0093EE24 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6827FCAA3A0093EE24 /* IconTextField.swift */; };
+		66742C6B27FCAD450093EE24 /* IconSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */; };
+		66742C6E27FCC8180093EE24 /* KeyboardAdaptive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6D27FCC8180093EE24 /* KeyboardAdaptive.swift */; };
+		66742C7027FCC8310093EE24 /* KeyboardHighPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6F27FCC8310093EE24 /* KeyboardHighPublisher.swift */; };
+		66742C7227FCC8470093EE24 /* UIResponder+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C7127FCC8470093EE24 /* UIResponder+Current.swift */; };
+		66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C7327FCC9A80093EE24 /* RegisterView.swift */; };
+		66742C7627FCCC0A0093EE24 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C7527FCCC0A0093EE24 /* UIViewController+Extension.swift */; };
 		667BF40127FB8A300000B7EB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BF40027FB8A300000B7EB /* AppState.swift */; };
 		667BF40427FB8B2A0000B7EB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BF40327FB8B2A0000B7EB /* MainView.swift */; };
 		66934AF827FB793B004DC396 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AF727FB793B004DC396 /* TaskManager.swift */; };
@@ -57,6 +64,13 @@
 		666524CF27FB35F9005C73F3 /* FacebookAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
 		666524D227FB3BF8005C73F3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		66742C6827FCAA3A0093EE24 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
+		66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSecureTextField.swift; sourceTree = "<group>"; };
+		66742C6D27FCC8180093EE24 /* KeyboardAdaptive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAdaptive.swift; sourceTree = "<group>"; };
+		66742C6F27FCC8310093EE24 /* KeyboardHighPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHighPublisher.swift; sourceTree = "<group>"; };
+		66742C7127FCC8470093EE24 /* UIResponder+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Current.swift"; sourceTree = "<group>"; };
+		66742C7327FCC9A80093EE24 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		66742C7527FCCC0A0093EE24 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		667BF40027FB8A300000B7EB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		667BF40327FB8B2A0000B7EB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		66934AF727FB793B004DC396 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
@@ -129,8 +143,19 @@
 			children = (
 				666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */,
 				66934AFB27FB8311004DC396 /* View+Extension.swift */,
+				66742C7527FCCC0A0093EE24 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		66742C6C27FCC7E10093EE24 /* KeyboardAvoidance */ = {
+			isa = PBXGroup;
+			children = (
+				66742C6D27FCC8180093EE24 /* KeyboardAdaptive.swift */,
+				66742C6F27FCC8310093EE24 /* KeyboardHighPublisher.swift */,
+				66742C7127FCC8470093EE24 /* UIResponder+Current.swift */,
+			);
+			path = KeyboardAvoidance;
 			sourceTree = "<group>";
 		};
 		667BF40227FB8B200000B7EB /* MainView */ = {
@@ -193,6 +218,7 @@
 		66D13CBF27FAFD88004B2077 /* APTracker */ = {
 			isa = PBXGroup;
 			children = (
+				66742C6C27FCC7E10093EE24 /* KeyboardAvoidance */,
 				66D13CEA27FAFE2B004B2077 /* Info.plist */,
 				667BF40627FB8E650000B7EB /* Asset */,
 				667BF40527FB8E580000B7EB /* App */,
@@ -204,6 +230,7 @@
 				66D13CF727FB1E9B004B2077 /* UIComponents */,
 				66D13CF427FB1E68004B2077 /* LoginView */,
 				66D13CC627FAFD95004B2077 /* Preview Content */,
+				66742C7327FCC9A80093EE24 /* RegisterView.swift */,
 			);
 			path = APTracker;
 			sourceTree = "<group>";
@@ -247,6 +274,8 @@
 			children = (
 				66D13CF827FB1EB7004B2077 /* SocialButton.swift */,
 				66C552E927FC428E00F5715E /* SocialSmallButton.swift */,
+				66742C6827FCAA3A0093EE24 /* IconTextField.swift */,
+				66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -400,6 +429,7 @@
 			files = (
 				66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */,
 				667BF40427FB8B2A0000B7EB /* MainView.swift in Sources */,
+				66742C6E27FCC8180093EE24 /* KeyboardAdaptive.swift in Sources */,
 				666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */,
 				66934AFC27FB8311004DC396 /* View+Extension.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
@@ -408,10 +438,16 @@
 				667BF40127FB8A300000B7EB /* AppState.swift in Sources */,
 				666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */,
 				66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */,
+				66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */,
+				66742C7027FCC8310093EE24 /* KeyboardHighPublisher.swift in Sources */,
 				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,
+				66742C7627FCCC0A0093EE24 /* UIViewController+Extension.swift in Sources */,
 				66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */,
+				66742C6927FCAA3A0093EE24 /* IconTextField.swift in Sources */,
 				66D13D0227FB2958004B2077 /* GoogleAuth.swift in Sources */,
 				66C552EA27FC428E00F5715E /* SocialSmallButton.swift in Sources */,
+				66742C6B27FCAD450093EE24 /* IconSecureTextField.swift in Sources */,
+				66742C7227FCC8470093EE24 /* UIResponder+Current.swift in Sources */,
 				66D13CF627FB1E74004B2077 /* LoginView.swift in Sources */,
 				66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */,
 				66934AF827FB793B004DC396 /* TaskManager.swift in Sources */,
