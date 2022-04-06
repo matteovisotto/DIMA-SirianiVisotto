@@ -13,7 +13,6 @@ struct IconSecureTextField: View {
     var text: Binding<String>
     var icon: Image? = nil
     var foregroundColor: Color = Color(UIColor.label)
-    var validator: (_ text: String) -> Bool = {text in return false}
     var body: some View {
         VStack (spacing: 0){
              HStack(spacing: 0){

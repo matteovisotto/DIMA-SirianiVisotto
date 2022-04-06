@@ -16,4 +16,5 @@ class AppConstant {
     public static let googleLoginURL = "https://aptracker.matmacsystem.it/auth/social/google"
     public static let refreshTokenURL = "https://aptracker.matmacsystem.it/auth/refresh"
     public static let logoutURL = "https://aptracker.matmacsystem.it/auth/logout"
+    public static let registerURL = "https://aptracker.matmacsystem.it/register"
 }
