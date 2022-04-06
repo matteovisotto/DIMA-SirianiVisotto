@@ -22,8 +22,10 @@ struct Scraper: ParsableCommand {
             if let index = url.range(of: "?")?.lowerBound {
                 substring = String(url[..<index])
                 urlSubstring = String(substring)
+                url = urlSubstring
+            } else {
+                url = self.url
             }
-            url = urlSubstring
             let _ = AmazonScraper(urlString: url, priceOnly: priceOnly) { printable in
                 print(printable)
             }
