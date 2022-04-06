@@ -73,7 +73,7 @@ extension LoginViewModel: LoginDelegate {
     
     func didFinishLogin(withError error: String) {
         self.isLoading = false
-        print(error)
+        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: error)
     }
     
 }

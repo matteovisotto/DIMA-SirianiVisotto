@@ -16,7 +16,7 @@ class FeedbackAlert: UIViewController {
     
     private var text: String = ""
     private var image: UIImage = UIImage()
-    private var dismissTime: Double = 1.0
+    private var dismissTime: Double = 1.5
     
     private var callBack: ()->() = {}
     

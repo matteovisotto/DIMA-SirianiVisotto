@@ -56,7 +56,7 @@ class RegisterViewModel: ObservableObject {
                             }
                             if let _ = e["success"] as? String {
                                 DispatchQueue.main.async{
-                                    FeedbackAlert.present(text: "Prova", icon: UIImage(systemName: "person.fill")!){
+                                    FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
                                         self.resetForm()
                                         self.presentationMode?.wrappedValue.dismiss()
                                     }
