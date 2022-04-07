@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97727FF6FD9005E3A41 /* AppTabBar.swift */; };
+		6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97927FF709F005E3A41 /* MainViewModel.swift */; };
+		6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97B27FF7503005E3A41 /* MainHeader.swift */; };
+		6631E97E27FF7919005E3A41 /* TabElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97D27FF7919005E3A41 /* TabElement.swift */; };
+		6631E98027FF7CE4005E3A41 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97F27FF7CE4005E3A41 /* UserIdentity.swift */; };
 		666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524CF27FB35F9005C73F3 /* FacebookAuth.swift */; };
 		666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D227FB3BF8005C73F3 /* AppConstant.swift */; };
 		666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */; };
@@ -63,6 +68,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6631E97727FF6FD9005E3A41 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
+		6631E97927FF709F005E3A41 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6631E97B27FF7503005E3A41 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
+		6631E97D27FF7919005E3A41 /* TabElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabElement.swift; sourceTree = "<group>"; };
+		6631E97F27FF7CE4005E3A41 /* UserIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentity.swift; sourceTree = "<group>"; };
 		666524CF27FB35F9005C73F3 /* FacebookAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
 		666524D227FB3BF8005C73F3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				667BF40327FB8B2A0000B7EB /* MainView.swift */,
+				6631E97927FF709F005E3A41 /* MainViewModel.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 				66D13CF727FB1E9B004B2077 /* UIComponents */,
 				66D13CF427FB1E68004B2077 /* LoginView */,
 				66D13CC627FAFD95004B2077 /* Preview Content */,
+				6631E97F27FF7CE4005E3A41 /* UserIdentity.swift */,
 			);
 			path = APTracker;
 			sourceTree = "<group>";
@@ -289,6 +301,8 @@
 				66C552E927FC428E00F5715E /* SocialSmallButton.swift */,
 				66742C6827FCAA3A0093EE24 /* IconTextField.swift */,
 				66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */,
+				6631E97727FF6FD9005E3A41 /* AppTabBar.swift */,
+				6631E97B27FF7503005E3A41 /* MainHeader.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -298,6 +312,7 @@
 			children = (
 				66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */,
 				66CF3A9827FD6D0800F2F866 /* Utils.swift */,
+				6631E97D27FF7919005E3A41 /* TabElement.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -446,11 +461,14 @@
 				666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */,
 				6689A62A27FCDA9C00260538 /* AlertViewController.swift in Sources */,
 				66CF3A9927FD6D0800F2F866 /* Utils.swift in Sources */,
+				6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */,
 				66934AFC27FB8311004DC396 /* View+Extension.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
+				6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */,
 				66D13CFB27FB230F004B2077 /* LoginViewModel.swift in Sources */,
 				666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */,
 				667BF40127FB8A300000B7EB /* AppState.swift in Sources */,
+				6631E97E27FF7919005E3A41 /* TabElement.swift in Sources */,
 				666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */,
 				66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */,
 				66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */,
@@ -467,8 +485,10 @@
 				66934AF827FB793B004DC396 /* TaskManager.swift in Sources */,
 				66CF3A9727FD6ACD00F2F866 /* RegisterViewModel.swift in Sources */,
 				66D13CFD27FB280E004B2077 /* LoginDelegate.swift in Sources */,
+				6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */,
 				66C5131727FD785C000EC52B /* FeedbackAlert.swift in Sources */,
 				66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */,
+				6631E98027FF7CE4005E3A41 /* UserIdentity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

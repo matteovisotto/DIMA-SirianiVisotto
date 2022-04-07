@@ -14,6 +14,7 @@ class AppState: ObservableObject {
     
     @Published var isUserLoggedIn: Bool = false
     var userCredential: LoginCredential? = nil
+    @Published var userIdentity: UserIdentity? = nil
     
     init() {
         reloadState()

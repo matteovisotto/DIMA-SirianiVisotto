@@ -64,9 +64,14 @@ extension LoginViewModel: LoginDelegate {
     
     func didFinishLogin(withSuccessCredential credential: LoginCredential) {
         KeychainHelper.standard.save(credential, service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain)
-        self.isLoading = false
         self.email = ""
         self.password = ""
+        let task = TaskManager(urlString: AppConstant.userDataURL+"?token="+credential.accessToken, method: .GET, parameters: nil)
+        task.execute { result, content, data in
+            
+        }
+        
+        self.isLoading = false
         AppState.shared.reloadState()
         isPresented.wrappedValue = false
     }
