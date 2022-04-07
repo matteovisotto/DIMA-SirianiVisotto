@@ -12,7 +12,9 @@ struct APTrackerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(AppState.shared).onAppear {
+            ContentView()
+                .environmentObject(AppState.shared)
+                .onAppear {
                 if let rootVC = UIApplication.shared.windows.first?.rootViewController {
                     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: rootVC, action: #selector(rootVC.dismissKeyboard))
                     tap.cancelsTouchesInView = false

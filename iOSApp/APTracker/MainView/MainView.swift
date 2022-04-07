@@ -15,7 +15,7 @@ struct MainView: View {
     var body: some View {
         VStack{
             Button{
-                appState.riseError(title: "", message: "")
+                appState.riseError(title: "Error", message: "This is an error message used as an example to show it")
             } label: {
                 Text("Display error")
             }
@@ -46,6 +46,6 @@ struct MainView: View {
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView().environmentObject(AppState.shared)
     }
 }

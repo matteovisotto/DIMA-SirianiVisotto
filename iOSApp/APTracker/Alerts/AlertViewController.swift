@@ -20,7 +20,7 @@ class AlertViewController: UIViewController {
     }
     
     private func setupLayout() {
-        alertView.backgroundColor = .systemBackground
+        alertView.backgroundColor = UIColor(named: "BackgroundColor")
         self.view.addSubview(alertView)
         alertView.translatesAutoresizingMaskIntoConstraints = false
         alertView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
