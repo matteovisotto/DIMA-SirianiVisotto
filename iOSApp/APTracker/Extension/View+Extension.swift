@@ -25,6 +25,6 @@ extension View {
             Spacer()
         }.padding(.horizontal)
             .padding(.leading, padding)
-            .padding(.top, (UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0 ) + padding)
+            .padding(.top, padding)
     }
 }

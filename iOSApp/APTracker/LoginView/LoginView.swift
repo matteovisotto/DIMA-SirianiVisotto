@@ -21,12 +21,12 @@ struct LoginView: View {
     }
     
     var body: some View {
-        ZStack{
-            NavigationView{
-                ZStack{
-                    GeometryReader{ geom in
+        NavigationView{
+            ZStack{
+                Color("BackgroundColor").ignoresSafeArea()
+                GeometryReader{ geom in
                     VStack{
-                        Image("login-image").resizable().frame(width: scaleImage(geom.size), height: scaleImage(geom.size), alignment: .center).padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
+                        Image("login-image").resizable().frame(width: scaleImage(geom.size), height: scaleImage(geom.size), alignment: .center)
                     
                         VStack{
                             HStack{
@@ -108,9 +108,8 @@ struct LoginView: View {
                             ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color("BackgroundColor"))).scaleEffect(x: 2, y: 2, anchor: .center)
                         }.ignoresSafeArea()
                     }
-                }.viewBackground(Color("BackgroundColor")).navigationBarHidden(true).ignoresSafeArea()
+                }.navigationBarHidden(true)
             }
-        }.viewBackground(Color("BackgroundColor")).ignoresSafeArea().keyboardAdaptive()
     }
 }
 
