@@ -22,6 +22,7 @@ class AppState: ObservableObject {
     
     func reloadState() {
         let credential = KeychainHelper.standard.read(service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain, type: LoginCredential.self)
+        self.userIdentity = PreferenceManager.shared.getUserIdentity()
          if let credential = credential {
              self.userCredential = credential
              if(isTokenValid(credential)){
@@ -74,6 +75,7 @@ class AppState: ObservableObject {
     
     private func localLogout(){
         KeychainHelper.standard.delete(service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain)
+        PreferenceManager.shared.removeUserIdentity()
         self.isUserLoggedIn = false
     }
     

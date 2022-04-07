@@ -68,12 +68,38 @@ extension LoginViewModel: LoginDelegate {
         self.password = ""
         let task = TaskManager(urlString: AppConstant.userDataURL+"?token="+credential.accessToken, method: .GET, parameters: nil)
         task.execute { result, content, data in
-            
+            if result {
+                do {
+                    let decoder = JSONDecoder()
+                    let identity = try decoder.decode(UserIdentity.self, from: data!)
+                    PreferenceManager.shared.setUserIdentity(identity)
+                    DispatchQueue.main.async {
+                        self.isLoading = false
+                        AppState.shared.reloadState()
+                        self.isPresented.wrappedValue = false
+                    }
+                } catch {
+                    var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
+                    do {
+                        let error = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        if let e = error {
+                            if let d = e["exception"] as? String {
+                                errorStr = d
+                            }
+                        }
+                    } catch {}
+                    DispatchQueue.main.async {
+                        self.isLoading = false
+                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: errorStr)
+                    }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.isLoading = false
+                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unknown error", comment: "Unknown error"))
+                }
+            }
         }
-        
-        self.isLoading = false
-        AppState.shared.reloadState()
-        isPresented.wrappedValue = false
     }
     
     func didFinishLogin(withError error: String) {

@@ -30,7 +30,11 @@ struct MainView: View {
                         Color("BackgroundColor").tag(0)
                         Color.blue.tag(1)
                         Color.yellow.tag(2)
-                        Button{showLogin.toggle()}label:{Text("Login")}.tag(3)
+                        if (appState.isUserLoggedIn) {
+                            Button{appState.logout()}label:{Text("Logout")}.tag(3)
+                        } else {
+                            Button{showLogin.toggle()}label:{Text("Login")}.tag(3)
+                        }
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                     

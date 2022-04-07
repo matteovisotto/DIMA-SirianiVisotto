@@ -15,7 +15,7 @@ struct MainHeader: View {
         VStack{
             if(appState.isUserLoggedIn){
                  HStack{
-                     Text("Welcome back " + (appState.userIdentity?.name ?? "Name") + " " + (appState.userIdentity?.surname ?? "Surname")).font(.footnote)
+                     Text("Welcome back " + (appState.userIdentity?.name ?? "")).font(.footnote)
                     Spacer()
                  }
             }

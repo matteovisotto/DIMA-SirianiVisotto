@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12D7D87027FF7EDF00178DAE /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */; };
 		6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97727FF6FD9005E3A41 /* AppTabBar.swift */; };
 		6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97927FF709F005E3A41 /* MainViewModel.swift */; };
 		6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97B27FF7503005E3A41 /* MainHeader.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		6631E97727FF6FD9005E3A41 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
 		6631E97927FF709F005E3A41 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6631E97B27FF7503005E3A41 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */,
 				66CF3A9827FD6D0800F2F866 /* Utils.swift */,
 				6631E97D27FF7919005E3A41 /* TabElement.swift */,
+				12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */,
 				66934AF827FB793B004DC396 /* TaskManager.swift in Sources */,
 				66CF3A9727FD6ACD00F2F866 /* RegisterViewModel.swift in Sources */,
+				12D7D87027FF7EDF00178DAE /* PreferenceManager.swift in Sources */,
 				66D13CFD27FB280E004B2077 /* LoginDelegate.swift in Sources */,
 				6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */,
 				66C5131727FD785C000EC52B /* FeedbackAlert.swift in Sources */,
