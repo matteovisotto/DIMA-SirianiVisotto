@@ -113,6 +113,8 @@ class AppState: ObservableObject {
             alert.setContent(title: title, message: message)
             alert.modalPresentationStyle = .overFullScreen
             topController.present(alert, animated: true, completion: nil)
+            
+            
         }
     }
     

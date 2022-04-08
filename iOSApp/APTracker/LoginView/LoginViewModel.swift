@@ -58,22 +58,23 @@ class LoginViewModel: ObservableObject {
     func dismiss() -> Void {
         self.isPresented.wrappedValue = false
     }
+    
 }
 
 extension LoginViewModel: LoginDelegate {
     
     func didFinishLogin(withSuccessCredential credential: LoginCredential) {
-        KeychainHelper.standard.save(credential, service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain)
         self.email = ""
         self.password = ""
         let task = TaskManager(urlString: AppConstant.userDataURL, method: .GET, parameters: nil)
-        task.executeWithAccessToken { result, content, data in
+        task.executeWithAccessToken(accessToken: credential.accessToken) { result, content, data in
             if result {
                 do {
                     let decoder = JSONDecoder()
                     let identity = try decoder.decode(UserIdentity.self, from: data!)
+                    KeychainHelper.standard.save(credential, service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain)
                     PreferenceManager.shared.setUserIdentity(identity)
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         self.isLoading = false
                         AppState.shared.reloadState()
                         self.isPresented.wrappedValue = false
@@ -88,13 +89,14 @@ extension LoginViewModel: LoginDelegate {
                             }
                         }
                     } catch {}
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                       
                         self.isLoading = false
                         AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: errorStr)
                     }
                 }
             } else {
-                DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.isLoading = false
                     AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unknown error", comment: "Unknown error"))
                 }

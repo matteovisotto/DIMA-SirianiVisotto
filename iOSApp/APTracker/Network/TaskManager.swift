@@ -76,4 +76,13 @@ class TaskManager {
         self.execute(completionHandler: completionHandler)
     }
     
+    func executeWithAccessToken(accessToken: String, completionHandler: @escaping (_ result: Bool, _ content: String?, _ data: Data?) -> ()) -> Void{
+        if(self.urlString.contains("?")){
+            self.urlString = self.urlString + "&token=" + accessToken
+        } else {
+            self.urlString = self.urlString + "?token=" + accessToken
+        }
+        self.execute(completionHandler: completionHandler)
+    }
+    
 }

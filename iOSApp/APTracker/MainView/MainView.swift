@@ -25,7 +25,7 @@ struct MainView: View {
                         .padding(.horizontal)
                     
                     TabView(selection: $viewModel.selectedTab){
-                        Color("BackgroundColor").tag(0)
+                        HomeView().tag(0).gesture(DragGesture())
                         Color.blue.tag(1)
                         Color.yellow.tag(2)
                         SettingView(showLogin: $viewModel.showLogin).tag(3).gesture(DragGesture())

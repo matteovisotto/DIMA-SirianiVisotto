@@ -13,6 +13,7 @@
 		6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97B27FF7503005E3A41 /* MainHeader.swift */; };
 		6631E97E27FF7919005E3A41 /* TabElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97D27FF7919005E3A41 /* TabElement.swift */; };
 		6631E98027FF7CE4005E3A41 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97F27FF7CE4005E3A41 /* UserIdentity.swift */; };
+		66479307280030DD0068AE91 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479306280030DD0068AE91 /* HomeView.swift */; };
 		666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524CF27FB35F9005C73F3 /* FacebookAuth.swift */; };
 		666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D227FB3BF8005C73F3 /* AppConstant.swift */; };
 		666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */; };
@@ -80,6 +81,7 @@
 		6631E97B27FF7503005E3A41 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
 		6631E97D27FF7919005E3A41 /* TabElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabElement.swift; sourceTree = "<group>"; };
 		6631E97F27FF7CE4005E3A41 /* UserIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentity.swift; sourceTree = "<group>"; };
+		66479306280030DD0068AE91 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		666524CF27FB35F9005C73F3 /* FacebookAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
 		666524D227FB3BF8005C73F3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66479305280030CF0068AE91 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				66479306280030DD0068AE91 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		666524D127FB3AAD005C73F3 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,13 +249,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		66BE657B28000BB00077777B /* HomeView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HomeView;
-			sourceTree = "<group>";
-		};
 		66BE657C28000BBB0077777B /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,9 +290,9 @@
 		66D13CBF27FAFD88004B2077 /* APTracker */ = {
 			isa = PBXGroup;
 			children = (
+				66479305280030CF0068AE91 /* HomeView */,
 				668518E028001C0E00A91A6F /* UserProfileView */,
 				66BE657C28000BBB0077777B /* SettingView */,
-				66BE657B28000BB00077777B /* HomeView */,
 				66CF3A9527FD6AA400F2F866 /* RegisterView */,
 				6689A62827FCDA9100260538 /* Alerts */,
 				66D13CEA27FAFE2B004B2077 /* Info.plist */,
@@ -519,6 +522,7 @@
 				6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */,
 				66D13CFB27FB230F004B2077 /* LoginViewModel.swift in Sources */,
 				666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */,
+				66479307280030DD0068AE91 /* HomeView.swift in Sources */,
 				667BF40127FB8A300000B7EB /* AppState.swift in Sources */,
 				6631E97E27FF7919005E3A41 /* TabElement.swift in Sources */,
 				666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */,

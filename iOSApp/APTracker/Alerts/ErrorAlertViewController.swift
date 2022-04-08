@@ -107,5 +107,5 @@ class ErrorAlertController: AlertViewController {
     @objc private func didTapDismiss() {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
 }
