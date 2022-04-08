@@ -48,6 +48,21 @@ class AmazonHTMLParser {
             completionHandler(nil)
         }
     }
+    
+    public static func parsePriceOnly(str: String, completionHandler: @escaping (_ price: String?) -> ()) {
+        do {
+           let doc: Document = try SwiftSoup.parse(str)
+            let priceWhole = try doc.select("span.a-price-whole").first?.text().replacingOccurrences(of: ",", with: "")
+            let priceDecimal = try doc.select("span.a-price-fraction").first?.text()
+            let priceSymbol = try doc.select("span.a-price-symbol").first?.text()
+            guard let pI = priceWhole, let pD = priceDecimal, let pS = priceSymbol else {completionHandler(nil); return}
+            
+            completionHandler(pI+"."+pD+pS)
+            
+        } catch {
+            completionHandler(nil)
+        }
+    }
 }
 
 class AmazonScraper {
@@ -64,14 +79,24 @@ class AmazonScraper {
        
         do {
             let contentString = try String(contentsOf: url, encoding: .utf8)
-            AmazonHTMLParser.parseString(str: contentString) { product in
-                do{
-                    let jsonEncoder = JSONEncoder()
-                    let jsonData = try jsonEncoder.encode(product)
-                    guard let jsonString = String(data: jsonData, encoding: String.Encoding.utf8) else {completionHandler("{\"exception\":\"Unable to convert json\"}"); return}
-                    completionHandler(jsonString)
-                }catch{
-                    completionHandler("{\"exception\":\"Unable to convert json\"}")
+            if(!priceOnly){
+                AmazonHTMLParser.parseString(str: contentString) { product in
+                    do{
+                        let jsonEncoder = JSONEncoder()
+                        let jsonData = try jsonEncoder.encode(product)
+                        guard let jsonString = String(data: jsonData, encoding: String.Encoding.utf8) else {completionHandler("{\"exception\":\"Unable to convert json\"}"); return}
+                        completionHandler(jsonString)
+                    }catch{
+                        completionHandler("{\"exception\":\"Unable to convert json\"}")
+                    }
+                }
+            } else {
+                AmazonHTMLParser.parsePriceOnly(str: contentString) { price in
+                    if let price = price {
+                        completionHandler("{\"price\":\""+price+"\"}")
+                    } else {
+                        completionHandler("{\"exception\":\"Unable to find the price\"}")
+                    }
                 }
             }
         } catch {

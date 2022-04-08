@@ -80,12 +80,16 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "https://www.amazon.it/Autunno-dautunno-vibrazioni-autunnali-Maglietta/dp/B09W4FX8GL/ref=sr_1_4_sspa?__mk_it_IT=&#xc5;M&#xc5;&#x17d;&#xd5;&#xd1;&amp;crid=6RRKBUL4DOQ5&amp;keywords=ciao&amp;qid=1649112081&amp;sprefix=ciao%2Caps%2C77&amp;sr=8-4-spons&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExNzVFOUVWNVhTOFU0JmVuY3J5cHRlZElkPUEwNDAzMzM5SDg4RFVCSEhJSjlSJmVuY3J5cHRlZEFkSWQ9QTA2Mjk0MzYxTFlMVjhSWVI2M0tYJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&amp;customId=B07536XX75&amp;th=1&amp;psc=1"
-            isEnabled = "YES">
+            argument = "https://www.amazon.it/Autunno-dautunno-vibrazioni-autunnali-Maglietta/dp/B09W4FX8GL/ref=sr_1_4_sspa?_mk_it_IT=&#xc5;M&#xc5;&#x17d;&#xd5;&#xd1;&amp;crid=6RRKBUL4DOQ5&amp;keywords=ciao&amp;qid=1649112081&amp;sprefix=ciao%2Caps%2C77&amp;sr=8-4-spons&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExNzVFOUVWNVhTOFU0JmVuY3J5cHRlZElkPUEwNDAzMzM5SDg4RFVCSEhJSjlSJmVuY3J5cHRlZEFkSWQ9QTA2Mjk0MzYxTFlMVjhSWVI2M0tYJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ&amp;customId=B07536XX75&amp;th=1&amp;psc=1"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "https://www.amazon.it/Xiaomi-Lite-Smartphone-Snapdragon-Fotocamera/dp/B09DNG3827/"
+            argument = "https://www.amazon.it/Xiaomi-Lite-Smartphone-Snapdragon-Fotocamera/dp/B09DNG3827/ --price-only"
             isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.it/Xiaomi-Lite-Smartphone-Snapdragon-Fotocamera/dp/B09DNG3827/ "
+            isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>
