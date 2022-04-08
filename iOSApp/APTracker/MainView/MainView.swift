@@ -11,8 +11,6 @@ struct MainView: View {
     @EnvironmentObject var appState: AppState
     @ObservedObject var viewModel: MainViewModel = MainViewModel()
     
-    @State var showLogin: Bool = false
-    
     var body: some View {
         NavigationView{
             ZStack{
@@ -30,11 +28,7 @@ struct MainView: View {
                         Color("BackgroundColor").tag(0)
                         Color.blue.tag(1)
                         Color.yellow.tag(2)
-                        if (appState.isUserLoggedIn) {
-                            Button{appState.logout()}label:{Text("Logout")}.tag(3)
-                        } else {
-                            Button{showLogin.toggle()}label:{Text("Login")}.tag(3)
-                        }
+                        SettingView(showLogin: $viewModel.showLogin).tag(3).gesture(DragGesture())
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                     
@@ -49,8 +43,8 @@ struct MainView: View {
             }.navigationBarHidden(true)
                 
            
-        }.fullScreenCover(isPresented: $showLogin) {
-            LoginView($showLogin)
+        }.fullScreenCover(isPresented: $viewModel.showLogin) {
+            LoginView($viewModel.showLogin)
         }
         
     }
