@@ -66,8 +66,8 @@ extension LoginViewModel: LoginDelegate {
         KeychainHelper.standard.save(credential, service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain)
         self.email = ""
         self.password = ""
-        let task = TaskManager(urlString: AppConstant.userDataURL+"?token="+credential.accessToken, method: .GET, parameters: nil)
-        task.execute { result, content, data in
+        let task = TaskManager(urlString: AppConstant.userDataURL, method: .GET, parameters: nil)
+        task.executeWithAccessToken { result, content, data in
             if result {
                 do {
                     let decoder = JSONDecoder()

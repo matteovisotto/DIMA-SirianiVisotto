@@ -63,4 +63,17 @@ class TaskManager {
         task.resume()
     }
     
+    func executeWithAccessToken(completionHandler: @escaping (_ result: Bool, _ content: String?, _ data: Data?) -> ()) -> Void{
+        guard let credential = AppState.shared.userCredential else {
+            completionHandler(false, NSLocalizedString("Unable to find access token locally", comment: "Unable to find access token locally"), nil)
+            return
+        }
+        if(self.urlString.contains("?")){
+            self.urlString = self.urlString + "&token=" + credential.accessToken
+        } else {
+            self.urlString = self.urlString + "?token=" + credential.accessToken
+        }
+        self.execute(completionHandler: completionHandler)
+    }
+    
 }
