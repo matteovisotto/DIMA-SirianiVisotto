@@ -60,10 +60,12 @@ class AppState: ObservableObject {
                     } catch {}
                     DispatchQueue.main.async {
                         self.riseError(title: NSLocalizedString("Error", comment: "Error"), message: message)
+                        self.localLogout()
                     }
                 } else {
                     DispatchQueue.main.async {
                         self.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("Unable to perform remote logout", comment: "Unable to perform remote logout"))
+                        self.localLogout()
                     }
                     
                 }
@@ -130,8 +132,7 @@ extension AppState: LoginDelegate {
     
     func didFinishLogin(withError error: String) {
         self.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("We cannot refresh your key, please login again", comment: "We cannot refresh your key, please login again"))
-        KeychainHelper.standard.delete(service: AppConstant.keychainCredentialKey, account: AppConstant.backendDomain)
-        self.isUserLoggedIn = false
+        self.localLogout()
     }
     
 }
