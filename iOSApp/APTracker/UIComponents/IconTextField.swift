@@ -14,6 +14,7 @@ struct IconTextField: View {
     var text: Binding<String>
     var icon: Image? = nil
     var foregroundColor: Color = Color(UIColor.label)
+    var showValidator: Bool = true
     var validator: (_ text: String) -> Bool = {text in return false}
     var body: some View {
         VStack (spacing: 0){
@@ -27,7 +28,9 @@ struct IconTextField: View {
                          hasInput = false
                      }
                  }).frame(height: 35).textFieldStyle(DefaultTextFieldStyle())
+                 if(showValidator){
                  Image(systemName: isValid ? "checkmark.seal" : "xmark.seal").foregroundColor(isValid ? .green : .red).opacity(hasInput ? 1 : 0)
+                 }
              }
             Rectangle().frame(height: 1)
             .foregroundColor(foregroundColor)

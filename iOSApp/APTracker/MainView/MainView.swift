@@ -32,7 +32,9 @@ struct MainView: View {
                     }
                     .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                     
-                    AppTabBar(selectedTab: $viewModel.selectedTab, elements: MainViewModel.tabs, centralButtonAction: {})
+                    AppTabBar(selectedTab: $viewModel.selectedTab, elements: MainViewModel.tabs, centralButtonAction: {
+                        viewModel.showAddProduct.toggle()
+                    })
                             .frame(height: 33)
                             .padding(.bottom, 10)
                             .padding(.horizontal)
@@ -45,6 +47,9 @@ struct MainView: View {
            
         }.fullScreenCover(isPresented: $viewModel.showLogin) {
             LoginView($viewModel.showLogin)
+        }
+        .sheet(isPresented: $viewModel.showAddProduct) {
+            AddProductView(isShown: $viewModel.showAddProduct)
         }
         
     }

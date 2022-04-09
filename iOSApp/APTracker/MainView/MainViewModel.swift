@@ -19,4 +19,5 @@ class MainViewModel: ObservableObject {
     
     @Published var selectedTab: Int = 0
     @Published var showLogin: Bool = false
+    @Published var showAddProduct:Bool = false
 }
