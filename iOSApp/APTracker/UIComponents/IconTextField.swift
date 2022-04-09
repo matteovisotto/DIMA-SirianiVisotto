@@ -28,6 +28,7 @@ struct IconTextField: View {
                          hasInput = false
                      }
                  }).frame(height: 35).textFieldStyle(DefaultTextFieldStyle())
+                     .foregroundColor(foregroundColor)
                  if(showValidator){
                  Image(systemName: isValid ? "checkmark.seal" : "xmark.seal").foregroundColor(isValid ? .green : .red).opacity(hasInput ? 1 : 0)
                  }

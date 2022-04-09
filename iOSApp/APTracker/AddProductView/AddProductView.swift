@@ -18,16 +18,16 @@ struct AddProductView: View {
     
     var body: some View {
         ZStack{
-            Color("BackgroundColor").ignoresSafeArea()
+            Color("AmazonBackground").ignoresSafeArea()
             VStack{
                 HStack{
-                    IconTextField(titleKey: "", text: $viewModel.currentUrl, icon: Image(systemName: "link"), showValidator: false)
+                    IconTextField(titleKey: "", text: $viewModel.currentUrl, icon: Image(systemName: "link"), foregroundColor: Color("AmazonText"), showValidator: false)
                     Button{
                         viewModel.shouldReloadWithGivenUrl.toggle()
                     } label: {
                         Image(systemName: "arrowtriangle.right")
                     }.disabled(viewModel.isWebViewLoading)
-                        .foregroundColor(viewModel.isWebViewLoading ? Color("PrimaryLabel").opacity(0.5) : Color("PrimaryLabel"))
+                        .foregroundColor(viewModel.isWebViewLoading ? Color("AmazonText").opacity(0.5) : Color("AmazonText"))
                 }.padding()
                 WebView(viewModel, stringUrl: "https://amazon.it").textFieldStyle(.roundedBorder)
                 HStack{
@@ -36,20 +36,20 @@ struct AddProductView: View {
                     } label: {
                         Image(systemName: "chevron.left")
                     }.disabled(!viewModel.canGoBack)
-                        .foregroundColor(viewModel.canGoBack ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                        .foregroundColor(viewModel.canGoBack ? Color("AmazonText") : Color("AmazonText").opacity(0.5))
                     Spacer()
                     if(appState.isUserLoggedIn){
                         Button{
                             viewModel.addTracking()
                         } label: {
                             Text("Track product")
-                        }.disabled(!viewModel.isAProduct).foregroundColor(viewModel.isAProduct ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                        }.disabled(!viewModel.isAProduct).foregroundColor(viewModel.isAProduct ? Color("AmazonText") : Color("AmazonText").opacity(0.5))
                     } else {
                         Button{
                             viewModel.addProduct()
                         } label: {
                             Text("Add product")
-                        }.disabled(!viewModel.isAProduct).foregroundColor(viewModel.isAProduct ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                        }.disabled(!viewModel.isAProduct).foregroundColor(viewModel.isAProduct ? Color("AmazonText") : Color("AmazonText").opacity(0.5))
                     }
                     Spacer()
                     Button{
@@ -57,7 +57,7 @@ struct AddProductView: View {
                     } label: {
                         Image(systemName: "chevron.right")
                     }.disabled(!viewModel.canGoForward)
-                        .foregroundColor(viewModel.canGoForward ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                        .foregroundColor(viewModel.canGoForward ? Color("AmazonText") : Color("AmazonText").opacity(0.5))
                 }.padding(.horizontal)
                     .padding(.top)
                     
