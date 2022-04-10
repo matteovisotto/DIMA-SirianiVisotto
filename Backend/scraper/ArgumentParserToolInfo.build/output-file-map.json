@@ -1,0 +1,12 @@
+{
+  "": {
+    "dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/ArgumentParserToolInfo.d",
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/ArgumentParserToolInfo.o",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/master.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParserToolInfo/ToolInfo.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/ToolInfo.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/ToolInfo~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/ToolInfo.swiftdeps"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "": {
+    "dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SwiftSoup.d",
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SwiftSoup.o",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/master.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/ArrayExt.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ArrayExt.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ArrayExt~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ArrayExt.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Attribute.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attribute.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attribute~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attribute.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Attributes.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attributes.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attributes~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attributes.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/BinarySearch.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BinarySearch.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BinarySearch~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BinarySearch.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/BooleanAttribute.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BooleanAttribute.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BooleanAttribute~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BooleanAttribute.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/CharacterExt.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterExt.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterExt~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterExt.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/CharacterReader.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterReader.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterReader~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterReader.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Cleaner.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Cleaner.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Cleaner~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Cleaner.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Collector.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Collector.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Collector~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Collector.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/CombiningEvaluator.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CombiningEvaluator.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CombiningEvaluator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CombiningEvaluator.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Comment.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Comment.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Comment~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Comment.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Connection.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Connection.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Connection~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Connection.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/CssSelector.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CssSelector.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CssSelector~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CssSelector.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/DataNode.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataNode.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataNode~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataNode.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/DataUtil.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataUtil.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataUtil~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataUtil.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Document.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Document.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Document~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Document.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/DocumentType.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DocumentType.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DocumentType~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DocumentType.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Element.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Element.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Element~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Element.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Elements.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Elements.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Elements~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Elements.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Entities.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Entities.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Entities~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Entities.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Evaluator.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Evaluator.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Evaluator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Evaluator.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Exception.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Exception.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Exception~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Exception.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/FormElement.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/FormElement.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/FormElement~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/FormElement.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/HtmlTreeBuilder.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilder.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilder.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/HtmlTreeBuilderState.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilderState.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilderState~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilderState.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/HttpStatusException.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HttpStatusException.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HttpStatusException~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HttpStatusException.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Node.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Node.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Node~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Node.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/NodeTraversor.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeTraversor.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeTraversor~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeTraversor.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/NodeVisitor.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeVisitor.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeVisitor~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeVisitor.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/OrderedSet.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/OrderedSet.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/OrderedSet~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/OrderedSet.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/ParseError.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseError.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseError~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseError.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/ParseErrorList.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseErrorList.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseErrorList~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseErrorList.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/ParseSettings.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseSettings.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseSettings~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseSettings.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Parser.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Parser.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Parser~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Parser.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Pattern.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Pattern.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Pattern~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Pattern.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/QueryParser.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/QueryParser.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/QueryParser~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/QueryParser.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/SerializationException.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SerializationException.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SerializationException~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SerializationException.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/SimpleDictionary.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SimpleDictionary.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SimpleDictionary~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SimpleDictionary.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/StreamReader.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StreamReader.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StreamReader~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StreamReader.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/String.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/String.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/String~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/String.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/StringBuilder.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringBuilder.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringBuilder.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/StringUtil.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringUtil.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringUtil~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringUtil.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/StructuralEvaluator.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StructuralEvaluator.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StructuralEvaluator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StructuralEvaluator.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/SwiftSoup.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SwiftSoup.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SwiftSoup~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SwiftSoup.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Tag.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tag.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tag~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tag.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/TextNode.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TextNode.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TextNode~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TextNode.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Token.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Token.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Token~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Token.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/TokenQueue.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokenQueue.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokenQueue~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokenQueue.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Tokeniser.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tokeniser.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tokeniser~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tokeniser.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/TokeniserState.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokeniserState.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokeniserState~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokeniserState.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/TreeBuilder.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TreeBuilder.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TreeBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TreeBuilder.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/UnicodeScalar.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/UnicodeScalar.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/UnicodeScalar~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/UnicodeScalar.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Validate.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Validate.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Validate~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Validate.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/Whitelist.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Whitelist.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Whitelist~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Whitelist.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/XmlDeclaration.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlDeclaration.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlDeclaration~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlDeclaration.swiftdeps"
+  },
+  "/Scraper/Scraper/.build/checkouts/SwiftSoup/Sources/XmlTreeBuilder.swift": {
+    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlTreeBuilder.swift.o",
+    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlTreeBuilder~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlTreeBuilder.swiftdeps"
+  }
+}

@@ -1,0 +1,4373 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "TypeDecl",
+      "name": "ToolInfoHeader",
+      "printedName": "ToolInfoHeader",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "serializationVersion",
+          "printedName": "serializationVersion",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivp",
+          "mangledName": "$s22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivg",
+              "mangledName": "$s22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivs",
+              "mangledName": "$s22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivM",
+              "mangledName": "$s22ArgumentParserToolInfo0cD6HeaderV20serializationVersionSivM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(serializationVersion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ToolInfoHeader",
+              "printedName": "ArgumentParserToolInfo.ToolInfoHeader",
+              "usr": "s:22ArgumentParserToolInfo0cD6HeaderV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo0cD6HeaderV20serializationVersionACSi_tcfc",
+          "mangledName": "$s22ArgumentParserToolInfo0cD6HeaderV20serializationVersionACSi_tcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(from:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ToolInfoHeader",
+              "printedName": "ArgumentParserToolInfo.ToolInfoHeader",
+              "usr": "s:22ArgumentParserToolInfo0cD6HeaderV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Decoder",
+              "printedName": "Swift.Decoder",
+              "usr": "s:s7DecoderP"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo0cD6HeaderV4fromACs7Decoder_p_tKcfc",
+          "mangledName": "$s22ArgumentParserToolInfo0cD6HeaderV4fromACs7Decoder_p_tKcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "throwing": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:22ArgumentParserToolInfo0cD6HeaderV",
+      "mangledName": "$s22ArgumentParserToolInfo0cD6HeaderV",
+      "moduleName": "ArgumentParserToolInfo",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Decodable",
+          "printedName": "Decodable",
+          "usr": "s:Se",
+          "mangledName": "$sSe"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "ToolInfoV0",
+      "printedName": "ToolInfoV0",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "serializationVersion",
+          "printedName": "serializationVersion",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V20serializationVersionSivp",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V20serializationVersionSivp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V20serializationVersionSivg",
+              "mangledName": "$s22ArgumentParserToolInfo0cD2V0V20serializationVersionSivg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V20serializationVersionSivs",
+              "mangledName": "$s22ArgumentParserToolInfo0cD2V0V20serializationVersionSivs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V20serializationVersionSivM",
+              "mangledName": "$s22ArgumentParserToolInfo0cD2V0V20serializationVersionSivM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "command",
+          "printedName": "command",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CommandInfoV0",
+              "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0Vvp",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0Vvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "CommandInfoV0",
+                  "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0Vvg",
+              "mangledName": "$s22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0Vvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "CommandInfoV0",
+                  "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0Vvs",
+              "mangledName": "$s22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0Vvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0VvM",
+              "mangledName": "$s22ArgumentParserToolInfo0cD2V0V7commandAA07CommanddE0VvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(command:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ToolInfoV0",
+              "printedName": "ArgumentParserToolInfo.ToolInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CommandInfoV0",
+              "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V7commandAcA07CommanddE0V_tcfc",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V7commandAcA07CommanddE0V_tcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(from:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ToolInfoV0",
+              "printedName": "ArgumentParserToolInfo.ToolInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Decoder",
+              "printedName": "Swift.Decoder",
+              "usr": "s:s7DecoderP"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V4fromACs7Decoder_p_tKcfc",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V4fromACs7Decoder_p_tKcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "throwing": true,
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "encode",
+          "printedName": "encode(to:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Encoder",
+              "printedName": "Swift.Encoder",
+              "usr": "s:s7EncoderP"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V6encode2toys7Encoder_p_tKF",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V6encode2toys7Encoder_p_tKF",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "hashValue",
+          "printedName": "hashValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V9hashValueSivp",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V9hashValueSivp",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V9hashValueSivg",
+              "mangledName": "$s22ArgumentParserToolInfo0cD2V0V9hashValueSivg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "hash",
+          "printedName": "hash(into:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Hasher",
+              "printedName": "Swift.Hasher",
+              "paramValueOwnership": "InOut",
+              "usr": "s:s6HasherV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V4hash4intoys6HasherVz_tF",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V4hash4intoys6HasherVz_tF",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "__derived_struct_equals",
+          "printedName": "__derived_struct_equals(_:_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "ToolInfoV0",
+              "printedName": "ArgumentParserToolInfo.ToolInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "ToolInfoV0",
+              "printedName": "ArgumentParserToolInfo.ToolInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0cD2V0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo0cD2V0V23__derived_struct_equalsySbAC_ACtFZ",
+          "mangledName": "$s22ArgumentParserToolInfo0cD2V0V23__derived_struct_equalsySbAC_ACtFZ",
+          "moduleName": "ArgumentParserToolInfo",
+          "static": true,
+          "implicit": true,
+          "declAttributes": [
+            "Implements"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:22ArgumentParserToolInfo0cD2V0V",
+      "mangledName": "$s22ArgumentParserToolInfo0cD2V0V",
+      "moduleName": "ArgumentParserToolInfo",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Decodable",
+          "printedName": "Decodable",
+          "usr": "s:Se",
+          "mangledName": "$sSe"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Encodable",
+          "printedName": "Encodable",
+          "usr": "s:SE",
+          "mangledName": "$sSE"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "CommandInfoV0",
+      "printedName": "CommandInfoV0",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "superCommands",
+          "printedName": "superCommands",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[Swift.String]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[Swift.String]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V13superCommandsSaySSGSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "commandName",
+          "printedName": "commandName",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvs",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvM",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11commandNameSSvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "abstract",
+          "printedName": "abstract",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V8abstractSSSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "discussion",
+          "printedName": "discussion",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V10discussionSSSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "defaultSubcommand",
+          "printedName": "defaultSubcommand",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V17defaultSubcommandSSSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "subcommands",
+          "printedName": "subcommands",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[ArgumentParserToolInfo.CommandInfoV0]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[ArgumentParserToolInfo.CommandInfoV0]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "CommandInfoV0",
+                      "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+                      "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[ArgumentParserToolInfo.CommandInfoV0]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[ArgumentParserToolInfo.CommandInfoV0]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "CommandInfoV0",
+                          "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+                          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[ArgumentParserToolInfo.CommandInfoV0]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[ArgumentParserToolInfo.CommandInfoV0]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "CommandInfoV0",
+                          "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+                          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V11subcommandsSayACGSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "arguments",
+          "printedName": "arguments",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ArgumentInfoV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 6,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ArgumentInfoV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ArgumentInfoV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V9argumentsSayAA0adF0VGSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(superCommands:commandName:abstract:discussion:defaultSubcommand:subcommands:arguments:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CommandInfoV0",
+              "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[ArgumentParserToolInfo.CommandInfoV0]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "CommandInfoV0",
+                  "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ArgumentInfoV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V13superCommands11commandName8abstract10discussion17defaultSubcommand11subcommands9argumentsACSaySSG_S4SSgSayACGSayAA0adF0VGtcfc",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V13superCommands11commandName8abstract10discussion17defaultSubcommand11subcommands9argumentsACSaySSG_S4SSgSayACGSayAA0adF0VGtcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(from:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "CommandInfoV0",
+              "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Decoder",
+              "printedName": "Swift.Decoder",
+              "usr": "s:s7DecoderP"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V4fromACs7Decoder_p_tKcfc",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V4fromACs7Decoder_p_tKcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "throwing": true,
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "encode",
+          "printedName": "encode(to:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Encoder",
+              "printedName": "Swift.Encoder",
+              "usr": "s:s7EncoderP"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V6encode2toys7Encoder_p_tKF",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V6encode2toys7Encoder_p_tKF",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "hashValue",
+          "printedName": "hashValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V9hashValueSivp",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V9hashValueSivp",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V9hashValueSivg",
+              "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V9hashValueSivg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "hash",
+          "printedName": "hash(into:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Hasher",
+              "printedName": "Swift.Hasher",
+              "paramValueOwnership": "InOut",
+              "usr": "s:s6HasherV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V4hash4intoys6HasherVz_tF",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V4hash4intoys6HasherVz_tF",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "__derived_struct_equals",
+          "printedName": "__derived_struct_equals(_:_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CommandInfoV0",
+              "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "CommandInfoV0",
+              "printedName": "ArgumentParserToolInfo.CommandInfoV0",
+              "usr": "s:22ArgumentParserToolInfo07CommandD2V0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo07CommandD2V0V23__derived_struct_equalsySbAC_ACtFZ",
+          "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V23__derived_struct_equalsySbAC_ACtFZ",
+          "moduleName": "ArgumentParserToolInfo",
+          "static": true,
+          "implicit": true,
+          "declAttributes": [
+            "Implements"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:22ArgumentParserToolInfo07CommandD2V0V",
+      "mangledName": "$s22ArgumentParserToolInfo07CommandD2V0V",
+      "moduleName": "ArgumentParserToolInfo",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Decodable",
+          "printedName": "Decodable",
+          "usr": "s:Se",
+          "mangledName": "$sSe"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Encodable",
+          "printedName": "Encodable",
+          "usr": "s:SE",
+          "mangledName": "$sSE"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "ArgumentInfoV0",
+      "printedName": "ArgumentInfoV0",
+      "children": [
+        {
+          "kind": "TypeDecl",
+          "name": "NameInfoV0",
+          "printedName": "NameInfoV0",
+          "children": [
+            {
+              "kind": "TypeDecl",
+              "name": "KindV0",
+              "printedName": "KindV0",
+              "children": [
+                {
+                  "kind": "Var",
+                  "name": "long",
+                  "printedName": "long",
+                  "children": [
+                    {
+                      "kind": "TypeFunc",
+                      "name": "Function",
+                      "printedName": "(ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0.Type) -> ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "KindV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Metatype",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0.Type",
+                          "children": [
+                            {
+                              "kind": "TypeNominal",
+                              "name": "KindV0",
+                              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "declKind": "EnumElement",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O4longyA2GmF",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O4longyA2GmF",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "declAttributes": [
+                    "RawDocComment"
+                  ],
+                  "fixedbinaryorder": 0
+                },
+                {
+                  "kind": "Var",
+                  "name": "short",
+                  "printedName": "short",
+                  "children": [
+                    {
+                      "kind": "TypeFunc",
+                      "name": "Function",
+                      "printedName": "(ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0.Type) -> ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "KindV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Metatype",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0.Type",
+                          "children": [
+                            {
+                              "kind": "TypeNominal",
+                              "name": "KindV0",
+                              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "declKind": "EnumElement",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O5shortyA2GmF",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O5shortyA2GmF",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "declAttributes": [
+                    "RawDocComment"
+                  ],
+                  "fixedbinaryorder": 1
+                },
+                {
+                  "kind": "Var",
+                  "name": "longWithSingleDash",
+                  "printedName": "longWithSingleDash",
+                  "children": [
+                    {
+                      "kind": "TypeFunc",
+                      "name": "Function",
+                      "printedName": "(ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0.Type) -> ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "KindV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Metatype",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0.Type",
+                          "children": [
+                            {
+                              "kind": "TypeNominal",
+                              "name": "KindV0",
+                              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "declKind": "EnumElement",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O18longWithSingleDashyA2GmF",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O18longWithSingleDashyA2GmF",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "declAttributes": [
+                    "RawDocComment"
+                  ],
+                  "fixedbinaryorder": 2
+                },
+                {
+                  "kind": "Constructor",
+                  "name": "init",
+                  "printedName": "init(rawValue:)",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Optional",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0?",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "KindV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                        }
+                      ],
+                      "usr": "s:Sq"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Constructor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O8rawValueAGSgSS_tcfc",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O8rawValueAGSgSS_tcfc",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Inlinable"
+                  ],
+                  "init_kind": "Designated"
+                },
+                {
+                  "kind": "Var",
+                  "name": "rawValue",
+                  "printedName": "rawValue",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Var",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O8rawValueSSvp",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O8rawValueSSvp",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "accessors": [
+                    {
+                      "kind": "Accessor",
+                      "name": "Get",
+                      "printedName": "Get()",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "declKind": "Accessor",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O8rawValueSSvg",
+                      "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O8rawValueSSvg",
+                      "moduleName": "ArgumentParserToolInfo",
+                      "implicit": true,
+                      "declAttributes": [
+                        "Inlinable"
+                      ],
+                      "accessorKind": "get"
+                    }
+                  ]
+                }
+              ],
+              "declKind": "Enum",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O",
+              "moduleName": "ArgumentParserToolInfo",
+              "declAttributes": [
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "enumRawTypeName": "String",
+              "isEnumExhaustive": true,
+              "conformances": [
+                {
+                  "kind": "Conformance",
+                  "name": "Equatable",
+                  "printedName": "Equatable",
+                  "usr": "s:SQ",
+                  "mangledName": "$sSQ"
+                },
+                {
+                  "kind": "Conformance",
+                  "name": "RawRepresentable",
+                  "printedName": "RawRepresentable",
+                  "children": [
+                    {
+                      "kind": "TypeWitness",
+                      "name": "RawValue",
+                      "printedName": "RawValue",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ]
+                    }
+                  ],
+                  "usr": "s:SY",
+                  "mangledName": "$sSY"
+                },
+                {
+                  "kind": "Conformance",
+                  "name": "Decodable",
+                  "printedName": "Decodable",
+                  "usr": "s:Se",
+                  "mangledName": "$sSe"
+                },
+                {
+                  "kind": "Conformance",
+                  "name": "Encodable",
+                  "printedName": "Encodable",
+                  "usr": "s:SE",
+                  "mangledName": "$sSE"
+                },
+                {
+                  "kind": "Conformance",
+                  "name": "Hashable",
+                  "printedName": "Hashable",
+                  "usr": "s:SH",
+                  "mangledName": "$sSH"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "kind",
+              "printedName": "kind",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "KindV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0Ovp",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0Ovp",
+              "moduleName": "ArgumentParserToolInfo",
+              "declAttributes": [
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 0,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "KindV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0Ovg",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0Ovg",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "KindV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0Ovs",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0Ovs",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0OvM",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4kindAE04KindE0OvM",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "name",
+              "printedName": "name",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvp",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvp",
+              "moduleName": "ArgumentParserToolInfo",
+              "declAttributes": [
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 1,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvg",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvg",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvs",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvs",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvM",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4nameSSvM",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Transparent"
+                  ],
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(kind:name:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NameInfoV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "KindV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0.KindV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V04KindE0O"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4kind4nameA2E04KindE0O_SStcfc",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4kind4nameA2E04KindE0O_SStcfc",
+              "moduleName": "ArgumentParserToolInfo",
+              "declAttributes": [
+                "AccessControl"
+              ],
+              "init_kind": "Designated"
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(from:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NameInfoV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Decoder",
+                  "printedName": "Swift.Decoder",
+                  "usr": "s:s7DecoderP"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4fromAEs7Decoder_p_tKcfc",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4fromAEs7Decoder_p_tKcfc",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "throwing": true,
+              "init_kind": "Designated"
+            },
+            {
+              "kind": "Function",
+              "name": "encode",
+              "printedName": "encode(to:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Encoder",
+                  "printedName": "Swift.Encoder",
+                  "usr": "s:s7EncoderP"
+                }
+              ],
+              "declKind": "Func",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V6encode2toys7Encoder_p_tKF",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V6encode2toys7Encoder_p_tKF",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "throwing": true,
+              "funcSelfKind": "NonMutating"
+            },
+            {
+              "kind": "Var",
+              "name": "hashValue",
+              "printedName": "hashValue",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V9hashValueSivp",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V9hashValueSivp",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Int",
+                      "printedName": "Swift.Int",
+                      "usr": "s:Si"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V9hashValueSivg",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V9hashValueSivg",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Function",
+              "name": "hash",
+              "printedName": "hash(into:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Hasher",
+                  "printedName": "Swift.Hasher",
+                  "paramValueOwnership": "InOut",
+                  "usr": "s:s6HasherV"
+                }
+              ],
+              "declKind": "Func",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V4hash4intoys6HasherVz_tF",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V4hash4intoys6HasherVz_tF",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "funcSelfKind": "NonMutating"
+            },
+            {
+              "kind": "Function",
+              "name": "__derived_struct_equals",
+              "printedName": "__derived_struct_equals(_:_:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "NameInfoV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "NameInfoV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                }
+              ],
+              "declKind": "Func",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V23__derived_struct_equalsySbAE_AEtFZ",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V23__derived_struct_equalsySbAE_AEtFZ",
+              "moduleName": "ArgumentParserToolInfo",
+              "static": true,
+              "implicit": true,
+              "declAttributes": [
+                "Implements"
+              ],
+              "funcSelfKind": "NonMutating"
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04NamedE0V",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "Decodable",
+              "printedName": "Decodable",
+              "usr": "s:Se",
+              "mangledName": "$sSe"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Encodable",
+              "printedName": "Encodable",
+              "usr": "s:SE",
+              "mangledName": "$sSE"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Hashable",
+              "printedName": "Hashable",
+              "usr": "s:SH",
+              "mangledName": "$sSH"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Equatable",
+              "printedName": "Equatable",
+              "usr": "s:SQ",
+              "mangledName": "$sSQ"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "KindV0",
+          "printedName": "KindV0",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "positional",
+              "printedName": "positional",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(ArgumentParserToolInfo.ArgumentInfoV0.KindV0.Type) -> ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "KindV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "KindV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O10positionalyA2EmF",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04KindE0O10positionalyA2EmF",
+              "moduleName": "ArgumentParserToolInfo",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 0
+            },
+            {
+              "kind": "Var",
+              "name": "option",
+              "printedName": "option",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(ArgumentParserToolInfo.ArgumentInfoV0.KindV0.Type) -> ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "KindV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "KindV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O6optionyA2EmF",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04KindE0O6optionyA2EmF",
+              "moduleName": "ArgumentParserToolInfo",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 1
+            },
+            {
+              "kind": "Var",
+              "name": "flag",
+              "printedName": "flag",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(ArgumentParserToolInfo.ArgumentInfoV0.KindV0.Type) -> ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "KindV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Metatype",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0.Type",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "KindV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "declKind": "EnumElement",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O4flagyA2EmF",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04KindE0O4flagyA2EmF",
+              "moduleName": "ArgumentParserToolInfo",
+              "declAttributes": [
+                "RawDocComment"
+              ],
+              "fixedbinaryorder": 2
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(rawValue:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "KindV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O8rawValueAESgSS_tcfc",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04KindE0O8rawValueAESgSS_tcfc",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Inlinable"
+              ],
+              "init_kind": "Designated"
+            },
+            {
+              "kind": "Var",
+              "name": "rawValue",
+              "printedName": "rawValue",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O8rawValueSSvp",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04KindE0O8rawValueSSvp",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O8rawValueSSvg",
+                  "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04KindE0O8rawValueSSvg",
+                  "moduleName": "ArgumentParserToolInfo",
+                  "implicit": true,
+                  "declAttributes": [
+                    "Inlinable"
+                  ],
+                  "accessorKind": "get"
+                }
+              ]
+            }
+          ],
+          "declKind": "Enum",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V04KindE0O",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "enumRawTypeName": "String",
+          "isEnumExhaustive": true,
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "Equatable",
+              "printedName": "Equatable",
+              "usr": "s:SQ",
+              "mangledName": "$sSQ"
+            },
+            {
+              "kind": "Conformance",
+              "name": "RawRepresentable",
+              "printedName": "RawRepresentable",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "RawValue",
+                  "printedName": "RawValue",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:SY",
+              "mangledName": "$sSY"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Decodable",
+              "printedName": "Decodable",
+              "usr": "s:Se",
+              "mangledName": "$sSe"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Encodable",
+              "printedName": "Encodable",
+              "usr": "s:SE",
+              "mangledName": "$sSE"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Hashable",
+              "printedName": "Hashable",
+              "usr": "s:SH",
+              "mangledName": "$sSH"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "kind",
+          "printedName": "kind",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "KindV0",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0Ovp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0Ovp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "KindV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0Ovg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0Ovg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "KindV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0Ovs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0Ovs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0OvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V4kindAC04KindE0OvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "shouldDisplay",
+          "printedName": "shouldDisplay",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13shouldDisplaySbvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isOptional",
+          "printedName": "isOptional",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V10isOptionalSbvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10isOptionalSbvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 2,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V10isOptionalSbvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10isOptionalSbvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V10isOptionalSbvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10isOptionalSbvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V10isOptionalSbvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10isOptionalSbvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isRepeating",
+          "printedName": "isRepeating",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 3,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V11isRepeatingSbvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "names",
+          "printedName": "names",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NameInfoV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 4,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "NameInfoV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "NameInfoV0",
+                          "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                          "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V5namesSayAC04NamedE0VGSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "preferredName",
+          "printedName": "preferredName",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NameInfoV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 5,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NameInfoV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NameInfoV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V13preferredNameAC0gdE0VSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "valueName",
+          "printedName": "valueName",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 6,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9valueNameSSSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "defaultValue",
+          "printedName": "defaultValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 7,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V12defaultValueSSSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "allValues",
+          "printedName": "allValues",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 8,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[Swift.String]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[Swift.String]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9allValuesSaySSGSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "abstract",
+          "printedName": "abstract",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V8abstractSSSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V8abstractSSSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 9,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V8abstractSSSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V8abstractSSSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V8abstractSSSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V8abstractSSSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V8abstractSSSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V8abstractSSSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "discussion",
+          "printedName": "discussion",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V10discussionSSSgvp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10discussionSSSgvp",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "fixedbinaryorder": 10,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V10discussionSSSgvg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10discussionSSSgvg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V10discussionSSSgvs",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10discussionSSSgvs",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V10discussionSSSgvM",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V10discussionSSSgvM",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(kind:shouldDisplay:isOptional:isRepeating:names:preferredName:valueName:defaultValue:allValues:abstract:discussion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ArgumentInfoV0",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "KindV0",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.KindV0",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V04KindE0O"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NameInfoV0",
+                      "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                      "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NameInfoV0",
+                  "printedName": "ArgumentParserToolInfo.ArgumentInfoV0.NameInfoV0",
+                  "usr": "s:22ArgumentParserToolInfo0aD2V0V04NamedE0V"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V4kind13shouldDisplay10isOptional0I9Repeating5names13preferredName05valueN012defaultValue9allValues8abstract10discussionA2C04KindE0O_S3bSayAC0ndE0VGSgARSgSSSgAVSaySSGSgA2Vtcfc",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V4kind13shouldDisplay10isOptional0I9Repeating5names13preferredName05valueN012defaultValue9allValues8abstract10discussionA2C04KindE0O_S3bSayAC0ndE0VGSgARSgSSSgAVSaySSGSgA2Vtcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(from:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ArgumentInfoV0",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Decoder",
+              "printedName": "Swift.Decoder",
+              "usr": "s:s7DecoderP"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V4fromACs7Decoder_p_tKcfc",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V4fromACs7Decoder_p_tKcfc",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "throwing": true,
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Function",
+          "name": "encode",
+          "printedName": "encode(to:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Encoder",
+              "printedName": "Swift.Encoder",
+              "usr": "s:s7EncoderP"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V6encode2toys7Encoder_p_tKF",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V6encode2toys7Encoder_p_tKF",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "hashValue",
+          "printedName": "hashValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V9hashValueSivp",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9hashValueSivp",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V9hashValueSivg",
+              "mangledName": "$s22ArgumentParserToolInfo0aD2V0V9hashValueSivg",
+              "moduleName": "ArgumentParserToolInfo",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "hash",
+          "printedName": "hash(into:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Hasher",
+              "printedName": "Swift.Hasher",
+              "paramValueOwnership": "InOut",
+              "usr": "s:s6HasherV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V4hash4intoys6HasherVz_tF",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V4hash4intoys6HasherVz_tF",
+          "moduleName": "ArgumentParserToolInfo",
+          "implicit": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "__derived_struct_equals",
+          "printedName": "__derived_struct_equals(_:_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "ArgumentInfoV0",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "ArgumentInfoV0",
+              "printedName": "ArgumentParserToolInfo.ArgumentInfoV0",
+              "usr": "s:22ArgumentParserToolInfo0aD2V0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:22ArgumentParserToolInfo0aD2V0V23__derived_struct_equalsySbAC_ACtFZ",
+          "mangledName": "$s22ArgumentParserToolInfo0aD2V0V23__derived_struct_equalsySbAC_ACtFZ",
+          "moduleName": "ArgumentParserToolInfo",
+          "static": true,
+          "implicit": true,
+          "declAttributes": [
+            "Implements"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:22ArgumentParserToolInfo0aD2V0V",
+      "mangledName": "$s22ArgumentParserToolInfo0aD2V0V",
+      "moduleName": "ArgumentParserToolInfo",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Decodable",
+          "printedName": "Decodable",
+          "usr": "s:Se",
+          "mangledName": "$sSe"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Encodable",
+          "printedName": "Encodable",
+          "usr": "s:SE",
+          "mangledName": "$sSE"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

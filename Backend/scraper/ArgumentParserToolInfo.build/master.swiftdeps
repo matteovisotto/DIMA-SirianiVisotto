@@ -1,0 +1,6 @@
+version: "Swift version 5.6 (swift-5.6-RELEASE)"
+options: "2da6b63172565cf43ca19aafaee21915c6aa5efde151546b3c3d84e85475fc12"
+build_start_time: [1649447068, 774142980]
+build_end_time: [1649447071, 173138141]
+inputs:
+  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParserToolInfo/ToolInfo.swift": [1649447031, 144921541]

@@ -1,0 +1,63 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "Scraper"
+    },
+    {
+      "kind": "Import",
+      "name": "ArgumentParser",
+      "printedName": "ArgumentParser",
+      "declKind": "Import",
+      "moduleName": "Scraper"
+    },
+    {
+      "kind": "Import",
+      "name": "FoundationNetworking",
+      "printedName": "FoundationNetworking",
+      "declKind": "Import",
+      "moduleName": "Scraper"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "Scraper",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftSoup",
+      "printedName": "SwiftSoup",
+      "declKind": "Import",
+      "moduleName": "Scraper"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "Scraper",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "FoundationNetworking",
+      "printedName": "FoundationNetworking",
+      "declKind": "Import",
+      "moduleName": "Scraper"
+    }
+  ],
+  "json_format_version": 6
+}
