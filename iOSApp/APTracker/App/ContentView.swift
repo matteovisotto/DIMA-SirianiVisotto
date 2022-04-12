@@ -11,8 +11,14 @@ import FacebookLogin
 import GoogleSignIn
 
 struct ContentView: View {
+    @State var tutorialAlreadySeen: Bool = PreferenceManager.shared.getTutorialAlreadySeen();
+    
     var body: some View {
-        MainView()
+        if (tutorialAlreadySeen) {
+            MainView()
+        } else {
+            TutorialView($tutorialAlreadySeen)
+        }
     }
 }
 

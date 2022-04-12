@@ -17,8 +17,8 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let host = navigationAction.request.url?.host, let urlString = navigationAction.request.url?.absoluteString {
-            if host.contains("amazon") {
-                if(urlString.contains("https://www.amazon") || urlString.contains("https://amazon")){
+            if host.lowercased().contains("amazon") {
+                if(urlString.lowercased().contains("https://www.amazon.") || urlString.lowercased().contains("https://amazon.") ){
                     parent.viewModel.isAProduct = false
                     parent.viewModel.isWebViewLoading = true
                 }

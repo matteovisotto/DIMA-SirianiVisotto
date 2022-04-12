@@ -29,4 +29,12 @@ class PreferenceManager {
     func removeUserIdentity() {
         userDefaults.removeObject(forKey: "userIdentity")
     }
+    
+    func setTutorialAlreadySeen(_ tutorialAlreadySeen: Bool) {
+        userDefaults.set(tutorialAlreadySeen, forKey: "tutorialAlreadySeen")
+    }
+    
+    func getTutorialAlreadySeen() -> Bool {
+        return userDefaults.bool(forKey: "tutorialAlreadySeen")
+    }
 }

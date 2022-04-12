@@ -10,10 +10,12 @@ import SwiftUI
 struct TutorialView: View {
     private let numberOfPages: Int = 2
     @State var currentPage: Int = 1
+    var tutorialAlreadySeen: Binding<Bool>
     
-    init() {
+    init(_ tutorialAlreadySeen: Binding<Bool>) {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(named: "PrimaryLabel")
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(named: "PrimaryLabel")!.withAlphaComponent(0.7)
+        self.tutorialAlreadySeen = tutorialAlreadySeen
     }
     
     var body: some View {
@@ -30,7 +32,8 @@ struct TutorialView: View {
                     Button{
                         let c = self.currentPage
                         if(c == numberOfPages){
-                            //Action to close tutoral
+                            PreferenceManager.shared.setTutorialAlreadySeen(true)
+                            tutorialAlreadySeen.wrappedValue = true
                         } else {
                             self.currentPage = self.currentPage + 1
                         }
@@ -52,6 +55,6 @@ struct TutorialView: View {
 
 struct TutorialView_Previews: PreviewProvider {
     static var previews: some View {
-        TutorialView()
+        TutorialView(.constant(false))
     }
 }
