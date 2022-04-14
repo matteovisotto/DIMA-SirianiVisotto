@@ -9,6 +9,13 @@ import Foundation
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var appState: AppState
+    @ObservedObject var viewModel: HomeViewModel
+
+    init() {
+        self.viewModel = HomeViewModel()
+    }
+    
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible()),
@@ -17,7 +24,8 @@ struct HomeView: View {
         GeometryReader{ geometry in
             ScrollView{
                 VStack(alignment: .leading, spacing: 10){
-                   
+                    
+                    //Text(viewModel.trackingObjects[0].name)
                     ScrollView(.horizontal, showsIndicators: false){
                         LazyHStack{
                             ForEach(0..<100){ index in

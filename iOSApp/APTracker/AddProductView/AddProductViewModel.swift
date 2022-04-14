@@ -35,34 +35,8 @@ class AddProductViewModel: ObservableObject {
         ]
         let taskManager = TaskManager(urlString: AppConstant.addTrackingByUrlURL, method: .POST, parameters: parameters)
         taskManager.executeWithAccessToken(accessToken: AppState.shared.userCredential?.accessToken ?? "") { result, content, data in
-            if(result){
-                    var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
-                    do {
-                        let c = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-                        if let e = c {
-                            if let d = e["exception"] as? String {
-                                message = d
-                            }
-                            if let _ = e["success"] as? String {
-                                DispatchQueue.main.async{
-                                    FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
-                                    }
-                                }
-                                return
-                            }
-                        }
-                    } catch {}
-                    DispatchQueue.main.async {
-                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: message)
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unexpected error occurred", comment: "Unexpected error occurred"))
-                    }
-                }
-
+            self.handleResult(result, content, data)
         }
-        //doAPost(AppConstant.addTrackingByUrlURL, parameters)
     }
     
     func addProduct() -> Void {
@@ -71,64 +45,35 @@ class AddProductViewModel: ObservableObject {
         ]
         let taskManager = TaskManager(urlString: AppConstant.addProductURL, method: .POST, parameters: parameters)
         taskManager.execute { result, content, data in
-            if(result){
-                    var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
-                    do {
-                        let c = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-                        if let e = c {
-                            if let d = e["exception"] as? String {
-                                message = d
-                            }
-                            if let _ = e["success"] as? String {
-                                DispatchQueue.main.async{
-                                    FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
-                                    }
-                                }
-                                return
-                            }
-                        }
-                    } catch {}
-                    DispatchQueue.main.async {
-                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: message)
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unexpected error occurred", comment: "Unexpected error occurred"))
-                    }
-                }
-
+            self.handleResult(result, content, data)
         }
     }
     
-    func doAPost(_ postLink: String,_ parameters: [String: Any]) -> Void {
-        let taskManager = TaskManager(urlString: postLink, method: .POST, parameters: parameters)
-        taskManager.execute { result, content, data in
-            if(result){
-                    var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
-                    do {
-                        let c = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-                        if let e = c {
-                            if let d = e["exception"] as? String {
-                                message = d
-                            }
-                            if let _ = e["success"] as? String {
-                                DispatchQueue.main.async{
-                                    FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
-                                    }
-                                }
-                                return
-                            }
+    func handleResult(_ result: Bool, _ content: String?, _ data: Data?) -> Void {
+        if(result){
+                var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
+                do {
+                    let c = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                    if let e = c {
+                        if let d = e["exception"] as? String {
+                            message = d
                         }
-                    } catch {}
-                    DispatchQueue.main.async {
-                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: message)
+                        if let _ = e["success"] as? String {
+                            DispatchQueue.main.async{
+                                FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
+                                }
+                            }
+                            return
+                        }
                     }
-                } else {
-                    DispatchQueue.main.async {
-                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unexpected error occurred", comment: "Unexpected error occurred"))
-                    }
+                } catch {}
+                DispatchQueue.main.async {
+                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: message)
                 }
-
-        }
+            } else {
+                DispatchQueue.main.async {
+                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unexpected error occurred", comment: "Unexpected error occurred"))
+                }
+            }
     }
 }
