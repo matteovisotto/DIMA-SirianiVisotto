@@ -17,7 +17,9 @@ class AddProductViewModel: ObservableObject {
     @Published var canGoForward: Bool = false
     @Published var shouldReloadWithGivenUrl: Bool = false
     @Published var isWebViewLoading: Bool = false
-    @Published var isAProduct:Bool = false
+    @Published var isAProduct: Bool = false
+    @Published var dropValue: Double = 0.0;
+    @Published var dropKey: String = "none";
     
     var isShown: Binding<Bool>
     
@@ -26,11 +28,51 @@ class AddProductViewModel: ObservableObject {
     }
     
     func addTracking() -> Void {
-        
+        let parameters: [String: Any] = [
+            "token": AppState.shared.userCredential?.accessToken ?? "",
+            "amazonUrl": self.currentUrl,
+            "dropValue": self.dropValue,
+            "dropKey": self.dropKey,
+        ]
+        doAPost(AppConstant.addTrackingByUrlURL, parameters)
     }
     
     func addProduct() -> Void {
-        
+        let parameters: [String: Any] = [
+            "amazonUrl": self.currentUrl,
+        ]
+        doAPost(AppConstant.addProductURL, parameters)
     }
     
+    func doAPost(_ postLink: String,_ parameters: [String: Any]) -> Void {
+        let taskManager = TaskManager(urlString: postLink, method: .POST, parameters: parameters)
+        taskManager.execute { result, content, data in
+            if(result){
+                    var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
+                    do {
+                        let c = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        if let e = c {
+                            if let d = e["exception"] as? String {
+                                message = d
+                            }
+                            if let _ = e["success"] as? String {
+                                DispatchQueue.main.async{
+                                    FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
+                                    }
+                                }
+                                return
+                            }
+                        }
+                    } catch {}
+                    DispatchQueue.main.async {
+                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: message)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unexpected error occurred", comment: "Unexpected error occurred"))
+                    }
+                }
+
+        }
+    }
 }
