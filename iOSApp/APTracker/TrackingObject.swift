@@ -18,6 +18,7 @@ struct TrackingObject: Codable {
     var dropKey: String
     var dropValue: Double
     var images: [String]
-    var prices: [Double]
+    var prices: [Price]?
+    var price: Double?
 }
 

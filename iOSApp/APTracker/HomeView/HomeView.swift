@@ -24,29 +24,13 @@ struct HomeView: View {
         GeometryReader{ geometry in
             ScrollView{
                 VStack(alignment: .leading, spacing: 10){
-                    
-                    //Text(viewModel.trackingObjects[0].name)
                     ScrollView(.horizontal, showsIndicators: false){
-                        LazyHStack{
-                            ForEach(0..<100){ index in
+                        HStack{
+                            ForEach(0..<viewModel.trackingObjects.count, id: \.self){ index in
                                 NavigationLink {
                                     Text("Ciao")
                                 } label: {
-                                    VStack(alignment: .leading, spacing: 0){
-                                        Text("This is the tile").font(.title2)
-                                        ZStack{
-                                            Image("test").resizable().frame(width: geometry.size.width-20, height: 200)
-                                            VStack{
-                                                Spacer()
-                                                ZStack{
-                                                    Color.white.opacity(0.6)
-                                                        .frame(width: geometry.size.width-20, height: 50)
-                                                    Text("200€").foregroundColor(.black).bold()
-                                                }
-                                                
-                                            }
-                                        }
-                                    }
+                                    TrackedProduct(viewModel.trackingObjects[index]).frame(width: geometry.size.width-20, height: 200)
                                 }
                             }
                         }
@@ -61,8 +45,48 @@ struct HomeView: View {
                         Rectangle().frame(width: ((geometry.size.width)-30)/2, height: 120)
                     }
                 }.padding(.horizontal, 10)
+            }.onAppear {
+                if(appState.isUserLoggedIn){
+                    viewModel.loadMyTracking()
+                }
             }
             
+        }
+    }
+}
+
+struct TrackedProduct: View {
+    
+    @ObservedObject var imageLoader:ImageLoader = ImageLoader()
+    @State var image:UIImage = UIImage()
+    @State var product: TrackingObject
+
+    init(_ p: TrackingObject) {
+        self.product = p
+        if let imgUrl = p.images.first {
+            imageLoader.getImage(urlString: imgUrl)
+        }
+    }
+    
+    var body: some View{
+        GeometryReader{ geometry in
+            VStack(alignment: .leading, spacing: 0){
+                Text(product.name).font(.title2)
+                ZStack{
+                    Image(uiImage: image).resizable().scaledToFit().onReceive(imageLoader.didChange) { data in
+                        self.image = UIImage(data: data) ?? UIImage()
+                }
+                    VStack{
+                        Spacer()
+                        ZStack{
+                            Color.white.opacity(0.6)
+                                .frame(height: 50)
+                            Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(.black).bold()
+                        }
+                        
+                    }
+                }
+            }
         }
     }
 }
