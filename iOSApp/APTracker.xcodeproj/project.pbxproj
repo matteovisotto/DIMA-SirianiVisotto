@@ -10,6 +10,9 @@
 		129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3D28086F1000F2C870 /* HomeViewModel.swift */; };
 		129A1A402808702000F2C870 /* TrackingObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3F2808702000F2C870 /* TrackingObject.swift */; };
 		12D7D87027FF7EDF00178DAE /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */; };
+		12F1FE7A280ABB17000BF1B1 /* ChangePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1FE79280ABB17000BF1B1 /* ChangePageView.swift */; };
+		12F84715280B02B10027BFFF /* TabTutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F84714280B02B10027BFFF /* TabTutorialElement.swift */; };
+		12F84717280B20520027BFFF /* SampleTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F84716280B20520027BFFF /* SampleTutorialView.swift */; };
 		6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97727FF6FD9005E3A41 /* AppTabBar.swift */; };
 		6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97927FF709F005E3A41 /* MainViewModel.swift */; };
 		6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97B27FF7503005E3A41 /* MainHeader.swift */; };
@@ -87,6 +90,9 @@
 		129A1A3D28086F1000F2C870 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		129A1A3F2808702000F2C870 /* TrackingObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingObject.swift; sourceTree = "<group>"; };
 		12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
+		12F1FE79280ABB17000BF1B1 /* ChangePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePageView.swift; sourceTree = "<group>"; };
+		12F84714280B02B10027BFFF /* TabTutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTutorialElement.swift; sourceTree = "<group>"; };
+		12F84716280B20520027BFFF /* SampleTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTutorialView.swift; sourceTree = "<group>"; };
 		6631E97727FF6FD9005E3A41 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
 		6631E97927FF709F005E3A41 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6631E97B27FF7503005E3A41 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
@@ -300,6 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				66CC9C062801FB79005935F0 /* TutorialView.swift */,
+				12F1FE79280ABB17000BF1B1 /* ChangePageView.swift */,
+				12F84714280B02B10027BFFF /* TabTutorialElement.swift */,
 			);
 			name = Tutorial;
 			sourceTree = "<group>";
@@ -406,6 +414,7 @@
 				66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */,
 				6631E97727FF6FD9005E3A41 /* AppTabBar.swift */,
 				6631E97B27FF7503005E3A41 /* MainHeader.swift */,
+				12F84716280B20520027BFFF /* SampleTutorialView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -572,6 +581,7 @@
 				66CC9C002801C3C8005935F0 /* WebViewCoordinator.swift in Sources */,
 				66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
+				12F84717280B20520027BFFF /* SampleTutorialView.swift in Sources */,
 				6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */,
 				66D13CFB27FB230F004B2077 /* LoginViewModel.swift in Sources */,
 				666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */,
@@ -603,7 +613,9 @@
 				6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */,
 				66CC9C072801FB79005935F0 /* TutorialView.swift in Sources */,
 				664AF2812808B48B008C7B50 /* Price.swift in Sources */,
+				12F1FE7A280ABB17000BF1B1 /* ChangePageView.swift in Sources */,
 				66CC9BFE2801C392005935F0 /* WebView.swift in Sources */,
+				12F84715280B02B10027BFFF /* TabTutorialElement.swift in Sources */,
 				66BE657E28000BD40077777B /* SettingView.swift in Sources */,
 				66C5131727FD785C000EC52B /* FeedbackAlert.swift in Sources */,
 				66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */,
