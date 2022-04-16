@@ -53,7 +53,7 @@ struct ChangePageView: View {
             }
             .animation(.none, value: dotState)
             
-            if (currentIndex.wrappedValue != 0){
+            /*if (currentIndex.wrappedValue != 0){
                 ZStack{
                     ((dotState == .normal ? tabTutorialElement[currentIndex.wrappedValue].color :
                                     tabTutorialElement[previousIndex].color))
@@ -67,7 +67,7 @@ struct ChangePageView: View {
                     }
                 }
                 .animation(.none, value: dotState)
-            }
+            }*/
             
             Rectangle()
                 .fill(!reachEnd ? (dotState != .normal ? tabTutorialElement[currentIndex.wrappedValue].color :
@@ -103,7 +103,7 @@ struct ChangePageView: View {
                     }
                 )
             
-            if (currentIndex.wrappedValue != 0){
+            /*if (currentIndex.wrappedValue != 0){
                 Rectangle()
                     .fill((dotState != .normal ? tabTutorialElement[currentIndex.wrappedValue].color :
                                             tabTutorialElement[previousIndex].color))
@@ -135,7 +135,7 @@ struct ChangePageView: View {
                             .offset (x: 20, y: -(getSafeArea().bottom + 20))
                         }
                     )
-            }
+            }*/
                 
             Circle()
                 .foregroundColor(Color.black.opacity(0.01))
@@ -204,7 +204,7 @@ struct ChangePageView: View {
                 })
                 .offset (x: -20, y: -(getSafeArea().bottom + 20))
             
-            if (currentIndex.wrappedValue != 0){
+            /*if (currentIndex.wrappedValue != 0){
                 Circle()
                     .foregroundColor(Color.black.opacity(0.01))
                     .frame (width: 80, height: 80)
@@ -264,7 +264,7 @@ struct ChangePageView: View {
                         }
                     })
                     .offset (x: 20, y: -(getSafeArea().bottom + 20))
-            }
+            }*/
         }
         .ignoresSafeArea()
     }
