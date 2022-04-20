@@ -33,6 +33,7 @@ struct TutorialView: View {
                 .padding(25)
             
             Button("Skip"){
+                PreferenceManager.shared.setTutorialAlreadySeen(true)
                 tutorialAlreadySeen.wrappedValue = true
             }
             .font(.system(size: 18, weight: .bold))

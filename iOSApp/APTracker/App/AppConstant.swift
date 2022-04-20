@@ -39,6 +39,7 @@ class AppConstant {
     public static let getAllProductsURL = "https://aptracker.matmacsystem.it/api/product/getAll"
     public static let getProductByIdURL = "https://aptracker.matmacsystem.it/api/product/getById"
     public static let getProductByUrlURL = "https://aptracker.matmacsystem.it/api/product/getByUrl"
+    public static let getMostTracked = "https://aptracker.matmacsystem.it/api/product/getMostTracked"
     
     
     public static let addTrackingByIdURL = "https://aptracker.matmacsystem.it/api/tracking/addById"

@@ -105,7 +105,9 @@ struct ChangePageView: View {
                     if isAnimating {return}
                     
                     if reachEnd {
+                        PreferenceManager.shared.setTutorialAlreadySeen(true)
                         tutorialAlreadySeen.wrappedValue = true
+                        
                         return
                     }
                     

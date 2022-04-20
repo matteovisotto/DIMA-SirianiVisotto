@@ -18,7 +18,7 @@ struct HomeView: View {
     
     let columns = [
             GridItem(.flexible()),
-            GridItem(.flexible()),
+            //GridItem(.flexible()),
         ]
     var body: some View {
         GeometryReader{ geometry in
@@ -41,14 +41,13 @@ struct HomeView: View {
                     Spacer()
                 }.padding(.horizontal)
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach(0..<100){ index in
-                        Rectangle().frame(width: ((geometry.size.width)-30)/2, height: 120)
+                    ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ index in
+                        //var product = viewModel.mostTracked[index]
+                        ProductView(viewModel.mostTracked[index]).frame(width: ((geometry.size.width)-30), height: 120).border(Color.red)
                     }
                 }.padding(.horizontal, 10)
             }.onAppear {
-                if(appState.isUserLoggedIn){
-                    viewModel.loadMyTracking()
-                }
+                viewModel.loadData()
             }
             
         }
@@ -87,6 +86,37 @@ struct TrackedProduct: View {
                     }
                 }
             }
+        }
+    }
+}
+
+struct ProductView: View {
+    
+    @ObservedObject var imageLoader:ImageLoader = ImageLoader()
+    @State var image:UIImage = UIImage()
+    @State var product: Product
+
+    init(_ p: Product) {
+        self.product = p
+        if let imgUrl = p.images.first {
+            imageLoader.getImage(urlString: imgUrl)
+        }
+    }
+    
+    var body: some View{
+        GeometryReader{ geometry in
+            HStack(alignment: .center){
+                Image(uiImage: image).resizable().scaledToFit().frame(width: 80, height: 80).onReceive(imageLoader.didChange) { data in
+                    self.image = UIImage(data: data) ?? UIImage() }
+                Spacer().frame(width: 10)
+                VStack(spacing: 8){
+                    Text(product.name).font(.title3).lineLimit(2)
+                    HStack{
+                        Spacer()
+                    Text("\(product.price ?? 0, specifier: "%.2f") €").font(.title2.bold())
+                    }
+                }
+            }.padding()
         }
     }
 }
