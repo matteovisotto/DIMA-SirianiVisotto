@@ -41,11 +41,10 @@ struct ChangePageView: View {
                 (dotState == .normal ? tabTutorialElement[currentIndex.wrappedValue].color :
                                 tabTutorialElement[nextIndex].color)
                 if dotState == .normal {
-                    //IntroView(tab: tabTutorialElement[currentIndex.wrappedValue])
                     SampleTutorialView($tabTutorialElements[currentIndex.wrappedValue])
                 }
                 else{
-                    //IntroView(tab: tabTutorialElement[nextIndex])
+
                     if (pressRight){
                         SampleTutorialView($tabTutorialElements[nextIndex])
                     }
@@ -53,33 +52,15 @@ struct ChangePageView: View {
             }
             .animation(.none, value: dotState)
             
-            /*if (currentIndex.wrappedValue != 0){
-                ZStack{
-                    ((dotState == .normal ? tabTutorialElement[currentIndex.wrappedValue].color :
-                                    tabTutorialElement[previousIndex].color))
-                    if dotState == .normal {
-                        SampleTutorialView($tabTutorialElements[currentIndex.wrappedValue])
-                    }
-                    else{
-                        if (pressRight){
-                            SampleTutorialView($tabTutorialElements[previousIndex])
-                        }
-                    }
-                }
-                .animation(.none, value: dotState)
-            }*/
-            
             Rectangle()
                 .fill(!reachEnd ? (dotState != .normal ? tabTutorialElement[currentIndex.wrappedValue].color :
                                     tabTutorialElement[nextIndex].color) : Color("BackgroundColor"))
                 .overlay(
                     ZStack{
                         if dotState == .normal {
-                            //IntroView(tab: tabTutorialElement[currentIndex.wrappedValue])
                             SampleTutorialView($tabTutorialElements[currentIndex.wrappedValue])
                         }
                         else{
-                            //IntroView(tab: tabTutorialElement[nextIndex])
                             if (pressRight){
                                 SampleTutorialView($tabTutorialElements[nextIndex])
                             }
@@ -90,7 +71,7 @@ struct ChangePageView: View {
                 
                 .mask(GeometryReader{ proxy in
                     Circle()
-                        .frame(width: 80, height: 80)
+                        .frame(width: 50, height: 50)
                         .scaleEffect(dotScale)
                         .rotation3DEffect(.init(degrees: dotRotation),
                                           axis: (x: 0, y: 1, z: 0),
@@ -102,47 +83,14 @@ struct ChangePageView: View {
                         .offset (x: -20, y: -(getSafeArea().bottom + 20))
                     }
                 )
-            
-            /*if (currentIndex.wrappedValue != 0){
-                Rectangle()
-                    .fill((dotState != .normal ? tabTutorialElement[currentIndex.wrappedValue].color :
-                                            tabTutorialElement[previousIndex].color))
-                    .overlay(
-                        ZStack{
-                            if dotState == .normal {
-                                SampleTutorialView($tabTutorialElements[currentIndex.wrappedValue])
-                            }
-                            else{
-                                if (pressRight){
-                                    SampleTutorialView($tabTutorialElements[previousIndex])
-                                }
-                            }
-                        }
-                    )
-                    .animation(.none, value: dotState)
-                
-                    .mask(GeometryReader{ proxy in
-                        Circle()
-                            .frame(width: 80, height: 80)
-                            .scaleEffect(dotScale)
-                            .rotation3DEffect(.init(degrees: dotRotation),
-                                              axis: (x: 0, y: 1, z: 0),
-                                              anchorZ: dotState == .flipped ? -10 : 10,
-                                              perspective: 1)
-                            .frame(maxWidth: .infinity,
-                                   maxHeight: .infinity,
-                                   alignment: .bottomLeading)
-                            .offset (x: 20, y: -(getSafeArea().bottom + 20))
-                        }
-                    )
-            }*/
                 
             Circle()
                 .foregroundColor(Color.black.opacity(0.01))
-                .frame (width: 80, height: 80)
+                .frame (width: 50, height: 50)
                 .overlay(
                     Image(systemName: reachEnd ? "checkmark" : "arrow.right")
-                        .font(.title)
+                        .resizable()
+                        .frame(width: 18, height: 18)
                         .foregroundColor(Color("BackgroundColorInverse"))
                         .opacity(dotRotation == -180 ? 0 : 1)
                         .animation(.easeInOut,
@@ -204,67 +152,6 @@ struct ChangePageView: View {
                 })
                 .offset (x: -20, y: -(getSafeArea().bottom + 20))
             
-            /*if (currentIndex.wrappedValue != 0){
-                Circle()
-                    .foregroundColor(Color.black.opacity(0.01))
-                    .frame (width: 80, height: 80)
-                    .overlay(
-                        Image(systemName: "arrow.left")
-                            .font(.title)
-                            .foregroundColor(Color("BackgroundColorInverse"))
-                            .opacity(dotRotation == 180 ? 0 : 1)
-                            .animation(.easeInOut,
-                                       value: dotRotation)
-                    )
-                    .frame (maxWidth: .infinity, maxHeight:
-                            .infinity, alignment: .bottomLeading)
-                    .onTapGesture (perform: {
-                        pressLeft = true
-                        pressRight = false
-                        
-                        if isAnimating {return}
-                        
-                        isAnimating = true
-                
-                        withAnimation(.linear(duration: 1.5)){
-                            dotRotation = 180
-                            dotScale = 8
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.725) {
-                            withAnimation(.easeInOut(duration: 0.71)){
-                                dotState = .flipped
-                            }
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                            withAnimation(.easeInOut(duration: 0.5)){
-                                dotScale = 1
-                            }
-                        }
-                        
-                        DispatchQueue.main.asyncAfter(deadline: .now () + 1.3) {
-                            
-                            withAnimation(.easeInOut(duration: 0.5)){
-                                dotRotation = 0
-                                dotState = .normal
-                                nextIndex = currentIndex.wrappedValue
-                                currentIndex.wrappedValue = currentIndex.wrappedValue - 1
-                                if (previousIndex != 0) {
-                                    previousIndex = previousIndex - 1
-                                }
-                                reachEnd = false
-                            }
-                            
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-                                isAnimating = false
-                                pressRight = false
-                                pressLeft = false
-                            }
-                        }
-                    })
-                    .offset (x: 20, y: -(getSafeArea().bottom + 20))
-            }*/
         }
         .ignoresSafeArea()
     }
