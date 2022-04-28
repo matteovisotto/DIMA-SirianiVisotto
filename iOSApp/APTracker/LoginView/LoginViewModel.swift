@@ -7,8 +7,9 @@
 
 import Foundation
 import SwiftUI
+import AuthenticationServices
 
-class LoginViewModel: ObservableObject {
+class LoginViewModel:NSObject, ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var isLoading: Bool = false
@@ -35,9 +36,12 @@ class LoginViewModel: ObservableObject {
     
     func authWithApple() -> Void {
         self.isLoading = true
-        let appleAuth = AppleAuth()
-        appleAuth.delegate = self
-        appleAuth.login()
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.performRequests()
     }
     
     func authLocal() -> Void {
@@ -112,4 +116,41 @@ extension LoginViewModel: LoginDelegate {
         AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: error)
     }
     
+}
+
+extension LoginViewModel: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as?  ASAuthorizationAppleIDCredential {
+            guard let tokenData = appleIDCredential.authorizationCode else {
+                self.didFinishLogin(withError: NSLocalizedString("Unable to find Apple Token", comment: "Unable to find Apple Token"))
+                return
+            }
+            guard let token = String(data: tokenData, encoding: .utf8) else {
+                self.didFinishLogin(withError: NSLocalizedString("Unable to find Apple Token", comment: "Unable to find Apple Token"))
+                return
+            }
+            var givenName = ""
+            var familyName = ""
+            if let name = appleIDCredential.fullName?.givenName{
+                givenName = name
+            }
+            if let surname = appleIDCredential.fullName?.familyName {
+                familyName = surname
+            }
+            
+            //Send the authorization to the backend
+            let taskManager = TaskManager(urlString: AppConstant.appleLoginURL,method: .POST, parameters: ["aToken":token,"givenName":givenName,"familyName":familyName])
+            taskManager.execute {result, content, data in
+                LoginCredential.parseAndDelegate(self, result: result, content: content, data: data)
+            }
+            
+        } else {
+            self.didFinishLogin(withError: NSLocalizedString("Unable to find Apple Credential", comment: "Unable to find Apple Credential"))
+        }
+              
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        self.didFinishLogin(withError: error.localizedDescription)
+    }
 }

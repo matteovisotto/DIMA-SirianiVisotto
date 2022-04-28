@@ -13,7 +13,6 @@
 		12F1FE7A280ABB17000BF1B1 /* ChangePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1FE79280ABB17000BF1B1 /* ChangePageView.swift */; };
 		12F84715280B02B10027BFFF /* TabTutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F84714280B02B10027BFFF /* TabTutorialElement.swift */; };
 		12F84717280B20520027BFFF /* SampleTutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F84716280B20520027BFFF /* SampleTutorialView.swift */; };
-		662F1A9B281A840F00DBEC3E /* AppleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662F1A9A281A840F00DBEC3E /* AppleAuth.swift */; };
 		6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97727FF6FD9005E3A41 /* AppTabBar.swift */; };
 		6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97927FF709F005E3A41 /* MainViewModel.swift */; };
 		6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97B27FF7503005E3A41 /* MainHeader.swift */; };
@@ -95,8 +94,6 @@
 		12F1FE79280ABB17000BF1B1 /* ChangePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePageView.swift; sourceTree = "<group>"; };
 		12F84714280B02B10027BFFF /* TabTutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTutorialElement.swift; sourceTree = "<group>"; };
 		12F84716280B20520027BFFF /* SampleTutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTutorialView.swift; sourceTree = "<group>"; };
-		662F1A99281A838B00DBEC3E /* APTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APTracker.entitlements; sourceTree = "<group>"; };
-		662F1A9A281A840F00DBEC3E /* AppleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuth.swift; sourceTree = "<group>"; };
 		6631E97727FF6FD9005E3A41 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
 		6631E97927FF709F005E3A41 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6631E97B27FF7503005E3A41 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
@@ -153,6 +150,7 @@
 		66D13CFE27FB287F004B2077 /* LoginCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredential.swift; sourceTree = "<group>"; };
 		66D13D0127FB2958004B2077 /* GoogleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
 		66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		66D7077B281AE4550051DCE7 /* APTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APTracker.entitlements; sourceTree = "<group>"; };
 		66D826E328109979007AA1F6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,7 +198,6 @@
 				66D13D0127FB2958004B2077 /* GoogleAuth.swift */,
 				666524CF27FB35F9005C73F3 /* FacebookAuth.swift */,
 				66934AF927FB7F82004DC396 /* LocalAuth.swift */,
-				662F1A9A281A840F00DBEC3E /* AppleAuth.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -350,7 +347,6 @@
 		66D13CBF27FAFD88004B2077 /* APTracker */ = {
 			isa = PBXGroup;
 			children = (
-				662F1A99281A838B00DBEC3E /* APTracker.entitlements */,
 				66CC9C082801FF83005935F0 /* Tutorial */,
 				66CC9C012801C611005935F0 /* AddProductView */,
 				66479305280030CF0068AE91 /* HomeView */,
@@ -370,6 +366,7 @@
 				66D13CF427FB1E68004B2077 /* LoginView */,
 				66D13CC627FAFD95004B2077 /* Preview Content */,
 				66D826E22810996B007AA1F6 /* Entity */,
+				66D7077B281AE4550051DCE7 /* APTracker.entitlements */,
 			);
 			path = APTracker;
 			sourceTree = "<group>";
@@ -611,7 +608,6 @@
 				66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */,
 				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,
 				66742C7627FCCC0A0093EE24 /* UIViewController+Extension.swift in Sources */,
-				662F1A9B281A840F00DBEC3E /* AppleAuth.swift in Sources */,
 				129A1A402808702000F2C870 /* TrackingObject.swift in Sources */,
 				66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */,
 				66CC9C032801C620005935F0 /* AddProductViewModel.swift in Sources */,
