@@ -34,7 +34,10 @@ class LoginViewModel: ObservableObject {
     }
     
     func authWithApple() -> Void {
-        
+        self.isLoading = true
+        let appleAuth = AppleAuth()
+        appleAuth.delegate = self
+        appleAuth.login()
     }
     
     func authLocal() -> Void {
