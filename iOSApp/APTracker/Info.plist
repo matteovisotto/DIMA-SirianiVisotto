@@ -25,5 +25,9 @@
 	<string>5e408dc25d0743a8eb0e4670bf87db4b</string>
 	<key>FacebookDisplayName</key>
 	<string>APTracker</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>
