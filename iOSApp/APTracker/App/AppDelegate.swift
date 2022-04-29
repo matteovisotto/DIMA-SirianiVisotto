@@ -12,14 +12,15 @@ import UIKit
 import Firebase
 
 class AppDelegate: NSObject, UIApplicationDelegate {
+    
+    public static var shared: AppDelegate? = nil
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        AppDelegate.shared = self
         ApplicationDelegate.shared.application(
                    application,
                    didFinishLaunchingWithOptions: launchOptions
                )
-        FirebaseApp.configure()
-        FirebaseConfiguration.shared.setLoggerLevel(.min)
-
         setupRemotePushNotifications()
         return true
     }
@@ -44,7 +45,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         }
 
         func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-            print(error.localizedDescription)
+            DispatchQueue.main.async{
+                AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("unable to register for remote notification", comment: "unable to register for remote notification"))
+            }
         }
 }
 
@@ -56,25 +59,20 @@ extension AppDelegate {
             options: [.alert, .badge, .sound],
             completionHandler: { [weak self] granted, error in
                 if granted {
+                    FirebaseApp.configure()
+                    FirebaseConfiguration.shared.setLoggerLevel(.min)
+                    DispatchQueue.main.async {
+                        AppState.shared.areNotificationsEnabled = true
+                    }
                     self?.getNotificationSettingsAndRegister()
+                    Messaging.messaging().delegate = self
                 } else {
                     DispatchQueue.main.async {
-                        if let window = UIApplication.shared.windows.filter({$0.isKeyWindow}).first {
-                        
-                            let alert = UIAlertController(title: "Notification Access", message: "In order to use this application, turn on notification permissions.", preferredStyle: .alert)
-                            let alertAction = UIAlertAction(title: "Okay", style: .default, handler: nil)
-                            alert.addAction(alertAction)
-                            window.rootViewController?.present(alert, animated: true, completion: nil)
-                        }
+                        AppState.shared.areNotificationsEnabled = false
                     }
                 }
             })
 
-        Messaging.messaging().delegate = self
-
-        UIApplication.shared.registerForRemoteNotifications()
-
-        //processPushToken()
     }
 
     private func getNotificationSettingsAndRegister() {
@@ -89,23 +87,46 @@ extension AppDelegate {
     private func processPushToken() {
         if let deviceId = UIDevice.current.identifierForVendor?.uuidString {
             if let token = Messaging.messaging().fcmToken {
-                let reqParam: [String: Any] = [
-                    "deviceId":deviceId,
-                    "fcmToken":token,
-                    "isLogged":AppState.shared.isUserLoggedIn,
-                    "email":AppState.shared.userIdentity?.email ?? "null"
-                ]
-                let taskManger = TaskManager(urlString: AppConstant.fcmRegistration, method: .POST, parameters: reqParam)
-                taskManger.execute { result, content, data in
-                    if(!result){
-                        DispatchQueue.main.async{
-                            AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("Unable to register the device for notification", comment: "Unable to register the device for notification"))
-                        }
+                /*
+                 Controlli qui per non reinviare al server
+                 */
+                if let fcmToken = PreferenceManager.shared.getFCMToken() {
+                    if(token != fcmToken){
+                        registerPushTokenRemotely(deviceId: deviceId, token: token)
                     }
+                } else {
+                    registerPushTokenRemotely(deviceId: deviceId, token: token)
                 }
+                
             }
         }
         
+    }
+    
+    func registerNotificationRemotlyOnLogin(){
+        if let deviceId = UIDevice.current.identifierForVendor?.uuidString {
+            if let token = Messaging.messaging().fcmToken {
+                registerPushTokenRemotely(deviceId: deviceId, token: token)
+            }
+        }
+    }
+    
+    private func registerPushTokenRemotely(deviceId: String, token: String) -> Void {
+        let reqParam: [String: Any] = [
+            "deviceId":deviceId,
+            "fcmToken":token,
+            "email":AppState.shared.userIdentity?.email ?? "none"
+        ]
+        let taskManger = TaskManager(urlString: AppConstant.fcmRegistration, method: .POST, parameters: reqParam)
+        taskManger.execute { result, content, data in
+            if(!result){
+                DispatchQueue.main.async{
+                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("Unable to register the device for notification", comment: "Unable to register the device for notification"))
+                }
+            } else {
+                PreferenceManager.shared.setCurrentFCMToken(fcmToken: token)
+            }
+        }
     }
 }
 

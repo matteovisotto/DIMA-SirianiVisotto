@@ -15,6 +15,7 @@ class AppState: ObservableObject {
     @Published var isUserLoggedIn: Bool = false
     var userCredential: LoginCredential? = nil
     @Published var userIdentity: UserIdentity? = nil
+    @Published var areNotificationsEnabled = false
     
     init() {
         reloadState()
@@ -38,7 +39,8 @@ class AppState: ObservableObject {
             if let rToken = credential.refreshToken {
             let parameters: [String: Any] = [
                 "token": credential.accessToken,
-                "refreshToken": rToken
+                "refreshToken": rToken,
+                "deviceId": UIDevice.current.identifierForVendor?.uuidString ?? ""
             ]
             let taskManager = TaskManager(urlString: AppConstant.logoutURL, method: .POST, parameters: parameters)
             taskManager.execute { result, content, data in

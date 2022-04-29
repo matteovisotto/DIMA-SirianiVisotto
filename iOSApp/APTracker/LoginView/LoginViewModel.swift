@@ -84,6 +84,7 @@ extension LoginViewModel: LoginDelegate {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                         self.isLoading = false
                         AppState.shared.reloadState()
+                        AppDelegate.shared?.registerNotificationRemotlyOnLogin()
                         self.isPresented.wrappedValue = false
                     }
                 } catch {

@@ -37,4 +37,12 @@ class PreferenceManager {
     func getTutorialAlreadySeen() -> Bool {
         return userDefaults.bool(forKey: "tutorialAlreadySeen")
     }
+    
+    func setCurrentFCMToken(fcmToken: String) -> Void {
+        userDefaults.set(fcmToken, forKey: "fcmToken")
+    }
+    
+    func getFCMToken() -> String? {
+        return userDefaults.string(forKey: "fcmToken")
+    }
 }
