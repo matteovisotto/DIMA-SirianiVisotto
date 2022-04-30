@@ -20,13 +20,22 @@ struct CommentView: View {
                     ForEach(0..<(viewModel.comments?.numberOfComments ?? 0), id: \.self){ index in
                         if(index == 0){
                             CommentCell(comment: viewModel.comments!.comments[index], isFirst: true) {
+                                EditCommentAlertViewController.present(comment: viewModel.comments!.comments[index].comment) { comment in
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        viewModel.updateComment(cId: viewModel.comments!.comments[index].id, text: comment)
+                                    }
+                                }
                                 
                             } onDelete: {
                                 viewModel.deleteComment(cId: viewModel.comments!.comments[index].id)
                             }
                         } else {
                             CommentCell(comment: viewModel.comments!.comments[index]){
-                                
+                                EditCommentAlertViewController.present(comment: viewModel.comments!.comments[index].comment) { comment in
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                        viewModel.updateComment(cId: viewModel.comments!.comments[index].id, text: comment)
+                                    }
+                                }
                             } onDelete: {
                                 viewModel.deleteComment(cId: viewModel.comments!.comments[index].id)
                             }

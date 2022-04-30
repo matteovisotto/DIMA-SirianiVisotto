@@ -70,8 +70,26 @@ struct ProductView: View {
                 VStack{
                     HStack{
                         Spacer()
-                        Button{
-                           
+                        Menu {
+                         // TODO:- Add if user is tracking the product or else
+                            Button {
+                                
+                            } label: {
+                                Label("Start tracking", systemImage: "plus")
+                            }
+                            
+                            Button {
+                                
+                            } label: {
+                                Label("Edit", systemImage: "pencil")
+                            }
+                            
+                            Button {
+                                
+                            } label: {
+                                Label("Stop tracking", systemImage: "minus")
+                            }
+                            
                         } label: {
                             Image(systemName: "doc.badge.gearshape").font(.title3.bold())
                         }.foregroundColor(Color("PrimaryLabel"))

@@ -170,4 +170,41 @@ class ProductViewModel: ObservableObject {
         }
     }
     
+    func updateComment(cId: Int, text: String) {
+        let param: [String: Any] = [
+            "commentId": cId,
+            "text": text
+        ]
+        let taskMenager = TaskManager(urlString: AppConstant.updateCommentURL, method: .POST, parameters: param)
+        taskMenager.executeWithAccessToken { result, content, data in
+            if(result){
+                    var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
+                    do {
+                        let c = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        if let e = c {
+                            if let d = e["exception"] as? String {
+                                message = d
+                            }
+                            if let _ = e["success"] as? String {
+                                DispatchQueue.main.async{
+                                    FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
+                                        self.newCommentText = ""
+                                        self.loadComments()
+                                    }
+                                }
+                                return
+                            }
+                        }
+                    } catch {}
+                    DispatchQueue.main.async {
+                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: message)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unexpected error occurred", comment: "Unexpected error occurred"))
+                    }
+                }
+        }
+    }
+    
 }
