@@ -43,7 +43,7 @@ class TrackingSettingViewModel: ObservableObject {
     
     func validateSettings() -> Bool {
         if(dropKey != "none" && dropKey != "always"){
-            return dropValue != "0"
+            return dropValue != "0" && dropValue != "0.0"
         }
         return true
     }

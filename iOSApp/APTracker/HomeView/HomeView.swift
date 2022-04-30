@@ -28,7 +28,7 @@ struct HomeView: View {
                         HStack{
                             ForEach(0..<viewModel.trackingObjects.count, id: \.self){ index in
                                 NavigationLink {
-                                    Text("Ciao")
+                                    ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
                                 } label: {
                                     TrackedProduct(viewModel.trackingObjects[index]).frame(width: geometry.size.width-20, height: 200)
                                 }
@@ -42,8 +42,12 @@ struct HomeView: View {
                 }.padding(.horizontal)
                 LazyVGrid(columns: columns, spacing: 10) {
                     ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ index in
-                        //var product = viewModel.mostTracked[index]
-                        ProductView(viewModel.mostTracked[index]).frame(width: ((geometry.size.width)-30), height: 120).border(Color.red)
+                        NavigationLink{
+                            ProductView(product: viewModel.mostTracked[index])
+                        } label: {
+                            SingleProductView(viewModel.mostTracked[index]).frame(width: ((geometry.size.width)-30), height: 120).border(Color.red)
+                        }
+                        
                     }
                 }.padding(.horizontal, 10)
             }.onAppear {
@@ -90,7 +94,7 @@ struct TrackedProduct: View {
     }
 }
 
-struct ProductView: View {
+struct SingleProductView: View {
     
     @ObservedObject var imageLoader:ImageLoader = ImageLoader()
     @State var image:UIImage = UIImage()

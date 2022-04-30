@@ -15,4 +15,8 @@ struct Product: Codable {
     var images: [String]
     var prices: [Price]?
     var price: Double?
+    
+    public static func fromTracked(_ p: TrackingObject) -> Product {
+        return Product(id: p.id, name: p.name, description: p.description, link: p.link, images: p.images, prices: p.prices, price: p.price)
+    }
 }
