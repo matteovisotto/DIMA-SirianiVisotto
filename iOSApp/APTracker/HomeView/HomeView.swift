@@ -22,7 +22,7 @@ struct HomeView: View {
         ]
     var body: some View {
         GeometryReader{ geometry in
-            ScrollView{
+            ScrollView(.vertical, showsIndicators: false){
                 VStack(alignment: .leading, spacing: 10){
                     ScrollView(.horizontal, showsIndicators: false){
                         HStack{
@@ -50,12 +50,10 @@ struct HomeView: View {
                         
                     }
                 }.padding(.horizontal, 10)
-            }.onAppear {
-                viewModel.loadData()
-            }
-            
-        }
+            }.onAppear(perform: viewModel.loadData)
     }
+    
+}
 }
 
 struct TrackedProduct: View {

@@ -84,6 +84,8 @@
 		66D826E428109979007AA1F6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D826E328109979007AA1F6 /* Product.swift */; };
 		66DA7E60281D9E9100B04036 /* PriceServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA7E5F281D9E9100B04036 /* PriceServerResponse.swift */; };
 		66DA7E62281DA96A00B04036 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA7E61281DA96A00B04036 /* DetailView.swift */; };
+		66DA7E64281DB0F100B04036 /* ProductComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA7E63281DB0F100B04036 /* ProductComments.swift */; };
+		66DA7E66281DB1BF00B04036 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA7E65281DB1BF00B04036 /* CommentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +182,8 @@
 		66D826E328109979007AA1F6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		66DA7E5F281D9E9100B04036 /* PriceServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceServerResponse.swift; sourceTree = "<group>"; };
 		66DA7E61281DA96A00B04036 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		66DA7E63281DB0F100B04036 /* ProductComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductComments.swift; sourceTree = "<group>"; };
+		66DA7E65281DB1BF00B04036 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,7 @@
 				66375634281D86AA00DCECB3 /* ProductViewModel.swift */,
 				6637563C281D987A00DCECB3 /* PriceView.swift */,
 				66DA7E61281DA96A00B04036 /* DetailView.swift */,
+				66DA7E65281DB1BF00B04036 /* CommentView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -499,6 +504,7 @@
 				664AF2802808B48B008C7B50 /* Price.swift */,
 				66D826E328109979007AA1F6 /* Product.swift */,
 				66DA7E5F281D9E9100B04036 /* PriceServerResponse.swift */,
+				66DA7E63281DB0F100B04036 /* ProductComments.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -663,6 +669,7 @@
 				66CC9C002801C3C8005935F0 /* WebViewCoordinator.swift in Sources */,
 				66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
+				66DA7E64281DB0F100B04036 /* ProductComments.swift in Sources */,
 				12F84717280B20520027BFFF /* SampleTutorialView.swift in Sources */,
 				6605EDDF281D8390001D2A49 /* MenuBar.swift in Sources */,
 				6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */,
@@ -690,6 +697,7 @@
 				66375635281D86AA00DCECB3 /* ProductViewModel.swift in Sources */,
 				66C552EA27FC428E00F5715E /* SocialSmallButton.swift in Sources */,
 				66742C6B27FCAD450093EE24 /* IconSecureTextField.swift in Sources */,
+				66DA7E66281DB1BF00B04036 /* CommentView.swift in Sources */,
 				66A06764281D1A55002C479C /* UserProfileViewModel.swift in Sources */,
 				66D13CF627FB1E74004B2077 /* LoginView.swift in Sources */,
 				66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */,

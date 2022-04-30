@@ -37,7 +37,7 @@ struct ProductView: View {
                         if(viewModel.selectedTab=="price"){
                             PriceView(viewModel: viewModel)
                         } else if(viewModel.selectedTab == "comment"){
-                            EmptyView()
+                            CommentView(viewModel: viewModel)
                         } else if(viewModel.selectedTab == "detail"){
                             DetailView(viewModel: viewModel)
                         }

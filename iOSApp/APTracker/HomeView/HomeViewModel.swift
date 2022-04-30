@@ -13,7 +13,7 @@ class HomeViewModel: ObservableObject {
     @Published var mostTracked: [Product] = []
     
     init() {
-        
+        loadData()
     }
     
     private func loadMyTracking() {
