@@ -45,4 +45,20 @@ class PreferenceManager {
     func getFCMToken() -> String? {
         return userDefaults.string(forKey: "fcmToken")
     }
+    
+    func setDropKey(_ dropKey: String) -> Void {
+        userDefaults.set(dropKey, forKey: "dropKey")
+    }
+    
+    func setDropValue(_ dropValue: Double) -> Void {
+        userDefaults.set(dropValue, forKey: "dropValue")
+    }
+    
+    func getDropKey() -> String {
+        return userDefaults.string(forKey: "dropKey") ?? "always"
+    }
+    
+    func getDropValue() -> Double {
+        return userDefaults.double(forKey: "dropValue") 
+    }
 }

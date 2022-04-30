@@ -59,8 +59,15 @@ struct AddProductView: View {
                     }.disabled(!viewModel.canGoForward)
                         .foregroundColor(viewModel.canGoForward ? Color("AmazonText") : Color("AmazonText").opacity(0.5))
                 }.padding(.horizontal)
-                    .padding(.top)
+                    .padding(.top, 15)
+                    .padding(.bottom, 15)
                     
+            }
+            if(viewModel.showLoader){
+                ZStack{
+                    Color("LabelColor").opacity(0.4)
+                    ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color("BackgroundColor"))).scaleEffect(x: 2, y: 2, anchor: .center)
+                }.ignoresSafeArea()
             }
         }
     }

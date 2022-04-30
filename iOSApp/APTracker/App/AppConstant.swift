@@ -51,6 +51,8 @@ class AppConstant {
     
     
     public static let userDataURL = "https://aptracker.matmacsystem.it/api/user/me"
+    public static let updateUserProfile = "https://aptracker.matmacsystem.it/api/user/updateProfile"
+    public static let changeUserPassword = "https://aptracker.matmacsystem.it/api/user/changePassword"
     
     public static let fcmRegistration = "https://aptracker.matmacsystem.it/api/notification/registerDevice"
 }

@@ -9,31 +9,93 @@ import SwiftUI
 
 struct UserProfileView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @ObservedObject var viewModel = UserProfileViewModel()
+    
     var body: some View {
         ZStack{
             Color("BackgroundColor").ignoresSafeArea()
-            VStack{
-                HStack{
-                    Button{
-                        mode.wrappedValue.dismiss()
-                    } label: {
-                        Image(systemName: "arrow.left").font(.title3.bold())
-                    }.foregroundColor(Color("PrimaryLabel"))
-                    Spacer()
+            GeometryReader{ geom in
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack{
+                        HStack{
+                            Button{
+                                mode.wrappedValue.dismiss()
+                            } label: {
+                                Image(systemName: "arrow.left").font(.title3.bold())
+                            }.foregroundColor(Color("PrimaryLabel"))
+                            Spacer()
+                        }
+                        Spacer().frame(height: 8)
+                        HStack{
+                            Text("Profile").font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
+                            Spacer()
+                        }
+                        VStack(spacing: 10){
+                            IconTextField(titleKey: "Name", text: $viewModel.name, icon: Image(systemName: "person"), foregroundColor: Color("PrimaryLabel")) { text in
+                                return !(text.isEmpty || text == "")
+                            }
+                            IconTextField(titleKey: "Surname", text: $viewModel.surname, icon: Image(systemName: "person"), foregroundColor: Color("PrimaryLabel")) { text in
+                                return !(text.isEmpty || text == "")
+                            }
+                            IconTextField(titleKey: "Username", text: $viewModel.username, icon: Image(systemName: "person"), foregroundColor: Color("PrimaryLabel")) { text in
+                                return !(text.isEmpty || text == "")
+                            }
+                            HStack{
+                                Spacer()
+                                Button{
+                                    viewModel.updateProfile()
+                                } label: {
+                                    Text("Save").bold()
+                                        .padding(.vertical, 3)
+                                    
+                                }.frame(width: (geom.size.width-40)/2)
+                            .padding(.vertical, 7)
+                            .background(Color("Primary"))
+                            .foregroundColor(Color.white)
+                            .cornerRadius(15)
+                            .disabled(!viewModel.validateUserData())
+                            .opacity(!viewModel.validateUserData() ? 0.5 : 1)
+                            }
+                            .padding(.top)
+                            Collapsible {
+                                Text("Change password")
+                            } content: {
+                                VStack(spacing: 10){
+                                    IconSecureTextField(titleKey: "Old Password", text: $viewModel.oldPassword, icon: Image(systemName: "lock"), foregroundColor: Color("PrimaryLabel"))
+                                    IconSecureTextField(titleKey: "Password", text: $viewModel.password, icon: Image(systemName: "lock"), foregroundColor: Color("PrimaryLabel"))
+                                    IconSecureTextField(titleKey: "Confirm password", text: $viewModel.passwordCnf, icon: Image(systemName: "lock"), foregroundColor: Color("PrimaryLabel"))
+                                    Text("If you have created your account using socials, you need to reset your password to enable APTracker local login").font(.caption)
+                                    HStack{
+                                        Spacer()
+                                        Button{
+                                            viewModel.changePassword()
+                                        } label: {
+                                            Text("Change").bold()
+                                                .padding(.vertical, 3)
+                                            
+                                        }.frame(width: (geom.size.width-40)/2)
+                                    .padding(.vertical, 7)
+                                    .background(Color("Primary"))
+                                    .foregroundColor(Color.white)
+                                    .cornerRadius(15)
+                                    .disabled(!viewModel.validatePassword())
+                                    .opacity(!viewModel.validatePassword() ? 0.5 : 1)
+                                    }
+                                    .padding(.top)
+                                }
+                            }.padding(.top)
+
+                            
+                        }
+                        Spacer()
+                    }.padding()
                 }
-                Spacer().frame(height: 8)
-                HStack{
-                    Text("Profile").font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
-                    Spacer()
-                }
-                Spacer() //Content Here
-            }.padding()
+            }
+            
         }.navigationBarHidden(true)
+            .onAppear {
+                viewModel.onAppear()
+            }
     }
 }
 
-struct UserProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserProfileView()
-    }
-}

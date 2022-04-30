@@ -21,6 +21,8 @@ class AddProductViewModel: ObservableObject {
     @Published var dropValue: Double = 0.0;
     @Published var dropKey: String = "none";
     
+    @Published var showLoader: Bool = false
+    
     var isShown: Binding<Bool>
     
     init(isShown: Binding<Bool>) {
@@ -28,10 +30,11 @@ class AddProductViewModel: ObservableObject {
     }
     
     func addTracking() -> Void {
+        self.showLoader = true
         let parameters: [String: Any] = [
             "amazonUrl": self.currentUrl,
-            "dropValue": self.dropValue,
-            "dropKey": self.dropKey,
+            "dropValue": "\(PreferenceManager.shared.getDropValue())",
+            "dropKey": PreferenceManager.shared.getDropKey(),
         ]
         let taskManager = TaskManager(urlString: AppConstant.addTrackingByUrlURL, method: .POST, parameters: parameters)
         taskManager.executeWithAccessToken(accessToken: AppState.shared.userCredential?.accessToken ?? "") { result, content, data in
@@ -40,6 +43,7 @@ class AddProductViewModel: ObservableObject {
     }
     
     func addProduct() -> Void {
+        self.showLoader = true
         let parameters: [String: Any] = [
             "amazonUrl": self.currentUrl,
         ]
@@ -50,6 +54,9 @@ class AddProductViewModel: ObservableObject {
     }
     
     func handleResult(_ result: Bool, _ content: String?, _ data: Data?) -> Void {
+        DispatchQueue.main.async{
+            self.showLoader = false
+        }
         if(result){
                 var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
                 do {
