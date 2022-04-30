@@ -138,5 +138,20 @@ function getAllProductsLastPrice() {
 	return $r;
 }
 
+function getMostTracked($limit){
+	$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id GROUP BY a.productId ORDER BY n.nTrackers DESC LIMIT ?";
+	$db = getDatabaseConnection();
+	$stmt = $db->prepare($sql);
+	$stmt->bind_param("i", $limit);
+	$stmt->execute();
+	$result = $stmt->get_result();
+	$stmt->close();
+	$r = array();
+	while($row = $result->fetch_assoc()){
+    	$row['images'] = getProductImagesByProductId($row['id']);
+    	$r[] = $row;
+    }
+	return $r;
+}
 
 ?>

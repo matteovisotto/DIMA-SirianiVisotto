@@ -16,6 +16,10 @@ Route::get("/docs", function(){
 	include HOME_DIR."docs.php";
 });
 
+Route::get("/privacyPolicy", function(){
+	include HOME_DIR."policy.php";
+});
+
 Route::post("/register", function(){
 	header('Content-type: application/json');
 	include HOME_DIR."controller/registerController.php";
