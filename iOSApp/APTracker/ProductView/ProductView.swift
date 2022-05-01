@@ -73,8 +73,7 @@ struct ProductView: View {
                         Menu {
                             if(viewModel.trackedStatus?.tracked ?? false){
                                 Button {
-                                    viewModel.updateTracking()
-                                    viewModel.trackedStatus?.tracked = true;
+                                    viewModel.openSetting = true
                                 } label: {
                                     Label("Edit", systemImage: "pencil")
                                 }
@@ -101,6 +100,16 @@ struct ProductView: View {
                     .padding(.vertical, 10)
             }
         }.navigationBarHidden(true)
+            .sheet(isPresented: $viewModel.openSetting) {
+                //if let binding = Binding<TrackingStatus>($viewModel.trackedStatus){
+                UpdateTrackingView(isOpen: $viewModel.openSetting, status: Binding($viewModel.trackedStatus)!) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                            self.viewModel.updateTracking()
+                        }
+                        
+                    }
+                //}
+            }
     }
 }
 

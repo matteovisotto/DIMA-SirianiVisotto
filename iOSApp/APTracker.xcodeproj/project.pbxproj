@@ -62,6 +62,7 @@
 		66C3C5D5281E80B4006393E4 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5D4281E80B4006393E4 /* ExploreView.swift */; };
 		66C3C5D7281E80F6006393E4 /* SingleProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5D6281E80F6006393E4 /* SingleProductView.swift */; };
 		66C3C5D9281E812C006393E4 /* TrackedProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5D8281E812C006393E4 /* TrackedProductView.swift */; };
+		66C3C5DB281ECF07006393E4 /* UpdateTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5DA281ECF07006393E4 /* UpdateTrackingView.swift */; };
 		66C5131727FD785C000EC52B /* FeedbackAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5131627FD785C000EC52B /* FeedbackAlert.swift */; };
 		66C552E827FC41BF00F5715E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C552E727FC41BF00F5715E /* Launch Screen.storyboard */; };
 		66C552EA27FC428E00F5715E /* SocialSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C552E927FC428E00F5715E /* SocialSmallButton.swift */; };
@@ -165,6 +166,7 @@
 		66C3C5D4281E80B4006393E4 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		66C3C5D6281E80F6006393E4 /* SingleProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProductView.swift; sourceTree = "<group>"; };
 		66C3C5D8281E812C006393E4 /* TrackedProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedProductView.swift; sourceTree = "<group>"; };
+		66C3C5DA281ECF07006393E4 /* UpdateTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTrackingView.swift; sourceTree = "<group>"; };
 		66C5131627FD785C000EC52B /* FeedbackAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAlert.swift; sourceTree = "<group>"; };
 		66C552E727FC41BF00F5715E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		66C552E927FC428E00F5715E /* SocialSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSmallButton.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				6637563C281D987A00DCECB3 /* PriceView.swift */,
 				66DA7E61281DA96A00B04036 /* DetailView.swift */,
 				66DA7E65281DB1BF00B04036 /* CommentView.swift */,
+				66C3C5DA281ECF07006393E4 /* UpdateTrackingView.swift */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -731,6 +734,7 @@
 				664AF2832808B75F008C7B50 /* ImageLoader.swift in Sources */,
 				66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */,
 				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,
+				66C3C5DB281ECF07006393E4 /* UpdateTrackingView.swift in Sources */,
 				66742C7627FCCC0A0093EE24 /* UIViewController+Extension.swift in Sources */,
 				129A1A402808702000F2C870 /* TrackedProduct.swift in Sources */,
 				66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */,

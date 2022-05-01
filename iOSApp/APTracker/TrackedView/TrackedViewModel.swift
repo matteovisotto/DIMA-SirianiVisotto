@@ -12,7 +12,12 @@ class TrackedViewModel: ObservableObject {
     
     var showLogin: Binding<Bool>
     @Published var trackingObjects: [TrackedProduct] = []
+    @Published var searchingObjects: [TrackedProduct] = []
+    
     @Published var isLoading: Bool = false
+    
+    @Published var isSearching: Bool = false
+    @Published var searchText: String = ""
     
     init(showLogin: Binding<Bool>){
         self.showLogin = showLogin
@@ -65,5 +70,15 @@ class TrackedViewModel: ObservableObject {
         if(AppState.shared.isUserLoggedIn){
             self.loadMyTracking()
         }
+    }
+    
+    func performSearch() {
+        self.searchingObjects.removeAll()
+        DispatchQueue.main.async {
+            self.searchingObjects = self.trackingObjects.filter { obj in
+                obj.name.range(of: self.searchText, options: .caseInsensitive) != nil
+            }
+        }
+        
     }
 }

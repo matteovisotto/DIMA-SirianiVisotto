@@ -22,6 +22,18 @@ struct TrackedView: View {
         ]
     
     var body: some View {
+        let searchTextProxy = Binding<String>(get: {
+                    viewModel.searchText
+                }, set: {
+                    viewModel.searchText = $0
+                    if($0 == ""){
+                        viewModel.isSearching = false
+                    } else {
+                        viewModel.isSearching = true
+                        viewModel.performSearch()
+                    }
+                })
+        
         ZStack{
             Color("BackgroundColor").ignoresSafeArea(.all)
             if(!appState.isUserLoggedIn){
@@ -38,20 +50,48 @@ struct TrackedView: View {
                 }
             } else {
                 ZStack{
-                        GeometryReader{ geometry in
-                            ScrollView(.vertical, showsIndicators: false){
-                                LazyVGrid(columns: columns, spacing: 10) {
-                                    ForEach(0 ..< viewModel.trackingObjects.count, id: \.self){ index in
-                                        NavigationLink{
-                                            ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
-                                        } label: {
-                                            TrackedProductView(viewModel.trackingObjects[index]).frame(width: ((geometry.size.width)-30), height: 120).border(Color.red)
+                    VStack{
+                        HStack{
+                            Image(systemName: "magnifyingglass")
+                            TextField("Search", text: searchTextProxy)
+                            if(viewModel.isSearching){
+                                Button{
+                                    viewModel.searchText = ""
+                                    viewModel.isSearching = false
+                                } label: {
+                                    Image(systemName: "multiply")
+                                }
+                            }
+                        }.padding(.horizontal)
+                            .padding(.vertical, 5)
+                            .background(Color("BackgroundColorInverse").opacity(0.2)).foregroundColor(Color("PrimaryLabel"))
+                            .cornerRadius(10)
+                            GeometryReader{ geometry in
+                                ScrollView(.vertical, showsIndicators: false){
+                                    VStack(spacing: 10) {
+                                        if(viewModel.isSearching){
+                                            ForEach(0 ..< viewModel.searchingObjects.count, id: \.self){ index in
+                                                NavigationLink{
+                                                    ProductView(product: Product.fromTracked(viewModel.searchingObjects[index]))
+                                                } label: {
+                                                    TrackedProductView(viewModel.searchingObjects[index]).frame(height: 120).border(Color.red)
+                                                }
+                                            }
+                                        } else {
+                                            ForEach(0 ..< viewModel.trackingObjects.count, id: \.self){ index in
+                                                NavigationLink{
+                                                    ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
+                                                } label: {
+                                                    TrackedProductView(viewModel.trackingObjects[index]).frame(height: 120).border(Color.red)
+                                                }
+                                                
+                                            }
                                         }
                                         
                                     }
-                                }.padding(.horizontal, 10)
-                            }.onAppear(perform: viewModel.loadData)
-                    }
+                                }.onAppear(perform: viewModel.loadData)
+                            }
+                    }.padding()
                     if(viewModel.isLoading){
                         LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
                     }

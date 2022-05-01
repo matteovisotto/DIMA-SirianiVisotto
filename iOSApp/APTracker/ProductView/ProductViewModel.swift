@@ -21,6 +21,8 @@ class ProductViewModel: ObservableObject {
     
     @Published var isLoading: Bool = false
     
+    @Published var openSetting: Bool = false
+    
     init(product: Product){
         self.product = product
         if let ps = product.prices {
@@ -244,13 +246,15 @@ class ProductViewModel: ObservableObject {
     
     func startTracking() -> Void {
         let parameters: [String: Any] = [
-            "amazonUrl": self.product.link,
+            "id": self.product.id,
             "dropValue": "\(PreferenceManager.shared.getDropValue())",
             "dropKey": PreferenceManager.shared.getDropKey(),
         ]
-        let taskManager = TaskManager(urlString: AppConstant.addTrackingByUrlURL, method: .POST, parameters: parameters)
+        let taskManager = TaskManager(urlString: AppConstant.addTrackingByIdURL, method: .POST, parameters: parameters)
         taskManager.executeWithAccessToken(accessToken: AppState.shared.userCredential?.accessToken ?? "") { result, content, data in
-            self.handleResult(result, content, data)
+            self.handleResult(result, content, data){
+                self.getTrackedStatus()
+            }
         }
     }
     
@@ -260,24 +264,28 @@ class ProductViewModel: ObservableObject {
         ]
         let taskManager = TaskManager(urlString: AppConstant.removeTrackingURL, method: .POST, parameters: parameters)
         taskManager.executeWithAccessToken(accessToken: AppState.shared.userCredential?.accessToken ?? "") { result, content, data in
-            self.handleResult(result, content, data)
+            self.handleResult(result, content, data) {
+                self.getTrackedStatus()
+            }
         }
     }
     
     func updateTracking() -> Void {
         let parameters: [String: Any] = [
             "productId": self.product.id,
-            "dropValue": "\(PreferenceManager.shared.getDropValue())",
-            "dropKey": PreferenceManager.shared.getDropKey(),
+            "dropValue": "\(self.trackedStatus?.dropValue ?? 0)",
+            "dropKey": self.trackedStatus?.dropKey ?? "always",
         ]
         let taskManager = TaskManager(urlString: AppConstant.updateTrackingURL, method: .POST, parameters: parameters)
         taskManager.executeWithAccessToken(accessToken: AppState.shared.userCredential?.accessToken ?? "") { result, content, data in
-            self.handleResult(result, content, data)
+            self.handleResult(result, content, data) {
+                self.getTrackedStatus()
+            }
         }
     }
     
     
-    func handleResult(_ result: Bool, _ content: String?, _ data: Data?) -> Void {
+    func handleResult(_ result: Bool, _ content: String?, _ data: Data?, callback: @escaping () -> ()) -> Void {
         if(result){
                 var message = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
                 do {
@@ -289,6 +297,7 @@ class ProductViewModel: ObservableObject {
                         if let _ = e["success"] as? String {
                             DispatchQueue.main.async{
                                 FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
+                                    callback()
                                 }
                             }
                             return
