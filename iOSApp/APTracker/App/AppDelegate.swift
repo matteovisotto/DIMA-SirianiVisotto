@@ -10,6 +10,7 @@ import GoogleSignIn
 import FacebookCore
 import UIKit
 import Firebase
+import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
@@ -132,48 +133,71 @@ extension AppDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-/*
-        let ui = notification.request.content.userInfo
-        let type = ui["type"] as! String
-
-        var category = UNNotificationCategory(identifier: "", actions: [], intentIdentifiers: [], options: [])
-
-        switch type {
-        case "type1":
-            let acceptAction = UNNotificationAction(identifier: "accept", title: "Accept", options: [.foreground])
-            let declineAction = UNNotificationAction(identifier: "decline", title: "Decline", options: [.foreground, .destructive])
-
-            category = UNNotificationCategory(identifier: "", actions: [acceptAction, declineAction], intentIdentifiers: [], options: [])
-        default:
-            break
+        
+        if #available(iOS 14.0, *) {
+            completionHandler([.badge, .sound])
+        } else {
+            completionHandler([.alert, .badge, .sound])
         }
-
-        UNUserNotificationCenter.current().setNotificationCategories([category])
-
-        completionHandler([.alert, .badge, .sound])*/
+        
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-
-       /* if let window = UIApplication.shared.windows.filter({$0.isKeyWindow}).first {
-
-            let ui = response.notification.request.content.userInfo
-            let type = ui["type"] as! String
-
-            switch type {
-            case "type1":
-                let vc = MainTabBarController()
-                vc.modalPresentationStyle = .fullScreen
-                vc.selectedIndex = 0
-                window.rootViewController = vc
-                window.makeKeyAndVisible()
-            default:
-                break
+        
+        let userInfo = response.notification.request.content.userInfo
+        self.parseNotification(userInfo)
+        completionHandler()
+    }
+    
+    private func parseNotification(_ userInfo: [AnyHashable: Any]) {
+        if let type = userInfo["type"] as? String {
+            if(type == "product"){
+                if let productId = userInfo["productId"] as? String {
+                    let taskManger = TaskManager(urlString: AppConstant.getProductByIdURL+"?id=\(productId)&lastPriceOnly", method: .GET, parameters: nil)
+                    taskManger.execute { result, content, data in
+                        if(result){
+                            do {
+                                let decoder = JSONDecoder()
+                                let product = try decoder.decode(Product.self, from: data!)
+                                
+                                DispatchQueue.main.async {
+                                    self.openProductView(product)
+                                    return
+                                }
+                            } catch {
+                                var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
+                                do {
+                                    let error = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                                    if let e = error {
+                                        if let d = e["exception"] as? String {
+                                            errorStr = d
+                                        }
+                                    }
+                                } catch {}
+                                DispatchQueue.main.async {
+                                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: errorStr)
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-
-        completionHandler()*/
     }
+    
+    private func openProductView(_ product: Product){
+    
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        if var topController = keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            let productViewController = UIHostingController(rootView: ProductView(product: product).environmentObject(AppState.shared))
+            productViewController.modalPresentationStyle = .overFullScreen
+            topController.present(productViewController, animated: true, completion: nil)
+        }
+    }
+    
 }
 
 extension AppDelegate: MessagingDelegate {
