@@ -89,6 +89,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "https://www.amazon.it/Xiaomi-Lite-Smartphone-Snapdragon-Fotocamera/dp/B09DNG3827/ "
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.it/dp/B07PHPXHQS/"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
