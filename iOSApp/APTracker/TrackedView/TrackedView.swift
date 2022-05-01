@@ -40,7 +40,7 @@ struct TrackedView: View {
                 ZStack{
                         GeometryReader{ geometry in
                             ScrollView(.vertical, showsIndicators: false){
-                                LazyVGrid(columns: columns, spacing: 10) {
+                                VStack(spacing: 10) {
                                     ForEach(0 ..< viewModel.trackingObjects.count, id: \.self){ index in
                                         NavigationLink{
                                             ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))

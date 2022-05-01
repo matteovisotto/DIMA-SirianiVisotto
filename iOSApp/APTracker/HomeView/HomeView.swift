@@ -42,7 +42,7 @@ struct HomeView: View {
                             Text("Sezione 2").font(.title)
                             Spacer()
                         }.padding(.horizontal)
-                        LazyVGrid(columns: columns, spacing: 10) {
+                        VStack(spacing: 10) {
                             ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ index in
                                 NavigationLink{
                                     ProductView(product: viewModel.mostTracked[index])
