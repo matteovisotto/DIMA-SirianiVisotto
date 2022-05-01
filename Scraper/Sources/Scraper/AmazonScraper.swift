@@ -13,6 +13,7 @@ struct AmazonProduct: Codable {
     var price: String
     var description: String
     var images: [String]
+    var category: String
 }
 
 class AmazonHTMLParser {
@@ -31,7 +32,14 @@ class AmazonHTMLParser {
             let priceWhole = try doc.select("span.a-price-whole").first?.text().replacingOccurrences(of: ",", with: "")
             let priceDecimal = try doc.select("span.a-price-fraction").first?.text()
             let priceSymbol = try doc.select("span.a-price-symbol").first?.text()
-            guard let pName = name, let pI = priceWhole, let pD = priceDecimal, let pS = priceSymbol else {completionHandler(nil); return}
+            var category = try doc.select("span.nav-a-content").first?.text()
+            if (category == nil) {
+                category = try doc.select("span.a-size-base-plus").first?.text()
+                if (category == nil) {
+                    category = "Generic"
+                }
+            }
+            guard let pName = name, let pI = priceWhole, let pD = priceDecimal, let pS = priceSymbol, let pCategory = category else {completionHandler(nil); return}
             let descriptionBullets = try doc.select("#feature-bullets li")
             var descriptionArray: [String] = []
             for bullet in descriptionBullets {
@@ -40,7 +48,8 @@ class AmazonHTMLParser {
             }
             var description = descriptionArray.joined(separator: ". ")
             description = description + "."
-            let product = AmazonProduct(name: pName, price: pI+"."+pD+pS, description: description, images: imgArray)
+            //guard let pCategory = category else {completionHandler(nil); return}
+            let product = AmazonProduct(name: pName, price: pI+"."+pD+pS, description: description, images: imgArray, category: pCategory)
             
             completionHandler(product)
             
