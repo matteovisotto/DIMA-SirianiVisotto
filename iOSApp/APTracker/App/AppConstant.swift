@@ -48,6 +48,7 @@ class AppConstant {
     public static let getMyTrackingURL = "https://aptracker.matmacsystem.it/api/tracking/my"
     public static let removeTrackingURL = "https://aptracker.matmacsystem.it/api/tracking/remove"
     public static let updateTrackingURL = "https://aptracker.matmacsystem.it/api/tracking/update"
+    public static let getTrackingStatusURL = "https://aptracker.matmacsystem.it/api/tracking/status"
     
     
     public static let userDataURL = "https://aptracker.matmacsystem.it/api/user/me"

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftfulLoadingIndicators
 
 struct AddProductView: View {
     @EnvironmentObject var appState: AppState
@@ -66,7 +67,7 @@ struct AddProductView: View {
             if(viewModel.showLoader){
                 ZStack{
                     Color("LabelColor").opacity(0.4)
-                    ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color("BackgroundColor"))).scaleEffect(x: 2, y: 2, anchor: .center)
+                    LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
                 }.ignoresSafeArea()
             }
         }

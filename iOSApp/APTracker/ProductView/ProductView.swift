@@ -71,23 +71,24 @@ struct ProductView: View {
                     HStack{
                         Spacer()
                         Menu {
-                         // TODO:- Add if user is tracking the product or else
-                            Button {
+                            if(viewModel.trackedStatus?.tracked ?? false){
+                                Button {
+                                    
+                                } label: {
+                                    Label("Edit", systemImage: "pencil")
+                                }
                                 
-                            } label: {
-                                Label("Start tracking", systemImage: "plus")
-                            }
-                            
-                            Button {
-                                
-                            } label: {
-                                Label("Edit", systemImage: "pencil")
-                            }
-                            
-                            Button {
-                                
-                            } label: {
-                                Label("Stop tracking", systemImage: "minus")
+                                Button {
+                                    
+                                } label: {
+                                    Label("Stop tracking", systemImage: "minus")
+                                }
+                            } else {
+                                Button {
+                                    
+                                } label: {
+                                    Label("Start tracking", systemImage: "plus")
+                                }
                             }
                             
                         } label: {

@@ -54,6 +54,8 @@
 		66A0676B281D319F002C479C /* TrackingSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */; };
 		66BE657E28000BD40077777B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657D28000BD40077777B /* SettingView.swift */; };
 		66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657F28000E8B0077777B /* SettingViewModel.swift */; };
+		66C3C5C7281E715F006393E4 /* TrackingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5C6281E715F006393E4 /* TrackingStatus.swift */; };
+		66C3C5CA281E7747006393E4 /* SwiftfulLoadingIndicators in Frameworks */ = {isa = PBXBuildFile; productRef = 66C3C5C9281E7747006393E4 /* SwiftfulLoadingIndicators */; };
 		66C5131727FD785C000EC52B /* FeedbackAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5131627FD785C000EC52B /* FeedbackAlert.swift */; };
 		66C552E827FC41BF00F5715E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66C552E727FC41BF00F5715E /* Launch Screen.storyboard */; };
 		66C552EA27FC428E00F5715E /* SocialSmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C552E927FC428E00F5715E /* SocialSmallButton.swift */; };
@@ -150,6 +152,7 @@
 		66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingViewModel.swift; sourceTree = "<group>"; };
 		66BE657D28000BD40077777B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		66BE657F28000E8B0077777B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		66C3C5C6281E715F006393E4 /* TrackingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingStatus.swift; sourceTree = "<group>"; };
 		66C5131627FD785C000EC52B /* FeedbackAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackAlert.swift; sourceTree = "<group>"; };
 		66C552E727FC41BF00F5715E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		66C552E927FC428E00F5715E /* SocialSmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialSmallButton.swift; sourceTree = "<group>"; };
@@ -193,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C3C5CA281E7747006393E4 /* SwiftfulLoadingIndicators in Frameworks */,
 				66D13CF327FB0AD3004B2077 /* FacebookLogin in Frameworks */,
 				66D13CED27FAFE6A004B2077 /* GoogleSignIn in Frameworks */,
 				6679718F281BC29D0054E6A1 /* FirebaseMessaging in Frameworks */,
@@ -508,6 +512,7 @@
 				66D826E328109979007AA1F6 /* Product.swift */,
 				66DA7E5F281D9E9100B04036 /* PriceServerResponse.swift */,
 				66DA7E63281DB0F100B04036 /* ProductComments.swift */,
+				66C3C5C6281E715F006393E4 /* TrackingStatus.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				6679718C281BC29D0054E6A1 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				6679718E281BC29D0054E6A1 /* FirebaseMessaging */,
 				6637563A281D949600DCECB3 /* LineChartView */,
+				66C3C5C9281E7747006393E4 /* SwiftfulLoadingIndicators */,
 			);
 			productName = APTracker;
 			productReference = 66D13CBD27FAFD88004B2077 /* APTracker.app */;
@@ -613,6 +619,7 @@
 				66D13CF127FB0AD3004B2077 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				66797189281BC29D0054E6A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				66375639281D949600DCECB3 /* XCRemoteSwiftPackageReference "LineChartView" */,
+				66C3C5C8281E7747006393E4 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
 			);
 			productRefGroup = 66D13CBE27FAFD88004B2077 /* Products */;
 			projectDirPath = "";
@@ -664,6 +671,7 @@
 				666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */,
 				6689A62A27FCDA9C00260538 /* AlertViewController.swift in Sources */,
 				66CF3A9927FD6D0800F2F866 /* Utils.swift in Sources */,
+				66C3C5C7281E715F006393E4 /* TrackingStatus.swift in Sources */,
 				129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */,
 				6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */,
 				668518DF2800197500A91A6F /* UserCell.swift in Sources */,
@@ -1075,6 +1083,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		66C3C5C8281E7747006393E4 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.4;
+			};
+		};
 		66D13CEB27FAFE6A004B2077 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
@@ -1113,6 +1129,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 66797189281BC29D0054E6A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseMessaging;
+		};
+		66C3C5C9281E7747006393E4 /* SwiftfulLoadingIndicators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 66C3C5C8281E7747006393E4 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */;
+			productName = SwiftfulLoadingIndicators;
 		};
 		66D13CEC27FAFE6A004B2077 /* GoogleSignIn */ = {
 			isa = XCSwiftPackageProductDependency;

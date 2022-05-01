@@ -11,6 +11,7 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
     @Published var trackingObjects: [TrackingObject] = []
     @Published var mostTracked: [Product] = []
+    @Published var isLoading: Bool = false
     
     init() {
         loadData()
@@ -53,6 +54,7 @@ class HomeViewModel: ObservableObject {
     private func loadMostTracked() -> Void {
         let task = TaskManager(urlString: AppConstant.getMostTracked+"?limit=10", method: .GET, parameters: nil)
         task.execute { result, content, data in
+            self.isLoading = false
             if result {
                 do {
                     let decoder = JSONDecoder()
@@ -85,6 +87,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func loadData() {
+        self.isLoading = true
         if(AppState.shared.isUserLoggedIn){
             self.loadMyTracking()
         }

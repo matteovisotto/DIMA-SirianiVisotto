@@ -15,8 +15,11 @@ class ProductViewModel: ObservableObject {
     @Published var product: Product
     @Published var productPrices: [Double] = []
     @Published var comments: ProductComments? = nil
+    @Published var trackedStatus: TrackingStatus? = nil
     
     @Published var newCommentText: String = ""
+    
+    @Published var isLoading: Bool = false
     
     init(product: Product){
         self.product = product
@@ -29,6 +32,38 @@ class ProductViewModel: ObservableObject {
     func loadData() {
         loadPrices()
         loadComments()
+        if(AppState.shared.isUserLoggedIn){
+            getTrackedStatus()
+        }
+    }
+    
+    private func getTrackedStatus(){
+        let taskManager = TaskManager(urlString: AppConstant.getTrackingStatusURL+"?productId=\(product.id)", method: .GET, parameters: nil)
+        taskManager.executeWithAccessToken { result, content, data in
+            if(result){
+                do {
+                    let decoder = JSONDecoder()
+                    let trackingStatus = try decoder.decode(TrackingStatus.self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        self.trackedStatus = trackingStatus
+                    }
+                } catch {
+                    var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
+                    do {
+                        let error = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        if let e = error {
+                            if let d = e["exception"] as? String {
+                                errorStr = d
+                            }
+                        }
+                    } catch {}
+                    DispatchQueue.main.async {
+                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: errorStr)
+                    }
+                }
+            }
+        }
     }
     
     private func loadPrices() {
@@ -205,6 +240,18 @@ class ProductViewModel: ObservableObject {
                     }
                 }
         }
+    }
+    
+    func startTracking() -> Void {
+        
+    }
+    
+    func stopTracking() -> Void {
+        
+    }
+    
+    func updateTracking() -> Void {
+        
     }
     
 }
