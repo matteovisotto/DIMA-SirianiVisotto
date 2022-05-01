@@ -73,24 +73,25 @@ struct ProductView: View {
                         Menu {
                             if(viewModel.trackedStatus?.tracked ?? false){
                                 Button {
-                                    
+                                    viewModel.updateTracking()
+                                    viewModel.trackedStatus?.tracked = true;
                                 } label: {
                                     Label("Edit", systemImage: "pencil")
                                 }
-                                
                                 Button {
-                                    
+                                    viewModel.stopTracking()
+                                    viewModel.trackedStatus?.tracked = false;
                                 } label: {
                                     Label("Stop tracking", systemImage: "minus")
                                 }
                             } else {
                                 Button {
-                                    
+                                    viewModel.startTracking()
+                                    viewModel.trackedStatus?.tracked = true;
                                 } label: {
                                     Label("Start tracking", systemImage: "plus")
                                 }
                             }
-                            
                         } label: {
                             Image(systemName: "doc.badge.gearshape").font(.title3.bold())
                         }.foregroundColor(Color("PrimaryLabel"))
@@ -99,8 +100,6 @@ struct ProductView: View {
                 }.padding(.horizontal, 15)
                     .padding(.vertical, 10)
             }
-            
-            
         }.navigationBarHidden(true)
     }
 }

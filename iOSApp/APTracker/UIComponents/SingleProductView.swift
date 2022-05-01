@@ -9,8 +9,8 @@ import SwiftUI
 
 struct SingleProductView: View {
     
-    @ObservedObject var imageLoader:ImageLoader = ImageLoader()
-    @State var image:UIImage = UIImage()
+    @ObservedObject var imageLoader: ImageLoader = ImageLoader()
+    @State var image: UIImage = UIImage()
     @State var product: Product
 
     init(_ p: Product) {

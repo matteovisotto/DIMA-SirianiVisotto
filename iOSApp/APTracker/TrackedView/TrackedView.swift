@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftfulLoadingIndicators
 
 struct TrackedView: View {
     @EnvironmentObject var appState: AppState
@@ -14,6 +15,11 @@ struct TrackedView: View {
     init(showLogin: Binding<Bool>){
         self.viewModel = TrackedViewModel(showLogin: showLogin)
     }
+    
+    let columns = [
+            GridItem(.flexible()),
+            //GridItem(.flexible()),
+        ]
     
     var body: some View {
         ZStack{
@@ -31,7 +37,25 @@ struct TrackedView: View {
                     }.frame(width: g.size.width, height: g.size.height, alignment: .center)
                 }
             } else {
-                EmptyView()
+                ZStack{
+                        GeometryReader{ geometry in
+                            ScrollView(.vertical, showsIndicators: false){
+                                LazyVGrid(columns: columns, spacing: 10) {
+                                    ForEach(0 ..< viewModel.trackingObjects.count, id: \.self){ index in
+                                        NavigationLink{
+                                            ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
+                                        } label: {
+                                            TrackedProductView(viewModel.trackingObjects[index]).frame(width: ((geometry.size.width)-30), height: 120).border(Color.red)
+                                        }
+                                        
+                                    }
+                                }.padding(.horizontal, 10)
+                            }.onAppear(perform: viewModel.loadData)
+                    }
+                    if(viewModel.isLoading){
+                        LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                    }
+                }
             }
         }
     }
