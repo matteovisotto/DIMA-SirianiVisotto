@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct APTrackerApp: App {
+struct myAPTrackerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {

@@ -73,7 +73,7 @@
 		66CC9C072801FB79005935F0 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC9C062801FB79005935F0 /* TutorialView.swift */; };
 		66CF3A9727FD6ACD00F2F866 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF3A9627FD6ACD00F2F866 /* RegisterViewModel.swift */; };
 		66CF3A9927FD6D0800F2F866 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CF3A9827FD6D0800F2F866 /* Utils.swift */; };
-		66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC027FAFD88004B2077 /* APTrackerApp.swift */; };
+		66D13CC127FAFD88004B2077 /* myAPTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC027FAFD88004B2077 /* myAPTrackerApp.swift */; };
 		66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC227FAFD88004B2077 /* ContentView.swift */; };
 		66D13CC527FAFD95004B2077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC427FAFD95004B2077 /* Assets.xcassets */; };
 		66D13CC827FAFD95004B2077 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC727FAFD95004B2077 /* Preview Assets.xcassets */; };
@@ -177,14 +177,14 @@
 		66CC9C062801FB79005935F0 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		66CF3A9627FD6ACD00F2F866 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		66CF3A9827FD6D0800F2F866 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		66D13CBD27FAFD88004B2077 /* APTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		66D13CC027FAFD88004B2077 /* APTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerApp.swift; sourceTree = "<group>"; };
+		66D13CBD27FAFD88004B2077 /* myAPTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myAPTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D13CC027FAFD88004B2077 /* myAPTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAPTrackerApp.swift; sourceTree = "<group>"; };
 		66D13CC227FAFD88004B2077 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66D13CC427FAFD95004B2077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D13CC727FAFD95004B2077 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		66D13CCD27FAFD96004B2077 /* APTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D13CCD27FAFD96004B2077 /* myAPTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myAPTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D13CD127FAFD96004B2077 /* APTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerTests.swift; sourceTree = "<group>"; };
-		66D13CD727FAFD97004B2077 /* APTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D13CD727FAFD97004B2077 /* myAPTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myAPTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITests.swift; sourceTree = "<group>"; };
 		66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		66D13CEA27FAFE2B004B2077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		66D13CFE27FB287F004B2077 /* LoginCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredential.swift; sourceTree = "<group>"; };
 		66D13D0127FB2958004B2077 /* GoogleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
 		66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
-		66D7077B281AE4550051DCE7 /* APTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APTracker.entitlements; sourceTree = "<group>"; };
+		66D7077B281AE4550051DCE7 /* myAPTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myAPTracker.entitlements; sourceTree = "<group>"; };
 		66D826E328109979007AA1F6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		66D831E2281DCF7A00B48194 /* EditCommentAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCommentAlertViewController.swift; sourceTree = "<group>"; };
 		66DA7E5F281D9E9100B04036 /* PriceServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceServerResponse.swift; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 		667BF40527FB8E580000B7EB /* App */ = {
 			isa = PBXGroup;
 			children = (
-				66D13CC027FAFD88004B2077 /* APTrackerApp.swift */,
+				66D13CC027FAFD88004B2077 /* myAPTrackerApp.swift */,
 				66D13CC227FAFD88004B2077 /* ContentView.swift */,
 				66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */,
 				666524D227FB3BF8005C73F3 /* AppConstant.swift */,
@@ -425,9 +425,9 @@
 		66D13CB427FAFD88004B2077 = {
 			isa = PBXGroup;
 			children = (
-				66D13CBF27FAFD88004B2077 /* APTracker */,
-				66D13CD027FAFD96004B2077 /* APTrackerTests */,
-				66D13CDA27FAFD97004B2077 /* APTrackerUITests */,
+				66D13CBF27FAFD88004B2077 /* myAPTracker */,
+				66D13CD027FAFD96004B2077 /* myAPTrackerTests */,
+				66D13CDA27FAFD97004B2077 /* myAPTrackerUITests */,
 				66D13CBE27FAFD88004B2077 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -435,14 +435,14 @@
 		66D13CBE27FAFD88004B2077 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66D13CBD27FAFD88004B2077 /* APTracker.app */,
-				66D13CCD27FAFD96004B2077 /* APTrackerTests.xctest */,
-				66D13CD727FAFD97004B2077 /* APTrackerUITests.xctest */,
+				66D13CBD27FAFD88004B2077 /* myAPTracker.app */,
+				66D13CCD27FAFD96004B2077 /* myAPTrackerTests.xctest */,
+				66D13CD727FAFD97004B2077 /* myAPTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66D13CBF27FAFD88004B2077 /* APTracker */ = {
+		66D13CBF27FAFD88004B2077 /* myAPTracker */ = {
 			isa = PBXGroup;
 			children = (
 				66C3C5D1281E808A006393E4 /* ExploreView */,
@@ -469,9 +469,9 @@
 				66D13CF427FB1E68004B2077 /* LoginView */,
 				66D13CC627FAFD95004B2077 /* Preview Content */,
 				66D826E22810996B007AA1F6 /* Entity */,
-				66D7077B281AE4550051DCE7 /* APTracker.entitlements */,
+				66D7077B281AE4550051DCE7 /* myAPTracker.entitlements */,
 			);
-			path = APTracker;
+			path = myAPTracker;
 			sourceTree = "<group>";
 		};
 		66D13CC627FAFD95004B2077 /* Preview Content */ = {
@@ -482,21 +482,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		66D13CD027FAFD96004B2077 /* APTrackerTests */ = {
+		66D13CD027FAFD96004B2077 /* myAPTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
 				66D13CD127FAFD96004B2077 /* APTrackerTests.swift */,
 			);
-			path = APTrackerTests;
+			path = myAPTrackerTests;
 			sourceTree = "<group>";
 		};
-		66D13CDA27FAFD97004B2077 /* APTrackerUITests */ = {
+		66D13CDA27FAFD97004B2077 /* myAPTrackerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */,
 				66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */,
 			);
-			path = APTrackerUITests;
+			path = myAPTrackerUITests;
 			sourceTree = "<group>";
 		};
 		66D13CF427FB1E68004B2077 /* LoginView */ = {
@@ -557,9 +557,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		66D13CBC27FAFD88004B2077 /* APTracker */ = {
+		66D13CBC27FAFD88004B2077 /* myAPTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D13CE127FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTracker" */;
+			buildConfigurationList = 66D13CE127FAFD97004B2077 /* Build configuration list for PBXNativeTarget "myAPTracker" */;
 			buildPhases = (
 				66D13CB927FAFD88004B2077 /* Sources */,
 				66D13CBA27FAFD88004B2077 /* Frameworks */,
@@ -569,7 +569,7 @@
 			);
 			dependencies = (
 			);
-			name = APTracker;
+			name = myAPTracker;
 			packageProductDependencies = (
 				66D13CEC27FAFE6A004B2077 /* GoogleSignIn */,
 				66D13CF227FB0AD3004B2077 /* FacebookLogin */,
@@ -580,12 +580,12 @@
 				66C3C5C9281E7747006393E4 /* SwiftfulLoadingIndicators */,
 			);
 			productName = APTracker;
-			productReference = 66D13CBD27FAFD88004B2077 /* APTracker.app */;
+			productReference = 66D13CBD27FAFD88004B2077 /* myAPTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		66D13CCC27FAFD96004B2077 /* APTrackerTests */ = {
+		66D13CCC27FAFD96004B2077 /* myAPTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D13CE427FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerTests" */;
+			buildConfigurationList = 66D13CE427FAFD97004B2077 /* Build configuration list for PBXNativeTarget "myAPTrackerTests" */;
 			buildPhases = (
 				66D13CC927FAFD96004B2077 /* Sources */,
 				66D13CCA27FAFD96004B2077 /* Frameworks */,
@@ -596,14 +596,14 @@
 			dependencies = (
 				66D13CCF27FAFD96004B2077 /* PBXTargetDependency */,
 			);
-			name = APTrackerTests;
+			name = myAPTrackerTests;
 			productName = APTrackerTests;
-			productReference = 66D13CCD27FAFD96004B2077 /* APTrackerTests.xctest */;
+			productReference = 66D13CCD27FAFD96004B2077 /* myAPTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		66D13CD627FAFD97004B2077 /* APTrackerUITests */ = {
+		66D13CD627FAFD97004B2077 /* myAPTrackerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 66D13CE727FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerUITests" */;
+			buildConfigurationList = 66D13CE727FAFD97004B2077 /* Build configuration list for PBXNativeTarget "myAPTrackerUITests" */;
 			buildPhases = (
 				66D13CD327FAFD97004B2077 /* Sources */,
 				66D13CD427FAFD97004B2077 /* Frameworks */,
@@ -614,9 +614,9 @@
 			dependencies = (
 				66D13CD927FAFD97004B2077 /* PBXTargetDependency */,
 			);
-			name = APTrackerUITests;
+			name = myAPTrackerUITests;
 			productName = APTrackerUITests;
-			productReference = 66D13CD727FAFD97004B2077 /* APTrackerUITests.xctest */;
+			productReference = 66D13CD727FAFD97004B2077 /* myAPTrackerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -662,9 +662,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66D13CBC27FAFD88004B2077 /* APTracker */,
-				66D13CCC27FAFD96004B2077 /* APTrackerTests */,
-				66D13CD627FAFD97004B2077 /* APTrackerUITests */,
+				66D13CBC27FAFD88004B2077 /* myAPTracker */,
+				66D13CCC27FAFD96004B2077 /* myAPTrackerTests */,
+				66D13CD627FAFD97004B2077 /* myAPTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -773,7 +773,7 @@
 				12F84715280B02B10027BFFF /* TabTutorialElement.swift in Sources */,
 				66BE657E28000BD40077777B /* SettingView.swift in Sources */,
 				66C5131727FD785C000EC52B /* FeedbackAlert.swift in Sources */,
-				66D13CC127FAFD88004B2077 /* APTrackerApp.swift in Sources */,
+				66D13CC127FAFD88004B2077 /* myAPTrackerApp.swift in Sources */,
 				66D831E3281DCF7A00B48194 /* EditCommentAlertViewController.swift in Sources */,
 				6631E98027FF7CE4005E3A41 /* UserIdentity.swift in Sources */,
 				668518DD2800187E00A91A6F /* LoginCell.swift in Sources */,
@@ -802,12 +802,12 @@
 /* Begin PBXTargetDependency section */
 		66D13CCF27FAFD96004B2077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66D13CBC27FAFD88004B2077 /* APTracker */;
+			target = 66D13CBC27FAFD88004B2077 /* myAPTracker */;
 			targetProxy = 66D13CCE27FAFD96004B2077 /* PBXContainerItemProxy */;
 		};
 		66D13CD927FAFD97004B2077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 66D13CBC27FAFD88004B2077 /* APTracker */;
+			target = 66D13CBC27FAFD88004B2077 /* myAPTracker */;
 			targetProxy = 66D13CD827FAFD97004B2077 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -932,14 +932,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = APTracker/APTracker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"APTracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = APTracker/Info.plist;
+				INFOPLIST_FILE = myAPTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = myAPTracker;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -966,14 +966,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = APTracker/APTracker.entitlements;
+				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"APTracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = APTracker/Info.plist;
+				INFOPLIST_FILE = myAPTracker/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = myAPTracker;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1011,7 +1011,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APTracker.app/APTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myAPTracker.app/myAPTracker";
 			};
 			name = Debug;
 		};
@@ -1031,7 +1031,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/APTracker.app/APTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myAPTracker.app/myAPTracker";
 			};
 			name = Release;
 		};
@@ -1083,7 +1083,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D13CE127FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTracker" */ = {
+		66D13CE127FAFD97004B2077 /* Build configuration list for PBXNativeTarget "myAPTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D13CE227FAFD97004B2077 /* Debug */,
@@ -1092,7 +1092,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D13CE427FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerTests" */ = {
+		66D13CE427FAFD97004B2077 /* Build configuration list for PBXNativeTarget "myAPTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D13CE527FAFD97004B2077 /* Debug */,
@@ -1101,7 +1101,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		66D13CE727FAFD97004B2077 /* Build configuration list for PBXNativeTarget "APTrackerUITests" */ = {
+		66D13CE727FAFD97004B2077 /* Build configuration list for PBXNativeTarget "myAPTrackerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				66D13CE827FAFD97004B2077 /* Debug */,
