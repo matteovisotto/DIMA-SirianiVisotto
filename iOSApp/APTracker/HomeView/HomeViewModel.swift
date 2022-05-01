@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class HomeViewModel: ObservableObject {
-    @Published var trackingObjects: [TrackingObject] = []
+    @Published var trackingObjects: [TrackedProduct] = []
     @Published var mostTracked: [Product] = []
     @Published var isLoading: Bool = false
     
@@ -23,7 +23,7 @@ class HomeViewModel: ObservableObject {
             if result {
                 do {
                     let decoder = JSONDecoder()
-                    let identity = try decoder.decode([TrackingObject].self, from: data!)
+                    let identity = try decoder.decode([TrackedProduct].self, from: data!)
                     DispatchQueue.main.async {
                         self.trackingObjects = identity
                     }
@@ -54,7 +54,9 @@ class HomeViewModel: ObservableObject {
     private func loadMostTracked() -> Void {
         let task = TaskManager(urlString: AppConstant.getMostTracked+"?limit=10", method: .GET, parameters: nil)
         task.execute { result, content, data in
-            self.isLoading = false
+            DispatchQueue.main.async {
+                self.isLoading = false
+            }
             if result {
                 do {
                     let decoder = JSONDecoder()

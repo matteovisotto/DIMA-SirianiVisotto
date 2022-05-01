@@ -32,7 +32,7 @@ struct HomeView: View {
                                         NavigationLink {
                                             ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
                                         } label: {
-                                            TrackedProduct(viewModel.trackingObjects[index]).frame(width: geometry.size.width-20, height: 200)
+                                            TrackedProductView(viewModel.trackingObjects[index]).frame(width: geometry.size.width-20, height: 200)
                                         }
                                     }
                                 }
@@ -62,72 +62,8 @@ struct HomeView: View {
 }
 }
 
-struct TrackedProduct: View {
-    
-    @ObservedObject var imageLoader:ImageLoader = ImageLoader()
-    @State var image:UIImage = UIImage()
-    @State var product: TrackingObject
 
-    init(_ p: TrackingObject) {
-        self.product = p
-        if let imgUrl = p.images.first {
-            imageLoader.getImage(urlString: imgUrl)
-        }
-    }
-    
-    var body: some View{
-        GeometryReader{ geometry in
-            VStack(alignment: .leading, spacing: 0){
-                Text(product.name).font(.title2)
-                ZStack{
-                    Image(uiImage: image).resizable().scaledToFit().onReceive(imageLoader.didChange) { data in
-                        self.image = UIImage(data: data) ?? UIImage()
-                }
-                    VStack{
-                        Spacer()
-                        ZStack{
-                            Color.white.opacity(0.6)
-                                .frame(height: 50)
-                            Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(.black).bold()
-                        }
-                        
-                    }
-                }
-            }
-        }
-    }
-}
 
-struct SingleProductView: View {
-    
-    @ObservedObject var imageLoader:ImageLoader = ImageLoader()
-    @State var image:UIImage = UIImage()
-    @State var product: Product
-
-    init(_ p: Product) {
-        self.product = p
-        if let imgUrl = p.images.first {
-            imageLoader.getImage(urlString: imgUrl)
-        }
-    }
-    
-    var body: some View{
-        GeometryReader{ geometry in
-            HStack(alignment: .center){
-                Image(uiImage: image).resizable().scaledToFit().frame(width: 80, height: 80).onReceive(imageLoader.didChange) { data in
-                    self.image = UIImage(data: data) ?? UIImage() }
-                Spacer().frame(width: 10)
-                VStack(spacing: 8){
-                    Text(product.name).font(.title3).lineLimit(2)
-                    HStack{
-                        Spacer()
-                    Text("\(product.price ?? 0, specifier: "%.2f") €").font(.title2.bold())
-                    }
-                }
-            }.padding()
-        }
-    }
-}
 
 struct HomeViewPreview_Previews: PreviewProvider {
     static var previews: some View {

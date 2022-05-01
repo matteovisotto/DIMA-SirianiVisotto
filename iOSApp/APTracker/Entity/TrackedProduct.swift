@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TrackingObject: Codable {
+struct TrackedProduct: Codable {
     var id: Int
     var name: String
     var description: String

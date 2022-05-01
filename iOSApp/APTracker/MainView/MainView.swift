@@ -26,7 +26,7 @@ struct MainView: View {
                     
                     TabView(selection: $viewModel.selectedTab){
                         HomeView().gesture(DragGesture()).tag(0)
-                        Color.blue.tag(1).gesture(DragGesture())
+                        TrackedView(showLogin: $viewModel.showLogin).tag(1).gesture(DragGesture())
                         Color.yellow.tag(2).gesture(DragGesture())
                         SettingView(showLogin: $viewModel.showLogin).tag(3).gesture(DragGesture())
                     }
