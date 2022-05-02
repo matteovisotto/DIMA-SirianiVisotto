@@ -39,6 +39,10 @@ $fields = array(
      			"sound"=> "default",
     			 "mutable_content" => true
             ),
+			'data' => array(
+            	"type"=>"generic",
+            	//"productId"=>13
+            )
         );
  
         //Initializing curl to open a connection

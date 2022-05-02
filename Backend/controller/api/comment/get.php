@@ -21,7 +21,7 @@ if(!productIdExists($productId)){
 
 $comments = getCommentsByProductId($productId);
 $response = array();
-$response['productId'] = $productId;
+$response['productId'] = intval($productId);
 $response['numberOfComments'] = count($comments);
 $response['comments'] = $comments;
 

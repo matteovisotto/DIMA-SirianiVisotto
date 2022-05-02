@@ -127,7 +127,8 @@ function getAllProducts() {
 }
 
 function getAllProductsLastPrice() {
-	$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId GROUP BY a.productId";
+	//$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId GROUP BY a.productId";
+	$sql="SELECT p.id, p.name, p.link, p.description, a.price, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId WHERE a.updatedAt = (SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId)";
 	$db = getDatabaseConnection();
 	$result = $db->query($sql);
 	$r = array();
@@ -139,7 +140,8 @@ function getAllProductsLastPrice() {
 }
 
 function getMostTracked($limit){
-	$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id GROUP BY a.productId ORDER BY n.nTrackers DESC LIMIT ?";
+	//$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id GROUP BY a.productId ORDER BY n.nTrackers DESC LIMIT ?";
+	$sql="SELECT p.id, p.name, p.link, p.description, a.price, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id WHERE a.updatedAt=(SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId) ORDER BY n.nTrackers DESC LIMIT ?";
 	$db = getDatabaseConnection();
 	$stmt = $db->prepare($sql);
 	$stmt->bind_param("i", $limit);

@@ -15,7 +15,15 @@ function updatePrices(){
 	    $json_str = shell_exec('cd /var/aptracker/scraper/ && ./Scraper '.$url.' --price-only');
 	    $obj = json_decode($json_str);
 	    $price = str_replace('€', '', $obj->price);
+    	notifyFollowers($id, $price);
 	    $stmt->execute();
 	}
 }
+
+function notifyFollowers($productId, $newPrice) {
+	$tokens = checkForPriceNotification($productId, $newPrice);
+	$product = getProductById($productId);
+	sendProductNotification($tokens, $product['name'], $productId);
+}
+
 ?>

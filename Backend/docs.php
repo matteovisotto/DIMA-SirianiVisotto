@@ -90,7 +90,7 @@ foreach ($modules as $m){
 }
 ?>
 <div class="row mt-3 mb-3">
-<p><i>Content</i></p>
+<p><i>API Documentation related to iOS application <strong>APTracker</strong> developed by <strong>Matteo Visotto</strong> and <strong>Mattia Siriani</strong> for Design and Implementation of Mobile Application course at <strong>Politecnico di Milano</strong></i></p>
 </div>
 
 </div>

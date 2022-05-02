@@ -9,4 +9,5 @@ include HOME_DIR.'core/imageService.php';
 include HOME_DIR.'core/productService.php';
 include HOME_DIR.'core/trackingService.php';
 include HOME_DIR.'core/notificationService.php';
+include HOME_DIR.'core/helpers.php';
 require_once HOME_DIR.'lib/GoogleAPI/vendor/autoload.php';

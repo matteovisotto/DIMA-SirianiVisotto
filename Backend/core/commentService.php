@@ -1,7 +1,7 @@
 <?php
 
 function getCommentsByProductId($productId){
-	$sql = "SELECT c.id, c.productId, c.comment, c.publishedAt, u.username, u.name, u.surname FROM comment AS c JOIN user AS u ON u.id=c.userId WHERE c.productId = ? ORDER BY c.publishedAt DESC";
+	$sql = "SELECT c.id, c.productId, c.comment, c.publishedAt, u.id AS userId, u.username, u.name, u.surname FROM comment AS c JOIN user AS u ON u.id=c.userId WHERE c.productId = ? ORDER BY c.publishedAt DESC";
 	$db = getDatabaseConnection();
 	$stmt = $db->prepare($sql);
 	$stmt->bind_param("i", $productId);
