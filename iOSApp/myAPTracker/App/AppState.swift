@@ -90,7 +90,7 @@ class AppState: ObservableObject {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         let date = formatter.date(from: credential.expireAt)
         if let date = date {
-            let oneHAgo = Calendar.current.date(byAdding: .hour, value: 2, to: Date())!
+            let oneHAgo = Calendar.current.date(byAdding: .hour, value:  2, to: Date())!
             return date > oneHAgo
         }
         return false
