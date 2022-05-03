@@ -16,8 +16,8 @@ class ExploreViewModel: ObservableObject {
         loadData()
     }
     
-    private func loadMostTracked() -> Void {
-        let task = TaskManager(urlString: AppConstant.getMostTracked+"?limit=10", method: .GET, parameters: nil)
+    private func loadAllProduct() -> Void {
+        let task = TaskManager(urlString: AppConstant.getAllProductsURL+"?lastPriceOnly", method: .GET, parameters: nil)
         task.execute { result, content, data in
             DispatchQueue.main.async {
                 self.isLoading = false
@@ -55,8 +55,6 @@ class ExploreViewModel: ObservableObject {
     
     func loadData() {
         self.isLoading = true
-        if(AppState.shared.isUserLoggedIn){
-            self.loadMostTracked()
-        }
+        self.loadAllProduct()
     }
 }
