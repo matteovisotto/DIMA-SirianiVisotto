@@ -14,7 +14,7 @@ struct HomeView: View {
     @ObservedObject var mainModel: MainViewModel
     @ObservedObject var viewModel: HomeViewModel
    
-
+    @State var trackedDisplayIndex: Int = 0
 
     init(mainViewModel: MainViewModel) {
         self.mainModel = mainViewModel
@@ -26,48 +26,44 @@ struct HomeView: View {
         ZStack{
                 GeometryReader{ geometry in
                     ScrollView(.vertical, showsIndicators: false){
-                        if(appState.isUserLoggedIn){
-                            VStack(alignment: .leading, spacing: 10){
-                                //TabView{
-                                ScrollView(.horizontal, showsIndicators: false){
-                                    HStack{
-                                                ForEach(0..<viewModel.trackingObjects.count, id: \.self){ index in
-                                                        NavigationLink {
-                                                            ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
-                                                        } label: {
-                                                            TrackedProductView(viewModel.trackingObjects[index]).frame(width: geometry.size.width-20, height: 200)
-                                                            
-                                                        }
-                                                }
-                                            }
-                                        
-                                        
-                                }.frame(width: geometry.size.width-20, height: 200).padding(.horizontal, 10)//.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                        VStack(spacing: 10){
+                            if(appState.isUserLoggedIn && viewModel.trackingObjects.count > 0){
                                 
+                                PagingView(index: $trackedDisplayIndex.animation(), maxIndex: viewModel.trackingObjects.count - 1) {
+                                    ForEach(0..<viewModel.trackingObjects.count, id: \.self){ index in
+                                        NavigationLink {
+                                                ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
+                                            } label: {
+                                                TrackedProductView(viewModel.trackingObjects[index]).padding(.horizontal, 10)
+                                                
+                                            }.highPriorityGesture(DragGesture())
+                                    }
+                                }.frame(width: geometry.size.width, height: 200)
+                                
+                                Divider()
                             }
-                            
-                            Divider()
-                        }
-                        HStack{
-                            Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
-                            Spacer()
-                            Button{
-                                mainModel.selectedTab = 2
-                            } label: {
-                                Text("See all")
-                            }
-                        }.padding(.horizontal)
-                        VStack(spacing: 10) {
-                            HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count) { contentIndex in
-                               
-                                NavigationLink{
-                                    ProductView(product: viewModel.mostTracked[contentIndex])
+                            HStack{
+                                Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                                Spacer()
+                                Button{
+                                    mainModel.selectedTab = 2
                                 } label: {
-                                    SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).border(Color.red).padding(.leading, 10)
+                                    Text("See all")
                                 }
-                                
+                            }.padding(.horizontal)
+                            VStack(spacing: 10) {
+                                HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count) { contentIndex in
+                                   
+                                    NavigationLink{
+                                        ProductView(product: viewModel.mostTracked[contentIndex])
+                                    } label: {
+                                        SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).border(Color.red).padding(.leading, 10)
+                                    }
+                                    
+                                }
                             }
                         }
+                        
                     }.onAppear(perform: viewModel.loadData)
             }
             if(viewModel.isLoading){
@@ -78,5 +74,6 @@ struct HomeView: View {
 }
    
 }
+
 
 

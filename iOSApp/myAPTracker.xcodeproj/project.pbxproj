@@ -30,6 +30,7 @@
 		666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524CF27FB35F9005C73F3 /* FacebookAuth.swift */; };
 		666524D327FB3BF8005C73F3 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D227FB3BF8005C73F3 /* AppConstant.swift */; };
 		666524D827FB41A3005C73F3 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */; };
+		667389CB2821D0EF001845FA /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667389CA2821D0EF001845FA /* PagingView.swift */; };
 		66742C6927FCAA3A0093EE24 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6827FCAA3A0093EE24 /* IconTextField.swift */; };
 		66742C6B27FCAD450093EE24 /* IconSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */; };
 		66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C7327FCC9A80093EE24 /* RegisterView.swift */; };
@@ -141,6 +142,7 @@
 		666524CF27FB35F9005C73F3 /* FacebookAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
 		666524D227FB3BF8005C73F3 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		666524D727FB41A3005C73F3 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		667389CA2821D0EF001845FA /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		66742C6827FCAA3A0093EE24 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 		66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSecureTextField.swift; sourceTree = "<group>"; };
 		66742C7327FCC9A80093EE24 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 				66D17A4F28216D7D00F8AAEA /* HGrid.swift */,
 				66D17A51282177AB00F8AAEA /* VoidView.swift */,
 				66D17A532821826700F8AAEA /* HLPriceView.swift */,
+				667389CA2821D0EF001845FA /* PagingView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				66934AFC27FB8311004DC396 /* View+Extension.swift in Sources */,
 				66CC9C002801C3C8005935F0 /* WebViewCoordinator.swift in Sources */,
 				66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */,
+				667389CB2821D0EF001845FA /* PagingView.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
 				66DA7E64281DB0F100B04036 /* ProductComments.swift in Sources */,
 				12F84717280B20520027BFFF /* SampleTutorialView.swift in Sources */,
