@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 struct Product: Codable {
     var id: Int
     var name: String
     var description: String
     var link: String
+    var highestPrice: Double
+    var lowestPrice: Double
     var images: [String]
     var prices: [Price]?
     var price: Double?
@@ -19,6 +22,6 @@ struct Product: Codable {
     var createdAt: String?
     
     public static func fromTracked(_ p: TrackedProduct) -> Product {
-        return Product(id: p.id, name: p.name, description: p.description, link: p.link, images: p.images, prices: p.prices, price: p.price)
+        return Product(id: p.id, name: p.name, description: p.description, link: p.link, highestPrice: p.highestPrice, lowestPrice: p.lowestPrice, images: p.images, prices: p.prices, price: p.price)
     }
 }

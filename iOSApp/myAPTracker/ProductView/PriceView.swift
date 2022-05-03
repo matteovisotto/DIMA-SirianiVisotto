@@ -13,18 +13,21 @@ struct PriceView: View {
     @ObservedObject var viewModel: ProductViewModel
     
     var body: some View {
-        LineChartView(lineChartParameters: LineChartParameters(data: viewModel.productPrices)).frame(height: 160)
-        ScrollView(.vertical, showsIndicators: false){
-            VStack(spacing: 2){
-                ForEach(0..<(viewModel.product.prices?.count ?? 0), id: \.self){index in
-                    if(index == 0) {
-                        PriceCell(price: viewModel.product.prices![index].price, date: viewModel.product.prices![index].updatedAt, previous: viewModel.product.prices![index].price, isFirst: true).padding(.horizontal)
-                    } else {
-                        PriceCell(price: viewModel.product.prices![index].price, date: viewModel.product.prices![index].updatedAt, previous: viewModel.product.prices![index-1].price).padding(.horizontal).padding(.vertical, 2.5)
+        VStack{
+            HLPriceView(lowestPrice: viewModel.product.lowestPrice, highestPrice: viewModel.product.highestPrice).padding(.horizontal)
+            LineChartView(lineChartParameters: LineChartParameters(data: viewModel.productPrices)).frame(height: 160)
+            ScrollView(.vertical, showsIndicators: false){
+                VStack(spacing: 2){
+                    ForEach(0..<(viewModel.product.prices?.count ?? 0), id: \.self){index in
+                        if(index == 0) {
+                            PriceCell(price: viewModel.product.prices![index].price, date: viewModel.product.prices![index].updatedAt, previous: viewModel.product.prices![index].price, isFirst: true).padding(.horizontal)
+                        } else {
+                            PriceCell(price: viewModel.product.prices![index].price, date: viewModel.product.prices![index].updatedAt, previous: viewModel.product.prices![index-1].price).padding(.horizontal).padding(.vertical, 2.5)
+                        }
                     }
-                }
+                }.frame(maxWidth: .infinity)
             }.frame(maxWidth: .infinity)
-        }.frame(maxWidth: .infinity)
+        }
     }
 }
 

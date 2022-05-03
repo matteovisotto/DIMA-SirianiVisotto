@@ -90,6 +90,9 @@
 		66D13CFF27FB287F004B2077 /* LoginCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CFE27FB287F004B2077 /* LoginCredential.swift */; };
 		66D13D0227FB2958004B2077 /* GoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13D0127FB2958004B2077 /* GoogleAuth.swift */; };
 		66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */; };
+		66D17A5028216D7D00F8AAEA /* HGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D17A4F28216D7D00F8AAEA /* HGrid.swift */; };
+		66D17A52282177AB00F8AAEA /* VoidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D17A51282177AB00F8AAEA /* VoidView.swift */; };
+		66D17A542821826700F8AAEA /* HLPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D17A532821826700F8AAEA /* HLPriceView.swift */; };
 		66D826E428109979007AA1F6 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D826E328109979007AA1F6 /* Product.swift */; };
 		66D831E3281DCF7A00B48194 /* EditCommentAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D831E2281DCF7A00B48194 /* EditCommentAlertViewController.swift */; };
 		66DA7E60281D9E9100B04036 /* PriceServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66DA7E5F281D9E9100B04036 /* PriceServerResponse.swift */; };
@@ -196,6 +199,9 @@
 		66D13CFE27FB287F004B2077 /* LoginCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredential.swift; sourceTree = "<group>"; };
 		66D13D0127FB2958004B2077 /* GoogleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuth.swift; sourceTree = "<group>"; };
 		66D13D0427FB2D2B004B2077 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		66D17A4F28216D7D00F8AAEA /* HGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HGrid.swift; sourceTree = "<group>"; };
+		66D17A51282177AB00F8AAEA /* VoidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidView.swift; sourceTree = "<group>"; };
+		66D17A532821826700F8AAEA /* HLPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLPriceView.swift; sourceTree = "<group>"; };
 		66D7077B281AE4550051DCE7 /* myAPTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myAPTracker.entitlements; sourceTree = "<group>"; };
 		66D826E328109979007AA1F6 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		66D831E2281DCF7A00B48194 /* EditCommentAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCommentAlertViewController.swift; sourceTree = "<group>"; };
@@ -525,6 +531,9 @@
 				6605EDDE281D8390001D2A49 /* MenuBar.swift */,
 				66C3C5D6281E80F6006393E4 /* SingleProductView.swift */,
 				66C3C5D8281E812C006393E4 /* TrackedProductView.swift */,
+				66D17A4F28216D7D00F8AAEA /* HGrid.swift */,
+				66D17A51282177AB00F8AAEA /* VoidView.swift */,
+				66D17A532821826700F8AAEA /* HLPriceView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -728,6 +737,7 @@
 				667BF40127FB8A300000B7EB /* AppState.swift in Sources */,
 				66CC9C052801C67C005935F0 /* AddProductView.swift in Sources */,
 				6631E97E27FF7919005E3A41 /* TabElement.swift in Sources */,
+				66D17A542821826700F8AAEA /* HLPriceView.swift in Sources */,
 				666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */,
 				66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */,
 				66DA7E62281DA96A00B04036 /* DetailView.swift in Sources */,
@@ -762,6 +772,8 @@
 				668518E228001C1F00A91A6F /* UserProfileView.swift in Sources */,
 				66D13CFD27FB280E004B2077 /* LoginDelegate.swift in Sources */,
 				66DA7E60281D9E9100B04036 /* PriceServerResponse.swift in Sources */,
+				66D17A5028216D7D00F8AAEA /* HGrid.swift in Sources */,
+				66D17A52282177AB00F8AAEA /* VoidView.swift in Sources */,
 				6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */,
 				66CC9C072801FB79005935F0 /* TutorialView.swift in Sources */,
 				664AF2812808B48B008C7B50 /* Price.swift in Sources */,

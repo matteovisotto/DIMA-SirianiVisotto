@@ -6,12 +6,15 @@
 //
 
 import Foundation
+import UIKit
 
 struct TrackedProduct: Codable {
     var id: Int
     var name: String
     var description: String
     var link: String
+    var highestPrice: Double
+    var lowestPrice: Double
     var createdAt: String
     var lastUpdate: String
     var trackingSince: String

@@ -75,7 +75,7 @@ struct SettingView: View {
                         }
                     }.listRowBackground(Color("SecondaryBackgroundColor"))
                 }
-            }
+            }.listStyle(.insetGrouped)
         }
     }
 }

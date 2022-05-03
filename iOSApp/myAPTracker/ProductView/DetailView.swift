@@ -19,8 +19,12 @@ struct DetailView: View {
             }.tabViewStyle(.page)
                 .frame(height: 150)
         ScrollView{
-            Text(viewModel.product.description).font(.body).lineLimit(nil).foregroundColor(Color("PrimaryLabel"))
+            VStack(alignment: .leading, spacing: 5) {
+                Text(viewModel.product.name).font(.body.bold()).foregroundColor(Color("PrimaryLabel"))
+                Divider().foregroundColor(Color("PrimaryLabel"))
+                Text(viewModel.product.description).font(.body).lineLimit(nil).foregroundColor(Color("PrimaryLabel"))
             }
+        }
             
         }.frame(maxWidth: .infinity)
     }
