@@ -15,6 +15,9 @@ function updatePrices(){
 	    $json_str = shell_exec('cd /var/aptracker/scraper/ && ./Scraper '.$url.' --price-only');
 	    $obj = json_decode($json_str);
 	    $price = str_replace('€', '', $obj->price);
+    	if($price == 0){
+        	continue;
+        }
     	notifyFollowers($id, $price);
 	    $stmt->execute();
 	}
@@ -23,7 +26,7 @@ function updatePrices(){
 function notifyFollowers($productId, $newPrice) {
 	$tokens = checkForPriceNotification($productId, $newPrice);
 	$product = getProductById($productId);
-	sendProductNotification($tokens, $product['name'], $productId);
+	sendProductNotification($tokens, $product['shortName'], $productId);
 }
 
 ?>

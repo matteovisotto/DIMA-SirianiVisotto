@@ -11,6 +11,7 @@ import UIKit
 struct TrackedProduct: Codable {
     var id: Int
     var name: String
+    var shortName: String
     var description: String
     var link: String
     var highestPrice: Double

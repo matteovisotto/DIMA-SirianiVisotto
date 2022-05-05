@@ -23,7 +23,7 @@ struct TrackedProductView: View {
     var body: some View{
         GeometryReader{ geometry in
             VStack(alignment: .leading, spacing: 0){
-                Text(product.name).font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).padding(.bottom, 5)
+                Text(product.shortName).font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).padding(.bottom, 5)
                 ZStack{
                     Image(uiImage: image).resizable().scaledToFit().onReceive(imageLoader.didChange) { data in
                         self.image = UIImage(data: data) ?? UIImage()

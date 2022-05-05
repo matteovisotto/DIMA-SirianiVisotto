@@ -68,17 +68,28 @@ function parseProduct($url) {
 	return $obj;
 }
 
+function decideForShortName($name, $shortName) {
+	if(strlen($name) > 60) {
+    	if(strlen($shortName) > 5) {
+        	return $shortName;
+        }
+    }
+	
+	return $name;
+}
+
 function insertProductByObject($obj, $url){
-	$sql1 = "INSERT INTO product (link, name, description) VALUES (?,?,?)";
+	$sql1 = "INSERT INTO product (link, name, description, shortName) VALUES (?,?,?,?)";
 	$sql2 = "INSERT INTO image (productId, url) VALUES (?,?)";
 	$sql3 = "INSERT INTO price (productId, price) VALUES (?,?)";
 	$db = getDatabaseConnection();
 	$db->begin_transaction();
 	try{
     	$stmt1 = $db->prepare($sql1);
-    	$stmt1->bind_param("sss", $url, $obj->name, $obj->description);
+    	$shortName = ucfirst(strtolower(decideForShortName($obj->name, str_replace("-", " ", explode("/", str_replace("https://www.amazon.it/", "", $url))[0]))));
+    	$name = ucfirst(strtolower($obj->name));
+    	$stmt1->bind_param("ssss", $url, $name, $obj->description, $shortName);
     	if(!$stmt1->execute()){
-        	echo "Here 1";
        		$db->rollback();
         	return null;
         }
@@ -94,10 +105,13 @@ function insertProductByObject($obj, $url){
         	}
         }
     	$price = str_replace("€", "", $obj->price);
+    	if($price == 0){
+        	$db->rollback();
+        	return null;
+        }
     	$stmt3 = $db->prepare($sql3);
     	$stmt3->bind_param("id", $productId, $price);
     	if(!$stmt3->execute()){
-        	echo "Here 3";
        		$db->rollback();
         	return null;
         }
@@ -121,6 +135,9 @@ function getAllProducts() {
 	while($row = $result->fetch_assoc()){
     	$row['prices'] = getProductPricesByProductId($row['id']);
     	$row['images'] = getProductImagesByProductId($row['id']);
+    	$row['lowestPrice'] = doubleval($row['lowestPrice']);
+    	$row['highestPrice'] = doubleval($row['highestPrice']);	
+    	$row['id'] = intval($row['id']);
     	$r[] = $row;
     }
 	return $r;
@@ -128,12 +145,16 @@ function getAllProducts() {
 
 function getAllProductsLastPrice() {
 	//$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId GROUP BY a.productId";
-	$sql="SELECT p.id, p.name, p.link, p.description, a.price, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId WHERE a.updatedAt = (SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId)";
+	$sql="SELECT p.id, p.name, p.shortName, p.link, p.description, a.price, p.highestPrice, p.lowestPrice, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId WHERE a.updatedAt = (SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId)";
 	$db = getDatabaseConnection();
 	$result = $db->query($sql);
 	$r = array();
 	while($row = $result->fetch_assoc()){
     	$row['images'] = getProductImagesByProductId($row['id']);
+    	$row['id'] = intval($row['id']);
+    	$row['price'] = doubleval($row['price']);
+    	$row['lowestPrice'] = doubleval($row['lowestPrice']);
+    	$row['highestPrice'] = doubleval($row['highestPrice']);
     	$r[] = $row;
     }
 	return $r;
@@ -141,7 +162,7 @@ function getAllProductsLastPrice() {
 
 function getMostTracked($limit){
 	//$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id GROUP BY a.productId ORDER BY n.nTrackers DESC LIMIT ?";
-	$sql="SELECT p.id, p.name, p.link, p.description, a.price, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id WHERE a.updatedAt=(SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId) ORDER BY n.nTrackers DESC LIMIT ?";
+	$sql="SELECT p.id, p.name, p.shortName, p.link, p.description, a.price, p.highestPrice, p.lowestPrice, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id WHERE a.updatedAt=(SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId) ORDER BY n.nTrackers DESC LIMIT ?";
 	$db = getDatabaseConnection();
 	$stmt = $db->prepare($sql);
 	$stmt->bind_param("i", $limit);

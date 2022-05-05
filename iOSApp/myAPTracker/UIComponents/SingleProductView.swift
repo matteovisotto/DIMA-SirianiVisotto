@@ -27,7 +27,7 @@ struct SingleProductView: View {
                     self.image = UIImage(data: data) ?? UIImage() }
                 Spacer().frame(width: 10)
                 VStack(spacing: 8){
-                    Text(product.name).font(.title3).lineLimit(2)
+                    Text(product.shortName).font(.title3).lineLimit(2)
                     HStack{
                         Spacer()
                     Text("\(product.price ?? 0, specifier: "%.2f") €").font(.title2.bold())
