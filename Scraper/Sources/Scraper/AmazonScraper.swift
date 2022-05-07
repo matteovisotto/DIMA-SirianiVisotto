@@ -29,19 +29,13 @@ class AmazonHTMLParser {
             let name = try doc.select("span#productTitle").first()?.text()
             let images = try doc.select("#altImages li.item")
             var imgArray: [String] = []
-            let highDef = true;
             var urlImage = ""
             //Togliendo le replacingOccurrences dovrebbe prendere quelle ad highDef e quelle a LowDef in base a richiesta utente (basta aggiungerlo alla chiamata)
             for image in images {
-                if (highDef) {
-                    urlImage = try image.select("img").attr("data-old-hires").replacingOccurrences(of: "US40", with: "SR320,320")
-                } else {
-                    urlImage = try image.select("img").attr("src").replacingOccurrences(of: "US40", with: "SR320,320")
+                urlImage = try image.select("img").attr("src").replacingOccurrences(of: "US40", with: "SR320,320").replacingOccurrences(of: "SR38,50", with: "SR320,320").replacingOccurrences(of: "US200", with: "SR320,320")
+                if(!urlImage.contains("play-icon-overlay")){
+                    imgArray.append(urlImage)
                 }
-                if (urlImage == "") {
-                    urlImage = try image.select("img").attr("src").replacingOccurrences(of: "US40", with: "SR320,320")
-                }
-                imgArray.append(urlImage)
             }
             let priceWhole = try doc.select("span.a-price-whole").first?.text().replacingOccurrences(of: ",", with: "")
             let priceDecimal = try doc.select("span.a-price-fraction").first?.text()
