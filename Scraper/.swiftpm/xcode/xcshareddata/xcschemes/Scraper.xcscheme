@@ -84,6 +84,10 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "https://www.amazon.it/MSI-RTX-3070-LHR-Architettura/dp/B099NYF19F/ref=sr_1_53?__mk_it_IT=&#xc5;M&#xc5;&#x17d;&#xd5;&#xd1;&amp;crid=E8017D5GIDD9&amp;keywords=rtx+3080&amp;qid=1651940733&amp;sprefix=rtx+3080%2Camazon-devices%2C56&amp;sr=8-53"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "https://www.amazon.it/Xiaomi-Lite-Smartphone-Snapdragon-Fotocamera/dp/B09DNG3827/ --price-only"
             isEnabled = "NO">
          </CommandLineArgument>
@@ -93,7 +97,31 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "https://www.amazon.it/dp/B07PHPXHQS/"
-            isEnabled = "YES">
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.it/dp/B09VCDC7M8/ref=sspa_dk_detail_2?psc=1&amp;pd_rd_i=B09VCDC7M8&amp;pd_rd_w=F9J1s&amp;pf_rd_p=28496f9a-8e03-4dec-b031-58b016891aa6&amp;pd_rd_wg=kOt9d&amp;pf_rd_r=21YWP7XTQ4JN909MVTE6&amp;pd_rd_r=689f58de-5d3e-4ad1-87aa-f8da26feadaf&amp;s=beauty"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.it/Giesswein-Neudau-Pantofole-Unisex-Adulto-Schiefer/dp/B00264FX4Q/"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.it/Pureday-4942079124033-Moai-Distributore-fazzoletti/dp/B008FVIK4Y?ref_=Oct_d_omwf_d_524015031&amp;pd_rd_w=Bj3a1&amp;pf_rd_p=b508b10a-f148-4d76-8507-2befb9d9d990&amp;pf_rd_r=12427WN48QAB9A5FTM4G&amp;pd_rd_r=92e4385a-3f18-4a91-9184-6d6fab56b2eb&amp;pd_rd_wg=ECYn8&amp;pd_rd_i=B008FVIK4Y"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.com/Geforce-GDDR6X-Express-Graphics-Titanium/dp/B096L83WV8/ref=sr_1_7?keywords=gtx+3080&amp;qid=1651940148&amp;sprefix=gtx+30%2Caps%2C174&amp;sr=8-7"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.it/Gigabyte-GeForce-GAMING-Scheda-Grafica/dp/B08NW2X37Z/ref=sr_1_54?__mk_it_IT=&#xc5;M&#xc5;&#x17d;&#xd5;&#xd1;&amp;crid=E8017D5GIDD9&amp;keywords=rtx+3080&amp;qid=1651940266&amp;sprefix=rtx+3080%2Camazon-devices%2C56&amp;sr=8-54"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.it/Corsair-Limited-Compatto-i9-11900K-Vengeance/dp/B09F6S7BS2/ref=sr_1_49_sspa?__mk_it_IT=&#xc5;M&#xc5;&#x17d;&#xd5;&#xd1;&amp;crid=E8017D5GIDD9&amp;keywords=rtx+3080&amp;qid=1651940733&amp;sprefix=rtx+3080%2Camazon-devices%2C56&amp;sr=8-49-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE1SFVJV0tES1ZFSkYmZW5jcnlwdGVkSWQ9QTA0NTM2ODYzVDRONlFNNDQ1QTVIJmVuY3J5cHRlZEFkSWQ9QTA2MDgzNTUxUDhZUTJMUTUxN0k1JndpZGdldE5hbWU9c3BfYXRmX25leHQmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl"
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
    </LaunchAction>
