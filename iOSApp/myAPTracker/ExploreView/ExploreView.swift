@@ -11,21 +11,19 @@ import SwiftfulLoadingIndicators
 struct ExploreView: View {
     @ObservedObject var viewModel: ExploreViewModel = ExploreViewModel()
     
-    let columns = [
-            GridItem(.flexible()),
-            //GridItem(.flexible()),
-        ]
-    
     var body: some View {
         ZStack{
                 GeometryReader{ geometry in
                     ScrollView(.vertical, showsIndicators: false){
                         VStack(spacing: 10) {
-                            ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ index in
+                            ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ contentIndex in
                                 NavigationLink{
-                                    ProductView(product: viewModel.mostTracked[index])
+                                    ProductView(product: viewModel.mostTracked[contentIndex])
                                 } label: {
-                                    SingleProductView(viewModel.mostTracked[index]).frame(width: ((geometry.size.width)-30), height: 120).border(Color.red)
+                                    VStack{
+                                        SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                        Divider().padding(.leading, 10)
+                                    }
                                 }
                                 
                             }

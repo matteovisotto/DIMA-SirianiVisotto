@@ -16,11 +16,6 @@ struct TrackedView: View {
         self.viewModel = TrackedViewModel(showLogin: showLogin)
     }
     
-    let columns = [
-            GridItem(.flexible()),
-            //GridItem(.flexible()),
-        ]
-    
     var body: some View {
         let searchTextProxy = Binding<String>(get: {
                     viewModel.searchText
@@ -68,27 +63,37 @@ struct TrackedView: View {
                             .cornerRadius(10)
                             GeometryReader{ geometry in
                                 ScrollView(.vertical, showsIndicators: false){
-                                    VStack(spacing: 10) {
+                                    
                                         if(viewModel.isSearching){
-                                            ForEach(0 ..< viewModel.searchingObjects.count, id: \.self){ index in
-                                                NavigationLink{
-                                                    ProductView(product: Product.fromTracked(viewModel.searchingObjects[index]))
-                                                } label: {
-                                                    TrackedProductView(viewModel.searchingObjects[index]).frame(height: 120).border(Color.red)
+                                            VStack(spacing: 10) {
+                                                ForEach(0 ..< viewModel.searchingObjects.count, id: \.self){ contentIndex in
+                                                    NavigationLink{
+                                                        ProductView(product: Product.fromTracked(viewModel.searchingObjects[contentIndex]))
+                                                    } label: {
+                                                        VStack{
+                                                            SingleProductView(Product.fromTracked(viewModel.searchingObjects[contentIndex])).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                                            Divider().padding(.leading, 10)
+                                                        }
+                                                    }
+                                                    
                                                 }
                                             }
                                         } else {
-                                            ForEach(0 ..< viewModel.trackingObjects.count, id: \.self){ index in
-                                                NavigationLink{
-                                                    ProductView(product: Product.fromTracked(viewModel.trackingObjects[index]))
-                                                } label: {
-                                                    TrackedProductView(viewModel.trackingObjects[index]).frame(height: 120).border(Color.red)
+                                            VStack(spacing: 10) {
+                                                ForEach(0 ..< viewModel.trackingObjects.count, id: \.self){ contentIndex in
+                                                    NavigationLink{
+                                                        ProductView(product: Product.fromTracked(viewModel.trackingObjects[contentIndex]))
+                                                    } label: {
+                                                        VStack{
+                                                            SingleProductView(Product.fromTracked(viewModel.trackingObjects[contentIndex])).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                                            Divider().padding(.leading, 10)
+                                                        }
+                                                    }
+                                                    
                                                 }
-                                                
                                             }
                                         }
-                                        
-                                    }
+                                    
                                 }.onAppear(perform: viewModel.loadData)
                             }
                     }.padding()
@@ -99,6 +104,30 @@ struct TrackedView: View {
             }
         }
     }
+}
+
+struct TrackedContentView: View {
+    var data: [TrackedProduct]
+    
+    var body: some View {
+        GeometryReader{ geometry in
+            VStack(spacing: 10) {
+                ForEach(0 ..< data.count, id: \.self){ contentIndex in
+                    NavigationLink{
+                        ProductView(product: Product.fromTracked(data[contentIndex]))
+                    } label: {
+                        VStack{
+                            SingleProductView(Product.fromTracked(data[contentIndex])).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                            Divider().padding(.leading, 10)
+                        }
+                    }
+                    
+                }
+            }
+        }
+        
+    }
+    
 }
 
 struct TrackedView_Previews: PreviewProvider {

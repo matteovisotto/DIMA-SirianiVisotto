@@ -53,11 +53,13 @@ struct HomeView: View {
                             }.padding(.horizontal)
                             VStack(spacing: 10) {
                                 HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count) { contentIndex in
-                                   
                                     NavigationLink{
                                         ProductView(product: viewModel.mostTracked[contentIndex])
                                     } label: {
-                                        SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).border(Color.red).padding(.leading, 10)
+                                        VStack{
+                                            SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                            Divider().padding(.leading, 10)
+                                        }
                                     }
                                     
                                 }
