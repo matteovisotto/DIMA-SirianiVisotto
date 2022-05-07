@@ -63,20 +63,24 @@ struct TrackedView: View {
                             .cornerRadius(10)
                             GeometryReader{ geometry in
                                 ScrollView(.vertical, showsIndicators: false){
-                                    
+                                    if viewModel.trackingObjects.count > 0{
                                         if(viewModel.isSearching){
-                                            VStack(spacing: 10) {
-                                                ForEach(0 ..< viewModel.searchingObjects.count, id: \.self){ contentIndex in
-                                                    NavigationLink{
-                                                        ProductView(product: Product.fromTracked(viewModel.searchingObjects[contentIndex]))
-                                                    } label: {
-                                                        VStack{
-                                                            SingleProductView(Product.fromTracked(viewModel.searchingObjects[contentIndex])).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
-                                                            Divider().padding(.leading, 10)
+                                            if viewModel.searchingObjects.count > 0 {
+                                                VStack(spacing: 10) {
+                                                    ForEach(0 ..< viewModel.searchingObjects.count, id: \.self){ contentIndex in
+                                                        NavigationLink{
+                                                            ProductView(product: Product.fromTracked(viewModel.searchingObjects[contentIndex]))
+                                                        } label: {
+                                                            VStack{
+                                                                SingleProductView(Product.fromTracked(viewModel.searchingObjects[contentIndex])).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel")).foregroundColor(Color("PrimaryLabel"))
+                                                                Divider().padding(.leading, 10)
+                                                            }
                                                         }
+                                                        
                                                     }
-                                                    
                                                 }
+                                            } else {
+                                                Text("No results").frame(maxWidth: .infinity, maxHeight: .infinity)
                                             }
                                         } else {
                                             VStack(spacing: 10) {
@@ -93,7 +97,9 @@ struct TrackedView: View {
                                                 }
                                             }
                                         }
-                                    
+                                    } else {
+                                        Text("No tracked product").frame(maxWidth: .infinity, maxHeight: .infinity).foregroundColor(Color("PrimaryLabel"))
+                                    }
                                 }.onAppear(perform: viewModel.loadData)
                             }
                     }.padding()
