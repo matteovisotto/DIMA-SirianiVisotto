@@ -920,7 +920,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
@@ -945,7 +945,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
@@ -1088,7 +1088,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;
@@ -1123,7 +1123,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;

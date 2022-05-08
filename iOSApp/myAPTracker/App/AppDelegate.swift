@@ -16,7 +16,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     public static var shared: AppDelegate? = nil
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
+                     [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        UIApplication.shared.applicationIconBadgeNumber = 0
         AppDelegate.shared = self
         ApplicationDelegate.shared.application(
                    application,
@@ -150,6 +152,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     private func parseNotification(_ userInfo: [AnyHashable: Any]) {
+        UIApplication.shared.applicationIconBadgeNumber = 0
         if let type = userInfo["type"] as? String {
             if(type == "product"){
                 if let productId = userInfo["productId"] as? String {
