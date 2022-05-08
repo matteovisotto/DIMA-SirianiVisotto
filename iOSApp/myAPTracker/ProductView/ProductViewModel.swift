@@ -23,6 +23,9 @@ class ProductViewModel: ObservableObject {
     
     @Published var openSetting: Bool = false
     
+    @Published var displayImageView: Bool = false
+    @Published var currentImage: Int = 0
+    
     init(product: Product){
         self.product = product
         if let ps = product.prices {

@@ -55,6 +55,8 @@
 		66A0676B281D319F002C479C /* TrackingSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */; };
 		66A5143628279F4C004388C7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5143528279F4C004388C7 /* NotificationService.swift */; };
 		66A5143A28279F4C004388C7 /* PushNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66A5143328279F4C004388C7 /* PushNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66A514412827ADD9004388C7 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514402827ADD9004388C7 /* ImageViewer.swift */; };
+		66A514432827AE25004388C7 /* ImageViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514422827AE25004388C7 /* ImageViewerViewModel.swift */; };
 		66BE657E28000BD40077777B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657D28000BD40077777B /* SettingView.swift */; };
 		66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657F28000E8B0077777B /* SettingViewModel.swift */; };
 		66C3C5C7281E715F006393E4 /* TrackingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5C6281E715F006393E4 /* TrackingStatus.swift */; };
@@ -188,6 +190,8 @@
 		66A5143328279F4C004388C7 /* PushNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A5143528279F4C004388C7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		66A5143728279F4C004388C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66A514402827ADD9004388C7 /* ImageViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
+		66A514422827AE25004388C7 /* ImageViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewModel.swift; sourceTree = "<group>"; };
 		66BE657D28000BD40077777B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		66BE657F28000E8B0077777B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		66C3C5C6281E715F006393E4 /* TrackingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingStatus.swift; sourceTree = "<group>"; };
@@ -408,6 +412,15 @@
 			path = PushNotification;
 			sourceTree = "<group>";
 		};
+		66A5143F2827ADC3004388C7 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				66A514402827ADD9004388C7 /* ImageViewer.swift */,
+				66A514422827AE25004388C7 /* ImageViewerViewModel.swift */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
 		66BE657C28000BBB0077777B /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +510,7 @@
 		66D13CBF27FAFD88004B2077 /* myAPTracker */ = {
 			isa = PBXGroup;
 			children = (
+				66A5143F2827ADC3004388C7 /* ImageViewer */,
 				66C3C5D1281E808A006393E4 /* ExploreView */,
 				66C3C5CB281E7D7F006393E4 /* TrackedView */,
 				6605EDD8281D6ABF001D2A49 /* ProductView */,
@@ -796,6 +810,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A514432827AE25004388C7 /* ImageViewerViewModel.swift in Sources */,
 				66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */,
 				667BF40427FB8B2A0000B7EB /* MainView.swift in Sources */,
 				6637563D281D987A00DCECB3 /* PriceView.swift in Sources */,
@@ -829,6 +844,7 @@
 				66DA7E62281DA96A00B04036 /* DetailView.swift in Sources */,
 				664AF2832808B75F008C7B50 /* ImageLoader.swift in Sources */,
 				66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */,
+				66A514412827ADD9004388C7 /* ImageViewer.swift in Sources */,
 				66D13CF927FB1EB7004B2077 /* SocialButton.swift in Sources */,
 				66C3C5DB281ECF07006393E4 /* UpdateTrackingView.swift in Sources */,
 				66742C7627FCCC0A0093EE24 /* UIViewController+Extension.swift in Sources */,

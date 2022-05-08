@@ -12,9 +12,12 @@ struct DetailView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            TabView{
+            TabView(selection: $viewModel.currentImage){
                 ForEach(0..<viewModel.product.images.count, id: \.self) {index in
-                    ProductImage(viewModel.product.images[index])
+                    ProductImage(viewModel.product.images[index]).onTapGesture {
+                        viewModel.displayImageView = true
+                    }.tag(index)
+
                 }
             }.tabViewStyle(.page)
                 .frame(height: 150)
@@ -27,15 +30,19 @@ struct DetailView: View {
         }
             
         }.frame(maxWidth: .infinity)
+            .fullScreenCover(isPresented: $viewModel.displayImageView) {
+                ImageViewer(isPresented: $viewModel.displayImageView, imageUrls: viewModel.product.images, currentImage: $viewModel.currentImage)
+            }
     }
 }
 
 struct ProductImage: View {
     
     @ObservedObject var imageLoader:ImageLoader = ImageLoader()
-    @State var image:UIImage = UIImage()
+    @State var image:UIImage
 
-    init(_ i: String) {
+    init(_ i: String, loading: UIImage = UIImage()) {
+        self.image = loading
         imageLoader.getImage(urlString: i)
     }
     
