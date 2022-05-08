@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1254A0C928284394006BE66D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1254A0C828284394006BE66D /* SwiftUICharts */; };
 		129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3D28086F1000F2C870 /* HomeViewModel.swift */; };
 		129A1A402808702000F2C870 /* TrackedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3F2808702000F2C870 /* TrackedProduct.swift */; };
 		12D7D87027FF7EDF00178DAE /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */; };
@@ -297,6 +298,7 @@
 				66D13CED27FAFE6A004B2077 /* GoogleSignIn in Frameworks */,
 				6679718F281BC29D0054E6A1 /* FirebaseMessaging in Frameworks */,
 				6679718B281BC29D0054E6A1 /* FirebaseAnalytics in Frameworks */,
+				1254A0C928284394006BE66D /* SwiftUICharts in Frameworks */,
 				6679718D281BC29D0054E6A1 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				6637563B281D949600DCECB3 /* LineChartView in Frameworks */,
 			);
@@ -756,6 +758,7 @@
 				6679718E281BC29D0054E6A1 /* FirebaseMessaging */,
 				6637563A281D949600DCECB3 /* LineChartView */,
 				66C3C5C9281E7747006393E4 /* SwiftfulLoadingIndicators */,
+				1254A0C828284394006BE66D /* SwiftUICharts */,
 			);
 			productName = APTracker;
 			productReference = 66D13CBD27FAFD88004B2077 /* myAPTracker.app */;
@@ -841,6 +844,7 @@
 				66797189281BC29D0054E6A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				66375639281D949600DCECB3 /* XCRemoteSwiftPackageReference "LineChartView" */,
 				66C3C5C8281E7747006393E4 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
+				1254A0C728284394006BE66D /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 66D13CBE27FAFD88004B2077 /* Products */;
 			projectDirPath = "";
@@ -1475,6 +1479,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1254A0C728284394006BE66D /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.5;
+			};
+		};
 		66375639281D949600DCECB3 /* XCRemoteSwiftPackageReference "LineChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Jonathan-Gander/LineChartView";
@@ -1518,6 +1530,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1254A0C828284394006BE66D /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1254A0C728284394006BE66D /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
 		6637563A281D949600DCECB3 /* LineChartView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 66375639281D949600DCECB3 /* XCRemoteSwiftPackageReference "LineChartView" */;
