@@ -53,6 +53,8 @@
 		66A06766281D1FE3002C479C /* Collapsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A06765281D1FE3002C479C /* Collapsible.swift */; };
 		66A06769281D2D37002C479C /* TrackingSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A06768281D2D37002C479C /* TrackingSettingView.swift */; };
 		66A0676B281D319F002C479C /* TrackingSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */; };
+		66A5143628279F4C004388C7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5143528279F4C004388C7 /* NotificationService.swift */; };
+		66A5143A28279F4C004388C7 /* PushNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66A5143328279F4C004388C7 /* PushNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66BE657E28000BD40077777B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657D28000BD40077777B /* SettingView.swift */; };
 		66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657F28000E8B0077777B /* SettingViewModel.swift */; };
 		66C3C5C7281E715F006393E4 /* TrackingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5C6281E715F006393E4 /* TrackingStatus.swift */; };
@@ -103,6 +105,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		66A5143828279F4C004388C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66D13CB527FAFD88004B2077 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66A5143228279F4C004388C7;
+			remoteInfo = PushNotification;
+		};
 		66D13CCE27FAFD96004B2077 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66D13CB527FAFD88004B2077 /* Project object */;
@@ -118,6 +127,20 @@
 			remoteInfo = APTracker;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66A5143B28279F4C004388C7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				66A5143A28279F4C004388C7 /* PushNotification.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		129A1A3D28086F1000F2C870 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -162,6 +185,9 @@
 		66A06765281D1FE3002C479C /* Collapsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collapsible.swift; sourceTree = "<group>"; };
 		66A06768281D2D37002C479C /* TrackingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingView.swift; sourceTree = "<group>"; };
 		66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingViewModel.swift; sourceTree = "<group>"; };
+		66A5143328279F4C004388C7 /* PushNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A5143528279F4C004388C7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		66A5143728279F4C004388C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66BE657D28000BD40077777B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		66BE657F28000E8B0077777B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		66C3C5C6281E715F006393E4 /* TrackingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingStatus.swift; sourceTree = "<group>"; };
@@ -214,6 +240,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		66A5143028279F4C004388C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D13CBA27FAFD88004B2077 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +399,15 @@
 			path = TrackingSettingView;
 			sourceTree = "<group>";
 		};
+		66A5143428279F4C004388C7 /* PushNotification */ = {
+			isa = PBXGroup;
+			children = (
+				66A5143528279F4C004388C7 /* NotificationService.swift */,
+				66A5143728279F4C004388C7 /* Info.plist */,
+			);
+			path = PushNotification;
+			sourceTree = "<group>";
+		};
 		66BE657C28000BBB0077777B /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +478,7 @@
 				66D13CBF27FAFD88004B2077 /* myAPTracker */,
 				66D13CD027FAFD96004B2077 /* myAPTrackerTests */,
 				66D13CDA27FAFD97004B2077 /* myAPTrackerUITests */,
+				66A5143428279F4C004388C7 /* PushNotification */,
 				66D13CBE27FAFD88004B2077 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -446,6 +489,7 @@
 				66D13CBD27FAFD88004B2077 /* myAPTracker.app */,
 				66D13CCD27FAFD96004B2077 /* myAPTrackerTests.xctest */,
 				66D13CD727FAFD97004B2077 /* myAPTrackerUITests.xctest */,
+				66A5143328279F4C004388C7 /* PushNotification.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -569,6 +613,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		66A5143228279F4C004388C7 /* PushNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66A5143E28279F4C004388C7 /* Build configuration list for PBXNativeTarget "PushNotification" */;
+			buildPhases = (
+				66A5142F28279F4C004388C7 /* Sources */,
+				66A5143028279F4C004388C7 /* Frameworks */,
+				66A5143128279F4C004388C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PushNotification;
+			productName = PushNotification;
+			productReference = 66A5143328279F4C004388C7 /* PushNotification.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		66D13CBC27FAFD88004B2077 /* myAPTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66D13CE127FAFD97004B2077 /* Build configuration list for PBXNativeTarget "myAPTracker" */;
@@ -576,10 +637,12 @@
 				66D13CB927FAFD88004B2077 /* Sources */,
 				66D13CBA27FAFD88004B2077 /* Frameworks */,
 				66D13CBB27FAFD88004B2077 /* Resources */,
+				66A5143B28279F4C004388C7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				66A5143928279F4C004388C7 /* PBXTargetDependency */,
 			);
 			name = myAPTracker;
 			packageProductDependencies = (
@@ -641,6 +704,9 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
+					66A5143228279F4C004388C7 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 					66D13CBC27FAFD88004B2077 = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -677,11 +743,19 @@
 				66D13CBC27FAFD88004B2077 /* myAPTracker */,
 				66D13CCC27FAFD96004B2077 /* myAPTrackerTests */,
 				66D13CD627FAFD97004B2077 /* myAPTrackerUITests */,
+				66A5143228279F4C004388C7 /* PushNotification */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		66A5143128279F4C004388C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D13CBB27FAFD88004B2077 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -710,6 +784,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		66A5142F28279F4C004388C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66A5143628279F4C004388C7 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D13CB927FAFD88004B2077 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -816,6 +898,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		66A5143928279F4C004388C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66A5143228279F4C004388C7 /* PushNotification */;
+			targetProxy = 66A5143828279F4C004388C7 /* PBXContainerItemProxy */;
+		};
 		66D13CCF27FAFD96004B2077 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 66D13CBC27FAFD88004B2077 /* myAPTracker */;
@@ -829,6 +916,56 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		66A5143C28279F4C004388C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PushNotification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.PushNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66A5143D28279F4C004388C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = 2FE7MP24X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushNotification/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PushNotification;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.PushNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		66D13CDF27FAFD97004B2077 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -946,11 +1083,12 @@
 		66D13CE227FAFD97004B2077 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;
@@ -980,11 +1118,12 @@
 		66D13CE327FAFD97004B2077 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;
@@ -1090,6 +1229,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		66A5143E28279F4C004388C7 /* Build configuration list for PBXNativeTarget "PushNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66A5143C28279F4C004388C7 /* Debug */,
+				66A5143D28279F4C004388C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66D13CB827FAFD88004B2077 /* Build configuration list for PBXProject "myAPTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
