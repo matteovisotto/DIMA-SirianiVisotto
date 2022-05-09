@@ -61,4 +61,12 @@ class PreferenceManager {
     func getDropValue() -> Double {
         return userDefaults.double(forKey: "dropValue") 
     }
+    
+    func setCommentPolicy(_ commentPolicy: String) -> Void {
+        userDefaults.set(commentPolicy, forKey: "commentPolicy")
+    }
+    
+    func getCommentPolicy() -> String {
+        return userDefaults.string(forKey: "commentPolicy") ?? "never"
+    }
 }

@@ -12,4 +12,5 @@ class TrackingStatus: Codable {
     var trackingSince: String?
     var dropKey: String?
     var dropValue: Double?
+    var commentPolicy: String?
 }

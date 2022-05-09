@@ -64,6 +64,14 @@ struct TrackingSettingView: View {
                                     default:
                                         EmptyView()
                                 }
+                                Group{
+                                    Text("You can choose the default settings to receive notifications about comments in your tracked products.").foregroundColor(Color("PrimaryLabel")).font(.callout)
+                                    Text("This setting can be overridden for each product you track by opening the product page").foregroundColor(Color("PrimaryLabel")).font(.caption)
+                                    Picker("", selection: $viewModel.commentPolicy) {
+                                        Text("Never").tag("never")
+                                        Text("Always").tag("always")
+                                    }.pickerStyle(.segmented).padding(.vertical)
+                                }
                                 HStack{
                                     Spacer()
                                     Button{

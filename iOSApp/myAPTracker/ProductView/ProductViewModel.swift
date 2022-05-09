@@ -49,7 +49,6 @@ class ProductViewModel: ObservableObject {
                 do {
                     let decoder = JSONDecoder()
                     let trackingStatus = try decoder.decode(TrackingStatus.self, from: data!)
-                    
                     DispatchQueue.main.async {
                         self.trackedStatus = trackingStatus
                     }
@@ -252,6 +251,7 @@ class ProductViewModel: ObservableObject {
             "id": self.product.id,
             "dropValue": "\(PreferenceManager.shared.getDropValue())",
             "dropKey": PreferenceManager.shared.getDropKey(),
+            "commentPolicy": PreferenceManager.shared.getCommentPolicy()
         ]
         let taskManager = TaskManager(urlString: AppConstant.addTrackingByIdURL, method: .POST, parameters: parameters)
         taskManager.executeWithAccessToken(accessToken: AppState.shared.userCredential?.accessToken ?? "") { result, content, data in
@@ -278,6 +278,7 @@ class ProductViewModel: ObservableObject {
             "productId": self.product.id,
             "dropValue": "\(self.trackedStatus?.dropValue ?? 0)",
             "dropKey": self.trackedStatus?.dropKey ?? "always",
+            "commentPolicy": self.trackedStatus?.commentPolicy ?? "never"
         ]
         let taskManager = TaskManager(urlString: AppConstant.updateTrackingURL, method: .POST, parameters: parameters)
         taskManager.executeWithAccessToken(accessToken: AppState.shared.userCredential?.accessToken ?? "") { result, content, data in

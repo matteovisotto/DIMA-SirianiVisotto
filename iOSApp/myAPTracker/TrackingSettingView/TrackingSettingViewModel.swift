@@ -11,6 +11,7 @@ import SwiftUI
 class TrackingSettingViewModel: ObservableObject {
     @Published var dropKey: String = "always"
     @Published var dropValue: String = "0"
+    @Published var commentPolicy: String = "never"
     
     private var dropValueVal: Double = 0
     
@@ -21,6 +22,7 @@ class TrackingSettingViewModel: ObservableObject {
     func loadData() {
         dropKey = PreferenceManager.shared.getDropKey()
         dropValue = "\(PreferenceManager.shared.getDropValue())"
+        commentPolicy = PreferenceManager.shared.getCommentPolicy()
     }
     
     func saveSetting() -> Void {
@@ -37,6 +39,7 @@ class TrackingSettingViewModel: ObservableObject {
         }
         PreferenceManager.shared.setDropKey(dropKey)
         PreferenceManager.shared.setDropValue(dropValueVal)
+        PreferenceManager.shared.setCommentPolicy(commentPolicy)
         FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
         }
     }

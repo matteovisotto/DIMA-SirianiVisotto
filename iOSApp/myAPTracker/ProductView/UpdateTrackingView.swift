@@ -62,6 +62,13 @@ struct UpdateTrackingView: View {
                                     default:
                                         EmptyView()
                                 }
+                                Group{
+                                    Text("You can choose if receive or not notification about comments on this product.").foregroundColor(Color("PrimaryLabel")).font(.callout)
+                                    Picker("", selection: Binding(status.commentPolicy)!) {
+                                        Text("Never").tag("never")
+                                        Text("Always").tag("always")
+                                    }.pickerStyle(.segmented).padding(.vertical)
+                                }
                                 HStack{
                                     Spacer()
                                     Button{
