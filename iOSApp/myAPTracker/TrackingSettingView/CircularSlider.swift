@@ -10,18 +10,28 @@ import SwiftUI
 
 struct CircularSlider: View {
     @State var angleValue: CGFloat = 0.0
-    var valuePercentage: Binding<Double>
+    
+    var stringValue: Binding<String>
     let config = Config(minimumValue: 0.0,
                         maximumValue: 100.0,
                         totalValue: 100.0,
-                        knobRadius: 15.0,
-                        radius: 125.0)
+                        knobRadius: 9,
+                        radius: 75)
     
-    init(_ valuePercentage: Binding<Double>) {
-        self.valuePercentage = valuePercentage
+    init(_ valuePercentage: Binding<String>) {
+        self.stringValue = valuePercentage
     }
     
     var body: some View {
+        let valuePercentage = Binding<Double> (
+            get: {
+                Double(stringValue.wrappedValue) ?? 0.0
+            },
+            set: {
+                stringValue.wrappedValue = "\($0)"
+            }
+        )
+        
         ZStack {
             Circle()
                 .stroke(Color("BackgroundColor"))
@@ -47,15 +57,15 @@ struct CircularSlider: View {
                 .rotationEffect(Angle.degrees(Double(angleValue)))
                 .gesture(DragGesture(minimumDistance: 0.0)
                             .onChanged({ value in
-                                change(location: value.location)
+                                change(location: value.location, valuePercentage: valuePercentage)
                             }))
             
             Text("\(String.init(format: "%.0f", valuePercentage.wrappedValue)) %")
-                            .font(.system(size: 60))
+                            .font(.system(size: 40))
         }
     }
     
-    private func change(location: CGPoint) {
+    private func change(location: CGPoint, valuePercentage: Binding<Double>) {
         let vector = CGVector(dx: location.x, dy: location.y)
         
         let angle = atan2(vector.dy - (config.knobRadius + 10), vector.dx - (config.knobRadius + 10)) + .pi/2.0
