@@ -10,6 +10,7 @@
 		1254A0C928284394006BE66D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1254A0C828284394006BE66D /* SwiftUICharts */; };
 		129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3D28086F1000F2C870 /* HomeViewModel.swift */; };
 		129A1A402808702000F2C870 /* TrackedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3F2808702000F2C870 /* TrackedProduct.swift */; };
+		12AF1EEF282A86E000A7FE58 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */; };
 		12D7D87027FF7EDF00178DAE /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */; };
 		12F1FE7A280ABB17000BF1B1 /* ChangePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F1FE79280ABB17000BF1B1 /* ChangePageView.swift */; };
 		12F84715280B02B10027BFFF /* TabTutorialElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F84714280B02B10027BFFF /* TabTutorialElement.swift */; };
@@ -166,6 +167,7 @@
 /* Begin PBXFileReference section */
 		129A1A3D28086F1000F2C870 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		129A1A3F2808702000F2C870 /* TrackedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedProduct.swift; sourceTree = "<group>"; };
+		12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
 		12D7D86F27FF7EDF00178DAE /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		12F1FE79280ABB17000BF1B1 /* ChangePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePageView.swift; sourceTree = "<group>"; };
 		12F84714280B02B10027BFFF /* TabTutorialElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabTutorialElement.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 			children = (
 				66A06768281D2D37002C479C /* TrackingSettingView.swift */,
 				66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */,
+				12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */,
 			);
 			path = TrackingSettingView;
 			sourceTree = "<group>";
@@ -960,6 +963,7 @@
 				666524D027FB35F9005C73F3 /* FacebookAuth.swift in Sources */,
 				66D13D0527FB2D2B004B2077 /* KeychainHelper.swift in Sources */,
 				66DA7E62281DA96A00B04036 /* DetailView.swift in Sources */,
+				12AF1EEF282A86E000A7FE58 /* CircularSlider.swift in Sources */,
 				664AF2832808B75F008C7B50 /* ImageLoader.swift in Sources */,
 				66742C7427FCC9A80093EE24 /* RegisterView.swift in Sources */,
 				66A514412827ADD9004388C7 /* ImageViewer.swift in Sources */,

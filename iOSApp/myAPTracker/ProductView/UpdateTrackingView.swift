@@ -45,6 +45,9 @@ struct UpdateTrackingView: View {
                                     //Text("Price").tag("price")
                                     Text("Always").tag("always")
                                 }.pickerStyle(.segmented).padding(.vertical)
+                                if(status.wrappedValue.dropKey == "percentage") {
+                                    CircularSlider($dropValue)
+                                }
                                 if(status.wrappedValue.dropKey != "none" && status.wrappedValue.dropKey != "always"){
                                     IconTextField(titleKey: "Value", text: $dropValue, icon: Image(systemName: "eurosign.circle"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
                                 }

@@ -47,6 +47,9 @@ struct TrackingSettingView: View {
                                     //Text("Price").tag("price")
                                     Text("Always").tag("always")
                                 }.pickerStyle(.segmented).padding(.vertical)
+                                if(viewModel.dropKey == "percentage") {
+                                    CircularSlider($viewModel.dropValue)
+                                }
                                 if(viewModel.dropKey != "none" && viewModel.dropKey != "always"){
                                     IconTextField(titleKey: "Value", text: $viewModel.dropValue, icon: Image(systemName: "eurosign.circle"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
                                 }
@@ -93,7 +96,7 @@ struct TrackingSettingView: View {
         
                         }.padding(.vertical, 5)
                     }.padding()
-                
+                    CircularSlider()
                 }.onAppear {
                     viewModel.loadData()
                 }
