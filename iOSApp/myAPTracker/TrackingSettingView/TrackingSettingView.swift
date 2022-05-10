@@ -50,7 +50,10 @@ struct TrackingSettingView: View {
                                 if(viewModel.dropKey == "percentage") {
                                     CircularSlider($viewModel.dropValue).frame(width: 150, height: 150, alignment: .center)
                                 }
-                                if(viewModel.dropKey != "none" && viewModel.dropKey != "always"){
+                                if(viewModel.dropKey == "percentage"){
+                                    IconTextField(titleKey: "Value", text: $viewModel.dropValue, icon: Image(systemName: "percent"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
+                                }
+                                if(viewModel.dropKey == "value"){
                                     IconTextField(titleKey: "Value", text: $viewModel.dropValue, icon: Image(systemName: "eurosign.circle"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
                                 }
                                 switch viewModel.dropKey {
