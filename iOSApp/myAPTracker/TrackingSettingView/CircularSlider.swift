@@ -31,7 +31,6 @@ struct CircularSlider: View {
                 stringValue.wrappedValue = "\($0)"
             }
         )
-        
         ZStack {
             Circle()
                 .trim(from: 0.0, to: 0.5)
@@ -79,7 +78,11 @@ struct CircularSlider: View {
         let value = fixedAngle / (2.0 * .pi) * config.totalValue
         
         if (value >= config.minimumValue && value <= config.maximumValue/2) {
-            valuePercentage.wrappedValue = value * 2
+            if ((value * 2).truncatingRemainder(dividingBy: 1) > 0.5) {
+                valuePercentage.wrappedValue = Double(Int((value * 2) + 1))
+            } else {
+                valuePercentage.wrappedValue = Double(Int(value * 2))
+            }
             angleValue = fixedAngle * 180 / .pi
         }
     }
