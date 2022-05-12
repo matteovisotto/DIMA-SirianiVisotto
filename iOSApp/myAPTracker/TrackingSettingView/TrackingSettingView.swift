@@ -48,12 +48,11 @@ struct TrackingSettingView: View {
                                     Text("Always").tag("always")
                                 }.pickerStyle(.segmented).padding(.vertical)
                                 if(viewModel.dropKey == "percentage") {
-                                    CircularSlider($viewModel.dropValue).frame(width: 150, height: 150, alignment: .center)
+                                    CircularSlider($viewModel.dropValuePercentage).frame(width: 150, height: 150, alignment: .center)
+                                    IconTextField(titleKey: "Percentage", text: $viewModel.dropValuePercentage, icon: Image(systemName: "percent"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
                                 }
-                                if(viewModel.dropKey == "percentage"){
-                                    IconTextField(titleKey: "Value", text: $viewModel.dropValue, icon: Image(systemName: "percent"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
-                                }
-                                if(viewModel.dropKey == "value"){
+                                if (viewModel.dropKey == "value") {
+                                    PickerView($viewModel.dropValue, 200).frame(height: 150)
                                     IconTextField(titleKey: "Value", text: $viewModel.dropValue, icon: Image(systemName: "eurosign.circle"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
                                 }
                                 switch viewModel.dropKey {
@@ -81,11 +80,10 @@ struct TrackingSettingView: View {
                                 HStack{
                                     Spacer()
                                     Button{
-                                        viewModel.saveSetting()
+                                        viewModel.saveSetting(percentage: viewModel.dropKey == "percentage")
                                     } label: {
                                         Text("Change").bold()
                                             .padding(.vertical, 3)
-                                        
                                     }.frame(width: (geom.size.width-40)/2)
                                 .padding(.vertical, 7)
                                 .background(Color("Primary"))

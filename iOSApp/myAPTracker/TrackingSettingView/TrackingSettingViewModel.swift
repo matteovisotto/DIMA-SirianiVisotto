@@ -11,6 +11,7 @@ import SwiftUI
 class TrackingSettingViewModel: ObservableObject {
     @Published var dropKey: String = "always"
     @Published var dropValue: String = "0"
+    @Published var dropValuePercentage: String = "0"
     @Published var commentPolicy: String = "never"
     
     private var dropValueVal: Double = 0
@@ -21,20 +22,35 @@ class TrackingSettingViewModel: ObservableObject {
     
     func loadData() {
         dropKey = PreferenceManager.shared.getDropKey()
-        dropValue = "\(PreferenceManager.shared.getDropValue())"
+        if (dropKey == "percentage"){
+            dropValuePercentage = "\(PreferenceManager.shared.getDropValue())"
+            dropValue = "0.0"
+        } else if (dropKey == "value") {
+            dropValue = "\(PreferenceManager.shared.getDropValue())"
+            dropValuePercentage = "0.0"
+        }
+        //dropValue = "\(PreferenceManager.shared.getDropValue())"
         commentPolicy = PreferenceManager.shared.getCommentPolicy()
     }
     
-    func saveSetting() -> Void {
+    func saveSetting(percentage: Bool) -> Void {
         if(dropKey == "none" || dropKey == "always"){
            dropValueVal = 0
         } else {
-            if let v = Double(dropValue.replacingOccurrences(of: ",", with: ".")){
-                dropValueVal = v
-                
+            if (percentage){
+                if let v = Double(dropValuePercentage.replacingOccurrences(of: ",", with: ".")){
+                    dropValueVal = v
+                } else {
+                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("Invalid value", comment: "invalid value"))
+                    return
+                }
             } else {
-                AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("Invalid value", comment: "invalid value"))
-                return
+                if let v = Double(dropValue.replacingOccurrences(of: ",", with: ".")){
+                    dropValueVal = v
+                } else {
+                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: NSLocalizedString("Invalid value", comment: "invalid value"))
+                    return
+                }
             }
         }
         PreferenceManager.shared.setDropKey(dropKey)
@@ -46,7 +62,11 @@ class TrackingSettingViewModel: ObservableObject {
     
     func validateSettings() -> Bool {
         if(dropKey != "none" && dropKey != "always"){
-            return dropValue != "0" && dropValue != "0.0"
+            if (dropKey == "percentage") {
+                return dropValuePercentage != "0" && dropValuePercentage != "0.0"
+            } else {
+                return dropValue != "0" && dropValue != "0.0"
+            }
         }
         return true
     }

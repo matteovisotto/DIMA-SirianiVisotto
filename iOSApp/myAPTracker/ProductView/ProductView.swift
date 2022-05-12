@@ -102,7 +102,7 @@ struct ProductView: View {
         }.navigationBarHidden(true)
             .sheet(isPresented: $viewModel.openSetting) {
                 //if let binding = Binding<TrackingStatus>($viewModel.trackedStatus){
-                UpdateTrackingView(isOpen: $viewModel.openSetting, status: Binding($viewModel.trackedStatus)!) {
+                UpdateTrackingView(isOpen: $viewModel.openSetting, price: viewModel.product.price!, status: Binding($viewModel.trackedStatus)!) {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             self.viewModel.updateTracking()
                         }

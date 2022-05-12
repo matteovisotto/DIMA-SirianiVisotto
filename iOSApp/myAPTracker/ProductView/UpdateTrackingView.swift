@@ -13,14 +13,32 @@ struct UpdateTrackingView: View {
         var isOpen: Binding<Bool>
         var onSave: () -> ()
         @State var dropValue: String
+        @State var dropValuePercentage: String
+        var price: Double
         
-        init(isOpen: Binding<Bool>, status: Binding<TrackingStatus>, onSave: @escaping ()->()) {
+    init(isOpen: Binding<Bool>, price: Double, status: Binding<TrackingStatus>, onSave: @escaping ()->()) {
             self.isOpen = isOpen
             self.status = status
             self.onSave = onSave
-            if let v = status.wrappedValue.dropValue?.description {
-                self.dropValue = v
+            self.price = price
+            if (status.wrappedValue.dropKey?.description == "percentage") {
+                if let v = status.wrappedValue.dropValue?.description {
+                    self.dropValuePercentage = v
+                    self.dropValue = "0.0"
+                } else {
+                    self.dropValuePercentage = "0.0"
+                    self.dropValue = "0.0"
+                }
+            } else if (status.wrappedValue.dropKey?.description == "value") {
+                if let v2 = status.wrappedValue.dropValue?.description {
+                    self.dropValuePercentage = "0.0"
+                    self.dropValue = v2
+                } else {
+                    self.dropValuePercentage = "0.0"
+                    self.dropValue = "0.0"
+                }
             } else {
+                self.dropValuePercentage = "0.0"
                 self.dropValue = "0.0"
             }
             UISegmentedControl.appearance().backgroundColor = UIColor.white.withAlphaComponent(0.2)
@@ -46,12 +64,11 @@ struct UpdateTrackingView: View {
                                     Text("Always").tag("always")
                                 }.pickerStyle(.segmented).padding(.vertical)
                                 if(status.wrappedValue.dropKey == "percentage") {
-                                    CircularSlider($dropValue).frame(width: 150, height: 150, alignment: .center)
+                                    CircularSlider($dropValuePercentage).frame(width: 150, height: 150, alignment: .center)
+                                    IconTextField(titleKey: "Percentage", text: $dropValuePercentage, icon: Image(systemName: "percent"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
                                 }
-                                if(status.wrappedValue.dropKey == "percentage"){
-                                    IconTextField(titleKey: "Value", text: $dropValue, icon: Image(systemName: "percent"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
-                                }
-                                if(status.wrappedValue.dropKey == "value"){
+                                if (status.wrappedValue.dropKey == "value") {
+                                    PickerView($dropValue, price).frame(height: 150)
                                     IconTextField(titleKey: "Value", text: $dropValue, icon: Image(systemName: "eurosign.circle"), foregroundColor: Color("PrimaryLabel"), showValidator: false).keyboardType(.numbersAndPunctuation)
                                 }
                                 switch status.wrappedValue.dropKey {
@@ -78,7 +95,12 @@ struct UpdateTrackingView: View {
                                 HStack{
                                     Spacer()
                                     Button{
-                                        status.dropValue.wrappedValue = Double(self.dropValue)
+                                        if (status.dropKey.wrappedValue == "percentage"){
+                                            status.dropValue.wrappedValue = Double(self.dropValuePercentage)
+                                        } else if (status.dropKey.wrappedValue == "value"){
+                                            status.dropValue.wrappedValue = Double(self.dropValue)
+                                        }
+                                        //status.dropValue.wrappedValue = Double(self.dropValue)
                                         self.onSave()
                                         self.isOpen.wrappedValue = false
                                     } label: {

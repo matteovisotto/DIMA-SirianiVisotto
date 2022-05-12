@@ -66,7 +66,9 @@ struct CircularSlider: View {
             
             Text("\(String.init(format: "%.0f", valuePercentage.wrappedValue)) %")
                             .font(.system(size: 40))
-        }
+        }.onAppear(perform: {
+            angleValue = ((180 * valuePercentage.wrappedValue)/100)
+        })
     }
     
     private func change(location: CGPoint, valuePercentage: Binding<Double>) {
