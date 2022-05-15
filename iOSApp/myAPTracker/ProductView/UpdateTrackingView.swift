@@ -51,7 +51,7 @@ struct UpdateTrackingView: View {
             ZStack{
                 Color("BackgroundColor").ignoresSafeArea()
                 GeometryReader{ geom in
-                    ScrollView(.vertical){
+                    ScrollView(.vertical, showsIndicators: false){
                         VStack{
                             VStack(spacing: 10){
                                 Text("You can choose the settings to receive notifications about this product when the price drops.").foregroundColor(Color("PrimaryLabel")).font(.callout)
@@ -112,7 +112,6 @@ struct UpdateTrackingView: View {
                                     }.padding(.top)
                                 }
                                 
-            
                             }.padding(.vertical, 5)
                         }.padding()
                     }
