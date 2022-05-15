@@ -19,7 +19,6 @@ struct PickerView: View {
     init(_ valuePercentage: Binding<String>,_ price: Double) {
         self.stringValue = valuePercentage
         self.price = price
-        print(stringValue.wrappedValue)
     }
     
     var body: some View {
@@ -60,9 +59,8 @@ struct PickerView: View {
                         valueText.wrappedValue = Double(self.$firstPartSelection.wrappedValue) + temp
                     }
             }.onAppear(perform: {
-                $firstPartSelection.wrappedValue = Int(valueText.wrappedValue)
-                
-                $secondPartSelection.wrappedValue = Int(valueText.wrappedValue / 100) //Int(valueText.wrappedValue.truncatingRemainder(dividingBy: 1))
+                firstPartSelection = Int(valueText.wrappedValue)
+                secondPartSelection = Int(valueText.wrappedValue.truncatingRemainder(dividingBy: 1)*100)
             })
         }
     }
@@ -70,6 +68,6 @@ struct PickerView: View {
 
 struct PickerView_Previews: PreviewProvider {
     static var previews: some View {
-        PickerView(.constant("0.0"), 0.0)
+        PickerView(.constant("12.22"), 12.22)
     }
 }
