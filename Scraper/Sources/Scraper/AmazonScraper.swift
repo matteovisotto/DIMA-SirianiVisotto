@@ -11,6 +11,8 @@ import SwiftSoup
 struct AmazonProduct: Codable {
     var name: String
     var price: String
+    var symbol: String
+    var locale: String
     var description: String
     var images: [String]
     var category: String
@@ -18,7 +20,7 @@ struct AmazonProduct: Codable {
 
 class AmazonHTMLParser {
     
-    public static func parseString(str: String, completionHandler: @escaping (_ product: AmazonProduct?) -> ()){
+    public static func parseString(url: String, str: String, completionHandler: @escaping (_ product: AmazonProduct?) -> ()){
         do {
            let doc: Document = try SwiftSoup.parse(str)
             let productNotAvailable = try doc.select("div#percolate-ui-lpo_div div.a-carousel-viewport li.a-carousel-card")
@@ -26,18 +28,21 @@ class AmazonHTMLParser {
                 completionHandler(nil)
                 return
             }
+            var locale = url.replacingOccurrences(of: "http://amazon.", with: "").replacingOccurrences(of: "https://amazon.", with: "").replacingOccurrences(of: "https://www.amazon.", with: "").replacingOccurrences(of: "http://www.amazon.", with: "").split(separator: "/")[0].split(separator: ".").last ?? ""
+            if locale != "" {
+                locale = "."+locale
+            }
             let name = try doc.select("span#productTitle").first()?.text()
             let images = try doc.select("#altImages li.item")
             var imgArray: [String] = []
             var urlImage = ""
-            //Togliendo le replacingOccurrences dovrebbe prendere quelle ad highDef e quelle a LowDef in base a richiesta utente (basta aggiungerlo alla chiamata)
             for image in images {
                 urlImage = try image.select("img").attr("src").replacingOccurrences(of: "US40", with: "SR320,320").replacingOccurrences(of: "SR38,50", with: "SR320,320").replacingOccurrences(of: "US200", with: "SR320,320")
                 if(!urlImage.contains("play-icon-overlay")){
                     imgArray.append(urlImage)
                 }
             }
-            let priceWhole = try doc.select("span.a-price-whole").first?.text().replacingOccurrences(of: ",", with: "")
+            let priceWhole = try doc.select("span.a-price-whole").first?.text().replacingOccurrences(of: ",", with: "").replacingOccurrences(of: ".", with: "")
             let priceDecimal = try doc.select("span.a-price-fraction").first?.text()
             let priceSymbol = try doc.select("span.a-price-symbol").first?.text()
             var category = try doc.select("span.nav-a-content").first?.text()
@@ -56,7 +61,7 @@ class AmazonHTMLParser {
             }
             var description = descriptionArray.joined(separator: ".\\n")
             description = description + "."
-            let product = AmazonProduct(name: pName, price: pI+"."+pD+pS, description: description, images: imgArray, category: pCategory)
+            let product = AmazonProduct(name: pName, price: pI+"."+pD, symbol: pS, locale: String(locale), description: description, images: imgArray, category: pCategory)
             
             completionHandler(product)
             
@@ -101,7 +106,7 @@ class AmazonScraper {
         do {
             let contentString = try String(contentsOf: url, encoding: .utf8)
             if(!priceOnly){
-                AmazonHTMLParser.parseString(str: contentString) { product in
+                AmazonHTMLParser.parseString(url: urlString, str: contentString) { product in
                     do {
                         if (Int(product?.price.prefix(1) ?? "0") == 0) {
                             completionHandler("{\"exception\":\"Price not valid, check if all the fields are filled\"}")

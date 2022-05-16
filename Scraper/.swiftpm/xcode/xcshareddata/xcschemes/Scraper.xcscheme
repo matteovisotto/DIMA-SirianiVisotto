@@ -97,6 +97,10 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "https://www.amazon.it/Xiaomi-Lite-Smartphone-Snapdragon-Fotocamera/dp/B09DNG3827/ "
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "https://www.amazon.co.uk/AmazonBasics-High-Speed-Ultra-HDMI-Cable/dp/B014I8SSD0/ref=sr_1_1_sspa?crid=1IDOHCCYU6W5Q&amp;keywords=hdmi&amp;qid=1652704299&amp;sprefix=hdmi%2Caps%2C119&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE5UUlOVE9HSldOREImZW5jcnlwdGVkSWQ9QTA4MDA0MjUyQktQTlo5UVgxTTRZJmVuY3J5cHRlZEFkSWQ9QTA2NDg2NzExRkJQMlcxRFQ1TjBPJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ=="
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
