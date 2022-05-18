@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1254A0C928284394006BE66D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1254A0C828284394006BE66D /* SwiftUICharts */; };
+		128EFE83283543F800048ECE /* DropPriceProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EFE82283543F800048ECE /* DropPriceProduct.swift */; };
 		129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3D28086F1000F2C870 /* HomeViewModel.swift */; };
 		129A1A402808702000F2C870 /* TrackedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3F2808702000F2C870 /* TrackedProduct.swift */; };
 		12A790E9282D439000F2959D /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A790E8282D439000F2959D /* PickerView.swift */; };
@@ -167,6 +168,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		128EFE82283543F800048ECE /* DropPriceProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropPriceProduct.swift; sourceTree = "<group>"; };
 		129A1A3D28086F1000F2C870 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		129A1A3F2808702000F2C870 /* TrackedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedProduct.swift; sourceTree = "<group>"; };
 		12A790E8282D439000F2959D /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
@@ -702,6 +704,7 @@
 				66DA7E5F281D9E9100B04036 /* PriceServerResponse.swift */,
 				66DA7E63281DB0F100B04036 /* ProductComments.swift */,
 				66C3C5C6281E715F006393E4 /* TrackingStatus.swift */,
+				128EFE82283543F800048ECE /* DropPriceProduct.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -952,6 +955,7 @@
 				66934AFC27FB8311004DC396 /* View+Extension.swift in Sources */,
 				66CC9C002801C3C8005935F0 /* WebViewCoordinator.swift in Sources */,
 				66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */,
+				128EFE83283543F800048ECE /* DropPriceProduct.swift in Sources */,
 				667389CB2821D0EF001845FA /* PagingView.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
 				66DA7E64281DB0F100B04036 /* ProductComments.swift in Sources */,

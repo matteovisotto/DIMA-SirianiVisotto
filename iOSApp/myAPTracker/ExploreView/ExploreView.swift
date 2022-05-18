@@ -15,8 +15,27 @@ struct ExploreView: View {
         ZStack{
                 GeometryReader{ geometry in
                     ScrollView(.vertical, showsIndicators: false){
+                        HStack{
+                            Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                            Spacer()
+                            Button{
+                                
+                            } label: {
+                                Text("See all")
+                            }
+                        }.padding(.horizontal)
                         VStack(spacing: 10) {
-                            ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ contentIndex in
+                            HGrid(numberOfRows: 2, numberOfItems: viewModel.mostTracked.count) { contentIndex in
+                                NavigationLink{
+                                    ProductView(product: viewModel.mostTracked[contentIndex])
+                                } label: {
+                                    VStack{
+                                        SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                        //Divider().padding(.leading, 10)
+                                    }
+                                }
+                            }
+                            /*ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ contentIndex in
                                 NavigationLink{
                                     ProductView(product: viewModel.mostTracked[contentIndex])
                                 } label: {
@@ -26,6 +45,48 @@ struct ExploreView: View {
                                     }
                                 }
                                 
+                            }*/
+                        }.padding(.horizontal, 10)
+                        Divider().padding(.leading, 10)
+                        HStack{
+                            Text("Biggest percentual drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                            Spacer()
+                            Button{
+                                
+                            } label: {
+                                Text("See all")
+                            }
+                        }.padding(.horizontal)
+                        VStack(spacing: 10) {
+                            HGrid(numberOfRows: 2, numberOfItems: viewModel.biggestPercentageDrop.count) { contentIndex in
+                                NavigationLink{
+                                    ProductView(product: Product.fromPriceDrop(viewModel.biggestPercentageDrop[contentIndex]))
+                                } label: {
+                                    VStack{
+                                        SingleProductView(Product.fromPriceDrop(viewModel.biggestPercentageDrop[contentIndex])).frame(width: ((geometry.size.width)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                    }
+                                }
+                            }
+                        }.padding(.horizontal, 10)
+                        Divider().padding(.leading, 10)
+                        HStack{
+                            Text("Biggest range drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                            Spacer()
+                            Button{
+                                
+                            } label: {
+                                Text("See all")
+                            }
+                        }.padding(.horizontal)
+                        VStack(spacing: 10) {
+                            HGrid(numberOfRows: 2, numberOfItems: viewModel.biggestRangeDrop.count) { contentIndex in
+                                NavigationLink{
+                                    ProductView(product: Product.fromPriceDrop(viewModel.biggestRangeDrop[contentIndex]))
+                                } label: {
+                                    VStack{
+                                        SingleProductView(Product.fromPriceDrop(viewModel.biggestRangeDrop[contentIndex])).frame(width: ((geometry.size.width)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                    }
+                                }
                             }
                         }.padding(.horizontal, 10)
                     }.onAppear(perform: viewModel.loadData)
