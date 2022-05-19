@@ -23,14 +23,7 @@ struct PriceView: View {
     var body: some View {
         VStack{
             HLPriceView(lowestPrice: viewModel.product.lowestPrice, highestPrice: viewModel.product.highestPrice).padding(.horizontal)
-            //La size è definita da una CGSize quindi si può gestire bene
-            LineChartView(data: viewModel.productPrices, title: "Trend", style: chartStyle, form: ChartForm.extraLarge, dropShadow: false, valueSpecifier: "%.2f")
-            /*LineChart()
-                .data(viewModel.productPrices)
-                .chartStyle(ChartStyle(backgroundColor: Color("BackgroundColor"),
-                                       foregroundColor: ColorGradient(.blue, .accentColor)))
-                .frame(height: 200)*/
-            //LineChartView(lineChartParameters: LineChartParameters(data: viewModel.productPrices)).frame(height: 160)
+            LineGraph(data: viewModel.productPrices,lineWidth: 2, lineColors: [Color("Primary"), Color("PrimaryLabel")], fillGradientColors: [Color("BackgroundColorInverse").opacity(0.3),Color("BackgroundColorInverse").opacity(0.2),Color("BackgroundColorInverse").opacity(0.1)]).frame(height: 200).padding(.top, 10)
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 2){
                     ForEach(0..<(viewModel.product.prices?.count ?? 0), id: \.self){index in

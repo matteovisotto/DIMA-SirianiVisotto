@@ -29,6 +29,9 @@
 		66375635281D86AA00DCECB3 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66375634281D86AA00DCECB3 /* ProductViewModel.swift */; };
 		6637563B281D949600DCECB3 /* LineChartView in Frameworks */ = {isa = PBXBuildFile; productRef = 6637563A281D949600DCECB3 /* LineChartView */; };
 		6637563D281D987A00DCECB3 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637563C281D987A00DCECB3 /* PriceView.swift */; };
+		6638176A28361893005D1182 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638176928361893005D1182 /* LineGraph.swift */; };
+		6638176D28366EE6005D1182 /* SeeAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638176C28366EE6005D1182 /* SeeAllView.swift */; };
+		6638176F28366F5A005D1182 /* SeeAllViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638176E28366F5A005D1182 /* SeeAllViewModel.swift */; };
 		66479307280030DD0068AE91 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66479306280030DD0068AE91 /* HomeView.swift */; };
 		664AF2812808B48B008C7B50 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664AF2802808B48B008C7B50 /* Price.swift */; };
 		664AF2832808B75F008C7B50 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664AF2822808B75F008C7B50 /* ImageLoader.swift */; };
@@ -188,6 +191,9 @@
 		6631E97F27FF7CE4005E3A41 /* UserIdentity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdentity.swift; sourceTree = "<group>"; };
 		66375634281D86AA00DCECB3 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		6637563C281D987A00DCECB3 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		6638176928361893005D1182 /* LineGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraph.swift; sourceTree = "<group>"; };
+		6638176C28366EE6005D1182 /* SeeAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllView.swift; sourceTree = "<group>"; };
+		6638176E28366F5A005D1182 /* SeeAllViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewModel.swift; sourceTree = "<group>"; };
 		66479306280030DD0068AE91 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		664AF2802808B48B008C7B50 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		664AF2822808B75F008C7B50 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -340,6 +346,15 @@
 				66C3C5DA281ECF07006393E4 /* UpdateTrackingView.swift */,
 			);
 			path = ProductView;
+			sourceTree = "<group>";
+		};
+		6638176B28366EAC005D1182 /* SeeAllView */ = {
+			isa = PBXGroup;
+			children = (
+				6638176C28366EE6005D1182 /* SeeAllView.swift */,
+				6638176E28366F5A005D1182 /* SeeAllViewModel.swift */,
+			);
+			path = SeeAllView;
 			sourceTree = "<group>";
 		};
 		66479305280030CF0068AE91 /* HomeView */ = {
@@ -594,6 +609,7 @@
 		66D13CBF27FAFD88004B2077 /* myAPTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6638176B28366EAC005D1182 /* SeeAllView */,
 				66A5143F2827ADC3004388C7 /* ImageViewer */,
 				66C3C5D1281E808A006393E4 /* ExploreView */,
 				66C3C5CB281E7D7F006393E4 /* TrackedView */,
@@ -679,6 +695,7 @@
 				66D17A51282177AB00F8AAEA /* VoidView.swift */,
 				66D17A532821826700F8AAEA /* HLPriceView.swift */,
 				667389CA2821D0EF001845FA /* PagingView.swift */,
+				6638176928361893005D1182 /* LineGraph.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -999,7 +1016,9 @@
 				66C3C5D5281E80B4006393E4 /* ExploreView.swift in Sources */,
 				66C3C5CF281E7DBD006393E4 /* TrackedViewModel.swift in Sources */,
 				66C3C5D9281E812C006393E4 /* TrackedProductView.swift in Sources */,
+				6638176D28366EE6005D1182 /* SeeAllView.swift in Sources */,
 				66A06764281D1A55002C479C /* UserProfileViewModel.swift in Sources */,
+				6638176A28361893005D1182 /* LineGraph.swift in Sources */,
 				66D13CF627FB1E74004B2077 /* LoginView.swift in Sources */,
 				66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */,
 				66934AF827FB793B004DC396 /* TaskManager.swift in Sources */,
@@ -1010,6 +1029,7 @@
 				66DA7E60281D9E9100B04036 /* PriceServerResponse.swift in Sources */,
 				66D17A5028216D7D00F8AAEA /* HGrid.swift in Sources */,
 				66D17A52282177AB00F8AAEA /* VoidView.swift in Sources */,
+				6638176F28366F5A005D1182 /* SeeAllViewModel.swift in Sources */,
 				6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */,
 				66CC9C072801FB79005935F0 /* TutorialView.swift in Sources */,
 				664AF2812808B48B008C7B50 /* Price.swift in Sources */,

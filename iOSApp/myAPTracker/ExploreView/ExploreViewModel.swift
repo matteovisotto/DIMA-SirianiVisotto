@@ -19,7 +19,7 @@ class ExploreViewModel: ObservableObject {
     }
     
     private func loadAllProduct() -> Void {
-        let task = TaskManager(urlString: AppConstant.getAllProductsURL+"?lastPriceOnly", method: .GET, parameters: nil)
+        let task = TaskManager(urlString: AppConstant.getMostTracked+"?limit=10", method: .GET, parameters: nil)
         task.execute { result, content, data in
             DispatchQueue.main.async {
                 self.isLoading = false

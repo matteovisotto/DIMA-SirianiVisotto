@@ -18,11 +18,12 @@ struct ExploreView: View {
                         HStack{
                             Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
-                            Button{
-                                
+                            NavigationLink {
+                                SeeAllView(apiUrl: AppConstant.getMostTracked, viewTitle: NSLocalizedString("Most Tracked", comment: "Most Tracked"))
                             } label: {
-                                Text("See all")
+                                Text("See All")
                             }
+
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
                             HGrid(numberOfRows: 2, numberOfItems: viewModel.mostTracked.count) { contentIndex in
@@ -51,10 +52,10 @@ struct ExploreView: View {
                         HStack{
                             Text("Biggest percentual drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
-                            Button{
-                                
+                            NavigationLink {
+                                SeeAllView(apiUrl: AppConstant.getLastPriceDropPercentage, viewTitle: NSLocalizedString("Biggest percentual drop", comment: "Biggest percentual drop"))
                             } label: {
-                                Text("See all")
+                                Text("See All")
                             }
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
@@ -72,10 +73,10 @@ struct ExploreView: View {
                         HStack{
                             Text("Biggest range drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
-                            Button{
-                                
+                            NavigationLink {
+                                SeeAllView(apiUrl: AppConstant.getPriceDrop, viewTitle: NSLocalizedString("Biggest range drop", comment: "Biggest range drop"))
                             } label: {
-                                Text("See all")
+                                Text("See All")
                             }
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
