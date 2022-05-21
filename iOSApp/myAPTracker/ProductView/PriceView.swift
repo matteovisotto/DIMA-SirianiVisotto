@@ -23,7 +23,12 @@ struct PriceView: View {
     var body: some View {
         VStack{
             HLPriceView(lowestPrice: viewModel.product.lowestPrice, highestPrice: viewModel.product.highestPrice).padding(.horizontal)
-            LineGraph(data: viewModel.productPrices,lineWidth: 2, lineColors: [Color("Primary"), Color("PrimaryLabel")], fillGradientColors: [Color("BackgroundColorInverse").opacity(0.3),Color("BackgroundColorInverse").opacity(0.2),Color("BackgroundColorInverse").opacity(0.1)]).frame(height: 200).padding(.top, 10)
+            /*LineGraph(data: viewModel.productPrices,lineWidth: 2, lineColors: [Color("Primary"), Color("PrimaryLabel")], fillGradientColors: [Color("BackgroundColorInverse").opacity(0.3),Color("BackgroundColorInverse").opacity(0.2),Color("BackgroundColorInverse").opacity(0.1)]).frame(height: 200).padding(.top, 10)*/
+            
+            //QUESTO NON FUNZIONA QUANDO SI TORNA INDIETRO, PROBABILMENTE VISTO CHE CARICA LE COSE SULL'onAppear()
+            //RICARICA GLI ARRAY E NON TROVA ELEMENTI NELL'ARRAY E CRASHA
+            
+            LineGraph(data: viewModel.productPrices, lineWidth: 2, lineColors: correctColor(prices: viewModel.product.prices!, isLineColor: true, pricesCount: viewModel.productPrices.count), fillGradientColors: correctColor(prices: viewModel.product.prices!, isLineColor: false, pricesCount: viewModel.productPrices.count)).frame(height: 200).padding(.top, 10)
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 2){
                     ForEach(0..<(viewModel.product.prices?.count ?? 0), id: \.self){index in
@@ -35,6 +40,42 @@ struct PriceView: View {
                     }
                 }.frame(maxWidth: .infinity)
             }.frame(maxWidth: .infinity)
+        }
+    }
+    
+    private func correctColor(prices: [Price], isLineColor: Bool, pricesCount: Int) -> [Color] {
+        var lastPrice: Double = 0
+        var penultimatePrice: Double = 0
+        if (isLineColor){
+            if (pricesCount == 1 || pricesCount == 0){
+                return[Color.orange, Color.orange]
+            }
+            lastPrice = prices[pricesCount - 1].price
+            penultimatePrice = prices[pricesCount - 2].price
+            if (lastPrice < penultimatePrice){
+                //Discesa
+                return[Color.green, Color.green]
+            } else if (lastPrice > penultimatePrice) {
+                //Salita
+                return[Color.red, Color.red]
+            } else {
+                return[Color.orange, Color.orange]
+            }
+        } else {
+            if (pricesCount == -1 || pricesCount == 1){
+                return[Color.orange.opacity(0.3), Color.orange.opacity(0.2), Color.orange.opacity(0.1)]
+            }
+            lastPrice = prices[pricesCount - 1].price
+            penultimatePrice = prices[pricesCount - 2].price
+            if (lastPrice < penultimatePrice){
+                //Discesa
+                return[Color.green.opacity(0.3), Color.green.opacity(0.2), Color.green.opacity(0.1)]
+            } else if (lastPrice > penultimatePrice) {
+                //Salita
+                return[Color.red.opacity(0.3), Color.red.opacity(0.2), Color.red.opacity(0.1)]
+            } else {
+                return[Color.orange.opacity(0.3), Color.orange.opacity(0.2), Color.orange.opacity(0.1)]
+            }
         }
     }
 }
