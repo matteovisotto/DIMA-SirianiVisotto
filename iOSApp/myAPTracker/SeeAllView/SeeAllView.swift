@@ -48,6 +48,27 @@ struct SeeAllView: View {
                                     
                                 }
                             }.padding(.horizontal, 10)
+                            if (!viewModel.isLoading){
+                                HStack{
+                                    Spacer()
+                                    Button{
+                                        viewModel.products = []
+                                        viewModel.loadNewPage(newPage: viewModel.pageIndex - 1)
+                                    } label: {
+                                        Image(systemName: "chevron.left")
+                                    }.disabled(viewModel.pageIndex == 0)
+                                    Spacer()
+                                    Text("\(viewModel.pageIndex)").font(.title2.bold()).foregroundColor(Color("PrimaryLabel"))
+                                    Spacer()
+                                    Button{
+                                        viewModel.products = []
+                                        viewModel.loadNewPage(newPage: viewModel.pageIndex + 1)
+                                    } label: {
+                                        Image(systemName: "chevron.right")
+                                    }
+                                    Spacer()
+                                }
+                            }
                         }.onAppear(perform: viewModel.loadData)
                     }
                     .padding(.horizontal,15)

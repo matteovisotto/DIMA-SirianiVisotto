@@ -45,10 +45,10 @@ struct HomeView: View {
                             HStack{
                                 Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
                                 Spacer()
-                                Button{
-                                    mainModel.selectedTab = 2
+                                NavigationLink {
+                                    SeeAllView(apiUrl: AppConstant.getMostTrackedPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Most tracked", comment: "Most tracked"))
                                 } label: {
-                                    Text("See all")
+                                    Text("See All")
                                 }
                             }.padding(.horizontal)
                             VStack(spacing: 10) {

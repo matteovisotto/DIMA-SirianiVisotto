@@ -19,7 +19,7 @@ struct ExploreView: View {
                             Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
                             NavigationLink {
-                                SeeAllView(apiUrl: AppConstant.getMostTracked, viewTitle: NSLocalizedString("Most Tracked", comment: "Most Tracked"))
+                                SeeAllView(apiUrl: AppConstant.getMostTrackedPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Most Tracked", comment: "Most Tracked"))
                             } label: {
                                 Text("See All")
                             }
@@ -53,7 +53,7 @@ struct ExploreView: View {
                             Text("Biggest percentual drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
                             NavigationLink {
-                                SeeAllView(apiUrl: AppConstant.getLastPriceDropPercentage, viewTitle: NSLocalizedString("Biggest percentual drop", comment: "Biggest percentual drop"))
+                                SeeAllView(apiUrl: AppConstant.getLastPriceDropPercentagePaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Biggest percentual drop", comment: "Biggest percentual drop"))
                             } label: {
                                 Text("See All")
                             }
@@ -74,7 +74,7 @@ struct ExploreView: View {
                             Text("Biggest range drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
                             NavigationLink {
-                                SeeAllView(apiUrl: AppConstant.getPriceDrop, viewTitle: NSLocalizedString("Biggest range drop", comment: "Biggest range drop"))
+                                SeeAllView(apiUrl: AppConstant.getPriceDropPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Biggest range drop", comment: "Biggest range drop"))
                             } label: {
                                 Text("See All")
                             }
