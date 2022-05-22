@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1254A0C928284394006BE66D /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 1254A0C828284394006BE66D /* SwiftUICharts */; };
 		128EFE83283543F800048ECE /* DropPriceProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EFE82283543F800048ECE /* DropPriceProduct.swift */; };
 		129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3D28086F1000F2C870 /* HomeViewModel.swift */; };
 		129A1A402808702000F2C870 /* TrackedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3F2808702000F2C870 /* TrackedProduct.swift */; };
@@ -20,6 +19,10 @@
 		6605EDDA281D6ACE001D2A49 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6605EDD9281D6ACE001D2A49 /* ProductView.swift */; };
 		6605EDDD281D8118001D2A49 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6605EDDC281D8118001D2A49 /* MenuButton.swift */; };
 		6605EDDF281D8390001D2A49 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6605EDDE281D8390001D2A49 /* MenuBar.swift */; };
+		6608CBAB283A273F00F8C986 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638176928361893005D1182 /* LineGraph.swift */; };
+		6608CBAC283A2AB700F8C986 /* HLPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D17A532821826700F8AAEA /* HLPriceView.swift */; };
+		6608CBAE283A301900F8C986 /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608CBAD283A301900F8C986 /* ProductImage.swift */; };
+		6608CBB0283A369500F8C986 /* WidgetChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608CBAF283A369500F8C986 /* WidgetChart.swift */; };
 		66140D6C282AFBDE002D2F74 /* SemicurcularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66140D6B282AFBDE002D2F74 /* SemicurcularSlider.swift */; };
 		6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97727FF6FD9005E3A41 /* AppTabBar.swift */; };
 		6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97927FF709F005E3A41 /* MainViewModel.swift */; };
@@ -27,7 +30,6 @@
 		6631E97E27FF7919005E3A41 /* TabElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97D27FF7919005E3A41 /* TabElement.swift */; };
 		6631E98027FF7CE4005E3A41 /* UserIdentity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97F27FF7CE4005E3A41 /* UserIdentity.swift */; };
 		66375635281D86AA00DCECB3 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66375634281D86AA00DCECB3 /* ProductViewModel.swift */; };
-		6637563B281D949600DCECB3 /* LineChartView in Frameworks */ = {isa = PBXBuildFile; productRef = 6637563A281D949600DCECB3 /* LineChartView */; };
 		6637563D281D987A00DCECB3 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6637563C281D987A00DCECB3 /* PriceView.swift */; };
 		6638176A28361893005D1182 /* LineGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638176928361893005D1182 /* LineGraph.swift */; };
 		6638176D28366EE6005D1182 /* SeeAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6638176C28366EE6005D1182 /* SeeAllView.swift */; };
@@ -49,6 +51,11 @@
 		66797191281BC3540054E6A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66797190281BC3540054E6A1 /* GoogleService-Info.plist */; };
 		667BF40127FB8A300000B7EB /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BF40027FB8A300000B7EB /* AppState.swift */; };
 		667BF40427FB8B2A0000B7EB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667BF40327FB8B2A0000B7EB /* MainView.swift */; };
+		6684F803283A140200B8F2FA /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664AF2822808B75F008C7B50 /* ImageLoader.swift */; };
+		6684F805283A14F300B8F2FA /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F804283A14F300B8F2FA /* TaskManager.swift */; };
+		6684F807283A182C00B8F2FA /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664AF2802808B48B008C7B50 /* Price.swift */; };
+		6684F809283A183B00B8F2FA /* WidgetProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F808283A183B00B8F2FA /* WidgetProduct.swift */; };
+		6684F80C283A1B8E00B8F2FA /* ProductImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6684F80B283A1B8E00B8F2FA /* ProductImage.swift */; };
 		668518DD2800187E00A91A6F /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668518DC2800187E00A91A6F /* LoginCell.swift */; };
 		668518DF2800197500A91A6F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668518DE2800197500A91A6F /* UserCell.swift */; };
 		668518E228001C1F00A91A6F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668518E128001C1F00A91A6F /* UserProfileView.swift */; };
@@ -183,6 +190,8 @@
 		6605EDD9281D6ACE001D2A49 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		6605EDDC281D8118001D2A49 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		6605EDDE281D8390001D2A49 /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		6608CBAD283A301900F8C986 /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
+		6608CBAF283A369500F8C986 /* WidgetChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetChart.swift; sourceTree = "<group>"; };
 		66140D6B282AFBDE002D2F74 /* SemicurcularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemicurcularSlider.swift; sourceTree = "<group>"; };
 		6631E97727FF6FD9005E3A41 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
 		6631E97927FF709F005E3A41 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -208,6 +217,9 @@
 		66797190281BC3540054E6A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		667BF40027FB8A300000B7EB /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		667BF40327FB8B2A0000B7EB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6684F804283A14F300B8F2FA /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		6684F808283A183B00B8F2FA /* WidgetProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetProduct.swift; sourceTree = "<group>"; };
+		6684F80B283A1B8E00B8F2FA /* ProductImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductImage.swift; sourceTree = "<group>"; };
 		668518DC2800187E00A91A6F /* LoginCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		668518DE2800197500A91A6F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		668518E128001C1F00A91A6F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
@@ -312,9 +324,7 @@
 				66D13CED27FAFE6A004B2077 /* GoogleSignIn in Frameworks */,
 				6679718F281BC29D0054E6A1 /* FirebaseMessaging in Frameworks */,
 				6679718B281BC29D0054E6A1 /* FirebaseAnalytics in Frameworks */,
-				1254A0C928284394006BE66D /* SwiftUICharts in Frameworks */,
 				6679718D281BC29D0054E6A1 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
-				6637563B281D949600DCECB3 /* LineChartView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +513,10 @@
 				66A514512827B8EB004388C7 /* Widgets.intentdefinition */,
 				66A514522827B8EF004388C7 /* Assets.xcassets */,
 				66A514542827B8EF004388C7 /* Info.plist */,
+				6684F804283A14F300B8F2FA /* TaskManager.swift */,
+				6684F808283A183B00B8F2FA /* WidgetProduct.swift */,
+				6608CBAD283A301900F8C986 /* ProductImage.swift */,
+				6608CBAF283A369500F8C986 /* WidgetChart.swift */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -696,6 +710,7 @@
 				66D17A532821826700F8AAEA /* HLPriceView.swift */,
 				667389CA2821D0EF001845FA /* PagingView.swift */,
 				6638176928361893005D1182 /* LineGraph.swift */,
+				6684F80B283A1B8E00B8F2FA /* ProductImage.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -785,9 +800,7 @@
 				6679718A281BC29D0054E6A1 /* FirebaseAnalytics */,
 				6679718C281BC29D0054E6A1 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				6679718E281BC29D0054E6A1 /* FirebaseMessaging */,
-				6637563A281D949600DCECB3 /* LineChartView */,
 				66C3C5C9281E7747006393E4 /* SwiftfulLoadingIndicators */,
-				1254A0C828284394006BE66D /* SwiftUICharts */,
 			);
 			productName = APTracker;
 			productReference = 66D13CBD27FAFD88004B2077 /* myAPTracker.app */;
@@ -871,9 +884,7 @@
 				66D13CEB27FAFE6A004B2077 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				66D13CF127FB0AD3004B2077 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				66797189281BC29D0054E6A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				66375639281D949600DCECB3 /* XCRemoteSwiftPackageReference "LineChartView" */,
 				66C3C5C8281E7747006393E4 /* XCRemoteSwiftPackageReference "SwiftfulLoadingIndicators" */,
-				1254A0C728284394006BE66D /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 66D13CBE27FAFD88004B2077 /* Products */;
 			projectDirPath = "";
@@ -944,10 +955,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6608CBB0283A369500F8C986 /* WidgetChart.swift in Sources */,
+				6684F803283A140200B8F2FA /* ImageLoader.swift in Sources */,
+				6684F809283A183B00B8F2FA /* WidgetProduct.swift in Sources */,
+				6684F807283A182C00B8F2FA /* Price.swift in Sources */,
+				6608CBAB283A273F00F8C986 /* LineGraph.swift in Sources */,
 				66A514552827B8EF004388C7 /* Widgets.intentdefinition in Sources */,
+				6608CBAE283A301900F8C986 /* ProductImage.swift in Sources */,
 				66A514672827BF57004388C7 /* WidgetLarge.swift in Sources */,
+				6608CBAC283A2AB700F8C986 /* HLPriceView.swift in Sources */,
 				66A514612827BD09004388C7 /* WidgetSmall.swift in Sources */,
 				66A514662827BF54004388C7 /* WidgetMedium.swift in Sources */,
+				6684F805283A14F300B8F2FA /* TaskManager.swift in Sources */,
 				66A514502827B8EA004388C7 /* Widgets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -973,6 +992,7 @@
 				66CC9C002801C3C8005935F0 /* WebViewCoordinator.swift in Sources */,
 				66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */,
 				128EFE83283543F800048ECE /* DropPriceProduct.swift in Sources */,
+				6684F80C283A1B8E00B8F2FA /* ProductImage.swift in Sources */,
 				667389CB2821D0EF001845FA /* PagingView.swift in Sources */,
 				66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */,
 				66DA7E64281DB0F100B04036 /* ProductComments.swift in Sources */,
@@ -1515,22 +1535,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1254A0C728284394006BE66D /* XCRemoteSwiftPackageReference "ChartView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/ChartView";
-			requirement = {
-				kind = exactVersion;
-				version = 1.5.5;
-			};
-		};
-		66375639281D949600DCECB3 /* XCRemoteSwiftPackageReference "LineChartView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Jonathan-Gander/LineChartView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		66797189281BC29D0054E6A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1566,16 +1570,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1254A0C828284394006BE66D /* SwiftUICharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1254A0C728284394006BE66D /* XCRemoteSwiftPackageReference "ChartView" */;
-			productName = SwiftUICharts;
-		};
-		6637563A281D949600DCECB3 /* LineChartView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 66375639281D949600DCECB3 /* XCRemoteSwiftPackageReference "LineChartView" */;
-			productName = LineChartView;
-		};
 		6679718A281BC29D0054E6A1 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 66797189281BC29D0054E6A1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

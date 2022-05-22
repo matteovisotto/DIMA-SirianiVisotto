@@ -10,34 +10,36 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+    func placeholder(in context: Context) -> WidgetModel {
+        WidgetModel(date: Date(), products: [])
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetModel) -> ()) {
+        let entry = WidgetModel(date: Date(), products: [])
         completion(entry)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
-            entries.append(entry)
+    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<WidgetModel>) -> Void) {
+        var entries: [WidgetProduct] = []
+        let next = Calendar.current.date(byAdding: .minute, value: 15, to: Date())
+        TaskManager.execute(urlString: "https://aptracker.matmacsystem.it/api/v1/product/getByLastPriceDropPercentage?limit=3&lastPriceOnly") { result, content, data in
+            if(result){
+                do {
+                    let decoder = JSONDecoder()
+                    let c = try decoder.decode([WidgetProduct].self, from: data!)
+                    DispatchQueue.main.async {
+                        entries = c
+                        let timeline = Timeline(entries: [WidgetModel(date: Date(), products: entries)], policy: .after(next!))
+                        completion(timeline)
+                        return
+                    }
+                } catch {
+                    
+                }
+            }
         }
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
-}
-
-struct SimpleEntry: TimelineEntry {
-    let date: Date
-    let configuration: ConfigurationIntent
 }
 
 struct myAPTrackerWidgetView: View {
@@ -48,9 +50,9 @@ struct myAPTrackerWidgetView: View {
         switch family {
         case .systemSmall:
             WidgetSmall(entry: entry)
-            //EmptyView()
         case .systemMedium:
             WidgetMedium(entry: entry)
+            //WidgetSmall(entry: entry)
         case .systemLarge:
             WidgetLarge(entry: entry)
         default:
@@ -76,7 +78,7 @@ struct Widgets: Widget {
 
 struct Widgets_Previews: PreviewProvider {
     static var previews: some View {
-        myAPTrackerWidgetView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
+        myAPTrackerWidgetView(entry: WidgetModel(date: Date(), products: []))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

@@ -43,23 +43,6 @@ struct TrackedProductView: View {
                     }
                 }.cornerRadius(10)
             }
-            /*VStack(alignment: .leading, spacing: 0){
-                Text(product.shortName).font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).padding(.bottom, 5)
-                ZStack{
-                    Image(uiImage: image).resizable().scaledToFit().onReceive(imageLoader.didChange) { data in
-                        self.image = UIImage(data: data) ?? UIImage()
-                }
-                    VStack{
-                        Spacer()
-                        ZStack{
-                            Color.white.opacity(0.6)
-                                .frame(height: 50)
-                            Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(.black).bold()
-                        }
-                        
-                    }
-                }
-            }*/
         }.onAppear(perform: {
             loadPrices(productId: product.id)
         })
