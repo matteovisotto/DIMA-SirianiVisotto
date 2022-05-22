@@ -21,9 +21,6 @@ struct PriceView: View {
             HLPriceView(lowestPrice: viewModel.product.lowestPrice, highestPrice: viewModel.product.highestPrice).padding(.horizontal)
             /*LineGraph(data: viewModel.productPrices,lineWidth: 2, lineColors: [Color("Primary"), Color("PrimaryLabel")], fillGradientColors: [Color("BackgroundColorInverse").opacity(0.3),Color("BackgroundColorInverse").opacity(0.2),Color("BackgroundColorInverse").opacity(0.1)]).frame(height: 200).padding(.top, 10)*/
             
-            //QUESTO NON FUNZIONA QUANDO SI TORNA INDIETRO, PROBABILMENTE VISTO CHE CARICA LE COSE SULL'onAppear()
-            //RICARICA GLI ARRAY E NON TROVA ELEMENTI NELL'ARRAY E CRASHA
-            
             LineGraph(data: viewModel.productPrices, lineWidth: 2, lineColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: true, pricesCount: viewModel.productPrices.count), fillGradientColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: false, pricesCount: viewModel.productPrices.count)).frame(height: 200).padding(.top, 10)
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 2){

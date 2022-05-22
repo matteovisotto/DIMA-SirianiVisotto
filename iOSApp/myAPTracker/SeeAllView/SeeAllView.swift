@@ -34,7 +34,7 @@ struct SeeAllView: View {
                             Text(viewModel.viewTitle).font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
                         }
-                        ScrollView(.vertical, showsIndicators: false){
+                        /*ScrollView(.vertical, showsIndicators: false){
                             VStack(spacing: 10) {
                                 ForEach(0 ..< viewModel.products.count, id: \.self){ contentIndex in
                                     NavigationLink{
@@ -69,7 +69,11 @@ struct SeeAllView: View {
                                     Spacer()
                                 }
                             }
-                        }.onAppear(perform: viewModel.loadData)
+                        }.onAppear(perform: viewModel.loadData)*/
+                        InfiniteList(data: $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){item in
+                            
+                        }
+                        
                     }
                     .padding(.horizontal,15)
                         .padding(.vertical, 10)

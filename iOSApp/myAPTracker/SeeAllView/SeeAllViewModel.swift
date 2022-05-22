@@ -57,6 +57,10 @@ class SeeAllViewModel: ObservableObject {
         }
     }
     
+    func loadMore() -> Void {
+        
+    }
+    
     func loadNewPage(newPage :Int) {
         self.isLoading = true
         pageIndex = newPage
