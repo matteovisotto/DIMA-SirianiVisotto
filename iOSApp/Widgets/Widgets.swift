@@ -11,34 +11,20 @@ import Intents
 
 struct Provider: IntentTimelineProvider {
     func placeholder(in context: Context) -> WidgetModel {
-        WidgetModel(date: Date(), products: [])
+        WidgetModel(date: Date(), products: WidgetManager.getFakeData())
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (WidgetModel) -> ()) {
-        let entry = WidgetModel(date: Date(), products: [])
+        let entry = WidgetModel(date: Date(), products: WidgetManager.getFakeData())
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<WidgetModel>) -> Void) {
-        var entries: [WidgetProduct] = []
         let next = Calendar.current.date(byAdding: .minute, value: 15, to: Date())
-        TaskManager.execute(urlString: "https://aptracker.matmacsystem.it/api/v1/product/getByLastPriceDropPercentage?limit=3&lastPriceOnly") { result, content, data in
-            if(result){
-                do {
-                    let decoder = JSONDecoder()
-                    let c = try decoder.decode([WidgetProduct].self, from: data!)
-                    DispatchQueue.main.async {
-                        entries = c
-                        let timeline = Timeline(entries: [WidgetModel(date: Date(), products: entries)], policy: .after(next!))
-                        completion(timeline)
-                        return
-                    }
-                } catch {
-                    
-                }
-            }
+        WidgetManager.loadData { products in
+            let timeline = Timeline(entries: [WidgetModel(date: Date(), products: products)], policy: .after(next!))
+            completion(timeline)
         }
-
     }
 }
 
@@ -70,15 +56,15 @@ struct Widgets: Widget {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             myAPTrackerWidgetView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("myAPTracker")
+        .description("Monitor your products easily")
         .supportedFamilies([.systemSmall, .systemMedium, .systemLarge])
     }
 }
 
 struct Widgets_Previews: PreviewProvider {
     static var previews: some View {
-        myAPTrackerWidgetView(entry: WidgetModel(date: Date(), products: []))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        myAPTrackerWidgetView(entry: WidgetModel(date: Date(), products: WidgetManager.getFakeData()))
+            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
