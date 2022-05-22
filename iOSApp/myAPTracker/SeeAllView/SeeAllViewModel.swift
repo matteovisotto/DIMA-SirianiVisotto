@@ -19,51 +19,9 @@ class SeeAllViewModel: ObservableObject {
         self.apiUrl = apiUrl
     }
     
-    func loadData() {
-        self.isLoading = true
-        let task = TaskManager(urlString: self.apiUrl, method: .GET, parameters: nil)
-        task.execute { result, content, data in
-            DispatchQueue.main.async {
-                self.isLoading = false
-            }
-            if result {
-                do {
-                    let decoder = JSONDecoder()
-                    let identity = try decoder.decode([Product].self, from: data!)
-                    DispatchQueue.main.async {
-                        self.products = identity
-                    }
-                } catch {
-                    var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
-                    do {
-                        let error = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-                        if let e = error {
-                            if let d = e["exception"] as? String {
-                                errorStr = d
-                            }
-                        }
-                    } catch {}
-                    DispatchQueue.main.async {
-                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: errorStr)
-                    }
-                    
-                }
-            } else {
-                DispatchQueue.main.async {
-                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unknown error", comment: "Unknown error"))
-                }
-                
-            }
-        }
-    }
-    
     func loadMore() -> Void {
-        
-    }
-    
-    func loadNewPage(newPage :Int) {
         self.isLoading = true
-        pageIndex = newPage
+        pageIndex = self.pageIndex
         let task = TaskManager(urlString: self.apiUrl.prefix(self.apiUrl.count - 1) + "\(self.pageIndex)", method: .GET, parameters: nil)
         task.execute { result, content, data in
             DispatchQueue.main.async {
@@ -74,7 +32,8 @@ class SeeAllViewModel: ObservableObject {
                     let decoder = JSONDecoder()
                     let identity = try decoder.decode([Product].self, from: data!)
                     DispatchQueue.main.async {
-                        self.products = identity
+                        self.products.append(contentsOf: identity)
+                        self.pageIndex = self.pageIndex + 1
                     }
                 } catch {
                     var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
@@ -99,4 +58,5 @@ class SeeAllViewModel: ObservableObject {
             }
         }
     }
+    
 }

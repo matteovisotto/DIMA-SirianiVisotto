@@ -13,6 +13,7 @@ struct SeeAllView: View {
     @ObservedObject var viewModel: SeeAllViewModel
     
     init(apiUrl: String, viewTitle: String){
+        UITableView.appearance().backgroundColor = .clear
         viewModel = SeeAllViewModel(apiUrl: apiUrl, viewTitle: viewTitle)
     }
     
@@ -70,8 +71,15 @@ struct SeeAllView: View {
                                 }
                             }
                         }.onAppear(perform: viewModel.loadData)*/
-                        InfiniteList(data: $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){item in
-                            
+                        InfiniteList(data: $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
+                            NavigationLink{
+                                ProductView(product: viewModel.products[contentIndex])
+                            } label: {
+                                VStack{
+                                    SingleProductView(viewModel.products[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                    Divider().padding(.leading, 10)
+                                }
+                            }
                         }
                         
                     }

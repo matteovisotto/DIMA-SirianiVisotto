@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct InfiniteList<Data, Content>: View
-    where Data: [Product], Content: View  {
-  @Binding var data: Data
+struct InfiniteList<Content>: View where Content: View {
+  @Binding var data: [Product]
   @Binding var isLoading: Bool
   let loadMore: () -> Void
-  let content: (Data) -> Content
+  let content: (Int) -> Content
 
-  init(data: Binding<Data>,
+  init(data: Binding<Array<Product>>,
        isLoading: Binding<Bool>,
        loadMore: @escaping () -> Void,
-       @ViewBuilder content: @escaping (Data) -> Content) {
+       @ViewBuilder content: @escaping (Int) -> Content) {
+      UITableView.appearance().showsVerticalScrollIndicator = false
+      UITableView.appearance().separatorColor = .clear
     _data = data
     _isLoading = isLoading
     self.loadMore = loadMore
@@ -26,18 +27,21 @@ struct InfiniteList<Data, Content>: View
 
   var body: some View {
     List {
-       ForEach(data, id: \.self) { item in
-         content(item)
-           .onAppear {
-              if item == data.last {
-                loadMore()
-              }
-           }
-       }
-       if isLoading {
-         ProgressView()
-           .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
-       }
-    }.onAppear(perform: loadMore)
+        Section{
+            ForEach(0..<data.count, id: \.self) { index in
+                content(index)//.listRowSeparator(.hidden)
+                    .onAppear {
+                        if index == data.count-1 {
+                            loadMore()
+                        }
+                    }
+            }
+            if isLoading {
+                ProgressView()
+                    .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
+            }
+            
+        }.listRowBackground(Color.clear)
+    }.listStyle(.plain).onAppear(perform: loadMore)
   }
 }

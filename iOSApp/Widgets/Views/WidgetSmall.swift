@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import StoreKit
 import WidgetKit
 
 struct WidgetSmall: View {

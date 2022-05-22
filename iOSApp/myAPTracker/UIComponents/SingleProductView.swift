@@ -10,22 +10,17 @@ import SwiftUI
 struct SingleProductView: View {
     
     @ObservedObject var imageLoader: ImageLoader = ImageLoader()
-    @State var image: UIImage = UIImage()
     @State var product: Product
 
     init(_ p: Product) {
         self.product = p
-        if let imgUrl = p.images.first {
-            imageLoader.getImage(urlString: imgUrl)
-        }
     }
     
     var body: some View{
         GeometryReader{ geometry in
             VStack(alignment: .leading, spacing: 0){
                 HStack(alignment: .center){
-                    Image(uiImage: image).resizable().scaledToFit().frame(width: 80, height: 80).onReceive(imageLoader.didChange) { data in
-                        self.image = UIImage(data: data) ?? UIImage() }.background(Color.white).cornerRadius(10)
+                    ProductImage(product.images.first ?? "").background(Color.white).cornerRadius(10)
                     Spacer().frame(width: 10)
                     VStack(spacing: 8){
                         Text(product.shortName).font(.title3).lineLimit(2)

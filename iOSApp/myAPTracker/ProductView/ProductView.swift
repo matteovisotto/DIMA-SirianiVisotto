@@ -7,7 +7,6 @@
 
 
 import SwiftUI
-import LineChartView
 
 struct ProductView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
