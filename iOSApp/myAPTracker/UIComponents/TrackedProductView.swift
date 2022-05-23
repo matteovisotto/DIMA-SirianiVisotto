@@ -31,15 +31,40 @@ struct TrackedProductView: View {
                     }.padding(.leading).padding(.top).padding(.bottom)
                     HStack{
                         Spacer()
-                        VStack{
-                            /*LineGraph(data: getPrices(prices: product.prices ?? []), lineWidth: 2, lineColors: [Color("Primary"), Color("PrimaryLabel")], fillGradientColors: [Color("BackgroundColorInverse").opacity(0.3), Color("BackgroundColorInverse").opacity(0.2), Color("BackgroundColorInverse").opacity(0.1)]).frame(width: 5 * geometry.size.width/11, height: geometry.size.height/3)*/
-                            LineGraph(data: getPrices(prices: product.prices ?? []), lineWidth: 2, lineColors: correctColor(lastPrice: (product.prices?[(product.prices?.count ?? 1) - 1].price) ?? 0, penultimatePrice: (product.prices?[(product.prices?.count ?? 2) - 2].price) ?? 0, isLineColor: true, pricesCount: product.prices?.count ?? -1), fillGradientColors: correctColor(lastPrice: (product.prices?[(product.prices?.count ?? 1) - 1].price) ?? 0, penultimatePrice: (product.prices?[(product.prices?.count ?? 2) - 2].price) ?? 0, isLineColor: false, pricesCount: product.prices?.count ?? -1)).frame(width: /*5 * geometry.size.width/11*/geometry.size.width/2, height: geometry.size.height/3).padding(.trailing)
-                            //Spacer()
-                            ZStack{
+                        VStack {
+                            /*ZStack (alignment: .trailing){
+                                PriceCard().fill(Color("Primary").opacity(0.6)).frame(width: geometry.size.width/3, height: 50).padding(.trailing)
+                                Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color("PrimaryLabel")).font(.system(size: 16).bold()).padding(.trailing, 30)
+                             if (product.prices?.count == 1 || product.prices?.count == 0){
+                                 Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.trailing, 6 * geometry.size.width / 11)
+                             } else if(product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0 > product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0){
+                                 Image(systemName: "arrow.down").foregroundColor(.green).scaleEffect(2.5).rotationEffect(Angle(degrees: -45)).padding(.trailing, 6 * geometry.size.width / 11)
+                             } else if(product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0 < product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0) {
+                                 Image(systemName: "arrow.up").foregroundColor(.green).scaleEffect(2.5).rotationEffect(Angle(degrees: 45)).padding(.trailing, 6 * geometry.size.width / 11)
+                             } else {
+                                 Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.trailing, 6 * geometry.size.width / 11)
+                             }
+                                Circle().fill(.white).frame(height: 15).padding(.leading, 100)
+                            }*/
+                            ZStack (alignment: .center){
+                                PriceCard().fill(Color("Primary").opacity(0.6)).frame(width: geometry.size.width/3, height: 50)
+                                Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color("PrimaryLabel")).font(.system(size: 16).bold()).padding(.leading, 30)
+                                if (product.prices?.count == 1 || product.prices?.count == 0){
+                                    Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.leading, 8 * geometry.size.width / 11)
+                                } else if(product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0 > product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0){
+                                    Image(systemName: "arrow.down").foregroundColor(.green).scaleEffect(2.5).rotationEffect(Angle(degrees: -45)).padding(.leading, 8 * geometry.size.width / 11)
+                                } else if(product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0 < product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0) {
+                                    Image(systemName: "arrow.up").foregroundColor(.green).scaleEffect(2.5).rotationEffect(Angle(degrees: 45)).padding(.leading, 8 * geometry.size.width / 11)
+                                } else {
+                                    Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.leading, 8 * geometry.size.width / 11)
+                                }
+                                Circle().fill(.white).frame(height: 15).padding(.trailing, 90)
+                            }
+                            /*ZStack{
                                 PriceCard().fill(Color("Primary").opacity(0.6)).frame(width: geometry.size.width/3, height: 50)
                                 Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color("PrimaryLabel")).font(.system(size: 16).bold()).padding(.leading)
                                 //Circle().fill(.white).frame(width: 100, height: 15).padding(.leading)
-                            }//.padding(10)
+                            }*/
                         }.padding(10)
                     }
                 }.cornerRadius(10)
@@ -47,36 +72,6 @@ struct TrackedProductView: View {
         }.onAppear(perform: {
             loadPrices(productId: product.id)
         })
-    }
-    
-    private func correctColor(lastPrice: Double, penultimatePrice: Double, isLineColor: Bool, pricesCount: Int) -> [Color] {
-        if (isLineColor){
-            if (pricesCount == -1 || pricesCount == 1 || pricesCount == 0){
-                return[Color.orange, Color.orange]
-            }
-            if (lastPrice < penultimatePrice){
-                //Discesa
-                return[Color.green, Color.green]
-            } else if (lastPrice > penultimatePrice) {
-                //Salita
-                return[Color.red, Color.red]
-            } else {
-                return[Color.orange, Color.orange]
-            }
-        } else {
-            if (pricesCount == -1 || pricesCount == 1 || pricesCount == 0){
-                return[Color.orange.opacity(0.3), Color.orange.opacity(0.2), Color.orange.opacity(0.1)]
-            }
-            if (lastPrice < penultimatePrice){
-                //Discesa
-                return[Color.green.opacity(0.3), Color.green.opacity(0.2), Color.green.opacity(0.1)]
-            } else if (lastPrice > penultimatePrice) {
-                //Salita
-                return[Color.red.opacity(0.3), Color.red.opacity(0.2), Color.red.opacity(0.1)]
-            } else {
-                return[Color.orange.opacity(0.3), Color.orange.opacity(0.2), Color.orange.opacity(0.1)]
-            }
-        }
     }
     
     private func getPrices(prices: [Price]) -> [Double] {
@@ -146,17 +141,17 @@ struct PriceCard: Shape {
         
         //Se si tolgono arc e move
         
-        path.move(to: CGPoint(x: rect.minX + 20 - rect.midY, y: rect.midY))
-        //path.move(to: CGPoint(x: rect.minX, y: rect.midY))
-        //path.addLine(to: CGPoint(x: rect.minX, y: (rect.maxY + rect.midY) / 2))
-        //path.addLine(to: CGPoint(x: rect.minX + 20, y: rect.maxY))
-        path.addArc(center: CGPoint(x: rect.minX + 20, y: rect.midY), radius: rect.midY, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 90), clockwise: true)
+        //path.move(to: CGPoint(x: rect.minX + 20 - rect.midY, y: rect.midY))
+        path.move(to: CGPoint(x: rect.minX, y: rect.midY))
+        path.addLine(to: CGPoint(x: rect.minX, y: (rect.maxY + rect.midY) / 2))
+        path.addLine(to: CGPoint(x: rect.minX + 20, y: rect.maxY))
+        //path.addArc(center: CGPoint(x: rect.minX + 20, y: rect.midY), radius: rect.midY, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 90), clockwise: true)
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
         path.addLine(to: CGPoint(x: rect.minX + 20, y: rect.minY))
-        //path.addLine(to: CGPoint(x: rect.minX, y: (rect.minY + rect.midY) / 2))
-        //path.addLine(to: CGPoint(x: rect.minX, y: rect.midY))
-        path.addArc(center: CGPoint(x: rect.minX + 20, y: rect.midY), radius: rect.midY, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
+        path.addLine(to: CGPoint(x: rect.minX, y: (rect.minY + rect.midY) / 2))
+        path.addLine(to: CGPoint(x: rect.minX, y: rect.midY))
+        //path.addArc(center: CGPoint(x: rect.minX + 20, y: rect.midY), radius: rect.midY, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
         return path
     }
 }

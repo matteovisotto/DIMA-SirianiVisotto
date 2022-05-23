@@ -38,7 +38,7 @@ struct HomeView: View {
                                                 
                                             }.highPriorityGesture(DragGesture())
                                     }
-                                }.frame(width: geometry.size.width, height: 200)
+                                }.frame(width: geometry.size.width, height: 150)
                                 
                                 Divider()
                             }
