@@ -37,7 +37,8 @@ struct TrackedProductView: View {
                             //Spacer()
                             ZStack{
                                 PriceCard().fill(Color("Primary").opacity(0.6)).frame(width: geometry.size.width/3, height: 50)
-                                Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color("PrimaryLabel")).font(.system(size: 16).bold()).padding()
+                                Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color("PrimaryLabel")).font(.system(size: 16).bold()).padding(.leading)
+                                //Circle().fill(.white).frame(width: 100, height: 15).padding(.leading)
                             }//.padding(10)
                         }.padding(10)
                     }
@@ -130,7 +131,7 @@ struct TrackedProductView: View {
 struct PriceCard: Shape {
     func path(in rect: CGRect) -> Path {
     
-        var path = Path()
+        /*var path = Path()
         
         path.move(to: CGPoint(x: rect.maxX, y: rect.midY))
         path.addLine(to: CGPoint(x: rect.maxX-20, y: rect.maxY))
@@ -139,6 +140,23 @@ struct PriceCard: Shape {
         path.addLine(to: CGPoint(x: rect.minX, y: rect.minY))
         path.addLine(to: CGPoint(x: rect.maxX-20, y: rect.minY))
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
+        return path*/
+        
+        var path = Path()
+        
+        //Se si tolgono arc e move
+        
+        path.move(to: CGPoint(x: rect.minX + 20 - rect.midY, y: rect.midY))
+        //path.move(to: CGPoint(x: rect.minX, y: rect.midY))
+        //path.addLine(to: CGPoint(x: rect.minX, y: (rect.maxY + rect.midY) / 2))
+        //path.addLine(to: CGPoint(x: rect.minX + 20, y: rect.maxY))
+        path.addArc(center: CGPoint(x: rect.minX + 20, y: rect.midY), radius: rect.midY, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 90), clockwise: true)
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.minX + 20, y: rect.minY))
+        //path.addLine(to: CGPoint(x: rect.minX, y: (rect.minY + rect.midY) / 2))
+        //path.addLine(to: CGPoint(x: rect.minX, y: rect.midY))
+        path.addArc(center: CGPoint(x: rect.minX + 20, y: rect.midY), radius: rect.midY, startAngle: Angle(degrees: 180), endAngle: Angle(degrees: 270), clockwise: false)
         return path
     }
 }
