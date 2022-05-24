@@ -29,18 +29,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-      var handled: Bool
-    ApplicationDelegate.shared.application(
-                    app,
-                    open: url,
-                    sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
-                    annotation: options[UIApplication.OpenURLOptionsKey.annotation]
-                )
-      handled = GIDSignIn.sharedInstance.handle(url)
-      if handled {
-        return true
-      }
-      return false
+        let urlString = url.absoluteString
+        print(urlString)
+        var handled: Bool
+        ApplicationDelegate.shared.application(app,open: url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+        handled = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+            return true
+        }
+        
+        
+    
+        return false
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -156,32 +156,36 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if let type = userInfo["type"] as? String {
             if(type == "product"){
                 if let productId = userInfo["productId"] as? String {
-                    let taskManger = TaskManager(urlString: AppConstant.getProductByIdURL+"?id=\(productId)&lastPriceOnly", method: .GET, parameters: nil)
-                    taskManger.execute { result, content, data in
-                        if(result){
-                            do {
-                                let decoder = JSONDecoder()
-                                let product = try decoder.decode(Product.self, from: data!)
-                                
-                                DispatchQueue.main.async {
-                                    self.openProductView(product)
-                                    return
-                                }
-                            } catch {
-                                var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
-                                do {
-                                    let error = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
-                                    if let e = error {
-                                        if let d = e["exception"] as? String {
-                                            errorStr = d
-                                        }
-                                    }
-                                } catch {}
-                                DispatchQueue.main.async {
-                                    AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: errorStr)
-                                }
+                    parseProduct(productId: productId)
+                }
+            }
+        }
+    }
+    
+    public func parseProduct(productId: String){
+        let taskManger = TaskManager(urlString: AppConstant.getProductByIdURL+"?id=\(productId)&lastPriceOnly", method: .GET, parameters: nil)
+        taskManger.execute { result, content, data in
+            if(result){
+                do {
+                    let decoder = JSONDecoder()
+                    let product = try decoder.decode(Product.self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        self.openProductView(product)
+                        return
+                    }
+                } catch {
+                    var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
+                    do {
+                        let error = try JSONSerialization.jsonObject(with: data!, options: []) as? [String: Any]
+                        if let e = error {
+                            if let d = e["exception"] as? String {
+                                errorStr = d
                             }
                         }
+                    } catch {}
+                    DispatchQueue.main.async {
+                        AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: errorStr)
                     }
                 }
             }

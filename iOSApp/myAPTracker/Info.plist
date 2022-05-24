@@ -18,6 +18,16 @@
 				<string>fb515370529987552</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>it.matteovisotto.aptracker.applink</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>aptracker</string>
+			</array>
+		</dict>
 	</array>
 	<key>FacebookAppID</key>
 	<string>515370529987552</string>

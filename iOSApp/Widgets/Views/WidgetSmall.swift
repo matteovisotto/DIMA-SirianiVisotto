@@ -26,7 +26,7 @@ struct WidgetSmall: View {
             } else {
                 Text("Loading...").foregroundColor(Color("LabelColor"))
             }
-        }
+        }.widgetURL(URL(string: "aptracker://product?id=\(entry.products.first!.id)")!)
     }
 }
 

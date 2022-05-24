@@ -20,7 +20,13 @@ struct myAPTrackerApp: App {
                     tap.cancelsTouchesInView = false
                     rootVC.view.addGestureRecognizer(tap)
                 }
-            }
+                }.onOpenURL { url in
+                    let str = url.absoluteString
+                    if str.contains("product?id") {
+                        let id = str.split(separator: "=")[1]
+                        AppDelegate.shared?.parseProduct(productId: String(id))
+                    }
+                }
         }
     }
 }
