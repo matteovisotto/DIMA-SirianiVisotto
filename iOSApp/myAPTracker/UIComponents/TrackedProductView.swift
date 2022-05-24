@@ -71,14 +71,14 @@ struct TrackedProductView: View {
                                 Text(product.shortName).lineLimit(2).font(.system(size: 16).bold()).multilineTextAlignment(.leading).foregroundColor(.black).padding(.bottom, geometry.size.height / 2).padding(.leading,(10 * geometry.size.width/27))
                                 PriceCard().fill(Color("Primary").opacity(0.6)).frame(width: geometry.size.width/3, height: 50).padding(.top, geometry.size.height / 3).padding(.leading,60)
                                 Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color("PrimaryLabel")).font(.system(size: 16).bold()).padding(.leading, 70).padding(.top, geometry.size.height / 3)
-                                if (product.prices?.count == 1 || product.prices?.count == 0){
-                                    Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.leading, 8 * geometry.size.width / 11).padding(.top, geometry.size.height / 3)
+                                if (product.prices?.count ?? 0 < 2){
+                                    Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.leading, 8 * geometry.size.width / 11).padding(.top, 2 * geometry.size.height / 9)
                                     Text("\(percentage, specifier: "%.2f") %").font(.system(size: 16).bold()).foregroundColor(.orange).padding(.leading, 33 * geometry.size.width / 44).padding(.top, 9 * geometry.size.height / 16)
                                 } else if(product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0 > product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0){
                                     Image(systemName: "arrow.down").foregroundColor(.green).scaleEffect(2.5).rotationEffect(Angle(degrees: -45)).padding(.leading, 8 * geometry.size.width / 11).padding(.top, geometry.size.height / 6)
                                     Text("\(percentage, specifier: "%.2f") %").font(.system(size: 16).bold()).foregroundColor(.green).padding(.leading, 33 * geometry.size.width / 44).padding(.top, 9 * geometry.size.height / 16)
                                 } else if(product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0 < product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0) {
-                                    Image(systemName: "arrow.up").foregroundColor(.green).scaleEffect(2.5).rotationEffect(Angle(degrees: 45)).padding(.leading, 8 * geometry.size.width / 11).padding(.top, geometry.size.height / 6)
+                                    Image(systemName: "arrow.up").foregroundColor(.red).scaleEffect(2.5).rotationEffect(Angle(degrees: 45)).padding(.leading, 8 * geometry.size.width / 11).padding(.top, geometry.size.height / 6)
                                     Text("\(percentage, specifier: "%.2f") %").font(.system(size: 16).bold()).foregroundColor(.red).padding(.leading, 33 * geometry.size.width / 44).padding(.top, 9 * geometry.size.height / 16)
                                 } else {
                                     Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.leading, 8 * geometry.size.width / 11).padding(.top, 2 * geometry.size.height / 9)
@@ -120,10 +120,15 @@ struct TrackedProductView: View {
                         if(pricesObj.prices.count>0){
                             self.product.price = pricesObj.prices[pricesObj.prices.count-1].price
                         }
-                        self.sub = (product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0) - (product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0)
-                        self.percentage = sub / (product.prices?[(product.prices?.count ?? 1) - 1].price ?? 1)
-                        if (self.percentage < 0){
-                            self.percentage = self.percentage * -1
+                        if (pricesObj.prices.count == 0 || pricesObj.prices.count == 1){
+                            self.sub = 0
+                            self.percentage = 0
+                        } else {
+                            self.sub = (product.prices?[(product.prices?.count ?? 1) - 1].price ?? 0) - (product.prices?[(product.prices?.count ?? 2) - 2].price ?? 0)
+                            self.percentage = sub / (product.prices?[(product.prices?.count ?? 1) - 1].price ?? 1)
+                            if (self.percentage < 0){
+                                self.percentage = self.percentage * -1
+                            }
                         }
                         //print("first " + "\(self.product.prices?[0].updatedAt)")
                         //print("last" + "\(self.product.prices?[(self.product.prices?.count ?? 0)-1].updatedAt)")

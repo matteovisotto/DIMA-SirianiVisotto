@@ -19,12 +19,14 @@ struct PriceView: View {
     var body: some View {
         VStack{
             HLPriceView(lowestPrice: viewModel.product.lowestPrice, highestPrice: viewModel.product.highestPrice).padding(.horizontal)
-            /*LineGraph(data: viewModel.productPrices,lineWidth: 2, lineColors: [Color("Primary"), Color("PrimaryLabel")], fillGradientColors: [Color("BackgroundColorInverse").opacity(0.3),Color("BackgroundColorInverse").opacity(0.2),Color("BackgroundColorInverse").opacity(0.1)]).frame(height: 200).padding(.top, 10)*/
-            
-            LineGraph(data: viewModel.productPrices, lineWidth: 2, lineColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: true, pricesCount: viewModel.productPrices.count), fillGradientColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: false, pricesCount: viewModel.productPrices.count)).frame(height: 200).padding(.top, 10)
+            if (viewModel.productPrices.count < 2){
+                Text("Not enough data to display the graph").font(.system(size: 20).bold()).multilineTextAlignment(.center).foregroundColor(Color("PrimaryLabel")).frame(maxWidth: .infinity, alignment: .center).padding()
+            } else {
+                LineGraph(data: viewModel.productPrices, lineWidth: 2, lineColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: true, pricesCount: viewModel.productPrices.count), fillGradientColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: false, pricesCount: viewModel.productPrices.count)).frame(height: 200).padding(.top, 10)
+            }
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 2){
-                    ForEach(0..<(viewModel.product.prices?.count ?? 0), id: \.self){index in
+                    ForEach((0..<(viewModel.product.prices?.count ?? 0)).reversed(), id: \.self){index in
                         if(index == 0) {
                             PriceCell(price: viewModel.product.prices![index].price, date: viewModel.product.prices![index].updatedAt, previous: viewModel.product.prices![index].price, isFirst: true).padding(.horizontal)
                         } else {
