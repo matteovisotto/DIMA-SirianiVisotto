@@ -243,7 +243,7 @@ struct TrackedProductView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             Color("BackgroundColor").ignoresSafeArea()
-            TrackedProductView(TrackedProduct(id: 1, name: "A not very long name for this product", shortName: "A not very long name for this product", description: "", link: "", highestPrice: 12.20, lowestPrice: 9.99, createdAt: "", lastUpdate: "", trackingSince: "", dropKey: "", dropValue: 0, images: ["https://m.media-amazon.com/images/I/71KroddqZCL._AC_SL1500_.jpg"], price: 1000)).frame(width: .infinity, height: 200, alignment: .center).padding()
+            TrackedProductView(TrackedProduct(id: 1, name: "A not very long name for this product", shortName: "A not very long name for this product", description: "", link: "", highestPrice: 12.20, lowestPrice: 9.99, createdAt: "", lastUpdate: "", trackingSince: "", dropKey: "", dropValue: 0, images: ["https://m.media-amazon.com/images/I/71KroddqZCL._AC_SL1500_.jpg"], price: 1000, category: "Test cat")).frame(width: .infinity, height: 200, alignment: .center).padding()
         }
     }
 }

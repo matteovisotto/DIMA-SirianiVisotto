@@ -23,4 +23,5 @@ struct DropPriceProduct: Codable {
     var createdAt: String?
     var priceDrop: Float
     var priceDropPercentage: Float
+    var category: String
 }

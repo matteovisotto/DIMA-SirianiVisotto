@@ -28,6 +28,7 @@
 		6608CBB4283A3C5400F8C986 /* GroupPreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608CBB2283A3C5400F8C986 /* GroupPreferenceManager.swift */; };
 		6608CBB7283A3D2000F8C986 /* WidgetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6608CBB6283A3D2000F8C986 /* WidgetManager.swift */; };
 		66140D6C282AFBDE002D2F74 /* SemicurcularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66140D6B282AFBDE002D2F74 /* SemicurcularSlider.swift */; };
+		661A5C93284E930A00E9AFD6 /* iPadContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661A5C92284E930A00E9AFD6 /* iPadContentView.swift */; };
 		6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97727FF6FD9005E3A41 /* AppTabBar.swift */; };
 		6631E97A27FF709F005E3A41 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97927FF709F005E3A41 /* MainViewModel.swift */; };
 		6631E97C27FF7503005E3A41 /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631E97B27FF7503005E3A41 /* MainHeader.swift */; };
@@ -201,6 +202,7 @@
 		6608CBB2283A3C5400F8C986 /* GroupPreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPreferenceManager.swift; sourceTree = "<group>"; };
 		6608CBB6283A3D2000F8C986 /* WidgetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetManager.swift; sourceTree = "<group>"; };
 		66140D6B282AFBDE002D2F74 /* SemicurcularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemicurcularSlider.swift; sourceTree = "<group>"; };
+		661A5C92284E930A00E9AFD6 /* iPadContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadContentView.swift; sourceTree = "<group>"; };
 		6631E97727FF6FD9005E3A41 /* AppTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabBar.swift; sourceTree = "<group>"; };
 		6631E97927FF709F005E3A41 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		6631E97B27FF7503005E3A41 /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 				66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */,
 				666524D227FB3BF8005C73F3 /* AppConstant.swift */,
 				667BF40027FB8A300000B7EB /* AppState.swift */,
+				661A5C92284E930A00E9AFD6 /* iPadContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -1026,6 +1029,7 @@
 				66A514562827B8EF004388C7 /* Widgets.intentdefinition in Sources */,
 				66479307280030DD0068AE91 /* HomeView.swift in Sources */,
 				667BF40127FB8A300000B7EB /* AppState.swift in Sources */,
+				661A5C93284E930A00E9AFD6 /* iPadContentView.swift in Sources */,
 				66CC9C052801C67C005935F0 /* AddProductView.swift in Sources */,
 				6631E97E27FF7919005E3A41 /* TabElement.swift in Sources */,
 				66D17A542821826700F8AAEA /* HLPriceView.swift in Sources */,

@@ -12,21 +12,40 @@ struct myAPTrackerApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(AppState.shared)
-                .onAppear {
-                if let rootVC = UIApplication.shared.windows.first?.rootViewController {
-                    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: rootVC, action: #selector(rootVC.dismissKeyboard))
-                    tap.cancelsTouchesInView = false
-                    rootVC.view.addGestureRecognizer(tap)
-                }
-                }.onOpenURL { url in
-                    let str = url.absoluteString
-                    if str.contains("product?id") {
-                        let id = str.split(separator: "=")[1]
-                        AppDelegate.shared?.parseProduct(productId: String(id))
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                iPadContentView()
+                    .environmentObject(AppState.shared)
+                    .onAppear {
+                    if let rootVC = UIApplication.shared.windows.first?.rootViewController {
+                        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: rootVC, action: #selector(rootVC.dismissKeyboard))
+                        tap.cancelsTouchesInView = false
+                        rootVC.view.addGestureRecognizer(tap)
                     }
-                }
+                    }.onOpenURL { url in
+                        let str = url.absoluteString
+                        if str.contains("product?id") {
+                            let id = str.split(separator: "=")[1]
+                            AppDelegate.shared?.parseProduct(productId: String(id))
+                        }
+                    }
+            } else {
+                ContentView()
+                    .environmentObject(AppState.shared)
+                    .onAppear {
+                    if let rootVC = UIApplication.shared.windows.first?.rootViewController {
+                        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: rootVC, action: #selector(rootVC.dismissKeyboard))
+                        tap.cancelsTouchesInView = false
+                        rootVC.view.addGestureRecognizer(tap)
+                    }
+                    }.onOpenURL { url in
+                        let str = url.absoluteString
+                        if str.contains("product?id") {
+                            let id = str.split(separator: "=")[1]
+                            AppDelegate.shared?.parseProduct(productId: String(id))
+                        }
+                    }
+            }
+            
         }
     }
 }

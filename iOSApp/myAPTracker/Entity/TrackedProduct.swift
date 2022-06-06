@@ -24,5 +24,6 @@ struct TrackedProduct: Codable {
     var images: [String]
     var prices: [Price]?
     var price: Double?
+    var category: String
 }
 
