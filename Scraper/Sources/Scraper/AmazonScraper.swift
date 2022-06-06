@@ -78,12 +78,12 @@ class AmazonHTMLParser {
                 completionHandler(nil)
                 return
             }
-            let priceWhole = try doc.select("span.a-price-whole").first?.text().replacingOccurrences(of: ",", with: "")
+            let priceWhole = try doc.select("span.a-price-whole").first?.text().replacingOccurrences(of: ",", with: "").replacingOccurrences(of: ".", with: "")
             let priceDecimal = try doc.select("span.a-price-fraction").first?.text()
             let priceSymbol = try doc.select("span.a-price-symbol").first?.text()
-            guard let pI = priceWhole, let pD = priceDecimal, let pS = priceSymbol else {completionHandler(nil); return}
+            guard let pI = priceWhole, let pD = priceDecimal, let _ = priceSymbol else {completionHandler(nil); return}
             
-            completionHandler(pI+"."+pD+pS)
+            completionHandler(pI+"."+pD)
             
         } catch {
             completionHandler(nil)
