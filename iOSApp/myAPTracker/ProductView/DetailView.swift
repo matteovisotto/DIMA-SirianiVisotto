@@ -24,6 +24,7 @@ struct DetailView: View {
         ScrollView{
             VStack(alignment: .leading, spacing: 5) {
                 Text(viewModel.product.name).font(.body.bold()).foregroundColor(Color("PrimaryLabel"))
+                Text(viewModel.product.category.uppercased()).font(.caption).foregroundColor(Color("Primary"))
                 Divider().foregroundColor(Color("PrimaryLabel"))
                 Text(viewModel.product.description.replacingOccurrences(of: "\\n", with: "\n")).font(.body).lineLimit(nil).foregroundColor(Color("PrimaryLabel"))
             }

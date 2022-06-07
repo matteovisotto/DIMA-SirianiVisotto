@@ -34,49 +34,22 @@ struct SeeAllView: View {
                         HStack{
                             Text(viewModel.viewTitle).font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
+                            Button{
+                                viewModel.showFilterView.toggle()
+                            }  label: {
+                                Image(systemName: "line.3.horizontal.decrease")
+                            }.frame(width: 30, height: 30, alignment: .center)
+                                .foregroundColor(Color("PrimaryLabel"))
+                                .background(Color("PrimaryLabel").opacity(0.15))
+                                .clipShape(Circle())
                         }
-                        /*ScrollView(.vertical, showsIndicators: false){
-                            VStack(spacing: 10) {
-                                ForEach(0 ..< viewModel.products.count, id: \.self){ contentIndex in
-                                    NavigationLink{
-                                        ProductView(product: viewModel.products[contentIndex])
-                                    } label: {
-                                        VStack{
-                                            SingleProductView(viewModel.products[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
-                                            Divider().padding(.leading, 10)
-                                        }
-                                    }
-                                    
-                                }
-                            }.padding(.horizontal, 10)
-                            if (!viewModel.isLoading){
-                                HStack{
-                                    Spacer()
-                                    Button{
-                                        viewModel.products = []
-                                        viewModel.loadNewPage(newPage: viewModel.pageIndex - 1)
-                                    } label: {
-                                        Image(systemName: "chevron.left")
-                                    }.disabled(viewModel.pageIndex == 0)
-                                    Spacer()
-                                    Text("\(viewModel.pageIndex)").font(.title2.bold()).foregroundColor(Color("PrimaryLabel"))
-                                    Spacer()
-                                    Button{
-                                        viewModel.products = []
-                                        viewModel.loadNewPage(newPage: viewModel.pageIndex + 1)
-                                    } label: {
-                                        Image(systemName: "chevron.right")
-                                    }
-                                    Spacer()
-                                }
-                            }
-                        }.onAppear(perform: viewModel.loadData)*/
-                        InfiniteList(data: $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
+                        Text(viewModel.categoryFilters.joined(separator: ",")).font(.caption).foregroundColor(Color("PrimaryLabel"))
+                        InfiniteList(data: viewModel.categoryFilters.count > 0 ? $viewModel.filteredProducts : $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
                             NavigationLink{
-                                ProductView(product: viewModel.products[contentIndex])
+                                ProductView(product: viewModel.categoryFilters.count > 0 ? viewModel.filteredProducts[contentIndex] : viewModel.products[contentIndex])
                             } label: {
                                 VStack{
-                                    SingleProductView(viewModel.products[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                    SingleProductView(viewModel.categoryFilters.count > 0 ? viewModel.filteredProducts[contentIndex] : viewModel.products[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
                                     Divider().padding(.leading, 10)
                                 }
                             }
@@ -91,13 +64,9 @@ struct SeeAllView: View {
                 LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
             }
         }.navigationBarHidden(true)
+            .sheet(isPresented: $viewModel.showFilterView) {
+                FilterView(isPresented: $viewModel.showFilterView, selectedCategories: $viewModel.categoryFilters)
+            }
     }
 }
 
-/*
-struct SeeAllView_Previews: PreviewProvider {
-    static var previews: some View {
-        SeeAllView()
-    }
-}
-*/

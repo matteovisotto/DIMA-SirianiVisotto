@@ -11,12 +11,28 @@ class SeeAllViewModel: ObservableObject {
     @Published var viewTitle: String = ""
     @Published var products: [Product] = []
     @Published var isLoading: Bool = false
+    @Published var showFilterView: Bool = false
     private var apiUrl: String
     @Published var pageIndex: Int = 0
+    
+    @Published var categoryFilters: [String] = [] {
+        didSet {
+            self.applyFilter()
+        }
+    }
+    @Published var filteredProducts: [Product] = []
     
     init(apiUrl: String, viewTitle: String) {
         self.viewTitle = viewTitle
         self.apiUrl = apiUrl
+    }
+    
+    func applyFilter() {
+        DispatchQueue.main.async {
+            self.filteredProducts = self.products.filter { obj in
+                self.categoryFilters.contains(obj.category)
+            }
+        }
     }
     
     func loadMore() -> Void {
@@ -34,6 +50,9 @@ class SeeAllViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         self.products.append(contentsOf: identity)
                         self.pageIndex = self.pageIndex + 1
+                        if self.categoryFilters.count > 0 {
+                            self.applyFilter()
+                        }
                     }
                 } catch {
                     var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
