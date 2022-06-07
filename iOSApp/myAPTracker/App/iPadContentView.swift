@@ -15,7 +15,7 @@ struct iPadContentView: View {
     
     var body: some View {
         if (tutorialAlreadySeen) {
-            MainView()
+            iPadMainView()
         } else {
             TutorialView($tutorialAlreadySeen)
         }

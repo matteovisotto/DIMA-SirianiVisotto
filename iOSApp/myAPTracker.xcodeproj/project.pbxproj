@@ -77,6 +77,7 @@
 		66A06766281D1FE3002C479C /* Collapsible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A06765281D1FE3002C479C /* Collapsible.swift */; };
 		66A06769281D2D37002C479C /* TrackingSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A06768281D2D37002C479C /* TrackingSettingView.swift */; };
 		66A0676B281D319F002C479C /* TrackingSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */; };
+		66A264D0284FA6D7000C863E /* iPadMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A264CF284FA6D7000C863E /* iPadMainView.swift */; };
 		66A5143628279F4C004388C7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5143528279F4C004388C7 /* NotificationService.swift */; };
 		66A5143A28279F4C004388C7 /* PushNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66A5143328279F4C004388C7 /* PushNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66A514412827ADD9004388C7 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514402827ADD9004388C7 /* ImageViewer.swift */; };
@@ -250,6 +251,8 @@
 		66A06765281D1FE3002C479C /* Collapsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collapsible.swift; sourceTree = "<group>"; };
 		66A06768281D2D37002C479C /* TrackingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingView.swift; sourceTree = "<group>"; };
 		66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingViewModel.swift; sourceTree = "<group>"; };
+		66A264CF284FA6D7000C863E /* iPadMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadMainView.swift; sourceTree = "<group>"; };
+		66A264D1284FA80A000C863E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66A5143328279F4C004388C7 /* PushNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		66A5143528279F4C004388C7 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		66A5143728279F4C004388C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -295,7 +298,6 @@
 		66D13CD727FAFD97004B2077 /* myAPTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myAPTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITests.swift; sourceTree = "<group>"; };
 		66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		66D13CEA27FAFE2B004B2077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D13CF527FB1E74004B2077 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66D13CF827FB1EB7004B2077 /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			children = (
 				667BF40327FB8B2A0000B7EB /* MainView.swift */,
 				6631E97927FF709F005E3A41 /* MainViewModel.swift */,
+				66A264CF284FA6D7000C863E /* iPadMainView.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -619,7 +622,6 @@
 		66CC9C012801C611005935F0 /* AddProductView */ = {
 			isa = PBXGroup;
 			children = (
-				66D13CEA27FAFE2B004B2077 /* Info.plist */,
 				66CC9C022801C620005935F0 /* AddProductViewModel.swift */,
 				66CC9C042801C67C005935F0 /* AddProductView.swift */,
 			);
@@ -664,6 +666,7 @@
 		66D13CBF27FAFD88004B2077 /* myAPTracker */ = {
 			isa = PBXGroup;
 			children = (
+				66A264D1284FA80A000C863E /* Info.plist */,
 				6638176B28366EAC005D1182 /* SeeAllView */,
 				66A5143F2827ADC3004388C7 /* ImageViewer */,
 				66C3C5D1281E808A006393E4 /* ExploreView */,
@@ -1081,6 +1084,7 @@
 				66C552EA27FC428E00F5715E /* SocialSmallButton.swift in Sources */,
 				66742C6B27FCAD450093EE24 /* IconSecureTextField.swift in Sources */,
 				66DA7E66281DB1BF00B04036 /* CommentView.swift in Sources */,
+				66A264D0284FA6D7000C863E /* iPadMainView.swift in Sources */,
 				66C3C5D5281E80B4006393E4 /* ExploreView.swift in Sources */,
 				66C3C5CF281E7DBD006393E4 /* TrackedViewModel.swift in Sources */,
 				66C3C5D9281E812C006393E4 /* TrackedProductView.swift in Sources */,
