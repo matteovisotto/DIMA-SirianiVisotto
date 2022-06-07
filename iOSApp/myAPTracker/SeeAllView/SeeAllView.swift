@@ -22,17 +22,12 @@ struct SeeAllView: View {
             Color("BackgroundColor").ignoresSafeArea(.all)
                 GeometryReader{ geometry in
                     VStack{
-                        HStack{
+                        HStack(alignment: .center){
                             Button{
                                 mode.wrappedValue.dismiss()
                             } label: {
                                 Image(systemName: "arrow.left").font(.title3.bold())
                             }.foregroundColor(Color("PrimaryLabel"))
-                            Spacer()
-                        }
-                        Spacer().frame(height: 8)
-                        HStack{
-                            Text(viewModel.viewTitle).font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
                             Button{
                                 viewModel.showFilterView.toggle()
@@ -43,14 +38,36 @@ struct SeeAllView: View {
                                 .background(Color("PrimaryLabel").opacity(0.15))
                                 .clipShape(Circle())
                         }
-                        Text(viewModel.categoryFilters.joined(separator: ",")).font(.caption).foregroundColor(Color("PrimaryLabel"))
-                        InfiniteList(data: viewModel.categoryFilters.count > 0 ? $viewModel.filteredProducts : $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
-                            NavigationLink{
-                                ProductView(product: viewModel.categoryFilters.count > 0 ? viewModel.filteredProducts[contentIndex] : viewModel.products[contentIndex])
-                            } label: {
-                                VStack{
-                                    SingleProductView(viewModel.categoryFilters.count > 0 ? viewModel.filteredProducts[contentIndex] : viewModel.products[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
-                                    Divider().padding(.leading, 10)
+                        Spacer().frame(height: 8)
+                        HStack{
+                            Text(viewModel.viewTitle).font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
+                            Spacer()
+                            
+                        }
+                        Text(viewModel.categoryFilters.joined(separator: ", ")).font(.caption).foregroundColor(Color("PrimaryLabel"))
+                        
+                        
+                        if(viewModel.categoryFilters.count > 0){
+                            InfiniteList(data: $viewModel.filteredProducts, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
+                                NavigationLink{
+                                    ProductView(product: viewModel.filteredProducts[contentIndex])
+                                } label: {
+                                    VStack{
+                                        SingleProductView(viewModel.filteredProducts[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                        Divider().padding(.leading, 10)
+                                    }
+                                }
+                            }
+                        } else {
+                           
+                            InfiniteList(data: $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
+                                NavigationLink{
+                                    ProductView(product: viewModel.products[contentIndex])
+                                } label: {
+                                    VStack{
+                                        SingleProductView(viewModel.products[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                        Divider().padding(.leading, 10)
+                                    }
                                 }
                             }
                         }

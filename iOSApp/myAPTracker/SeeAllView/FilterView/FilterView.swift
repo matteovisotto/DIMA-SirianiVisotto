@@ -22,6 +22,7 @@ struct FilterView: View {
                 HStack{
                     Spacer()
                     Button{
+                        self.viewModel.save()
                         self.viewModel.isPresented.wrappedValue.toggle()
                     } label: {
                         Text("Done")
@@ -32,19 +33,18 @@ struct FilterView: View {
                 List{
                     Section{
                         ForEach(self.viewModel.categories, id: \.self) { category in
-                            FilterCellView(title: category, isSelected: self.viewModel.selected.wrappedValue.contains(category)) {
-                                if self.viewModel.selected.wrappedValue.contains(category) {
-                                    self.viewModel.selected.wrappedValue.removeAll(where: {$0 == category})
+                            FilterCellView(title: category, isSelected: self.viewModel.selected.contains(category)) {
+                                if self.viewModel.selected.contains(category) {
+                                    self.viewModel.selected.removeAll(where: {$0 == category})
                                 } else {
-                                    self.viewModel.selected.wrappedValue.append(category)
+                                    self.viewModel.selected.append(category)
                                 }
                             }
                         }
                     }
                     Section{
                         Button{
-                            self.viewModel.selected.wrappedValue = []
-                            //self.viewModel.isPresented.wrappedValue.toggle()
+                            self.viewModel.selected = []
                         } label: {
                             Text("Clear filters")
                         }.foregroundColor(Color.red)
@@ -52,7 +52,6 @@ struct FilterView: View {
                 }
                 
             }.padding()
-            
         }
     }
 }

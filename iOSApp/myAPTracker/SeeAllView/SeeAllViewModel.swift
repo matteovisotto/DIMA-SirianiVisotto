@@ -8,8 +8,15 @@
 import Foundation
 
 class SeeAllViewModel: ObservableObject {
+    private var sem: Bool = false
     @Published var viewTitle: String = ""
-    @Published var products: [Product] = []
+    @Published var products: [Product] = [] {
+        didSet{
+            if categoryFilters.count > 0 {
+                self.applyFilter()
+            }
+        }
+    }
     @Published var isLoading: Bool = false
     @Published var showFilterView: Bool = false
     private var apiUrl: String
@@ -28,19 +35,23 @@ class SeeAllViewModel: ObservableObject {
     }
     
     func applyFilter() {
-        DispatchQueue.main.async {
-            self.filteredProducts = self.products.filter { obj in
-                self.categoryFilters.contains(obj.category)
-            }
+        self.filteredProducts.removeAll()
+        self.filteredProducts = self.products.filter { obj in
+            self.categoryFilters.contains(obj.category)
         }
     }
     
     func loadMore() -> Void {
+        if sem {
+            return
+        }
+        sem = true
         self.isLoading = true
         pageIndex = self.pageIndex
         let task = TaskManager(urlString: self.apiUrl.prefix(self.apiUrl.count - 1) + "\(self.pageIndex)", method: .GET, parameters: nil)
         task.execute { result, content, data in
             DispatchQueue.main.async {
+                self.sem = false
                 self.isLoading = false
             }
             if result {
@@ -50,9 +61,6 @@ class SeeAllViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         self.products.append(contentsOf: identity)
                         self.pageIndex = self.pageIndex + 1
-                        if self.categoryFilters.count > 0 {
-                            self.applyFilter()
-                        }
                     }
                 } catch {
                     var errorStr = NSLocalizedString("Unable to parse the received content", comment: "Unable to convert data")
