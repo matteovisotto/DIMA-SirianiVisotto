@@ -1,99 +1,99 @@
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swift.o
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swift.o'
-'/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand.swift.o'
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/ToolInfo.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/Scraper.build/AmazonScraper.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/Scraper.build/DownloadManager.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/Scraper.build/main.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ArrayExt.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attribute.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attributes.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BinarySearch.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BooleanAttribute.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterExt.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterReader.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Cleaner.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Collector.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CombiningEvaluator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Comment.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Connection.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CssSelector.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataNode.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataUtil.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Document.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DocumentType.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Element.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Elements.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Entities.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Evaluator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Exception.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/FormElement.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilder.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilderState.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HttpStatusException.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Node.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeTraversor.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeVisitor.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/OrderedSet.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseError.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseErrorList.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseSettings.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Parser.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Pattern.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/QueryParser.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SerializationException.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SimpleDictionary.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StreamReader.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/String.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringBuilder.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringUtil.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StructuralEvaluator.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SwiftSoup.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tag.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TextNode.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Token.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokenQueue.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tokeniser.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokeniserState.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TreeBuilder.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/UnicodeScalar.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Validate.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Whitelist.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlDeclaration.swift.o
-/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlTreeBuilder.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swift.o
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swift.o'
+'/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand.swift.o'
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParserToolInfo.build/ToolInfo.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/Scraper.build/AmazonScraper.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/Scraper.build/DownloadManager.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/Scraper.build/main.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ArrayExt.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attribute.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Attributes.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BinarySearch.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/BooleanAttribute.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterExt.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CharacterReader.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Cleaner.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Collector.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CombiningEvaluator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Comment.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Connection.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/CssSelector.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataNode.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DataUtil.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Document.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/DocumentType.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Element.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Elements.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Entities.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Evaluator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Exception.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/FormElement.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilder.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HtmlTreeBuilderState.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/HttpStatusException.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Node.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeTraversor.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/NodeVisitor.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/OrderedSet.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseError.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseErrorList.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/ParseSettings.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Parser.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Pattern.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/QueryParser.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SerializationException.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SimpleDictionary.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StreamReader.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/String.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringBuilder.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StringUtil.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/StructuralEvaluator.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/SwiftSoup.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tag.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TextNode.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Token.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokenQueue.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Tokeniser.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TokeniserState.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/TreeBuilder.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/UnicodeScalar.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Validate.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/Whitelist.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlDeclaration.swift.o
+/Scraper/.build/x86_64-unknown-linux-gnu/release/SwiftSoup.build/XmlTreeBuilder.swift.o

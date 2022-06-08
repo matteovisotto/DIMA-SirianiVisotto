@@ -15,6 +15,7 @@ if(!isset($_POST["amazonUrl"]) || empty($_POST["amazonUrl"])){
 }
 $dropValue = isset($_POST['dropValue']) ? $_POST['dropValue'] : 0;
 $dropKey = isset($_POST['dropKey']) ? $_POST['dropKey'] : "none";
+$commentPolicy = isset($_POST['commentPolicy']) ? $_POST['commentPolicy'] : "never";
 $amazonUrl = explode("?", $_POST["amazonUrl"])[0];
 $unwanted_array = array(    'Š'=>'S', 'š'=>'s', 'Ž'=>'Z', 'ž'=>'z', 'À'=>'A', 'Á'=>'A', 'Â'=>'A', 'Ã'=>'A', 'Ä'=>'A', 'Å'=>'A', 'Æ'=>'A', 'Ç'=>'C', 'È'=>'E', 'É'=>'E',
                             'Ê'=>'E', 'Ë'=>'E', 'Ì'=>'I', 'Í'=>'I', 'Î'=>'I', 'Ï'=>'I', 'Ñ'=>'N', 'Ò'=>'O', 'Ó'=>'O', 'Ô'=>'O', 'Õ'=>'O', 'Ö'=>'O', 'Ø'=>'O', 'Ù'=>'U',
@@ -36,7 +37,7 @@ if($productId == null) {
     }
 }
 
-if(addTracking($userId,$productId, $dropValue, $dropKey)){
+if(addTracking($userId,$productId, $dropValue, $dropKey, $commentPolicy)){
 	echo '{"success":"Added and tracked", "productId":'.$productId.'}';
 } else {
 	echo '{"exception":"Product added but not set as tracked"}';

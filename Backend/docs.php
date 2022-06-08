@@ -52,7 +52,7 @@ foreach ($modules as $m){
           			echo '<div class="col-12">
         <div class="card card-outline card-'.$color.' collapsed-card">
               <div class="card-header">
-                <h3 class="card-title"><h3 class="badge badgle-lg badge-'.$color.'">'.$prop["Method"].'</h3>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'.str_replace(".php", "", ucfirst($a)).'</strong>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; /api/'.$m.'/'.str_replace(".php", "", $a).'&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;'.$auth.'</h3>
+                <h3 class="card-title"><h3 class="badge badgle-lg badge-'.$color.'">'.$prop["Method"].'</h3>&nbsp;&nbsp;&nbsp;&nbsp;<strong>'.str_replace(".php", "", ucfirst($a)).'</strong>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; /api/v1/'.$m.'/'.str_replace(".php", "", $a).'&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;'.$auth.'</h3>
                 <div class="card-tools">
                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
                     <i class="fas fa-plus"></i>

@@ -15,7 +15,8 @@ if(!isset($_POST['productId']) || empty($_POST['productId']) || !isset($_POST['d
 $productId = $_POST['productId'];
 $dropKey = $_POST['dropKey'];
 $dropValue = $_POST['dropValue'];
-if (updateTrackingPreference($userId, $productId, $dropKey, $dropValue)){
+$commentPolicy = isset($_POST['commentPolicy']) ? $_POST['commentPolicy'] : "never";
+if (updateTrackingPreference($userId, $productId, $dropKey, $dropValue, $commentPolicy)){
 	echo '{"success":"Preferences correctly updated"}';
 } else {
 	echo '{"exception":"Unable to update preferences"}';

@@ -1,0 +1,1252 @@
+[
+  {
+    "CountryCode": "TW",
+    "TLD": ".tw",
+    "DisplayName": "Taiwan"
+  },
+  {
+    "CountryCode": "AF",
+    "TLD": ".af",
+    "DisplayName": "Afghanistan"
+  },
+  {
+    "CountryCode": "AL",
+    "TLD": ".al",
+    "DisplayName": "Albania"
+  },
+  {
+    "CountryCode": "DZ",
+    "TLD": ".dz",
+    "DisplayName": "Algeria"
+  },
+  {
+    "CountryCode": "AS",
+    "TLD": ".as",
+    "DisplayName": "American Samoa"
+  },
+  {
+    "CountryCode": "AD",
+    "TLD": ".ad",
+    "DisplayName": "Andorra"
+  },
+  {
+    "CountryCode": "AO",
+    "TLD": ".ao",
+    "DisplayName": "Angola"
+  },
+  {
+    "CountryCode": "AI",
+    "TLD": ".ai",
+    "DisplayName": "Anguilla"
+  },
+  {
+    "CountryCode": "AQ",
+    "TLD": ".aq",
+    "DisplayName": "Antarctica"
+  },
+  {
+    "CountryCode": "AG",
+    "TLD": ".ag",
+    "DisplayName": "Antigua & Barbuda"
+  },
+  {
+    "CountryCode": "AR",
+    "TLD": ".ar",
+    "DisplayName": "Argentina"
+  },
+  {
+    "CountryCode": "AM",
+    "TLD": ".am",
+    "DisplayName": "Armenia"
+  },
+  {
+    "CountryCode": "AW",
+    "TLD": ".aw",
+    "DisplayName": "Aruba"
+  },
+  {
+    "CountryCode": "AU",
+    "TLD": ".au",
+    "DisplayName": "Australia"
+  },
+  {
+    "CountryCode": "AT",
+    "TLD": ".at",
+    "DisplayName": "Austria"
+  },
+  {
+    "CountryCode": "AZ",
+    "TLD": ".az",
+    "DisplayName": "Azerbaijan"
+  },
+  {
+    "CountryCode": "BS",
+    "TLD": ".bs",
+    "DisplayName": "Bahamas"
+  },
+  {
+    "CountryCode": "BH",
+    "TLD": ".bh",
+    "DisplayName": "Bahrain"
+  },
+  {
+    "CountryCode": "BD",
+    "TLD": ".bd",
+    "DisplayName": "Bangladesh"
+  },
+  {
+    "CountryCode": "BB",
+    "TLD": ".bb",
+    "DisplayName": "Barbados"
+  },
+  {
+    "CountryCode": "BY",
+    "TLD": ".by",
+    "DisplayName": "Belarus"
+  },
+  {
+    "CountryCode": "BE",
+    "TLD": ".be",
+    "DisplayName": "Belgium"
+  },
+  {
+    "CountryCode": "BZ",
+    "TLD": ".bz",
+    "DisplayName": "Belize"
+  },
+  {
+    "CountryCode": "BJ",
+    "TLD": ".bj",
+    "DisplayName": "Benin"
+  },
+  {
+    "CountryCode": "BM",
+    "TLD": ".bm",
+    "DisplayName": "Bermuda"
+  },
+  {
+    "CountryCode": "BT",
+    "TLD": ".bt",
+    "DisplayName": "Bhutan"
+  },
+  {
+    "CountryCode": "BO",
+    "TLD": ".bo",
+    "DisplayName": "Bolivia"
+  },
+  {
+    "CountryCode": "BQ",
+    "TLD": ".bq",
+    "DisplayName": "Caribbean Netherlands"
+  },
+  {
+    "CountryCode": "BA",
+    "TLD": ".ba",
+    "DisplayName": "Bosnia"
+  },
+  {
+    "CountryCode": "BW",
+    "TLD": ".bw",
+    "DisplayName": "Botswana"
+  },
+  {
+    "CountryCode": "BV",
+    "TLD": ".bv",
+    "DisplayName": "Bouvet Island"
+  },
+  {
+    "CountryCode": "BR",
+    "TLD": ".br",
+    "DisplayName": "Brazil"
+  },
+  {
+    "CountryCode": "IO",
+    "TLD": ".io",
+    "DisplayName": "British Indian Ocean Territory"
+  },
+  {
+    "CountryCode": "VG",
+    "TLD": ".vg",
+    "DisplayName": "British Virgin Islands"
+  },
+  {
+    "CountryCode": "BN",
+    "TLD": ".bn",
+    "DisplayName": "Brunei"
+  },
+  {
+    "CountryCode": "BG",
+    "TLD": ".bg",
+    "DisplayName": "Bulgaria"
+  },
+  {
+    "CountryCode": "BF",
+    "TLD": ".bf",
+    "DisplayName": "Burkina Faso"
+  },
+  {
+    "CountryCode": "BI",
+    "TLD": ".bi",
+    "DisplayName": "Burundi"
+  },
+  {
+    "CountryCode": "CV",
+    "TLD": ".cv",
+    "DisplayName": "Cape Verde"
+  },
+  {
+    "CountryCode": "KH",
+    "TLD": ".kh",
+    "DisplayName": "Cambodia"
+  },
+  {
+    "CountryCode": "CM",
+    "TLD": ".cm",
+    "DisplayName": "Cameroon"
+  },
+  {
+    "CountryCode": "CA",
+    "TLD": ".ca",
+    "DisplayName": "Canada"
+  },
+  {
+    "CountryCode": "KY",
+    "TLD": ".ky",
+    "DisplayName": "Cayman Islands"
+  },
+  {
+    "CountryCode": "CF",
+    "TLD": ".cf",
+    "DisplayName": "Central African Republic"
+  },
+  {
+    "CountryCode": "TD",
+    "TLD": ".td",
+    "DisplayName": "Chad"
+  },
+  {
+    "CountryCode": "CL",
+    "TLD": ".cl",
+    "DisplayName": "Chile"
+  },
+  {
+    "CountryCode": "CN",
+    "TLD": ".cn",
+    "DisplayName": "China"
+  },
+  {
+    "CountryCode": "HK",
+    "TLD": ".hk",
+    "DisplayName": "Hong Kong"
+  },
+  {
+    "CountryCode": "MO",
+    "TLD": ".mo",
+    "DisplayName": "Macau"
+  },
+  {
+    "CountryCode": "CX",
+    "TLD": ".cx",
+    "DisplayName": "Christmas Island"
+  },
+  {
+    "CountryCode": "CC",
+    "TLD": ".cc",
+    "DisplayName": "Cocos (Keeling) Islands"
+  },
+  {
+    "CountryCode": "CO",
+    "TLD": ".co",
+    "DisplayName": "Colombia"
+  },
+  {
+    "CountryCode": "KM",
+    "TLD": ".km",
+    "DisplayName": "Comoros"
+  },
+  {
+    "CountryCode": "CG",
+    "TLD": ".cg",
+    "DisplayName": "Congo - Brazzaville"
+  },
+  {
+    "CountryCode": "CK",
+    "TLD": ".ck",
+    "DisplayName": "Cook Islands"
+  },
+  {
+    "CountryCode": "CR",
+    "TLD": ".cr",
+    "DisplayName": "Costa Rica"
+  },
+  {
+    "CountryCode": "HR",
+    "TLD": ".hr",
+    "DisplayName": "Croatia"
+  },
+  {
+    "CountryCode": "CU",
+    "TLD": ".cu",
+    "DisplayName": "Cuba"
+  },
+  {
+    "CountryCode": "CW",
+    "TLD": ".cw",
+    "DisplayName": "Curaçao"
+  },
+  {
+    "CountryCode": "CY",
+    "TLD": ".cy",
+    "DisplayName": "Cyprus"
+  },
+  {
+    "CountryCode": "CZ",
+    "TLD": ".cz",
+    "DisplayName": "Czechia"
+  },
+  {
+    "CountryCode": "CI",
+    "TLD": ".ci",
+    "DisplayName": "Côte d’Ivoire"
+  },
+  {
+    "CountryCode": "KP",
+    "TLD": ".kp",
+    "DisplayName": "North Korea"
+  },
+  {
+    "CountryCode": "CD",
+    "TLD": ".cd",
+    "DisplayName": "Congo - Kinshasa"
+  },
+  {
+    "CountryCode": "DK",
+    "TLD": ".dk",
+    "DisplayName": "Denmark"
+  },
+  {
+    "CountryCode": "DJ",
+    "TLD": ".dj",
+    "DisplayName": "Djibouti"
+  },
+  {
+    "CountryCode": "DM",
+    "TLD": ".dm",
+    "DisplayName": "Dominica"
+  },
+  {
+    "CountryCode": "DO",
+    "TLD": ".do",
+    "DisplayName": "Dominican Republic"
+  },
+  {
+    "CountryCode": "EC",
+    "TLD": ".ec",
+    "DisplayName": "Ecuador"
+  },
+  {
+    "CountryCode": "EG",
+    "TLD": ".eg",
+    "DisplayName": "Egypt"
+  },
+  {
+    "CountryCode": "SV",
+    "TLD": ".sv",
+    "DisplayName": "El Salvador"
+  },
+  {
+    "CountryCode": "GQ",
+    "TLD": ".gq",
+    "DisplayName": "Equatorial Guinea"
+  },
+  {
+    "CountryCode": "ER",
+    "TLD": ".er",
+    "DisplayName": "Eritrea"
+  },
+  {
+    "CountryCode": "EE",
+    "TLD": ".ee",
+    "DisplayName": "Estonia"
+  },
+  {
+    "CountryCode": "SZ",
+    "TLD": ".sz",
+    "DisplayName": "Eswatini"
+  },
+  {
+    "CountryCode": "ET",
+    "TLD": ".et",
+    "DisplayName": "Ethiopia"
+  },
+  {
+    "CountryCode": "FK",
+    "TLD": ".fk",
+    "DisplayName": "Falkland Islands"
+  },
+  {
+    "CountryCode": "FO",
+    "TLD": ".fo",
+    "DisplayName": "Faroe Islands"
+  },
+  {
+    "CountryCode": "FJ",
+    "TLD": ".fj",
+    "DisplayName": "Fiji"
+  },
+  {
+    "CountryCode": "FI",
+    "TLD": ".fi",
+    "DisplayName": "Finland"
+  },
+  {
+    "CountryCode": "FR",
+    "TLD": ".fr",
+    "DisplayName": "France"
+  },
+  {
+    "CountryCode": "GF",
+    "TLD": ".gf",
+    "DisplayName": "French Guiana"
+  },
+  {
+    "CountryCode": "PF",
+    "TLD": ".pf",
+    "DisplayName": "French Polynesia"
+  },
+  {
+    "CountryCode": "TF",
+    "TLD": ".tf",
+    "DisplayName": "French Southern Territories"
+  },
+  {
+    "CountryCode": "GA",
+    "TLD": ".ga",
+    "DisplayName": "Gabon"
+  },
+  {
+    "CountryCode": "GM",
+    "TLD": ".gm",
+    "DisplayName": "Gambia"
+  },
+  {
+    "CountryCode": "GE",
+    "TLD": ".ge",
+    "DisplayName": "Georgia"
+  },
+  {
+    "CountryCode": "DE",
+    "TLD": ".de",
+    "DisplayName": "Germany"
+  },
+  {
+    "CountryCode": "GH",
+    "TLD": ".gh",
+    "DisplayName": "Ghana"
+  },
+  {
+    "CountryCode": "GI",
+    "TLD": ".gi",
+    "DisplayName": "Gibraltar"
+  },
+  {
+    "CountryCode": "GR",
+    "TLD": ".gr",
+    "DisplayName": "Greece"
+  },
+  {
+    "CountryCode": "GL",
+    "TLD": ".gl",
+    "DisplayName": "Greenland"
+  },
+  {
+    "CountryCode": "GD",
+    "TLD": ".gd",
+    "DisplayName": "Grenada"
+  },
+  {
+    "CountryCode": "GP",
+    "TLD": ".gp",
+    "DisplayName": "Guadeloupe"
+  },
+  {
+    "CountryCode": "GU",
+    "TLD": ".gu",
+    "DisplayName": "Guam"
+  },
+  {
+    "CountryCode": "GT",
+    "TLD": ".gt",
+    "DisplayName": "Guatemala"
+  },
+  {
+    "CountryCode": "GG",
+    "TLD": ".gg",
+    "DisplayName": "Guernsey"
+  },
+  {
+    "CountryCode": "GN",
+    "TLD": ".gn",
+    "DisplayName": "Guinea"
+  },
+  {
+    "CountryCode": "GW",
+    "TLD": ".gw",
+    "DisplayName": "Guinea-Bissau"
+  },
+  {
+    "CountryCode": "GY",
+    "TLD": ".gy",
+    "DisplayName": "Guyana"
+  },
+  {
+    "CountryCode": "HT",
+    "TLD": ".ht",
+    "DisplayName": "Haiti"
+  },
+  {
+    "CountryCode": "HM",
+    "TLD": ".hm",
+    "DisplayName": "Heard & McDonald Islands"
+  },
+  {
+    "CountryCode": "VA",
+    "TLD": ".va",
+    "DisplayName": "Vatican City"
+  },
+  {
+    "CountryCode": "HN",
+    "TLD": ".hn",
+    "DisplayName": "Honduras"
+  },
+  {
+    "CountryCode": "HU",
+    "TLD": ".hu",
+    "DisplayName": "Hungary"
+  },
+  {
+    "CountryCode": "IS",
+    "TLD": ".is",
+    "DisplayName": "Iceland"
+  },
+  {
+    "CountryCode": "IN",
+    "TLD": ".in",
+    "DisplayName": "India"
+  },
+  {
+    "CountryCode": "ID",
+    "TLD": ".id",
+    "DisplayName": "Indonesia"
+  },
+  {
+    "CountryCode": "IR",
+    "TLD": ".ir",
+    "DisplayName": "Iran"
+  },
+  {
+    "CountryCode": "IQ",
+    "TLD": ".iq",
+    "DisplayName": "Iraq"
+  },
+  {
+    "CountryCode": "IE",
+    "TLD": ".ie",
+    "DisplayName": "Ireland"
+  },
+  {
+    "CountryCode": "IM",
+    "TLD": ".im",
+    "DisplayName": "Isle of Man"
+  },
+  {
+    "CountryCode": "IL",
+    "TLD": ".il",
+    "DisplayName": "Israel"
+  },
+  {
+    "CountryCode": "IT",
+    "TLD": ".it",
+    "DisplayName": "Italy"
+  },
+  {
+    "CountryCode": "JM",
+    "TLD": ".jm",
+    "DisplayName": "Jamaica"
+  },
+  {
+    "CountryCode": "JP",
+    "TLD": ".jp",
+    "DisplayName": "Japan"
+  },
+  {
+    "CountryCode": "JE",
+    "TLD": ".je",
+    "DisplayName": "Jersey"
+  },
+  {
+    "CountryCode": "JO",
+    "TLD": ".jo",
+    "DisplayName": "Jordan"
+  },
+  {
+    "CountryCode": "KZ",
+    "TLD": ".kz",
+    "DisplayName": "Kazakhstan"
+  },
+  {
+    "CountryCode": "KE",
+    "TLD": ".ke",
+    "DisplayName": "Kenya"
+  },
+  {
+    "CountryCode": "KI",
+    "TLD": ".ki",
+    "DisplayName": "Kiribati"
+  },
+  {
+    "CountryCode": "KW",
+    "TLD": ".kw",
+    "DisplayName": "Kuwait"
+  },
+  {
+    "CountryCode": "KG",
+    "TLD": ".kg",
+    "DisplayName": "Kyrgyzstan"
+  },
+  {
+    "CountryCode": "LA",
+    "TLD": ".la",
+    "DisplayName": "Laos"
+  },
+  {
+    "CountryCode": "LV",
+    "TLD": ".lv",
+    "DisplayName": "Latvia"
+  },
+  {
+    "CountryCode": "LB",
+    "TLD": ".lb",
+    "DisplayName": "Lebanon"
+  },
+  {
+    "CountryCode": "LS",
+    "TLD": ".ls",
+    "DisplayName": "Lesotho"
+  },
+  {
+    "CountryCode": "LR",
+    "TLD": ".lr",
+    "DisplayName": "Liberia"
+  },
+  {
+    "CountryCode": "LY",
+    "TLD": ".ly",
+    "DisplayName": "Libya"
+  },
+  {
+    "CountryCode": "LI",
+    "TLD": ".li",
+    "DisplayName": "Liechtenstein"
+  },
+  {
+    "CountryCode": "LT",
+    "TLD": ".lt",
+    "DisplayName": "Lithuania"
+  },
+  {
+    "CountryCode": "LU",
+    "TLD": ".lu",
+    "DisplayName": "Luxembourg"
+  },
+  {
+    "CountryCode": "MG",
+    "TLD": ".mg",
+    "DisplayName": "Madagascar"
+  },
+  {
+    "CountryCode": "MW",
+    "TLD": ".mw",
+    "DisplayName": "Malawi"
+  },
+  {
+    "CountryCode": "MY",
+    "TLD": ".my",
+    "DisplayName": "Malaysia"
+  },
+  {
+    "CountryCode": "MV",
+    "TLD": ".mv",
+    "DisplayName": "Maldives"
+  },
+  {
+    "CountryCode": "ML",
+    "TLD": ".ml",
+    "DisplayName": "Mali"
+  },
+  {
+    "CountryCode": "MT",
+    "TLD": ".mt",
+    "DisplayName": "Malta"
+  },
+  {
+    "CountryCode": "MH",
+    "TLD": ".mh",
+    "DisplayName": "Marshall Islands"
+  },
+  {
+    "CountryCode": "MQ",
+    "TLD": ".mq",
+    "DisplayName": "Martinique"
+  },
+  {
+    "CountryCode": "MR",
+    "TLD": ".mr",
+    "DisplayName": "Mauritania"
+  },
+  {
+    "CountryCode": "MU",
+    "TLD": ".mu",
+    "DisplayName": "Mauritius"
+  },
+  {
+    "CountryCode": "YT",
+    "TLD": ".yt",
+    "DisplayName": "Mayotte"
+  },
+  {
+    "CountryCode": "MX",
+    "TLD": ".mx",
+    "DisplayName": "Mexico"
+  },
+  {
+    "CountryCode": "FM",
+    "TLD": ".fm",
+    "DisplayName": "Micronesia"
+  },
+  {
+    "CountryCode": "MC",
+    "TLD": ".mc",
+    "DisplayName": "Monaco"
+  },
+  {
+    "CountryCode": "MN",
+    "TLD": ".mn",
+    "DisplayName": "Mongolia"
+  },
+  {
+    "CountryCode": "ME",
+    "TLD": ".me",
+    "DisplayName": "Montenegro"
+  },
+  {
+    "CountryCode": "MS",
+    "TLD": ".ms",
+    "DisplayName": "Montserrat"
+  },
+  {
+    "CountryCode": "MA",
+    "TLD": ".ma",
+    "DisplayName": "Morocco"
+  },
+  {
+    "CountryCode": "MZ",
+    "TLD": ".mz",
+    "DisplayName": "Mozambique"
+  },
+  {
+    "CountryCode": "MM",
+    "TLD": ".mm",
+    "DisplayName": "Myanmar"
+  },
+  {
+    "CountryCode": "NA",
+    "TLD": ".na",
+    "DisplayName": "Namibia"
+  },
+  {
+    "CountryCode": "NR",
+    "TLD": ".nr",
+    "DisplayName": "Nauru"
+  },
+  {
+    "CountryCode": "NP",
+    "TLD": ".np",
+    "DisplayName": "Nepal"
+  },
+  {
+    "CountryCode": "NL",
+    "TLD": ".nl",
+    "DisplayName": "Netherlands"
+  },
+  {
+    "CountryCode": "NC",
+    "TLD": ".nc",
+    "DisplayName": "New Caledonia"
+  },
+  {
+    "CountryCode": "NZ",
+    "TLD": ".nz",
+    "DisplayName": "New Zealand"
+  },
+  {
+    "CountryCode": "NI",
+    "TLD": ".ni",
+    "DisplayName": "Nicaragua"
+  },
+  {
+    "CountryCode": "NE",
+    "TLD": ".ne",
+    "DisplayName": "Niger"
+  },
+  {
+    "CountryCode": "NG",
+    "TLD": ".ng",
+    "DisplayName": "Nigeria"
+  },
+  {
+    "CountryCode": "NU",
+    "TLD": ".nu",
+    "DisplayName": "Niue"
+  },
+  {
+    "CountryCode": "NF",
+    "TLD": ".nf",
+    "DisplayName": "Norfolk Island"
+  },
+  {
+    "CountryCode": "MP",
+    "TLD": ".mp",
+    "DisplayName": "Northern Mariana Islands"
+  },
+  {
+    "CountryCode": "NO",
+    "TLD": ".no",
+    "DisplayName": "Norway"
+  },
+  {
+    "CountryCode": "OM",
+    "TLD": ".om",
+    "DisplayName": "Oman"
+  },
+  {
+    "CountryCode": "PK",
+    "TLD": ".pk",
+    "DisplayName": "Pakistan"
+  },
+  {
+    "CountryCode": "PW",
+    "TLD": ".pw",
+    "DisplayName": "Palau"
+  },
+  {
+    "CountryCode": "PA",
+    "TLD": ".pa",
+    "DisplayName": "Panama"
+  },
+  {
+    "CountryCode": "PG",
+    "TLD": ".pg",
+    "DisplayName": "Papua New Guinea"
+  },
+  {
+    "CountryCode": "PY",
+    "TLD": ".py",
+    "DisplayName": "Paraguay"
+  },
+  {
+    "CountryCode": "PE",
+    "TLD": ".pe",
+    "DisplayName": "Peru"
+  },
+  {
+    "CountryCode": "PH",
+    "TLD": ".ph",
+    "DisplayName": "Philippines"
+  },
+  {
+    "CountryCode": "PN",
+    "TLD": ".pn",
+    "DisplayName": "Pitcairn Islands"
+  },
+  {
+    "CountryCode": "PL",
+    "TLD": ".pl",
+    "DisplayName": "Poland"
+  },
+  {
+    "CountryCode": "PT",
+    "TLD": ".pt",
+    "DisplayName": "Portugal"
+  },
+  {
+    "CountryCode": "PR",
+    "TLD": ".pr",
+    "DisplayName": "Puerto Rico"
+  },
+  {
+    "CountryCode": "QA",
+    "TLD": ".qa",
+    "DisplayName": "Qatar"
+  },
+  {
+    "CountryCode": "KR",
+    "TLD": ".kr",
+    "DisplayName": "South Korea"
+  },
+  {
+    "CountryCode": "MD",
+    "TLD": ".md",
+    "DisplayName": "Moldova"
+  },
+  {
+    "CountryCode": "RO",
+    "TLD": ".ro",
+    "DisplayName": "Romania"
+  },
+  {
+    "CountryCode": "RU",
+    "TLD": ".ru",
+    "DisplayName": "Russia"
+  },
+  {
+    "CountryCode": "RW",
+    "TLD": ".rw",
+    "DisplayName": "Rwanda"
+  },
+  {
+    "CountryCode": "RE",
+    "TLD": ".re",
+    "DisplayName": "Réunion"
+  },
+  {
+    "CountryCode": "BL",
+    "TLD": ".gp",
+    "DisplayName": "St. Barthélemy"
+  },
+  {
+    "CountryCode": "SH",
+    "TLD": ".sh",
+    "DisplayName": "St. Helena"
+  },
+  {
+    "CountryCode": "KN",
+    "TLD": ".kn",
+    "DisplayName": "St. Kitts & Nevis"
+  },
+  {
+    "CountryCode": "LC",
+    "TLD": ".lc",
+    "DisplayName": "St. Lucia"
+  },
+  {
+    "CountryCode": "MF",
+    "TLD": ".gp",
+    "DisplayName": "St. Martin"
+  },
+  {
+    "CountryCode": "PM",
+    "TLD": ".pm",
+    "DisplayName": "St. Pierre & Miquelon"
+  },
+  {
+    "CountryCode": "VC",
+    "TLD": ".vc",
+    "DisplayName": "St. Vincent & Grenadines"
+  },
+  {
+    "CountryCode": "WS",
+    "TLD": ".ws",
+    "DisplayName": "Samoa"
+  },
+  {
+    "CountryCode": "SM",
+    "TLD": ".sm",
+    "DisplayName": "San Marino"
+  },
+  {
+    "CountryCode": "ST",
+    "TLD": ".st",
+    "DisplayName": "São Tomé & Príncipe"
+  },
+  {
+    "CountryCode": "",
+    "TLD": "",
+    "DisplayName": ""
+  },
+  {
+    "CountryCode": "SA",
+    "TLD": ".sa",
+    "DisplayName": "Saudi Arabia"
+  },
+  {
+    "CountryCode": "SN",
+    "TLD": ".sn",
+    "DisplayName": "Senegal"
+  },
+  {
+    "CountryCode": "RS",
+    "TLD": ".rs",
+    "DisplayName": "Serbia"
+  },
+  {
+    "CountryCode": "SC",
+    "TLD": ".sc",
+    "DisplayName": "Seychelles"
+  },
+  {
+    "CountryCode": "SL",
+    "TLD": ".sl",
+    "DisplayName": "Sierra Leone"
+  },
+  {
+    "CountryCode": "SG",
+    "TLD": ".sg",
+    "DisplayName": "Singapore"
+  },
+  {
+    "CountryCode": "SX",
+    "TLD": ".sx",
+    "DisplayName": "Sint Maarten"
+  },
+  {
+    "CountryCode": "SK",
+    "TLD": ".sk",
+    "DisplayName": "Slovakia"
+  },
+  {
+    "CountryCode": "SI",
+    "TLD": ".si",
+    "DisplayName": "Slovenia"
+  },
+  {
+    "CountryCode": "SB",
+    "TLD": ".sb",
+    "DisplayName": "Solomon Islands"
+  },
+  {
+    "CountryCode": "SO",
+    "TLD": ".so",
+    "DisplayName": "Somalia"
+  },
+  {
+    "CountryCode": "ZA",
+    "TLD": ".za",
+    "DisplayName": "South Africa"
+  },
+  {
+    "CountryCode": "GS",
+    "TLD": ".gs",
+    "DisplayName": "South Georgia & South Sandwich Islands"
+  },
+  {
+    "CountryCode": "SS",
+    "TLD": "",
+    "DisplayName": "South Sudan"
+  },
+  {
+    "CountryCode": "ES",
+    "TLD": ".es",
+    "DisplayName": "Spain"
+  },
+  {
+    "CountryCode": "LK",
+    "TLD": ".lk",
+    "DisplayName": "Sri Lanka"
+  },
+  {
+    "CountryCode": "PS",
+    "TLD": ".ps",
+    "DisplayName": "Palestine"
+  },
+  {
+    "CountryCode": "SD",
+    "TLD": ".sd",
+    "DisplayName": "Sudan"
+  },
+  {
+    "CountryCode": "SR",
+    "TLD": ".sr",
+    "DisplayName": "Suriname"
+  },
+  {
+    "CountryCode": "SJ",
+    "TLD": ".sj",
+    "DisplayName": "Svalbard & Jan Mayen"
+  },
+  {
+    "CountryCode": "SE",
+    "TLD": ".se",
+    "DisplayName": "Sweden"
+  },
+  {
+    "CountryCode": "CH",
+    "TLD": ".ch",
+    "DisplayName": "Switzerland"
+  },
+  {
+    "CountryCode": "SY",
+    "TLD": ".sy",
+    "DisplayName": "Syria"
+  },
+  {
+    "CountryCode": "TJ",
+    "TLD": ".tj",
+    "DisplayName": "Tajikistan"
+  },
+  {
+    "CountryCode": "TH",
+    "TLD": ".th",
+    "DisplayName": "Thailand"
+  },
+  {
+    "CountryCode": "MK",
+    "TLD": ".mk",
+    "DisplayName": "North Macedonia"
+  },
+  {
+    "CountryCode": "TL",
+    "TLD": ".tl",
+    "DisplayName": "Timor-Leste"
+  },
+  {
+    "CountryCode": "TG",
+    "TLD": ".tg",
+    "DisplayName": "Togo"
+  },
+  {
+    "CountryCode": "TK",
+    "TLD": ".tk",
+    "DisplayName": "Tokelau"
+  },
+  {
+    "CountryCode": "TO",
+    "TLD": ".to",
+    "DisplayName": "Tonga"
+  },
+  {
+    "CountryCode": "TT",
+    "TLD": ".tt",
+    "DisplayName": "Trinidad & Tobago"
+  },
+  {
+    "CountryCode": "TN",
+    "TLD": ".tn",
+    "DisplayName": "Tunisia"
+  },
+  {
+    "CountryCode": "TR",
+    "TLD": ".tr",
+    "DisplayName": "Turkey"
+  },
+  {
+    "CountryCode": "TM",
+    "TLD": ".tm",
+    "DisplayName": "Turkmenistan"
+  },
+  {
+    "CountryCode": "TC",
+    "TLD": ".tc",
+    "DisplayName": "Turks & Caicos Islands"
+  },
+  {
+    "CountryCode": "TV",
+    "TLD": ".tv",
+    "DisplayName": "Tuvalu"
+  },
+  {
+    "CountryCode": "UG",
+    "TLD": ".ug",
+    "DisplayName": "Uganda"
+  },
+  {
+    "CountryCode": "UA",
+    "TLD": ".ua",
+    "DisplayName": "Ukraine"
+  },
+  {
+    "CountryCode": "AE",
+    "TLD": ".ae",
+    "DisplayName": "United Arab Emirates"
+  },
+  {
+    "CountryCode": "GB",
+    "TLD": ".uk",
+    "DisplayName": "UK"
+  },
+  {
+    "CountryCode": "TZ",
+    "TLD": ".tz",
+    "DisplayName": "Tanzania"
+  },
+  {
+    "CountryCode": "UM",
+    "TLD": ".um",
+    "DisplayName": "U.S. Outlying Islands"
+  },
+  {
+    "CountryCode": "VI",
+    "TLD": ".vi",
+    "DisplayName": "U.S. Virgin Islands"
+  },
+  {
+    "CountryCode": "US",
+    "TLD": ".us",
+    "DisplayName": "US"
+  },
+  {
+    "CountryCode": "UY",
+    "TLD": ".uy",
+    "DisplayName": "Uruguay"
+  },
+  {
+    "CountryCode": "UZ",
+    "TLD": ".uz",
+    "DisplayName": "Uzbekistan"
+  },
+  {
+    "CountryCode": "VU",
+    "TLD": ".vu",
+    "DisplayName": "Vanuatu"
+  },
+  {
+    "CountryCode": "VE",
+    "TLD": ".ve",
+    "DisplayName": "Venezuela"
+  },
+  {
+    "CountryCode": "VN",
+    "TLD": ".vn",
+    "DisplayName": "Vietnam"
+  },
+  {
+    "CountryCode": "WF",
+    "TLD": ".wf",
+    "DisplayName": "Wallis & Futuna"
+  },
+  {
+    "CountryCode": "EH",
+    "TLD": ".eh",
+    "DisplayName": "Western Sahara"
+  },
+  {
+    "CountryCode": "YE",
+    "TLD": ".ye",
+    "DisplayName": "Yemen"
+  },
+  {
+    "CountryCode": "ZM",
+    "TLD": ".zm",
+    "DisplayName": "Zambia"
+  },
+  {
+    "CountryCode": "ZW",
+    "TLD": ".zw",
+    "DisplayName": "Zimbabwe"
+  },
+  {
+    "CountryCode": "AX",
+    "TLD": ".ax",
+    "DisplayName": "Åland Islands"
+  }
+]

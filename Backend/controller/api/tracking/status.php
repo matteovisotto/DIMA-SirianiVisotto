@@ -25,6 +25,7 @@
     	$response['trackingSince'] = $prop['trackingSince'];
     	$response['dropKey'] = $prop['dropKey'];
     	$response['dropValue'] = $prop['dropValue'];
+    	$response['commentPolicy'] = $prop['commentPolicy'];
     } 
 
 	echo json_encode($response);

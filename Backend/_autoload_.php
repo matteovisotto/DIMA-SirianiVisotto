@@ -1,5 +1,6 @@
 <?php
 define('HOME_DIR','/var/aptracker/');
+include HOME_DIR.'core/currencieService.php';
 include HOME_DIR.'core/DBHelper.php';
 include HOME_DIR.'core/loginService.php';
 include HOME_DIR.'core/userService.php';

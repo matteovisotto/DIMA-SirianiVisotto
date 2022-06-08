@@ -1,202 +1,202 @@
 {
   "": {
-    "dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/ArgumentParser.d",
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/ArgumentParser.o",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/master.swiftdeps"
+    "dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/ArgumentParser.d",
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/ArgumentParser.o",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/master.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/CompletionsGenerator.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Argument.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentVisibility.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/ArgumentVisibility.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/CompletionKind.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Errors.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Flag.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/NameSpecification.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/Option.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Properties/OptionGroup.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/AsyncParsableCommand.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/AsyncParsableCommand.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArguments.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArgumentsValidation.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArgumentsValidation.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsable Types/ParsableCommand.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDecoder.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentDefinition.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ArgumentSet.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/CommandParser.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/InputOrigin.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Name.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/Parsed.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParsedValues.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/ParserError.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Parsing/SplitArguments.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/DumpHelpGenerator.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/DumpHelpGenerator.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpCommand.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/HelpGenerator.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/MessageInfo.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Usage/UsageGenerator.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/CollectionExtensions.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/CollectionExtensions.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/SequenceExtensions.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/StringExtensions.swiftdeps"
   },
-  "/Scraper/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift": {
-    "object": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree.swift.o",
-    "swiftmodule": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree~partial.swiftmodule",
-    "swift-dependencies": "/Scraper/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree.swiftdeps"
+  "/Scraper/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift": {
+    "object": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree.swift.o",
+    "swiftmodule": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree~partial.swiftmodule",
+    "swift-dependencies": "/Scraper/.build/x86_64-unknown-linux-gnu/release/ArgumentParser.build/Utilities/Tree.swiftdeps"
   }
 }

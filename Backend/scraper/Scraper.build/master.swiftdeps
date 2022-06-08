@@ -1,8 +1,8 @@
 version: "Swift version 5.6 (swift-5.6-RELEASE)"
 options: "d752bcf3eb9ae042c009d57c1c6a35d58731d5042f7644531b0e08ec4962df89"
-build_start_time: [1649447100, 487717151]
-build_end_time: [1649447101, 401341915]
+build_start_time: [1654517524, 557908058]
+build_end_time: [1654517530, 222867012]
 inputs:
-  "/Scraper/Scraper/Sources/Scraper/AmazonScraper.swift": [1649407957, 0]
-  "/Scraper/Scraper/Sources/Scraper/DownloadManager.swift": [1649098051, 0]
-  "/Scraper/Scraper/Sources/Scraper/main.swift": [1649353133, 0]
+  "/Scraper/Sources/Scraper/AmazonScraper.swift": [1654517113, 0]
+  "/Scraper/Sources/Scraper/DownloadManager.swift": [1648976093, 0]
+  "/Scraper/Sources/Scraper/main.swift": [1649398634, 0]

@@ -22,6 +22,8 @@ if(!productIdExists($productId)){
 }
 
 if(addComment($userId, $productId, $text)){
+	$tokens = checkForCommentNotification($productId, $userId);
+	sendProductCommentNotification($tokens, $productId);
 	echo '{"success":"Comment successfully added"}';
 } else {
 	echo '{"exception":"An error occurred while adding the comment"}';

@@ -1,0 +1,8 @@
+version: "Swift version 5.6 (swift-5.6-RELEASE)"
+options: "d752bcf3eb9ae042c009d57c1c6a35d58731d5042f7644531b0e08ec4962df89"
+build_start_time: [1651991037, 745750904]
+build_end_time: [1651991039, 248424053]
+inputs:
+  "/Scraper/Sources/Scraper/AmazonScraper.swift": [1651990609, 0]
+  "/Scraper/Sources/Scraper/DownloadManager.swift": [1648976093, 0]
+  "/Scraper/Sources/Scraper/main.swift": [1649398634, 0]

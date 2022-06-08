@@ -6,7 +6,7 @@
 	 * #Parameters: String title - Notification title, String message - Content of the notification, String adminKey - Administrator API Key
 	 * #Prameters in: body
 	 **/
-$adminKey = "testKey";
+$adminKey = "m+!8{t6brd;N#9P>XP^!J8Kj8A]auF.&";
 
 if(!isset($_POST['adminKey']) || empty($_POST['adminKey']) || $_POST['adminKey'] != $adminKey){
 	header("HTTP/1.1 401 - Unauthorized");
@@ -21,6 +21,9 @@ if(!isset($_POST['title']) || empty($_POST['title']) || !isset($_POST['message']
 $title = $_POST['title'];
 $message = $_POST['message'];
 
+$title_it = isset($_POST['title_it']) ? $_POST['title_it'] : $title;
+$message_it = isset($_POST['message_it']) ? $_POST['message_it'] : $message;
+
 $tokens = getAllNotificationTokens();
 
 $url = 'https://fcm.googleapis.com/fcm/send';
@@ -32,17 +35,27 @@ $url = 'https://fcm.googleapis.com/fcm/send';
         );
 
 $fields = array(
-            'registration_ids' => $tokens,
+			'registration_ids' => $tokens,
             'notification' => array(
-            	"title"=> $title,
-     			"body"=> $message,
-     			"sound"=> "default",
-    			 "mutable_content" => true
-            ),
-			'data' => array(
-            	"type"=>"generic",
-            	//"productId"=>13
+        	"title"=> $title,
+     		"body"=> $message,
+     		"sound"=> "default",
+        	"badge" => 1,
+    		"mutable_content" => true
+     	),
+		'data' => array(
+            "type"=>"generic",
+        	"lang" => array(
+            	"en" => array(
+                	"title"=>$title,
+                	"body" => $message
+                ),
+            	"it" => array(
+                	"title"=> $title_it,
+                	"body" => $message_it
+                ),
             )
+         )
         );
  
         //Initializing curl to open a connection

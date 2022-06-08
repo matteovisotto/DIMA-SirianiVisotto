@@ -159,6 +159,7 @@ function sendProductNotification($tokens, $productName, $productId) {
         	"title"=> "New price drop",
      		"body"=> $productName.' has now a lower price',
      		"sound"=> "default",
+        	"badge" => 1,
     		"mutable_content" => true
      	),
 		'data' => array(
@@ -171,6 +172,62 @@ function sendProductNotification($tokens, $productName, $productId) {
             	"it" => array(
                 	"title"=>"Nuova variazione di prezzo",
                 	"body" => $productName." ha ora un prezzo inferiore"
+                ),
+            ),
+            "productId"=>$productId
+         )
+    );
+ 
+    //Initializing curl to open a connection
+    $ch = curl_init();
+    //Setting the curl url
+    curl_setopt($ch, CURLOPT_URL, $url);
+    //setting the method as post
+    curl_setopt($ch, CURLOPT_POST, true);
+    //adding headers 
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+ 	//disabling ssl support
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+	//adding the fields in json format 
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($fields));
+	//finally executing the curl request 
+    $result = curl_exec($ch);
+    //Now close the connection
+    curl_close($ch);
+}
+
+function sendProductCommentNotification($tokens, $productId) {
+	if(count($tokens) == 0){
+    	return;
+    }
+	
+	$url = 'https://fcm.googleapis.com/fcm/send';
+    //building headers for the request
+    $headers = array(
+    	'Authorization: key=AAAAEC5gQj4:APA91bHN4-EtPFnG0XtyRDcwlpI99w1K3OPbVkqvy40nJrvDq4b-Mlmmj5RVa36T5HDHfazYU6dv3KvKGHtTjKuI-9y92RMpH6D5EA29qbB_Ji6XdM01yUu-9TnBpZWWvjTJpBNIXvjs',
+        'Content-Type: application/json'
+    );
+
+	$fields = array(
+    	'registration_ids' => $tokens,
+        'notification' => array(
+        	"title"=> "New comment",
+     		"body"=> 'A new comment has been added on a tracked product',
+     		"sound"=> "default",
+        	"badge" => 1,
+    		"mutable_content" => true
+     	),
+		'data' => array(
+            "type"=>"product",
+        	"lang" => array(
+            	"en" => array(
+                	"title"=>"New comment",
+                	"body" => "A new comment has been added on a tracked product"
+                ),
+            	"it" => array(
+                	"title"=>"Nuovo commento",
+                	"body" =>"Un nuovo commento è stato aggiunto ad un prodotto tracciato"
                 ),
             ),
             "productId"=>$productId
