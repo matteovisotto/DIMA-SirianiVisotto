@@ -11,7 +11,7 @@ struct LoginCell: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 5){
             Text("Do you know how many thing you can do with an account?").font(.subheadline)
-            Text("Login or create your account").font(.body)
+            Text("Login or create your account").font(.body.bold()).foregroundColor(Color("Primary"))
         }.foregroundColor(Color("PrimaryLabel"))
     }
 }
@@ -21,3 +21,4 @@ struct LoginCell_Previews: PreviewProvider {
         LoginCell().padding(.horizontal, 25)
     }
 }
+

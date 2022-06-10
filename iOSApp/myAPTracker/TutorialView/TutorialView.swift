@@ -37,7 +37,7 @@ struct TutorialView: View {
                 tutorialAlreadySeen.wrappedValue = true
             }
             .font(.system(size: 18, weight: .bold))
-            .foregroundColor(Color("BackgroundColorInverse"))
+            .foregroundColor(Color(currentIndex == 2 ? "Tutorial1" : "Tutorial3"))
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             .padding()
         }
