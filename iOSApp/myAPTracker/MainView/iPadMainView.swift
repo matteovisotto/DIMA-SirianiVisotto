@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct iPadMainView: View {
+    init(){
+        UITableView.appearance().backgroundColor = UIColor(named: "BackgroundColor")?.withAlphaComponent(0.6) // background color of list
+       
+    }
     var body: some View {
         ZStack{
             Color("BackgroundColor").ignoresSafeArea()
             NavigationView{
                 List{
                     NavigationLink{
-                        Text("A")
+                        ZStack{
+                            Color("BackgroundColor").ignoresSafeArea()
+                            Text("A")
+                        }
                     } label: {
                         Text("Link A")
                     }
@@ -23,7 +30,7 @@ struct iPadMainView: View {
                     } label: {
                         Text("Link B")
                     }
-                }.listStyle(.sidebar)
+                }.listStyle(.sidebar).foregroundColor(Color("PrimaryLabel"))
             }
         }
     }

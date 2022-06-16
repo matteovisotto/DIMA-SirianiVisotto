@@ -11,7 +11,7 @@ struct UserCell: View {
     var userIdentity: UserIdentity?
     var body: some View {
         HStack{
-            Image("userPlaceholder").resizable()
+            UserWebImage("https://avatars.dicebear.com/api/initials/"+Utils.getInitialFromIdentity(userIdentity)+".png")
                 .frame(width: 55, height: 55, alignment: .center).cornerRadius(55/2)
                 .padding(.trailing, 5)
             VStack(alignment: .leading){

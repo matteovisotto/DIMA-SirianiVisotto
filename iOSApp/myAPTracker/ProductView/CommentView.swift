@@ -71,7 +71,7 @@ struct CommentCell: View{
             }
             VStack(alignment: .leading, spacing: 2.5){
                 HStack{
-                    Image("userPlaceholder").resizable().scaledToFit().frame(width: 25, height: 25).cornerRadius(12.5)
+                    UserWebImage("https://avatars.dicebear.com/api/initials/"+Utils.getInitialFromComment(comment)+".png").frame(width: 25, height: 25).cornerRadius(12.5)
                     Text(comment.username).font(.caption).foregroundColor(Color("PrimaryLabel").opacity(0.8))
                     if(AppState.shared.isUserLoggedIn && comment.userId == AppState.shared.userIdentity?.id){
                         Spacer()
