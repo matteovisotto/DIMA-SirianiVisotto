@@ -19,8 +19,8 @@ struct TabTutorialElement: Identifiable {
 }
 
 var tabTutorialElement: [TabTutorialElement] = [
-    TabTutorialElement(id: UUID().uuidString, title: "myAPTracker", subtitle: "Welcome in", description: "Keep track of your favourite Amazon product", image: "person.fill", color: Color("Tutorial1"), fontColor: Color("Tutorial3")),
-    TabTutorialElement(title: "Stay update", subtitle: "Create your account", description: "Create an account or sign in via socials", image: "applewatch", color: Color("Tutorial2"), fontColor: Color("Tutorial3")),
-    TabTutorialElement(title: "Get notified", subtitle: "Track every product", description: "Get notified whenever your tracked product has a lower price", image: "iphone", color: Color("Tutorial3"), fontColor: Color("Tutorial1"))
+    TabTutorialElement(id: UUID().uuidString, title: "myAPTracker", subtitle: "Welcome in", description: "Keep track of your favourite Amazon product", image: "hand.thumbsup", color: Color("Tutorial1"), fontColor: Color("Tutorial3")),
+    TabTutorialElement(title: "Stay update", subtitle: "Create your account", description: "Create an account or sign in via socials", image: "waveform.path.ecg", color: Color("Tutorial2"), fontColor: Color("Tutorial3")),
+    TabTutorialElement(title: "Get notified", subtitle: "Track every product", description: "Get notified whenever your tracked product has a lower price", image: "bell.fill", color: Color("Tutorial3"), fontColor: Color("Tutorial1"))
 ]
 

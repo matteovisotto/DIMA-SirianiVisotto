@@ -21,7 +21,7 @@ struct SampleTutorialView: View {
             Image(systemName: tab.wrappedValue.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 50, height: 50, alignment: .center)
+                .frame(width: 100, height: 100, alignment: .center)
                 .foregroundColor(tab.wrappedValue.fontColor)
                 .padding()
             VStack(alignment: .leading, spacing: 0) {
