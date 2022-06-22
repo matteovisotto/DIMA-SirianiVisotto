@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1250E1EF28630C71009A4A88 /* SeeAllViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */; };
+		1250E1F1286312DC009A4A88 /* TrackingSettingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */; };
+		1250E1F32863189C009A4A88 /* UserProfileViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F22863189C009A4A88 /* UserProfileViewModelTest.swift */; };
+		1250E1F528631B56009A4A88 /* RegisterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F428631B56009A4A88 /* RegisterViewModelTest.swift */; };
+		1250E1F728631DC2009A4A88 /* LoginViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F628631DC2009A4A88 /* LoginViewModelTest.swift */; };
+		1250E1F9286325F5009A4A88 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F8286325F5009A4A88 /* HomeViewModelTest.swift */; };
+		1250E1FB28632DE5009A4A88 /* FilterViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1FA28632DE5009A4A88 /* FilterViewModelTest.swift */; };
+		1250E1FD2863373C009A4A88 /* ExploreViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1FC2863373C009A4A88 /* ExploreViewModelTest.swift */; };
+		1250E20128636136009A4A88 /* ProductViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E20028636136009A4A88 /* ProductViewModelTest.swift */; };
+		1250E20328637E7B009A4A88 /* TrackedViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E20228637E7A009A4A88 /* TrackedViewUITest.swift */; };
 		128EFE83283543F800048ECE /* DropPriceProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EFE82283543F800048ECE /* DropPriceProduct.swift */; };
 		129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3D28086F1000F2C870 /* HomeViewModel.swift */; };
 		129A1A402808702000F2C870 /* TrackedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3F2808702000F2C870 /* TrackedProduct.swift */; };
@@ -189,6 +199,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewModelTest.swift; sourceTree = "<group>"; };
+		1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingViewModelTest.swift; sourceTree = "<group>"; };
+		1250E1F22863189C009A4A88 /* UserProfileViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModelTest.swift; sourceTree = "<group>"; };
+		1250E1F428631B56009A4A88 /* RegisterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelTest.swift; sourceTree = "<group>"; };
+		1250E1F628631DC2009A4A88 /* LoginViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTest.swift; sourceTree = "<group>"; };
+		1250E1F8286325F5009A4A88 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		1250E1FA28632DE5009A4A88 /* FilterViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModelTest.swift; sourceTree = "<group>"; };
+		1250E1FC2863373C009A4A88 /* ExploreViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModelTest.swift; sourceTree = "<group>"; };
+		1250E20028636136009A4A88 /* ProductViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModelTest.swift; sourceTree = "<group>"; };
+		1250E20228637E7A009A4A88 /* TrackedViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedViewUITest.swift; sourceTree = "<group>"; };
 		128EFE82283543F800048ECE /* DropPriceProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropPriceProduct.swift; sourceTree = "<group>"; };
 		129A1A3D28086F1000F2C870 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		129A1A3F2808702000F2C870 /* TrackedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedProduct.swift; sourceTree = "<group>"; };
@@ -668,6 +688,7 @@
 		66D13CBF27FAFD88004B2077 /* myAPTracker */ = {
 			isa = PBXGroup;
 			children = (
+				66D13CF427FB1E68004B2077 /* LoginView */,
 				66A264D1284FA80A000C863E /* Info.plist */,
 				6638176B28366EAC005D1182 /* SeeAllView */,
 				66A5143F2827ADC3004388C7 /* ImageViewer */,
@@ -691,7 +712,6 @@
 				666524D127FB3AAD005C73F3 /* Login */,
 				66D13D0327FB2D1D004B2077 /* Utils */,
 				66D13CF727FB1E9B004B2077 /* UIComponents */,
-				66D13CF427FB1E68004B2077 /* LoginView */,
 				66D13CC627FAFD95004B2077 /* Preview Content */,
 				66D826E22810996B007AA1F6 /* Entity */,
 				66D7077B281AE4550051DCE7 /* myAPTracker.entitlements */,
@@ -711,6 +731,15 @@
 			isa = PBXGroup;
 			children = (
 				66D13CD127FAFD96004B2077 /* APTrackerTests.swift */,
+				1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */,
+				1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */,
+				1250E1F22863189C009A4A88 /* UserProfileViewModelTest.swift */,
+				1250E1F428631B56009A4A88 /* RegisterViewModelTest.swift */,
+				1250E1F628631DC2009A4A88 /* LoginViewModelTest.swift */,
+				1250E1F8286325F5009A4A88 /* HomeViewModelTest.swift */,
+				1250E1FA28632DE5009A4A88 /* FilterViewModelTest.swift */,
+				1250E1FC2863373C009A4A88 /* ExploreViewModelTest.swift */,
+				1250E20028636136009A4A88 /* ProductViewModelTest.swift */,
 			);
 			path = myAPTrackerTests;
 			sourceTree = "<group>";
@@ -720,6 +749,7 @@
 			children = (
 				66D13CDB27FAFD97004B2077 /* APTrackerUITests.swift */,
 				66D13CDD27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift */,
+				1250E20228637E7A009A4A88 /* TrackedViewUITest.swift */,
 			);
 			path = myAPTrackerUITests;
 			sourceTree = "<group>";
@@ -1132,7 +1162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1250E1FB28632DE5009A4A88 /* FilterViewModelTest.swift in Sources */,
+				1250E1F528631B56009A4A88 /* RegisterViewModelTest.swift in Sources */,
+				1250E1EF28630C71009A4A88 /* SeeAllViewModelTest.swift in Sources */,
+				1250E1F32863189C009A4A88 /* UserProfileViewModelTest.swift in Sources */,
+				1250E20128636136009A4A88 /* ProductViewModelTest.swift in Sources */,
+				1250E1F1286312DC009A4A88 /* TrackingSettingViewModelTest.swift in Sources */,
+				1250E1F728631DC2009A4A88 /* LoginViewModelTest.swift in Sources */,
 				66D13CD227FAFD96004B2077 /* APTrackerTests.swift in Sources */,
+				1250E1F9286325F5009A4A88 /* HomeViewModelTest.swift in Sources */,
+				1250E1FD2863373C009A4A88 /* ExploreViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1142,6 +1181,7 @@
 			files = (
 				66D13CDE27FAFD97004B2077 /* APTrackerUITestsLaunchTests.swift in Sources */,
 				66D13CDC27FAFD97004B2077 /* APTrackerUITests.swift in Sources */,
+				1250E20328637E7B009A4A88 /* TrackedViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
