@@ -30,7 +30,7 @@ struct ProductView: View {
                         }.foregroundColor(Color("PrimaryLabel"))
                         Spacer()
                     }.padding(.bottom,3)
-                    Text(viewModel.product.shortName).lineLimit(2).font(.title2.bold()).foregroundColor(Color("PrimaryLabel"))
+                    Text(viewModel.product.shortName).lineLimit(2).font(.title2.bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("ProductViewHomeName")
                     MenuBar(selection: $viewModel.selectedTab, items: viewModel.menuItems, background: Color("Primary"), foreground: Color("PrimaryLabel")).frame(height: 40)
                     
                         if(viewModel.selectedTab=="price"){

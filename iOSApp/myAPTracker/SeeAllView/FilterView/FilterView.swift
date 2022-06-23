@@ -26,10 +26,10 @@ struct FilterView: View {
                         self.viewModel.isPresented.wrappedValue.toggle()
                     } label: {
                         Text("Done")
-                    }
+                    }.accessibilityIdentifier("FilterViewCloseCategories")
                 }
                 Text("Select one or more categories to visualize").font(.callout).padding(.top)
-                    .foregroundColor(Color("PrimaryLabel"))
+                    .foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("FilterViewSelectMoreCategories")
                 List{
                     Section{
                         ForEach(self.viewModel.categories, id: \.self) { category in

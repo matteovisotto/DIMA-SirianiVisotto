@@ -37,8 +37,9 @@ struct HomeView: View {
                                                 TrackedProductView(viewModel.trackingObjects[index]).padding(.horizontal, 10)
                                                 
                                             }.highPriorityGesture(DragGesture())
+                                            .accessibilityIdentifier("HomeViewProductLastProductAdded")
                                     }
-                                }.frame(width: geometry.size.width, height: 150)
+                                }.frame(width: geometry.size.width, height: 150).accessibilityIdentifier("HomeViewPagingView")
                                 
                                 Divider()
                             }
@@ -49,7 +50,7 @@ struct HomeView: View {
                                     SeeAllView(apiUrl: AppConstant.getMostTrackedPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Most tracked", comment: "Most tracked"))
                                 } label: {
                                     Text("See All")
-                                }
+                                }.accessibilityIdentifier("HomeViewSeeAllButton")
                             }.padding(.horizontal)
                             VStack(spacing: 10) {
                                 HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count) { contentIndex in

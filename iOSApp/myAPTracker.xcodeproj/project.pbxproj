@@ -22,6 +22,10 @@
 		128EFE83283543F800048ECE /* DropPriceProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128EFE82283543F800048ECE /* DropPriceProduct.swift */; };
 		129A1A3E28086F1000F2C870 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3D28086F1000F2C870 /* HomeViewModel.swift */; };
 		129A1A402808702000F2C870 /* TrackedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A1A3F2808702000F2C870 /* TrackedProduct.swift */; };
+		12A19A7B286505B700EBB2E2 /* HomeViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A7A286505B700EBB2E2 /* HomeViewUITest.swift */; };
+		12A19A7D286505F000EBB2E2 /* SeeAllViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A7C286505F000EBB2E2 /* SeeAllViewUITest.swift */; };
+		12A19A8128650BD400EBB2E2 /* TrackedViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A8028650BD400EBB2E2 /* TrackedViewUITest.swift */; };
+		12A19A83286511B100EBB2E2 /* ExploreViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A82286511B100EBB2E2 /* ExploreViewUITest.swift */; };
 		12A50D7D283AC118005CB21A /* InfiniteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A50D7C283AC118005CB21A /* InfiniteList.swift */; };
 		12A790E9282D439000F2959D /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A790E8282D439000F2959D /* PickerView.swift */; };
 		12AF1EEF282A86E000A7FE58 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */; };
@@ -221,6 +225,10 @@
 		128EFE82283543F800048ECE /* DropPriceProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropPriceProduct.swift; sourceTree = "<group>"; };
 		129A1A3D28086F1000F2C870 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		129A1A3F2808702000F2C870 /* TrackedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedProduct.swift; sourceTree = "<group>"; };
+		12A19A7A286505B700EBB2E2 /* HomeViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewUITest.swift; sourceTree = "<group>"; };
+		12A19A7C286505F000EBB2E2 /* SeeAllViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewUITest.swift; sourceTree = "<group>"; };
+		12A19A8028650BD400EBB2E2 /* TrackedViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedViewUITest.swift; sourceTree = "<group>"; };
+		12A19A82286511B100EBB2E2 /* ExploreViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewUITest.swift; sourceTree = "<group>"; };
 		12A50D7C283AC118005CB21A /* InfiniteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteList.swift; sourceTree = "<group>"; };
 		12A790E8282D439000F2959D /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
@@ -403,6 +411,10 @@
 			isa = PBXGroup;
 			children = (
 				12168C5128645CD20087CC50 /* myAPTrackerUITest.swift */,
+				12A19A82286511B100EBB2E2 /* ExploreViewUITest.swift */,
+				12A19A8028650BD400EBB2E2 /* TrackedViewUITest.swift */,
+				12A19A7C286505F000EBB2E2 /* SeeAllViewUITest.swift */,
+				12A19A7A286505B700EBB2E2 /* HomeViewUITest.swift */,
 				12168C5A28645D500087CC50 /* SettingsViewUITest.swift */,
 				12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */,
 			);
@@ -1047,8 +1059,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				12168C5428645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift in Sources */,
+				12A19A7B286505B700EBB2E2 /* HomeViewUITest.swift in Sources */,
 				12168C5B28645D500087CC50 /* SettingsViewUITest.swift in Sources */,
+				12A19A7D286505F000EBB2E2 /* SeeAllViewUITest.swift in Sources */,
 				12168C5228645CD20087CC50 /* myAPTrackerUITest.swift in Sources */,
+				12A19A83286511B100EBB2E2 /* ExploreViewUITest.swift in Sources */,
+				12A19A8128650BD400EBB2E2 /* TrackedViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

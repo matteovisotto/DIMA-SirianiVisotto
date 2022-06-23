@@ -48,7 +48,7 @@ struct TrackedView: View {
                     VStack{
                         HStack{
                             Image(systemName: "magnifyingglass")
-                            TextField("Search", text: searchTextProxy)
+                            TextField("Search", text: searchTextProxy).accessibilityIdentifier("TrackedViewSearchTextField")
                             if(viewModel.isSearching){
                                 Button{
                                     viewModel.searchText = ""
@@ -80,7 +80,7 @@ struct TrackedView: View {
                                                     }
                                                 }
                                             } else {
-                                                Text("No results").frame(maxWidth: .infinity, maxHeight: .infinity)
+                                                Text("No results").frame(maxWidth: .infinity, maxHeight: .infinity).accessibilityIdentifier("TrackedViewNoResult")
                                             }
                                         } else {
                                             VStack(spacing: 10) {

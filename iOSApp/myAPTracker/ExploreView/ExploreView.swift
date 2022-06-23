@@ -16,13 +16,13 @@ struct ExploreView: View {
                 GeometryReader{ geometry in
                     ScrollView(.vertical, showsIndicators: false){
                         HStack{
-                            Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                            Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("ExploreViewFirstTitle")
                             Spacer()
                             NavigationLink {
                                 SeeAllView(apiUrl: AppConstant.getMostTrackedPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Most Tracked", comment: "Most Tracked"))
                             } label: {
                                 Text("See All")
-                            }
+                            }.accessibilityIdentifier("ExploreViewFirstSeeAll")
 
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
@@ -50,13 +50,13 @@ struct ExploreView: View {
                         }.padding(.horizontal, 10)
                         Divider().padding(.leading, 10)
                         HStack{
-                            Text("Biggest percentual drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                            Text("Biggest percentual drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("ExploreViewSecondTitle")
                             Spacer()
                             NavigationLink {
                                 SeeAllView(apiUrl: AppConstant.getLastPriceDropPercentagePaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Biggest percentual drop", comment: "Biggest percentual drop"))
                             } label: {
                                 Text("See All")
-                            }
+                            }.accessibilityIdentifier("ExploreViewSecondSeeAll")
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
                             HGrid(numberOfRows: 2, numberOfItems: viewModel.biggestPercentageDrop.count) { contentIndex in
@@ -71,13 +71,13 @@ struct ExploreView: View {
                         }.padding(.horizontal, 10)
                         Divider().padding(.leading, 10)
                         HStack{
-                            Text("Biggest range drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                            Text("Biggest range drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("ExploreViewThirdTitle")
                             Spacer()
                             NavigationLink {
                                 SeeAllView(apiUrl: AppConstant.getPriceDropPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Biggest range drop", comment: "Biggest range drop"))
                             } label: {
                                 Text("See All")
-                            }
+                            }.accessibilityIdentifier("ExploreViewThirdSeeAll")
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
                             HGrid(numberOfRows: 2, numberOfItems: viewModel.biggestRangeDrop.count) { contentIndex in

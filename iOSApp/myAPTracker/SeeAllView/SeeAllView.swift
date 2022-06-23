@@ -37,10 +37,12 @@ struct SeeAllView: View {
                                 .foregroundColor(Color("PrimaryLabel"))
                                 .background(Color("PrimaryLabel").opacity(0.15))
                                 .clipShape(Circle())
+                                .accessibilityIdentifier("SeeAllViewCategoriesButton")
                         }
                         Spacer().frame(height: 8)
                         HStack{
                             Text(viewModel.viewTitle).font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
+                                .accessibilityIdentifier("SeeAllViewTitle")
                             Spacer()
                             
                         }
