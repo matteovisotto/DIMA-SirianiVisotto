@@ -22,7 +22,7 @@ struct MainView: View {
                 VStack {
                     MainHeader(tabName: MainViewModel.tabs[viewModel.selectedTab].tabName)
                         .frame(height: appState.isUserLoggedIn ? 60 : 50)
-                        .padding(.horizontal)
+                        .padding(.horizontal).accessibilityIdentifier("SelectedTabTitleName")
                     
                     //TabView(selection: $viewModel.selectedTab){
                     switch viewModel.selectedTab {

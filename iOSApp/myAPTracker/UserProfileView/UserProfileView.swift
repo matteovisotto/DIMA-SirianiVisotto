@@ -28,6 +28,7 @@ struct UserProfileView: View {
                         Spacer().frame(height: 8)
                         HStack{
                             Text("Profile").font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
+                                .accessibilityIdentifier("ProfileText")
                             Spacer()
                         }
                         VStack(spacing: 10){

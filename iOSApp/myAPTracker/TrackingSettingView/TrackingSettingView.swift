@@ -42,17 +42,18 @@ struct TrackingSettingView: View {
                                 Text("This setting can be overridden for each product you track by opening the product page").foregroundColor(Color("PrimaryLabel")).font(.caption)
                                 Group{
                                     Picker("", selection: $viewModel.dropKey) {
-                                        Text("Never").tag("none")
-                                        Text("Percentage").tag("percentage")
-                                        Text("Value").tag("value")
+                                        Text("Never").tag("none").accessibilityIdentifier("NeverSettingsPicker")
+                                        Text("Percentage").tag("percentage").accessibilityIdentifier("PercentageSettingsPicker")
+                                        Text("Value").tag("value").accessibilityIdentifier("ValueSettingsPicker")
                                         //Text("Price").tag("price")
-                                        Text("Always").tag("always")
+                                        Text("Always").tag("always").accessibilityIdentifier("AlwaysSettingsPicker")
                                     }.pickerStyle(.segmented).padding(.vertical)
                                     if(viewModel.dropKey == "percentage") {
-                                        CircularSlider($viewModel.dropValuePercentage).frame(width: 150, height: 150, alignment: .center)
+                                        CircularSlider($viewModel.dropValuePercentage).frame(width: 150, height: 150, alignment: .center).accessibilityIdentifier("CircularSliderCustomView")
                                     }
                                     if (viewModel.dropKey == "value") {
                                         PickerView($viewModel.dropValue, 200).frame(height: 150)
+                                            .accessibilityIdentifier("PickerCustomView")
                                     }
                                     switch viewModel.dropKey {
                                         case "none":
@@ -72,8 +73,8 @@ struct TrackingSettingView: View {
                                         Text("You can choose the default settings to receive notifications about comments in your tracked products.").foregroundColor(Color("PrimaryLabel")).font(.callout)
                                         Text("This setting can be overridden for each product you track by opening the product page").foregroundColor(Color("PrimaryLabel")).font(.caption)
                                         Picker("", selection: $viewModel.commentPolicy) {
-                                            Text("Never").tag("never")
-                                            Text("Always").tag("always")
+                                            Text("Never").tag("never").accessibilityIdentifier("NeverCommentButton")
+                                            Text("Always").tag("always").accessibilityIdentifier("AlwaysCommentButton")
                                         }.pickerStyle(.segmented).padding(.vertical)
                                     }
                                     HStack{
@@ -84,6 +85,7 @@ struct TrackingSettingView: View {
                                             Text("Change").bold()
                                                 .padding(.vertical, 3)
                                         }.frame(width: (geom.size.width-40)/2)
+                                            .accessibilityIdentifier("ChangeSettingsTrackingButton")
                                     .padding(.vertical, 7)
                                     .background(Color("Primary"))
                                     .foregroundColor(Color.white)

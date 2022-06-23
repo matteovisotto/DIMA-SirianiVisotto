@@ -27,7 +27,7 @@ struct SettingView: View {
                             UserProfileView()
                         } label: {
                             UserCell(userIdentity: appState.userIdentity)
-                        }
+                        }.accessibilityIdentifier("UserProfileNavigationLink")
                     } else {
                         Button{
                             viewModel.showLogin.wrappedValue.toggle()
@@ -44,7 +44,7 @@ struct SettingView: View {
                             TrackingSettingView()
                         } label: {
                             Text("Product notification")
-                        }
+                        }.accessibilityIdentifier("ProductNotification")
 
                     }.listRowBackground(Color("SecondaryBackgroundColor"))
                 }

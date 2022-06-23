@@ -31,6 +31,7 @@ struct LoginView: View {
                         VStack{
                             HStack{
                                 Text("Login").font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
+                                    .accessibilityIdentifier("LoginText")
                                 Spacer()
                             }
                             

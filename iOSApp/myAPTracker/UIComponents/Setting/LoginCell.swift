@@ -12,6 +12,7 @@ struct LoginCell: View {
         VStack(alignment: .leading, spacing: 5){
             Text("Do you know how many thing you can do with an account?").font(.subheadline)
             Text("Login or create your account").font(.body.bold()).foregroundColor(Color("Primary"))
+                .accessibilityIdentifier("LoginOrCreateAnAccountButton")
         }.foregroundColor(Color("PrimaryLabel"))
     }
 }

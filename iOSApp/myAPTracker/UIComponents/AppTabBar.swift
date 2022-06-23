@@ -23,6 +23,7 @@ struct AppTabBar: View {
                         Circle().fill(Color("Primary")).frame(width: 5, height: 5, alignment: .center).opacity(selectedTab == elements[0].tag ? 1 : 0)
                     }
                 }.frame(width: geometry.size.width/5).foregroundColor(selectedTab == elements[0].tag ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                    .accessibilityIdentifier("HomeTabBar")
                 Spacer()
                 Button{
                     selectedTab = elements[1].tag
@@ -32,6 +33,7 @@ struct AppTabBar: View {
                         Circle().fill(Color("Primary")).frame(width: 5, height: 5, alignment: .center).opacity(selectedTab == elements[1].tag ? 1 : 0)
                     }
                 }.frame(width: geometry.size.width/5).foregroundColor(selectedTab == elements[1].tag ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                    .accessibilityIdentifier("TrackingTabBar")
                 Spacer()
                 Button{
                     centralButtonAction()
@@ -44,6 +46,7 @@ struct AppTabBar: View {
                     .cornerRadius(10)
                     .shadow(radius: 2)
                     .offset(y: -20)
+                    .accessibilityIdentifier("AmazonPlusTabBar")
                     
                 Spacer()
                 Button{
@@ -54,6 +57,7 @@ struct AppTabBar: View {
                         Circle().fill(Color("Primary")).frame(width: 5, height: 5, alignment: .center).opacity(selectedTab == elements[2].tag ? 1 : 0)
                     }
                 }.frame(width: geometry.size.width/5).foregroundColor(selectedTab == elements[2].tag ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                    .accessibilityIdentifier("ExploreTabBar")
                 Spacer()
                 
                 Button{
@@ -64,6 +68,7 @@ struct AppTabBar: View {
                         Circle().fill(Color("Primary")).frame(width: 5, height: 5, alignment: .center).opacity(selectedTab == elements[3].tag ? 1 : 0)
                     }
                 }.frame(width: geometry.size.width/5).foregroundColor(selectedTab == elements[3].tag ? Color("PrimaryLabel") : Color("PrimaryLabel").opacity(0.5))
+                    .accessibilityIdentifier("SettingsTabBar")
                 
             }
         }
