@@ -48,10 +48,12 @@ class ProductViewModelTest: XCTestCase {
         
         wait(for: [expectation], timeout: 5)
         
-        let test: Int = vm.comments?.comments.count ?? 0
-        
         XCTAssertGreaterThan(vm.productPrices.count, 0)
-        XCTAssertGreaterThan(test, 0)
+        
+        if let test: Int = vm.comments?.comments.count {
+            XCTAssertGreaterThan(test, 0)
+        }
+        
     }
 
 }

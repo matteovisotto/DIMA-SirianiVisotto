@@ -6,7 +6,7 @@
 //
 
 import XCTest
-//@testable import myAPTracker
+@testable import myAPTracker
 
 class SettingsViewUITest: XCTestCase {
 
