@@ -26,106 +26,142 @@ class SettingsViewUITest: XCTestCase {
     }
 
     func test_SettingsView_UserLoginRegister_UserIsLogged() {
-        let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
-        
-        XCTAssertFalse(loginButton.exists)
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
+            XCTAssertFalse(loginButton.exists)
+        } else {
+            let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
+            XCTAssertTrue(loginButton.exists)
+        }
+    }
+    
+    func test_SettingsView_UserLoginRegister_UserIsNotLoggedAndGoToLoginPageAndReturnToPreviousPage() {
+        if (app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
+            XCTAssertTrue(loginButton.exists)
+            
+            loginButton.tap()
+            
+            let loginText = app.staticTexts["LoginViewLoginText"]
+            
+            XCTAssertTrue(loginText.exists)
+            
+            //It shouldn't exist a button before
+            app.buttons.firstMatch.tap()
+            
+            let loginButtonNew = app.tables.buttons["LoginOrCreateAnAccountButton"]
+            XCTAssertTrue(loginButtonNew.exists)
+        }
     }
     
     func test_SettingsView_UserProfileInformation_UserShowInfo() {
-        app.tables.buttons["UserProfileNavigationLink"].tap()
-                
-        let profileText = app.scrollViews.otherElements.staticTexts["ProfileText"]
-        
-        XCTAssertTrue(profileText.exists)
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            app.tables.buttons["UserProfileNavigationLink"].tap()
+                    
+            let profileText = app.scrollViews.otherElements.staticTexts["ProfileText"]
+            
+            XCTAssertTrue(profileText.exists)
+        }
     }
     
     func test_SettingsView_UserProfileInformation_UserShowInfoAndGoBack() {
-        app.tables/*@START_MENU_TOKEN@*/.buttons["UserProfileNavigationLink"]/*[[".cells[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"UserProfileNavigationLink\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
-        
-        let elementsQuery = app.scrollViews.otherElements
-        elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["ProfileText"]/*[[".staticTexts[\"Profile\"]",".staticTexts[\"ProfileText\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        elementsQuery.buttons["Left"].tap()
-        let settingsText = app.staticTexts["SelectedTabTitleName"]
-        
-        XCTAssertTrue(settingsText.exists)
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            app.tables/*@START_MENU_TOKEN@*/.buttons["UserProfileNavigationLink"]/*[[".cells[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"UserProfileNavigationLink\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+            
+            let elementsQuery = app.scrollViews.otherElements
+            elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["ProfileText"]/*[[".staticTexts[\"Profile\"]",".staticTexts[\"ProfileText\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+            elementsQuery.buttons["Left"].tap()
+            let settingsText = app.staticTexts["SelectedTabTitleName"]
+            
+            XCTAssertTrue(settingsText.exists)
+        }
     }
     
     func test_SettingsView_UserTrackingInformation_UserModifyToNeverTrackingNotificationAndGoBack() {
-        app.tables.buttons["ProductNotification"].tap()
-        
-        let elementsQuery = app.scrollViews.otherElements
-        let neverButton = elementsQuery.segmentedControls.containing(.button, identifier:"NeverSettingsPicker").buttons["NeverSettingsPicker"]
-        neverButton.tap()
-        
-        XCTAssertTrue(neverButton.exists)
-        
-        elementsQuery.children(matching: .segmentedControl).element(boundBy: 1).buttons["NeverCommentButton"].tap()
-        elementsQuery.buttons["ChangeSettingsTrackingButton"].tap()
-        app.buttons["Left"].tap()
-        
-        let settingsText = app.staticTexts["SelectedTabTitleName"]
-        
-        XCTAssertTrue(settingsText.exists)
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            app.tables.buttons["ProductNotification"].tap()
+            
+            let elementsQuery = app.scrollViews.otherElements
+            let neverButton = elementsQuery.segmentedControls.containing(.button, identifier:"NeverSettingsPicker").buttons["NeverSettingsPicker"]
+            neverButton.tap()
+            
+            XCTAssertTrue(neverButton.exists)
+            
+            elementsQuery.children(matching: .segmentedControl).element(boundBy: 1).buttons["NeverCommentButton"].tap()
+            elementsQuery.buttons["ChangeSettingsTrackingButton"].tap()
+            app.buttons["Left"].tap()
+            
+            let settingsText = app.staticTexts["SelectedTabTitleName"]
+            
+            XCTAssertTrue(settingsText.exists)
+        }
     }
     
     func test_SettingsView_UserTrackingInformation_UserModifyToAlwaysTrackingNotificationAndGoBack() {
-        app.tables.buttons["ProductNotification"].tap()
-        
-        let elementsQuery = app.scrollViews.otherElements
-        let alwaysButton = elementsQuery.segmentedControls.containing(.button, identifier:"AlwaysSettingsPicker").buttons["AlwaysSettingsPicker"]
-        alwaysButton.tap()
-        
-        XCTAssertTrue(alwaysButton.exists)
-        
-        elementsQuery.children(matching: .segmentedControl).element(boundBy: 1).buttons["AlwaysCommentButton"].tap()
-        elementsQuery.buttons["ChangeSettingsTrackingButton"].tap()
-        app.buttons["Left"].tap()
-        
-        let settingsText = app.staticTexts["SelectedTabTitleName"]
-        
-        XCTAssertTrue(settingsText.exists)
-        //XCTAssertTrue(PreferenceManager.shared.getCommentPolicy() == "always")
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            app.tables.buttons["ProductNotification"].tap()
+            
+            let elementsQuery = app.scrollViews.otherElements
+            let alwaysButton = elementsQuery.segmentedControls.containing(.button, identifier:"AlwaysSettingsPicker").buttons["AlwaysSettingsPicker"]
+            alwaysButton.tap()
+            
+            XCTAssertTrue(alwaysButton.exists)
+            
+            elementsQuery.children(matching: .segmentedControl).element(boundBy: 1).buttons["AlwaysCommentButton"].tap()
+            elementsQuery.buttons["ChangeSettingsTrackingButton"].tap()
+            
+            //It shouldn't exist a button before
+            app.buttons.firstMatch.tap()
+            
+            let settingsText = app.staticTexts["SelectedTabTitleName"]
+            
+            XCTAssertTrue(settingsText.exists)
+        }
     }
     
     func test_SettingsView_UserTrackingInformation_UserAccessPercentageTrackingNotificationAndGoBack() {
-        app.tables.buttons["ProductNotification"].tap()
-        
-        let elementsQuery = app.scrollViews.otherElements
-        let percentageButton = elementsQuery.segmentedControls.containing(.button, identifier:"PercentageSettingsPicker").buttons["PercentageSettingsPicker"]
-        percentageButton.tap()
-        
-        XCTAssertTrue(percentageButton.exists)
-        
-        //let circularSlider = elementsQuery.children(matching: .segmentedControl).otherElements["CircularSliderCustomView"]
-        
-        //XCTAssertTrue(circularSlider.exists)
-        
-        app.buttons["Left"].tap()
-        
-        let settingsText = app.staticTexts["SelectedTabTitleName"]
-        
-        XCTAssertTrue(settingsText.exists)
-        //XCTAssertTrue(PreferenceManager.shared.getCommentPolicy() == "always")
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            app.tables.buttons["ProductNotification"].tap()
+            
+            let elementsQuery = app.scrollViews.otherElements
+            let percentageButton = elementsQuery.segmentedControls.containing(.button, identifier:"PercentageSettingsPicker").buttons["PercentageSettingsPicker"]
+            percentageButton.tap()
+            
+            XCTAssertTrue(percentageButton.exists)
+            
+            /*let circularSlider = elementsQuery.children(matching: .segmentedControl).otherElements.staticTexts["CircularSliderPercentageText"].waitForExistence(timeout: 2)
+            
+            XCTAssertTrue(circularSlider)*/
+            
+            //It shouldn't exist a button before
+            app.buttons.firstMatch.tap()
+            
+            let settingsText = app.staticTexts["SelectedTabTitleName"]
+            
+            XCTAssertTrue(settingsText.exists)
+        }
     }
     
     func test_SettingsView_UserTrackingInformation_UserAccessValueTrackingNotificationAndGoBack() {
-        app.tables.buttons["ProductNotification"].tap()
-        
-        let elementsQuery = app.scrollViews.otherElements
-        let valueButton = elementsQuery.segmentedControls.containing(.button, identifier:"ValueSettingsPicker").buttons["ValueSettingsPicker"]
-        valueButton.tap()
-        
-        XCTAssertTrue(valueButton.exists)
-        
-        //let circularSlider = elementsQuery.children(matching: .segmentedControl).otherElements["CircularSliderCustomView"]
-        
-        //XCTAssertTrue(circularSlider.exists)
-        
-        app.buttons["Left"].tap()
-        
-        let settingsText = app.staticTexts["SelectedTabTitleName"]
-        
-        XCTAssertTrue(settingsText.exists)
-        //XCTAssertTrue(PreferenceManager.shared.getCommentPolicy() == "always")
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+            app.tables.buttons["ProductNotification"].tap()
+            
+            let elementsQuery = app.scrollViews.otherElements
+            let valueButton = elementsQuery.segmentedControls.containing(.button, identifier:"ValueSettingsPicker").buttons["ValueSettingsPicker"]
+            valueButton.tap()
+            
+            XCTAssertTrue(valueButton.exists)
+            
+            /*let valuePicker = elementsQuery.children(matching: .segmentedControl).otherElements.pickerWheels.firstMatch
+            
+            XCTAssertTrue(valuePicker.exists)*/
+            
+            //It shouldn't exist a button before
+            app.buttons.firstMatch.tap()
+            
+            let settingsText = app.staticTexts["SelectedTabTitleName"]
+            
+            XCTAssertTrue(settingsText.exists)
+        }
     }
 }

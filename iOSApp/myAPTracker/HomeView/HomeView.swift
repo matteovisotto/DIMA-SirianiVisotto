@@ -28,7 +28,7 @@ struct HomeView: View {
                     ScrollView(.vertical, showsIndicators: false){
                         VStack(spacing: 10){
                             if(appState.isUserLoggedIn && viewModel.trackingObjects.count > 0){
-                                Text("Your last added products").font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).frame(maxWidth: .infinity, alignment: .leading).padding(.leading).padding(.bottom, 5)
+                                Text("Your last added products").font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).frame(maxWidth: .infinity, alignment: .leading).padding(.leading).padding(.bottom, 5).accessibilityIdentifier("HomeViewLastProductText")
                                 PagingView(index: $trackedDisplayIndex.animation(), maxIndex: viewModel.trackingObjects.count - 1) {
                                     ForEach((0..<viewModel.trackingObjects.count).reversed(), id: \.self){ index in
                                         NavigationLink {
@@ -44,7 +44,7 @@ struct HomeView: View {
                                 Divider()
                             }
                             HStack{
-                                Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel"))
+                                Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("HomeViewMostTrackedText")
                                 Spacer()
                                 NavigationLink {
                                     SeeAllView(apiUrl: AppConstant.getMostTrackedPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Most tracked", comment: "Most tracked"))

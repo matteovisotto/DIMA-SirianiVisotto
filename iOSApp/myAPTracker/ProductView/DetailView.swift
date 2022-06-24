@@ -23,10 +23,10 @@ struct DetailView: View {
                 .frame(height: 150)
         ScrollView{
             VStack(alignment: .leading, spacing: 5) {
-                Text(viewModel.product.name).font(.body.bold()).foregroundColor(Color("PrimaryLabel"))
-                Text(viewModel.product.category.uppercased()).font(.caption).foregroundColor(Color("Primary"))
+                Text(viewModel.product.name).font(.body.bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("DetailViewName")
+                Text(viewModel.product.category.uppercased()).font(.caption).foregroundColor(Color("Primary")).accessibilityIdentifier("DetailViewCategory")
                 Divider().foregroundColor(Color("PrimaryLabel"))
-                Text(viewModel.product.description.replacingOccurrences(of: "\\n", with: "\n")).font(.body).lineLimit(nil).foregroundColor(Color("PrimaryLabel"))
+                Text(viewModel.product.description.replacingOccurrences(of: "\\n", with: "\n")).font(.body).lineLimit(nil).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("DetailViewDescription")
             }
         }
             

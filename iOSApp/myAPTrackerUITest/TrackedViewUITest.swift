@@ -26,34 +26,76 @@ class TrackedViewUITest: XCTestCase {
     }
 
     func test_TrackedView_TextField_NoResult() {
-        app.textFields["TrackedViewSearchTextField"].tap()
-        
-        app.keys["A"].tap()
-        app.keys["a"].tap()
-        app.keys["a"].tap()
-        app.keys["a"].tap()
-        app.keys["a"].tap()
-
-        app.buttons["Return"].tap()
-        
-        let noResult = app.staticTexts["TrackedViewNoResult"]
-        
-        XCTAssertTrue(noResult.exists)
+        if (!app.buttons["TrackedViewLoginButton"].exists) {
+            let textField = app.textFields["TrackedViewSearchTextField"]
+            
+            textField.tap()
+            
+            textField.typeText("Aaaaa\n")
+            
+            let noResult = app.staticTexts["TrackedViewNoResult"]
+            
+            XCTAssertTrue(noResult.exists)
+        }
     }
     
     func test_TrackedView_TextField_Result() {
-        app.textFields["TrackedViewSearchTextField"].tap()
-        
-        app.keys["A"].tap()
-        app.keys["p"].tap()
-        app.keys["p"].tap()
-        app.keys["l"].tap()
-        app.keys["e"].tap()
-
-        app.buttons["Return"].tap()
-        
-        let noResult = app.staticTexts["TrackedViewNoResult"]
-        
-        XCTAssertFalse(noResult.exists)
+        if (!app.buttons["TrackedViewLoginButton"].exists) {
+            let textField = app.textFields["TrackedViewSearchTextField"]
+            
+            textField.tap()
+            
+            textField.typeText("Apple\n")
+            
+            let noResult = app.staticTexts["TrackedViewNoResult"]
+            
+            XCTAssertFalse(noResult.exists)
+        }
+    }
+    
+    func test_TrackedView_ProductButton_AccessAPrdouct() {
+        if (!app.buttons["TrackedViewLoginButton"].exists) {
+            if (!app.staticTexts["TrackedViewNoResult"].exists) {
+                app.scrollViews.otherElements.buttons.firstMatch.tap()
+                let productName = app.staticTexts["ProductViewHomeName"]
+                XCTAssertTrue(productName.exists)
+            } else {
+                XCTAssertTrue(app.staticTexts["TrackedViewNoResult"].exists)
+            }
+        }
+    }
+    
+    func test_TrackedView_ProductButton_AccessAPrdouctAndGoBack() {
+        if (!app.buttons["TrackedViewLoginButton"].exists) {
+            if (!app.staticTexts["TrackedViewNoResult"].exists) {
+                app.scrollViews.otherElements.buttons.firstMatch.tap()
+                let productName = app.staticTexts["ProductViewHomeName"]
+                XCTAssertTrue(productName.exists)
+                
+                //It shouldn't exist a button before
+                app.buttons.firstMatch.tap()
+                
+                let textField = app.textFields["TrackedViewSearchTextField"]
+                XCTAssertTrue(textField.exists)
+            } else {
+                XCTAssertTrue(app.staticTexts["TrackedViewNoResult"].exists)
+            }
+        }
+    }
+    
+    func test_TrackedView_LoginButton_AccessLogin() {
+        if (app.buttons["TrackedViewLoginButton"].exists) {
+            app.buttons["TrackedViewLoginButton"].tap()
+            
+            let loginText = app.staticTexts["LoginViewLoginText"]
+            
+            XCTAssertTrue(loginText.exists)
+            
+            //It shouldn't exist a button before
+            app.buttons.firstMatch.tap()
+            
+            let loginButtonNew = app.buttons["TrackedViewLoginButton"]
+            XCTAssertTrue(loginButtonNew.exists)
+        }
     }
 }

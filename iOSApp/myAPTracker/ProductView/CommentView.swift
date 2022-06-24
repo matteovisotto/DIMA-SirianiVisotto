@@ -14,7 +14,7 @@ struct CommentView: View {
     var body: some View {
         VStack{
             ScrollView(.vertical, showsIndicators: false){
-                if((viewModel.comments?.numberOfComments ?? 0)==0){
+                if((viewModel.comments?.numberOfComments ?? 0) == 0){
                     Text("No comments available")
                 } else {
                     ForEach(0..<(viewModel.comments?.numberOfComments ?? 0), id: \.self){ index in
@@ -46,7 +46,7 @@ struct CommentView: View {
             }
             if(appState.isUserLoggedIn){
                 HStack{
-                    IconTextField(titleKey: "Add new comment", text: $viewModel.newCommentText, icon: nil, foregroundColor: Color("PrimaryLabel"), showValidator: false)
+                    IconTextField(titleKey: "Add new comment", text: $viewModel.newCommentText, icon: nil, foregroundColor: Color("PrimaryLabel"), showValidator: false).accessibilityIdentifier("CommentViewCommentTextField")
                     Button{
                         viewModel.createComment()
                     } label: {

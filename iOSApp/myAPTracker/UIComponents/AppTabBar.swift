@@ -46,7 +46,7 @@ struct AppTabBar: View {
                     .cornerRadius(10)
                     .shadow(radius: 2)
                     .offset(y: -20)
-                    .accessibilityIdentifier("AmazonPlusTabBar")
+                    .accessibilityIdentifier("AmazonTabBar")
                     
                 Spacer()
                 Button{

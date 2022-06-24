@@ -50,7 +50,7 @@ class UserProfileViewModelTest: XCTestCase {
         XCTAssertFalse(vm.validatePassword())
     }
     
-    func test_UserProfileViewModel_validateUserData_valid() {
+    /*func test_UserProfileViewModel_validateUserData_valid() {
         AppState.shared.userIdentity?.name = "Name"
         AppState.shared.userIdentity?.surname = "Surname"
         AppState.shared.userIdentity?.username = "Username"
@@ -58,7 +58,7 @@ class UserProfileViewModelTest: XCTestCase {
         let vm = UserProfileViewModel()
         
         XCTAssertTrue(vm.validateUserData())
-    }
+    }*/
     
     func test_UserProfileViewModel_validateUserData_notValid() {
         AppState.shared.userIdentity?.name = "Name"

@@ -25,7 +25,21 @@ class ExploreViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_ExploreView_FirstSeeAllButton() {
+    func test_ExploreView_FirstSeeAllButton_CheckWorking() {
+        app.buttons["ExploreViewFirstSeeAll"].tap()
+        
+        let titleSeeAllView = app.staticTexts["SeeAllViewTitle"]
+        
+        XCTAssertTrue(titleSeeAllView.exists)
+        
+        //It shouldn't exist a button before
+        app.buttons.firstMatch.tap()
+        
+        let seeAllName = app.staticTexts["ExploreViewFirstTitle"]
+        XCTAssertTrue(seeAllName.exists)
+    }
+    
+    func test_ExploreView_FirstSeeAllButton_CheckSameTitle() {
         let seeAllName = app.staticTexts["ExploreViewFirstTitle"]
         let seeAllNameText = seeAllName.label
         
@@ -40,7 +54,21 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    func test_ExploreView_SecondSeeAllButton() {
+    func test_ExploreView_SecondSeeAllButton_CheckWorking() {
+        app.buttons["ExploreViewSecondSeeAll"].tap()
+        
+        let titleSeeAllView = app.staticTexts["SeeAllViewTitle"]
+        
+        XCTAssertTrue(titleSeeAllView.exists)
+        
+        //It shouldn't exist a button before
+        app.buttons.firstMatch.tap()
+        
+        let seeAllName = app.staticTexts["ExploreViewSecondTitle"]
+        XCTAssertTrue(seeAllName.exists)
+    }
+    
+    func test_ExploreView_SecondSeeAllButton_CheckSameTitle() {
         let seeAllName = app.staticTexts["ExploreViewSecondTitle"]
         let seeAllNameText = seeAllName.label
         
@@ -55,7 +83,21 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    func test_ExploreView_ThirdSeeAllButton() {
+    func test_ExploreView_ThirdSeeAllButton_CheckWorking() {
+        app.buttons["ExploreViewThirdSeeAll"].tap()
+        
+        let titleSeeAllView = app.staticTexts["SeeAllViewTitle"]
+        
+        XCTAssertTrue(titleSeeAllView.exists)
+        
+        //It shouldn't exist a button before
+        app.buttons.firstMatch.tap()
+        
+        let seeAllName = app.staticTexts["ExploreViewThirdTitle"]
+        XCTAssertTrue(seeAllName.exists)
+    }
+    
+    func test_ExploreView_ThirdSeeAllButton_CheckSameTitle() {
         let seeAllName = app.staticTexts["ExploreViewThirdTitle"]
         let seeAllNameText = seeAllName.label
         

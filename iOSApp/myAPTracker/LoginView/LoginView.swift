@@ -31,7 +31,7 @@ struct LoginView: View {
                         VStack{
                             HStack{
                                 Text("Login").font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
-                                    .accessibilityIdentifier("LoginText")
+                                    .accessibilityIdentifier("LoginViewLoginText")
                                 Spacer()
                             }
                             
@@ -39,7 +39,9 @@ struct LoginView: View {
                                 return viewModel.isValidEmail(text)
                             }.autocapitalization(.none)
                                 .keyboardType(.emailAddress)
-                            IconSecureTextField(titleKey: "Password", text: $viewModel.password, icon: Image(systemName: "lock"), foregroundColor: Color("PrimaryLabel"))
+                                .accessibilityIdentifier("LoginViewEmailTextField")
+                            IconSecureTextField(titleKey: "Password", text: $viewModel.password, icon: Image(systemName: "lock"), foregroundColor: Color("PrimaryLabel")).accessibilityIdentifier("LoginViewPasswordTextField")
+                                
                             HStack{
                                 Spacer()
                                 Button{
@@ -49,6 +51,7 @@ struct LoginView: View {
                                         .padding(.vertical, 3)
                                     
                                 }.frame(width: (geom.size.width-40)/2)
+                                    .accessibilityIdentifier("LoginViewLoginButton")
                             .padding(.vertical, 7)
                             .background(Color("Primary"))
                             .foregroundColor(Color.white)
@@ -92,6 +95,7 @@ struct LoginView: View {
                                 Text("Register Here")
                             }
                             .foregroundColor(Color("Primary"))
+                            .accessibilityIdentifier("LoginViewRegisterButton")
                         Spacer()
                         }.padding(.top, 10)
                             .font(.subheadline.bold())

@@ -40,6 +40,7 @@ struct TutorialView: View {
             .foregroundColor(Color(currentIndex == 2 ? "Tutorial1" : "Tutorial3"))
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
             .padding()
+            .accessibilityIdentifier("TutorialViewSkipButton")
         }
     }
 }

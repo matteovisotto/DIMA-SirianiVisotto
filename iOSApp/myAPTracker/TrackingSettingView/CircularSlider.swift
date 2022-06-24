@@ -65,7 +65,7 @@ struct CircularSlider: View {
                             }))
             
             Text("\(String.init(format: "%.0f", valuePercentage.wrappedValue)) %")
-                            .font(.system(size: 40))
+                .font(.system(size: 40)).accessibilityIdentifier("CircularSliderPercentageText")
         }.onAppear(perform: {
             angleValue = ((180 * valuePercentage.wrappedValue)/100)
         })

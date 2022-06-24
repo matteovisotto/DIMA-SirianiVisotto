@@ -10,6 +10,7 @@
 		12168C5228645CD20087CC50 /* myAPTrackerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12168C5128645CD20087CC50 /* myAPTrackerUITest.swift */; };
 		12168C5428645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */; };
 		12168C5B28645D500087CC50 /* SettingsViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12168C5A28645D500087CC50 /* SettingsViewUITest.swift */; };
+		1237CC9C286604DC00A1895E /* TutorialViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237CC9B286604DC00A1895E /* TutorialViewUITest.swift */; };
 		1250E1EF28630C71009A4A88 /* SeeAllViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */; };
 		1250E1F1286312DC009A4A88 /* TrackingSettingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */; };
 		1250E1F32863189C009A4A88 /* UserProfileViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F22863189C009A4A88 /* UserProfileViewModelTest.swift */; };
@@ -26,6 +27,10 @@
 		12A19A7D286505F000EBB2E2 /* SeeAllViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A7C286505F000EBB2E2 /* SeeAllViewUITest.swift */; };
 		12A19A8128650BD400EBB2E2 /* TrackedViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A8028650BD400EBB2E2 /* TrackedViewUITest.swift */; };
 		12A19A83286511B100EBB2E2 /* ExploreViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A82286511B100EBB2E2 /* ExploreViewUITest.swift */; };
+		12A19A852865BA9C00EBB2E2 /* ProductViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A842865BA9C00EBB2E2 /* ProductViewUITest.swift */; };
+		12A19A872865C72C00EBB2E2 /* LoginViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A862865C72C00EBB2E2 /* LoginViewUITest.swift */; };
+		12A19A892865D0BC00EBB2E2 /* RegisterViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A882865D0BC00EBB2E2 /* RegisterViewUITest.swift */; };
+		12A19A8B2865D8AC00EBB2E2 /* AddProductViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A19A8A2865D8AC00EBB2E2 /* AddProductViewUITest.swift */; };
 		12A50D7D283AC118005CB21A /* InfiniteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A50D7C283AC118005CB21A /* InfiniteList.swift */; };
 		12A790E9282D439000F2959D /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A790E8282D439000F2959D /* PickerView.swift */; };
 		12AF1EEF282A86E000A7FE58 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */; };
@@ -213,6 +218,7 @@
 		12168C5128645CD20087CC50 /* myAPTrackerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAPTrackerUITest.swift; sourceTree = "<group>"; };
 		12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAPTrackerUITestLaunchTests.swift; sourceTree = "<group>"; };
 		12168C5A28645D500087CC50 /* SettingsViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewUITest.swift; sourceTree = "<group>"; };
+		1237CC9B286604DC00A1895E /* TutorialViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewUITest.swift; sourceTree = "<group>"; };
 		1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewModelTest.swift; sourceTree = "<group>"; };
 		1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingViewModelTest.swift; sourceTree = "<group>"; };
 		1250E1F22863189C009A4A88 /* UserProfileViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModelTest.swift; sourceTree = "<group>"; };
@@ -229,6 +235,10 @@
 		12A19A7C286505F000EBB2E2 /* SeeAllViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewUITest.swift; sourceTree = "<group>"; };
 		12A19A8028650BD400EBB2E2 /* TrackedViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedViewUITest.swift; sourceTree = "<group>"; };
 		12A19A82286511B100EBB2E2 /* ExploreViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewUITest.swift; sourceTree = "<group>"; };
+		12A19A842865BA9C00EBB2E2 /* ProductViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewUITest.swift; sourceTree = "<group>"; };
+		12A19A862865C72C00EBB2E2 /* LoginViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUITest.swift; sourceTree = "<group>"; };
+		12A19A882865D0BC00EBB2E2 /* RegisterViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewUITest.swift; sourceTree = "<group>"; };
+		12A19A8A2865D8AC00EBB2E2 /* AddProductViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewUITest.swift; sourceTree = "<group>"; };
 		12A50D7C283AC118005CB21A /* InfiniteList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteList.swift; sourceTree = "<group>"; };
 		12A790E8282D439000F2959D /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
@@ -417,6 +427,11 @@
 				12A19A7A286505B700EBB2E2 /* HomeViewUITest.swift */,
 				12168C5A28645D500087CC50 /* SettingsViewUITest.swift */,
 				12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */,
+				12A19A842865BA9C00EBB2E2 /* ProductViewUITest.swift */,
+				12A19A862865C72C00EBB2E2 /* LoginViewUITest.swift */,
+				12A19A882865D0BC00EBB2E2 /* RegisterViewUITest.swift */,
+				12A19A8A2865D8AC00EBB2E2 /* AddProductViewUITest.swift */,
+				1237CC9B286604DC00A1895E /* TutorialViewUITest.swift */,
 			);
 			path = myAPTrackerUITest;
 			sourceTree = "<group>";
@@ -1058,13 +1073,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1237CC9C286604DC00A1895E /* TutorialViewUITest.swift in Sources */,
 				12168C5428645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift in Sources */,
 				12A19A7B286505B700EBB2E2 /* HomeViewUITest.swift in Sources */,
 				12168C5B28645D500087CC50 /* SettingsViewUITest.swift in Sources */,
 				12A19A7D286505F000EBB2E2 /* SeeAllViewUITest.swift in Sources */,
+				12A19A872865C72C00EBB2E2 /* LoginViewUITest.swift in Sources */,
+				12A19A852865BA9C00EBB2E2 /* ProductViewUITest.swift in Sources */,
 				12168C5228645CD20087CC50 /* myAPTrackerUITest.swift in Sources */,
 				12A19A83286511B100EBB2E2 /* ExploreViewUITest.swift in Sources */,
 				12A19A8128650BD400EBB2E2 /* TrackedViewUITest.swift in Sources */,
+				12A19A892865D0BC00EBB2E2 /* RegisterViewUITest.swift in Sources */,
+				12A19A8B2865D8AC00EBB2E2 /* AddProductViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

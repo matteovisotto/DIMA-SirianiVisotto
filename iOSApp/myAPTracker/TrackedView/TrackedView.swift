@@ -40,7 +40,7 @@ struct TrackedView: View {
                             viewModel.displayLogin()
                         } label: {
                             Text("Login Now").bold().foregroundColor(Color("Primary"))
-                        }
+                        }.accessibilityIdentifier("TrackedViewLoginButton")
                     }.frame(width: g.size.width, height: g.size.height, alignment: .center)
                 }
             } else {
