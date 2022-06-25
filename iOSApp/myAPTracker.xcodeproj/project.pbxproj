@@ -139,7 +139,6 @@
 		66D13CC327FAFD88004B2077 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CC227FAFD88004B2077 /* ContentView.swift */; };
 		66D13CC527FAFD95004B2077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC427FAFD95004B2077 /* Assets.xcassets */; };
 		66D13CC827FAFD95004B2077 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66D13CC727FAFD95004B2077 /* Preview Assets.xcassets */; };
-		66D13CD227FAFD96004B2077 /* APTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CD127FAFD96004B2077 /* APTrackerTests.swift */; };
 		66D13CED27FAFE6A004B2077 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 66D13CEC27FAFE6A004B2077 /* GoogleSignIn */; };
 		66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */; };
 		66D13CF327FB0AD3004B2077 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 66D13CF227FB0AD3004B2077 /* FacebookLogin */; };
@@ -343,7 +342,6 @@
 		66D13CC427FAFD95004B2077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66D13CC727FAFD95004B2077 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66D13CCD27FAFD96004B2077 /* myAPTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myAPTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		66D13CD127FAFD96004B2077 /* APTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APTrackerTests.swift; sourceTree = "<group>"; };
 		66D13CEE27FAFE7D004B2077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66D13CF527FB1E74004B2077 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		66D13CF827FB1EB7004B2077 /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
@@ -779,7 +777,6 @@
 		66D13CD027FAFD96004B2077 /* myAPTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				66D13CD127FAFD96004B2077 /* APTrackerTests.swift */,
 				1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */,
 				1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */,
 				1250E1F22863189C009A4A88 /* UserProfileViewModelTest.swift */,
@@ -1235,7 +1232,6 @@
 				1250E20128636136009A4A88 /* ProductViewModelTest.swift in Sources */,
 				1250E1F1286312DC009A4A88 /* TrackingSettingViewModelTest.swift in Sources */,
 				1250E1F728631DC2009A4A88 /* LoginViewModelTest.swift in Sources */,
-				66D13CD227FAFD96004B2077 /* APTrackerTests.swift in Sources */,
 				1250E1F9286325F5009A4A88 /* HomeViewModelTest.swift in Sources */,
 				1250E1FD2863373C009A4A88 /* ExploreViewModelTest.swift in Sources */,
 			);

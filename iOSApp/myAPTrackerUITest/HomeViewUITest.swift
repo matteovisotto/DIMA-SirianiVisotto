@@ -123,4 +123,10 @@ class HomeViewUITest: XCTestCase {
         let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
         XCTAssertTrue(productNew.exists)
     }
+    
+    func test_test() {
+        app/*@START_MENU_TOKEN@*/.buttons["ExploreTabBar"]/*[[".buttons[\"Study Cards\"]",".buttons[\"ExploreTabBar\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0).tap()
+                
+    }
 }

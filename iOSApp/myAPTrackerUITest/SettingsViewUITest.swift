@@ -130,7 +130,6 @@ class SettingsViewUITest: XCTestCase {
             XCTAssertTrue(percentageButton.exists)
             
             let circularSlider = app.scrollViews.otherElements.staticTexts["CircularSliderCustomView"]
-            
             XCTAssertTrue(circularSlider.exists)
             
             //It shouldn't exist a button before
