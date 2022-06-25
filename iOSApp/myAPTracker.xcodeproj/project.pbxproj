@@ -101,7 +101,7 @@
 		66A0676B281D319F002C479C /* TrackingSettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */; };
 		66A264D0284FA6D7000C863E /* iPadMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A264CF284FA6D7000C863E /* iPadMainView.swift */; };
 		66A5143628279F4C004388C7 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5143528279F4C004388C7 /* NotificationService.swift */; };
-		66A5143A28279F4C004388C7 /* PushNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66A5143328279F4C004388C7 /* PushNotification.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66A5143A28279F4C004388C7 /* PushNotification.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66A5143328279F4C004388C7 /* PushNotification.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66A514412827ADD9004388C7 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514402827ADD9004388C7 /* ImageViewer.swift */; };
 		66A514432827AE25004388C7 /* ImageViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514422827AE25004388C7 /* ImageViewerViewModel.swift */; };
 		66A5144B2827B8EA004388C7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A5144A2827B8EA004388C7 /* WidgetKit.framework */; };
@@ -110,7 +110,7 @@
 		66A514532827B8EF004388C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66A514522827B8EF004388C7 /* Assets.xcassets */; };
 		66A514552827B8EF004388C7 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 66A514512827B8EB004388C7 /* Widgets.intentdefinition */; };
 		66A514562827B8EF004388C7 /* Widgets.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 66A514512827B8EB004388C7 /* Widgets.intentdefinition */; };
-		66A514592827B8EF004388C7 /* WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66A514482827B8EA004388C7 /* WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66A514592827B8EF004388C7 /* WidgetsExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66A514482827B8EA004388C7 /* WidgetsExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		66A514612827BD09004388C7 /* WidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5145E2827BBC1004388C7 /* WidgetSmall.swift */; };
 		66A514662827BF54004388C7 /* WidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514622827BF19004388C7 /* WidgetMedium.swift */; };
 		66A514672827BF57004388C7 /* WidgetLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514642827BF2C004388C7 /* WidgetLarge.swift */; };
@@ -299,6 +299,7 @@
 		66A06765281D1FE3002C479C /* Collapsible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collapsible.swift; sourceTree = "<group>"; };
 		66A06768281D2D37002C479C /* TrackingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingView.swift; sourceTree = "<group>"; };
 		66A0676A281D319F002C479C /* TrackingSettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingViewModel.swift; sourceTree = "<group>"; };
+		66A24D3F28679D4400EA875A /* PushNotification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushNotification.entitlements; sourceTree = "<group>"; };
 		66A264CF284FA6D7000C863E /* iPadMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadMainView.swift; sourceTree = "<group>"; };
 		66A264D1284FA80A000C863E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66A5143328279F4C004388C7 /* PushNotification.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PushNotification.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -595,6 +596,7 @@
 		66A5143428279F4C004388C7 /* PushNotification */ = {
 			isa = PBXGroup;
 			children = (
+				66A24D3F28679D4400EA875A /* PushNotification.entitlements */,
 				66A5143528279F4C004388C7 /* NotificationService.swift */,
 				66A5143728279F4C004388C7 /* Info.plist */,
 			);
@@ -1247,11 +1249,13 @@
 		};
 		66A5143928279F4C004388C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 66A5143228279F4C004388C7 /* PushNotification */;
 			targetProxy = 66A5143828279F4C004388C7 /* PBXContainerItemProxy */;
 		};
 		66A514582827B8EF004388C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 66A514472827B8EA004388C7 /* WidgetsExtension */;
 			targetProxy = 66A514572827B8EF004388C7 /* PBXContainerItemProxy */;
 		};
@@ -1302,6 +1306,7 @@
 		66A5143C28279F4C004388C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
@@ -1319,6 +1324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.PushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1328,6 +1334,7 @@
 		66A5143D28279F4C004388C7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
@@ -1345,6 +1352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.PushNotification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1374,6 +1382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.Widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1403,6 +1412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.Widgets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1552,6 +1562,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1587,6 +1598,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
