@@ -26,7 +26,7 @@ class SettingsViewUITest: XCTestCase {
     }
 
     func test_SettingsView_UserLoginRegister_UserIsLogged() {
-        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
             XCTAssertFalse(loginButton.exists)
         } else {
@@ -36,7 +36,7 @@ class SettingsViewUITest: XCTestCase {
     }
     
     func test_SettingsView_UserLoginRegister_UserIsNotLoggedAndGoToLoginPageAndReturnToPreviousPage() {
-        if (app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
             XCTAssertTrue(loginButton.exists)
             
@@ -55,7 +55,7 @@ class SettingsViewUITest: XCTestCase {
     }
     
     func test_SettingsView_UserProfileInformation_UserShowInfo() {
-        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["UserProfileNavigationLink"].tap()
                     
             let profileText = app.scrollViews.otherElements.staticTexts["ProfileText"]
@@ -65,7 +65,7 @@ class SettingsViewUITest: XCTestCase {
     }
     
     func test_SettingsView_UserProfileInformation_UserShowInfoAndGoBack() {
-        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables/*@START_MENU_TOKEN@*/.buttons["UserProfileNavigationLink"]/*[[".cells[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"UserProfileNavigationLink\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
             
             let elementsQuery = app.scrollViews.otherElements
@@ -78,7 +78,7 @@ class SettingsViewUITest: XCTestCase {
     }
     
     func test_SettingsView_UserTrackingInformation_UserModifyToNeverTrackingNotificationAndGoBack() {
-        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             
             let elementsQuery = app.scrollViews.otherElements
@@ -98,7 +98,7 @@ class SettingsViewUITest: XCTestCase {
     }
     
     func test_SettingsView_UserTrackingInformation_UserModifyToAlwaysTrackingNotificationAndGoBack() {
-        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             
             let elementsQuery = app.scrollViews.otherElements
@@ -120,18 +120,18 @@ class SettingsViewUITest: XCTestCase {
     }
     
     func test_SettingsView_UserTrackingInformation_UserAccessPercentageTrackingNotificationAndGoBack() {
-        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             
             let elementsQuery = app.scrollViews.otherElements
-            let percentageButton = elementsQuery.segmentedControls.containing(.button, identifier:"PercentageSettingsPicker").buttons["PercentageSettingsPicker"]
+            let percentageButton = elementsQuery.buttons["PercentageSettingsPicker"]
             percentageButton.tap()
             
             XCTAssertTrue(percentageButton.exists)
             
-            /*let circularSlider = elementsQuery.children(matching: .segmentedControl).otherElements.staticTexts["CircularSliderPercentageText"].waitForExistence(timeout: 2)
+            let circularSlider = app.scrollViews.otherElements.staticTexts["CircularSliderCustomView"]
             
-            XCTAssertTrue(circularSlider)*/
+            XCTAssertTrue(circularSlider.exists)
             
             //It shouldn't exist a button before
             app.buttons.firstMatch.tap()
@@ -143,18 +143,18 @@ class SettingsViewUITest: XCTestCase {
     }
     
     func test_SettingsView_UserTrackingInformation_UserAccessValueTrackingNotificationAndGoBack() {
-        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].exists) {
+        if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             
             let elementsQuery = app.scrollViews.otherElements
-            let valueButton = elementsQuery.segmentedControls.containing(.button, identifier:"ValueSettingsPicker").buttons["ValueSettingsPicker"]
-            valueButton.tap()
+            let percentageButton = elementsQuery.buttons["ValueSettingsPicker"]
+            percentageButton.tap()
             
-            XCTAssertTrue(valueButton.exists)
+            XCTAssertTrue(percentageButton.exists)
             
-            /*let valuePicker = elementsQuery.children(matching: .segmentedControl).otherElements.pickerWheels.firstMatch
+            let valuePicker = elementsQuery.pickerWheels["0"]
             
-            XCTAssertTrue(valuePicker.exists)*/
+            XCTAssertTrue(valuePicker.exists)
             
             //It shouldn't exist a button before
             app.buttons.firstMatch.tap()

@@ -16,7 +16,7 @@ class LoginViewUITest: XCTestCase {
         continueAfterFailure = false
         app.launch()
         app.buttons["TrackingTabBar"].tap()
-        if (!app.buttons["TrackedViewLoginButton"].exists) {
+        if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             userIsNotLogged = false
         } else {
             app.buttons["TrackedViewLoginButton"].tap()

@@ -25,9 +25,10 @@ class HomeViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    /*func test_HomeView_OpenProductAndGoBackToHome() {
-        if (app.staticTexts["HomeViewLastProductText"].exists) {
-            app.scrollViews.otherElements["HomeViewPagingView"].buttons["HomeViewProductLastProductAdded"].tap()
+    func test_HomeView_LastProductAdded_OpenProductAndGoBackToHome() {
+        if (app.staticTexts["HomeViewLastProductText"].waitForExistence(timeout: 2)) {
+            app.scrollViews.otherElements.buttons.element(boundBy: 0).tap()
+            //app.buttons["doc.badge.gearshape"].tap()
             
             let productName = app.staticTexts["ProductViewHomeName"]
             
@@ -39,14 +40,14 @@ class HomeViewUITest: XCTestCase {
             
             XCTAssertTrue(tabTitle.exists)
         }
-    }*/
+    }
     
     func test_HomeView_SeeAllButton_CheckThatWeReachSeeAllViewAndReturnBack() {
         app.scrollViews.otherElements.buttons["HomeViewSeeAllButton"].tap()
         
-        let seeAllName = app.staticTexts["SeeAllViewTitle"]
+        let seeAllName = app.staticTexts["SeeAllViewTitle"].waitForExistence(timeout: 5)
         
-        XCTAssertTrue(seeAllName.exists)
+        XCTAssertTrue(seeAllName)
         
         //It shouldn't exist a button before
         app.buttons.firstMatch.tap()
@@ -85,17 +86,41 @@ class HomeViewUITest: XCTestCase {
         XCTAssertTrue(tabTitle.exists)
     }
     
-    /*func test_HomeView_LastAddedProductButton_AccessProductAndGoBack() {
-        app.scrollViews.buttons.element(boundBy: 0).tap()
+    func test_HomeView_LastAddedProductButton_SwipeProducts() {
+        if (app.staticTexts["HomeViewLastProductText"].waitForExistence(timeout: 2)) {
+            let product = app.scrollViews.buttons.element(boundBy: 0)
+            
+            let topOffset = CGVector(dx: 0.95, dy: 0.5)
+            let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+            let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
+            let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
+
+            sleep(5)
+            
+            // drag from right to left to delete
+            cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+            
+            let productNew = app.scrollViews.buttons.element(boundBy: 1)
+            XCTAssertTrue(productNew.exists)
+        }
+    }
+    
+    func test_HomeView_MostTrackedProductButton_SwipeProducts() {
+        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
         
-        let product = app.staticTexts["ProductViewHomeName"]
+        let topOffset = CGVector(dx: 0.95, dy: 0.5)
+        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+        let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
+        let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
+
+        sleep(5)
         
-        XCTAssertTrue(product.exists)
+        // drag from right to left to delete
+        cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
         
-        app.buttons.firstMatch.tap()
-        
-        let tabTitle = app.staticTexts["SelectedTabTitleName"]
-        
-        XCTAssertTrue(tabTitle.exists)
-    }*/
+        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
+        XCTAssertTrue(productNew.exists)
+    }
 }

@@ -45,6 +45,7 @@ struct PickerView: View {
                     .frame(width: geom.size.width/2, height: geom.size.height, alignment: .center)
                     .compositingGroup()
                     .clipped()
+                    .accessibilityIdentifier("PickerViewFirstPicker")
                 Picker(selection: self.$secondPartSelection, label: Text("")) {
                     ForEach(0...99, id: \.self) { index in
                         Text("\(index)").tag(index)
@@ -58,6 +59,7 @@ struct PickerView: View {
                         let temp = Double(self.$secondPartSelection.wrappedValue) / 100
                         valueText.wrappedValue = Double(self.$firstPartSelection.wrappedValue) + temp
                     }
+                    .accessibilityIdentifier("PickerViewSecondPicker")
             }.onAppear(perform: {
                 firstPartSelection = Int(valueText.wrappedValue)
                 secondPartSelection = Int(valueText.wrappedValue.truncatingRemainder(dividingBy: 1)*100)

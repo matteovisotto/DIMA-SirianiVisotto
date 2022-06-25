@@ -18,8 +18,7 @@ class AddProductViewUITest: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         app.launch()
-        //app.buttons["TrackingTabBar"].tap()
-        if (!app.staticTexts["HomeViewLastAddedText"].exists) {
+        if (!app.staticTexts["HomeViewLastAddedText"].waitForExistence(timeout: 2)) {
             userIsNotLogged = true
         }
         app.buttons["AmazonTabBar"].tap()
@@ -30,22 +29,43 @@ class AddProductViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func test_AddProductView_AmazonView_CloseAmazonView() throws {
+        let textField = app.textFields["AddProductViewAmazonTextField"].waitForExistence(timeout: 2)
+        
+        XCTAssertTrue(textField)
+        
+        let topOffset = CGVector(dx: 0.5, dy: 0.95)
+        let bottomOffset = CGVector(dx: 0.5, dy: 0.15)
+
+        let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+        let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
+
+        // drag from right to left to delete
+        cellFarLeftCoordinate.press(forDuration: 0.1, thenDragTo: cellFarRightCoordinate)
+                
+        sleep(5)
+        
+        let mostTrackedText = app.staticTexts["HomeViewMostTrackedText"]
+        
+        XCTAssertTrue(mostTrackedText.exists)
+    }
+    
     func test_AddProductView_AddButton_Disabled() throws {
-        if (userIsNotLogged) {
+        if (!userIsNotLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
         }
     }
     
     func test_TrackProductView_TrackButton_Disabled() throws {
-        if (!userIsNotLogged) {
+        if (userIsNotLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
         }
     }
     
     func test_AddProductView_AddButton_Enabled() throws {
-        if (userIsNotLogged) {
+        if (!userIsNotLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
             
@@ -55,7 +75,7 @@ class AddProductViewUITest: XCTestCase {
                         
             sleep(5)
             
-            textField.typeText("dp/B084DWG2VQ/\n")
+            textField.typeText("/dp/B084DWG2VQ/\n")
             
             app.buttons["AddProductViewAmazonSearch"].tap()
             
@@ -68,7 +88,7 @@ class AddProductViewUITest: XCTestCase {
     }
     
     func test_AddProductView_TrackButton_Enabled() throws {
-        if (!userIsNotLogged) {
+        if (userIsNotLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
             
@@ -76,9 +96,9 @@ class AddProductViewUITest: XCTestCase {
             
             textField.tap()
             
-            sleep(2)
+            sleep(5)
             
-            textField.typeText("dp/B084DWG2VQ/\n")
+            textField.typeText("/dp/B084DWG2VQ/\n")
             
             app.buttons["AddProductViewAmazonSearch"].tap()
             
@@ -101,9 +121,9 @@ class AddProductViewUITest: XCTestCase {
         
         textField.tap()
         
-        sleep(2)
+        sleep(5)
                 
-        textField.typeText("dp/B084DWG2VQ/\n")
+        textField.typeText("/dp/B084DWG2VQ/\n")
         
         app.buttons["AddProductViewAmazonSearch"].tap()
         

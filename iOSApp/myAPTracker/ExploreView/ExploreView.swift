@@ -35,7 +35,7 @@ struct ExploreView: View {
                                         //Divider().padding(.leading, 10)
                                     }
                                 }
-                            }
+                            }.accessibilityIdentifier("ExploreViewFirstProduct")
                             /*ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ contentIndex in
                                 NavigationLink{
                                     ProductView(product: viewModel.mostTracked[contentIndex])

@@ -26,7 +26,7 @@ class TrackedViewUITest: XCTestCase {
     }
 
     func test_TrackedView_TextField_NoResult() {
-        if (!app.buttons["TrackedViewLoginButton"].exists) {
+        if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             let textField = app.textFields["TrackedViewSearchTextField"]
             
             textField.tap()
@@ -40,7 +40,7 @@ class TrackedViewUITest: XCTestCase {
     }
     
     func test_TrackedView_TextField_Result() {
-        if (!app.buttons["TrackedViewLoginButton"].exists) {
+        if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             let textField = app.textFields["TrackedViewSearchTextField"]
             
             textField.tap()
@@ -54,7 +54,7 @@ class TrackedViewUITest: XCTestCase {
     }
     
     func test_TrackedView_ProductButton_AccessAPrdouct() {
-        if (!app.buttons["TrackedViewLoginButton"].exists) {
+        if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             if (!app.staticTexts["TrackedViewNoResult"].exists) {
                 app.scrollViews.otherElements.buttons.firstMatch.tap()
                 let productName = app.staticTexts["ProductViewHomeName"]
@@ -66,7 +66,7 @@ class TrackedViewUITest: XCTestCase {
     }
     
     func test_TrackedView_ProductButton_AccessAPrdouctAndGoBack() {
-        if (!app.buttons["TrackedViewLoginButton"].exists) {
+        if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             if (!app.staticTexts["TrackedViewNoResult"].exists) {
                 app.scrollViews.otherElements.buttons.firstMatch.tap()
                 let productName = app.staticTexts["ProductViewHomeName"]
@@ -84,7 +84,7 @@ class TrackedViewUITest: XCTestCase {
     }
     
     func test_TrackedView_LoginButton_AccessLogin() {
-        if (app.buttons["TrackedViewLoginButton"].exists) {
+        if (app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             app.buttons["TrackedViewLoginButton"].tap()
             
             let loginText = app.staticTexts["LoginViewLoginText"]

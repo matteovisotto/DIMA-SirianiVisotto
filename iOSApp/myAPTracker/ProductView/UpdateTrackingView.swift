@@ -54,14 +54,14 @@ struct UpdateTrackingView: View {
                     ScrollView(.vertical, showsIndicators: false){
                         VStack{
                             VStack(spacing: 10){
-                                Text("You can choose the settings to receive notifications about this product when the price drops.").foregroundColor(Color("PrimaryLabel")).font(.callout)
+                                Text("You can choose the settings to receive notifications about this product when the price drops.").foregroundColor(Color("PrimaryLabel")).font(.callout).accessibilityIdentifier("UpdateTrackingViewNotificationText")
                                 Text("This setting can be overridden for each product you track by opening the product page").foregroundColor(Color("PrimaryLabel")).font(.caption)
                                 Group{
                                     Picker("", selection: Binding(status.dropKey)!) {
-                                        Text("Never").tag("none")
-                                        Text("Percentage").tag("percentage")
-                                        Text("Value").tag("value")
-                                        Text("Always").tag("always")
+                                        Text("Never").tag("none").accessibilityIdentifier("UpdateTrackingViewNeverButton")
+                                        Text("Percentage").tag("percentage").accessibilityIdentifier("UpdateTrackingViewPercentageButton")
+                                        Text("Value").tag("value").accessibilityIdentifier("UpdateTrackingViewValueButton")
+                                        Text("Always").tag("always").accessibilityIdentifier("UpdateTrackingViewAlwaysButton")
                                     }.pickerStyle(.segmented).padding(.vertical)
                                     if(status.wrappedValue.dropKey == "percentage") {
                                         CircularSlider($dropValuePercentage).frame(width: 150, height: 150, alignment: .center)
@@ -70,15 +70,15 @@ struct UpdateTrackingView: View {
                                     }
                                     switch status.wrappedValue.dropKey {
                                         case "none":
-                                            Text("With this option you don't receive notification for your tracked product").foregroundColor(Color("PrimaryLabel")).font(.caption)
+                                        Text("With this option you don't receive notification for your tracked product").foregroundColor(Color("PrimaryLabel")).font(.caption).accessibilityIdentifier("UpdateTrackingViewNeverNotificationText")
                                         case "percentage":
-                                            Text("With this option you'll receive a notification when a price falls by the defined percentage").foregroundColor(Color("PrimaryLabel")).font(.caption)
+                                            Text("With this option you'll receive a notification when a price falls by the defined percentage").foregroundColor(Color("PrimaryLabel")).font(.caption).accessibilityIdentifier("UpdateTrackingViewPercentageNotificationText")
+                                        /*case "value":
+                                            Text("With this option you'll receive a notification when the price falls by the defined value").foregroundColor(Color("PrimaryLabel")).font(.caption).accessibilityIdentifier("UpdateTrackingViewValueNotificationText")*/
                                         case "value":
-                                            Text("With this option you'll receive a notification when the price falls by the defined value").foregroundColor(Color("PrimaryLabel")).font(.caption)
-                                        case "price":
-                                            Text("With this option you'll receive a notification when the price falls below the defined import").foregroundColor(Color("PrimaryLabel")).font(.caption)
+                                            Text("With this option you'll receive a notification when the price falls below the defined import").foregroundColor(Color("PrimaryLabel")).font(.caption).accessibilityIdentifier("UpdateTrackingViewValueNotificationText")
                                         case "always":
-                                            Text("With this option you'll receive a notification every time the price falls").foregroundColor(Color("PrimaryLabel")).font(.caption)
+                                            Text("With this option you'll receive a notification every time the price falls").foregroundColor(Color("PrimaryLabel")).font(.caption).accessibilityIdentifier("UpdateTrackingViewAlwaysNotificationText")
                                         default:
                                             EmptyView()
                                     }

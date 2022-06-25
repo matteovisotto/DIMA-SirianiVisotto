@@ -54,6 +54,39 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
+    /*func test_ExploreView_FirstSeeAllCategories_AccessProductsAndGoBack() {
+        //app.scrollViews.otherElements.buttons.element(boundBy: 3).tap()
+        app.scrollViews.otherElements.buttons.element(boundBy: 0).tap()
+        
+        let product = app.staticTexts["ProductViewHomeName"]
+        
+        XCTAssertTrue(product.exists)
+        
+        app.buttons.firstMatch.tap()
+        
+        let tabTitle = app.staticTexts["SelectedTabTitleName"]
+        
+        XCTAssertTrue(tabTitle.exists)
+    }*/
+    
+    /*func test_ExploreView_FirstSeeAllCategories_SwipeProducts() {
+        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
+        
+        let topOffset = CGVector(dx: 0.95, dy: 0.5)
+        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+        let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
+        let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
+
+        sleep(5)
+        
+        // drag from right to left to delete
+        cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        
+        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
+        XCTAssertTrue(productNew.exists)
+    }*/
+    
     func test_ExploreView_SecondSeeAllButton_CheckWorking() {
         app.buttons["ExploreViewSecondSeeAll"].tap()
         
@@ -83,6 +116,38 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
+    /*func test_ExploreView_SecondSeeAllCategories_AccessProductsAndGoBack() {
+        app.scrollViews.otherElements.buttons.element(boundBy: 6).tap()
+        
+        let product = app.staticTexts["ProductViewHomeName"]
+        
+        XCTAssertTrue(product.exists)
+        
+        app.buttons.firstMatch.tap()
+        
+        let tabTitle = app.staticTexts["SelectedTabTitleName"]
+        
+        XCTAssertTrue(tabTitle.exists)
+    }
+    
+    func test_ExploreView_SecondSeeAllCategories_SwipeProducts() {
+        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
+        
+        let topOffset = CGVector(dx: 0.95, dy: 0.5)
+        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+        let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
+        let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
+
+        sleep(5)
+        
+        // drag from right to left to delete
+        cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        
+        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
+        XCTAssertTrue(productNew.exists)
+    }*/
+    
     func test_ExploreView_ThirdSeeAllButton_CheckWorking() {
         app.buttons["ExploreViewThirdSeeAll"].tap()
         
@@ -111,4 +176,36 @@ class ExploreViewUITest: XCTestCase {
         
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
+    
+    /*func test_ExploreView_ThirdSeeAllCategories_AccessProductsAndGoBack() {
+        app.scrollViews.otherElements.buttons.element(boundBy: 9).tap()
+        
+        let product = app.staticTexts["ProductViewHomeName"]
+        
+        XCTAssertTrue(product.exists)
+        
+        app.buttons.firstMatch.tap()
+        
+        let tabTitle = app.staticTexts["SelectedTabTitleName"]
+        
+        XCTAssertTrue(tabTitle.exists)
+    }
+    
+    func test_ExploreView_ThirdSeeAllCategories_SwipeProducts() {
+        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
+        
+        let topOffset = CGVector(dx: 0.95, dy: 0.5)
+        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+        let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
+        let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
+
+        sleep(5)
+        
+        // drag from right to left to delete
+        cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        
+        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
+        XCTAssertTrue(productNew.exists)
+    }*/
 }

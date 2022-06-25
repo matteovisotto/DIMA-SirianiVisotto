@@ -75,24 +75,25 @@ struct ProductView: View {
                                     viewModel.openSetting = true
                                 } label: {
                                     Label("Edit", systemImage: "pencil")
-                                }
+                                }.accessibilityIdentifier("ProductViewSettingsButton")
                                 Button {
                                     viewModel.stopTracking()
                                     viewModel.trackedStatus?.tracked = false;
                                 } label: {
                                     Label("Stop tracking", systemImage: "minus")
-                                }
+                                }.accessibilityIdentifier("ProductViewStopTrackProduct")
                             } else {
                                 Button {
                                     viewModel.startTracking()
                                     viewModel.trackedStatus?.tracked = true;
                                 } label: {
                                     Label("Start tracking", systemImage: "plus")
-                                }
+                                }.accessibilityIdentifier("ProductViewStartTrackProduct")
                             }
                         } label: {
                             Image(systemName: "doc.badge.gearshape").font(.title3.bold())
                         }.foregroundColor(Color("PrimaryLabel"))
+                            .accessibilityIdentifier("ProductViewSettingsTrackingButton")
                     }.padding(.bottom,3)
                     Spacer()
                 }.padding(.horizontal, 15)

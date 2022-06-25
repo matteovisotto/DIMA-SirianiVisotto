@@ -37,7 +37,6 @@ struct HomeView: View {
                                                 TrackedProductView(viewModel.trackingObjects[index]).padding(.horizontal, 10)
                                                 
                                             }.highPriorityGesture(DragGesture())
-                                            .accessibilityIdentifier("HomeViewProductLastProductAdded")
                                     }
                                 }.frame(width: geometry.size.width, height: 150).accessibilityIdentifier("HomeViewPagingView")
                                 

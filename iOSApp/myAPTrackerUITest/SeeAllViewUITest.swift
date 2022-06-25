@@ -18,6 +18,11 @@ class SeeAllViewUITest: XCTestCase {
         continueAfterFailure = false
         app.launch()
         app.buttons["HomeTabBar"].tap()
+        
+        let seeAllButton = app.scrollViews.otherElements.buttons["HomeViewSeeAllButton"].waitForExistence(timeout: 5)
+        
+        XCTAssertTrue(seeAllButton)
+        
         app.scrollViews.otherElements.buttons["HomeViewSeeAllButton"].tap()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -27,6 +32,10 @@ class SeeAllViewUITest: XCTestCase {
     }
 
     func test_SeeAllView_OpenCategories () {
+        let seeAllButtonCategories = app.buttons["SeeAllViewCategoriesButton"]
+        
+        XCTAssertTrue(seeAllButtonCategories.exists)
+        
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
