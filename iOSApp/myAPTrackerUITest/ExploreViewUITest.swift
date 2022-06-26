@@ -54,9 +54,14 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    /*func test_ExploreView_FirstSeeAllCategories_AccessProductsAndGoBack() {
-        //app.scrollViews.otherElements.buttons.element(boundBy: 3).tap()
-        app.scrollViews.otherElements.buttons.element(boundBy: 0).tap()
+    func test_test() {
+        app.buttons["ExploreTabBar"].tap()
+        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0).tap()
+                
+    }
+    
+    func test_ExploreView_FirstSeeAllCategories_AccessProductsAndGoBack() {
+        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 0).tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
         
@@ -67,25 +72,32 @@ class ExploreViewUITest: XCTestCase {
         let tabTitle = app.staticTexts["SelectedTabTitleName"]
         
         XCTAssertTrue(tabTitle.exists)
-    }*/
+    }
     
-    /*func test_ExploreView_FirstSeeAllCategories_SwipeProducts() {
-        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
+    func test_ExploreView_FirstSeeAllCategories_SwipeProducts() {
+        let product = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 0)
+        XCTAssertTrue(product.isHittable)
+        
+        let product2 = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 2)
+        XCTAssertFalse(product2.isHittable)
         
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
         let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
 
         let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
         let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
-
-        sleep(5)
         
         // drag from right to left to delete
         cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
         
-        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
-        XCTAssertTrue(productNew.exists)
-    }*/
+        sleep(5)
+        
+        let productNewHit = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 2)
+        
+        sleep(2)
+        XCTAssertFalse(product.isHittable)
+        XCTAssertTrue(productNewHit.isHittable)
+    }
     
     func test_ExploreView_SecondSeeAllButton_CheckWorking() {
         app.buttons["ExploreViewSecondSeeAll"].tap()
@@ -116,8 +128,8 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    /*func test_ExploreView_SecondSeeAllCategories_AccessProductsAndGoBack() {
-        app.scrollViews.otherElements.buttons.element(boundBy: 6).tap()
+    func test_ExploreView_SecondSeeAllCategories_AccessProductsAndGoBack() {
+        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0).tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
         
@@ -131,22 +143,28 @@ class ExploreViewUITest: XCTestCase {
     }
     
     func test_ExploreView_SecondSeeAllCategories_SwipeProducts() {
-        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
+        let product = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0)
+        XCTAssertTrue(product.isHittable)
+        
+        let product2 = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 2)
+        XCTAssertFalse(product2.isHittable)
         
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
         let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
 
         let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
         let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
-
-        sleep(5)
         
         // drag from right to left to delete
         cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
         
-        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
-        XCTAssertTrue(productNew.exists)
-    }*/
+        sleep(5)
+        
+        let productNewHit = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 2)
+        
+        XCTAssertFalse(product.isHittable)
+        XCTAssertTrue(productNewHit.isHittable)
+    }
     
     func test_ExploreView_ThirdSeeAllButton_CheckWorking() {
         app.buttons["ExploreViewThirdSeeAll"].tap()
@@ -177,8 +195,8 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    /*func test_ExploreView_ThirdSeeAllCategories_AccessProductsAndGoBack() {
-        app.scrollViews.otherElements.buttons.element(boundBy: 9).tap()
+    func test_ExploreView_ThirdSeeAllCategories_AccessProductsAndGoBack() {
+        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 0).tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
         
@@ -192,20 +210,37 @@ class ExploreViewUITest: XCTestCase {
     }
     
     func test_ExploreView_ThirdSeeAllCategories_SwipeProducts() {
-        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
-        
-        let topOffset = CGVector(dx: 0.95, dy: 0.5)
-        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+        let topOffset = CGVector(dx: 0.5, dy: 0.5)
+        let bottomOffset = CGVector(dx: 0.5, dy: 0.15)
 
-        let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
-        let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
+        let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+        let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
 
-        sleep(5)
-        
         // drag from right to left to delete
         cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+                
+        sleep(5)
         
-        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
-        XCTAssertTrue(productNew.exists)
-    }*/
+        let product = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 0)
+        XCTAssertTrue(product.isHittable)
+        
+        let product2 = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 2)
+        XCTAssertFalse(product2.isHittable)
+        
+        let topOffset2 = CGVector(dx: 0.95, dy: 0.5)
+        let bottomOffset2 = CGVector(dx: 0.05, dy: 0.5)
+
+        let cellFarRightCoordinate2 = product.coordinate(withNormalizedOffset: topOffset2)
+        let cellFarLeftCoordinate2 = product.coordinate(withNormalizedOffset: bottomOffset2)
+        
+        // drag from right to left to delete
+        cellFarRightCoordinate2.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate2)
+        
+        sleep(5)
+        
+        let productNewHit = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 2)
+        
+        XCTAssertFalse(product.isHittable)
+        XCTAssertTrue(productNewHit.isHittable)
+    }
 }

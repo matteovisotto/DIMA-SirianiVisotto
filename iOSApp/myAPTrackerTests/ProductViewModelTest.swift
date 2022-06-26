@@ -13,7 +13,6 @@ class ProductViewModelTest: XCTestCase {
 
     var cancellables = Set<AnyCancellable>()
     var cancellables1 = Set<AnyCancellable>()
-    var cancellables2 = Set<AnyCancellable>()
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -29,6 +28,7 @@ class ProductViewModelTest: XCTestCase {
         let vm = ProductViewModel(product: Product(id: 41, name: "HP cartuccia", shortName: "HP cartuccia", description: "HP cartuccia", link: "https://www.amazon.it/HP-Cartuccia-Originale-dInchiostro-Tricromia/dp/B00VYAWKJY/ref=mp_s_a_1_1_sspa", highestPrice: 100, lowestPrice: 10, images: [], prices: [], category: "HP cartuccia"))
         
         let expectation = XCTestExpectation(description: "Wait to retrieve items from the DB")
+        let expectation2 = XCTestExpectation(description: "Wait to retrieve items from the DB 2")
         
         vm.$productPrices
             .dropFirst()
@@ -40,7 +40,7 @@ class ProductViewModelTest: XCTestCase {
         vm.$comments
             .dropFirst()
             .sink { products in
-                expectation.fulfill()
+                expectation2.fulfill()
             }
             .store(in: &cancellables1)
         
@@ -53,7 +53,6 @@ class ProductViewModelTest: XCTestCase {
         if let test: Int = vm.comments?.comments.count {
             XCTAssertGreaterThan(test, 0)
         }
-        
     }
 
 }

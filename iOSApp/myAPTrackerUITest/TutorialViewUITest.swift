@@ -10,35 +10,44 @@ import XCTest
 class TutorialViewUITest: XCTestCase {
 
     let app = XCUIApplication()
-    var userHasAlreadyDoneTheTutorial = false
     
     override func setUpWithError() throws {
         continueAfterFailure = false
+        app.launchArguments = ["-UITest_TutorialToSee"]
         app.launch()
-        if (app.staticTexts["HomeViewMostTrackedText"].exists) {
-            userHasAlreadyDoneTheTutorial = true
-        }
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_TutorialView_ChangePageButton_UserChangePage() {
-        if (!userHasAlreadyDoneTheTutorial) {
-            app.images["Right"].tap()
-            
-            sleep(10)
-            
-            app.images["Right"].tap()
-            
-            sleep(10)
-            
-            let next = app.images["Right"]
-            let done = app.otherElements.images.firstMatch
-            
-            XCTAssertFalse(next.exists)
-            XCTAssertTrue(done.exists)
-        }
+    func test_TutorialView_ChangePageButton_UserChangePageAndEndsTutorial() {
+        app.images["Right"].tap()
+        
+        sleep(10)
+        
+        app.images["Right"].tap()
+        
+        sleep(10)
+        
+        let next = app.images["Right"]
+        let done = app.otherElements.images.firstMatch
+        
+        XCTAssertFalse(next.exists)
+        XCTAssertTrue(done.exists)
+        
+        app.buttons["TutorialViewSkipButton"].tap()
+        
+        sleep(10)
+        
+        XCTAssertTrue(app.staticTexts["HomeViewMostTrackedText"].exists)
+    }
+    
+    func test_TutorialView_SkipButton_UserEndsTutorialThroughSkip() {
+        app.buttons["TutorialViewSkipButton"].tap()
+        
+        sleep(10)
+        
+        XCTAssertTrue(app.staticTexts["HomeViewMostTrackedText"].exists)
     }
 }

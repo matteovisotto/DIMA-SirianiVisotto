@@ -46,7 +46,7 @@ struct SeeAllView: View {
                             Spacer()
                             
                         }
-                        Text(viewModel.categoryFilters.joined(separator: ", ")).font(.caption).foregroundColor(Color("PrimaryLabel"))
+                        Text(viewModel.categoryFilters.joined(separator: ", ")).font(.caption).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("SeeAllViewCategoryFilterText")
                         
                         
                         if(viewModel.categoryFilters.count > 0){

@@ -27,6 +27,8 @@ class ExploreViewModelTest: XCTestCase {
         let vm = ExploreViewModel()
         
         let expectation = XCTestExpectation(description: "Wait to retrieve items from the DB")
+        let expectation2 = XCTestExpectation(description: "Wait to retrieve items from the DB 2")
+        let expectation3 = XCTestExpectation(description: "Wait to retrieve items from the DB 3")
         
         vm.$mostTracked
             .dropFirst()
@@ -38,18 +40,20 @@ class ExploreViewModelTest: XCTestCase {
         vm.$biggestPercentageDrop
             .dropFirst()
             .sink { products in
-                expectation.fulfill()
+                expectation2.fulfill()
             }
             .store(in: &cancellables1)
         
         vm.$biggestRangeDrop
             .dropFirst()
             .sink { products in
-                expectation.fulfill()
+                expectation3.fulfill()
             }
             .store(in: &cancellables2)
         
         wait(for: [expectation], timeout: 3)
+        
+        sleep(10)
         
         XCTAssertGreaterThan(vm.mostTracked.count, 0)
         XCTAssertGreaterThan(vm.biggestRangeDrop.count, 0)

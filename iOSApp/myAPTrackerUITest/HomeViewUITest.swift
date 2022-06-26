@@ -95,11 +95,13 @@ class HomeViewUITest: XCTestCase {
 
             let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
             let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
-
-            sleep(5)
             
             // drag from right to left to delete
             cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+            
+            sleep(5)
+            
+            XCTAssertFalse(product.isHittable)
             
             let productNew = app.scrollViews.buttons.element(boundBy: 1)
             XCTAssertTrue(productNew.exists)
@@ -107,26 +109,22 @@ class HomeViewUITest: XCTestCase {
     }
     
     func test_HomeView_MostTrackedProductButton_SwipeProducts() {
-        let product = app.scrollViews.otherElements.buttons.element(boundBy: 0)
+        let product = app.scrollViews.otherElements.scrollViews.otherElements.buttons.element(boundBy: 0)
         
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
         let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
 
         let cellFarRightCoordinate = product.coordinate(withNormalizedOffset: topOffset)
         let cellFarLeftCoordinate = product.coordinate(withNormalizedOffset: bottomOffset)
-
-        sleep(5)
         
         // drag from right to left to delete
         cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
         
-        let productNew = app.scrollViews.otherElements.buttons.element(boundBy: 4)
+        sleep(5)
+        
+        XCTAssertFalse(product.isHittable)
+        
+        let productNew = app.scrollViews.otherElements.scrollViews.otherElements.buttons.element(boundBy: 3)
         XCTAssertTrue(productNew.exists)
-    }
-    
-    func test_test() {
-        app/*@START_MENU_TOKEN@*/.buttons["ExploreTabBar"]/*[[".buttons[\"Study Cards\"]",".buttons[\"ExploreTabBar\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0).tap()
-                
     }
 }

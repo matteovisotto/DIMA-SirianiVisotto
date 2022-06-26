@@ -9,11 +9,17 @@ import SwiftUI
 
 @main
 struct myAPTrackerApp: App {
+    let tutorialToSee: Bool
+    
+    init () {
+        self.tutorialToSee = CommandLine.arguments.contains("-UITest_TutorialToSee")
+    }
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             if UIDevice.current.userInterfaceIdiom == .phone {
-                ContentView()
+                ContentView(tutorialToSee: tutorialToSee)
                     .environmentObject(AppState.shared)
                     .onAppear {
                     if let rootVC = UIApplication.shared.windows.first?.rootViewController {

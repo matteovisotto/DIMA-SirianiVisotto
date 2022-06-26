@@ -10,7 +10,7 @@ import XCTest
 class AddProductViewUITest: XCTestCase {
 
     let app = XCUIApplication()
-    var userIsNotLogged = false
+    var userIsLogged = false
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,8 +18,9 @@ class AddProductViewUITest: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         app.launch()
-        if (!app.staticTexts["HomeViewLastAddedText"].waitForExistence(timeout: 2)) {
-            userIsNotLogged = true
+        sleep(5)
+        if (app.staticTexts["HomeViewLastProductText"].exists) {
+            userIsLogged = true
         }
         app.buttons["AmazonTabBar"].tap()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
@@ -47,25 +48,25 @@ class AddProductViewUITest: XCTestCase {
         
         let mostTrackedText = app.staticTexts["HomeViewMostTrackedText"]
         
-        XCTAssertTrue(mostTrackedText.exists)
+        XCTAssertTrue(mostTrackedText.isHittable)
     }
     
     func test_AddProductView_AddButton_Disabled() throws {
-        if (!userIsNotLogged) {
+        if (!userIsLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
         }
     }
     
     func test_TrackProductView_TrackButton_Disabled() throws {
-        if (userIsNotLogged) {
+        if (userIsLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
         }
     }
     
     func test_AddProductView_AddButton_Enabled() throws {
-        if (!userIsNotLogged) {
+        if (!userIsLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
             
@@ -88,7 +89,7 @@ class AddProductViewUITest: XCTestCase {
     }
     
     func test_AddProductView_TrackButton_Enabled() throws {
-        if (userIsNotLogged) {
+        if (userIsLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
             

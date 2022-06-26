@@ -16,7 +16,8 @@ class ProductViewUITest: XCTestCase {
         continueAfterFailure = false
         app.launch()
         app.buttons["HomeTabBar"].tap()
-        if (!app.staticTexts["HomeViewLastAddedText"].waitForExistence(timeout: 2)) {
+        sleep(5)
+        if (app.staticTexts["HomeViewLastProductText"].exists) {
             userIsLogged = false
         }
         app.scrollViews.otherElements.scrollViews.otherElements.buttons.element(boundBy: 1).tap()
@@ -88,106 +89,120 @@ class ProductViewUITest: XCTestCase {
     }
     
     func test_ProductView_TrackingSettingsOptionsButton_OpenSettings() {
-        app.buttons["ProductViewSettingsTrackingButton"].tap()
-        if (app.buttons["ProductViewSettingsButton"].exists){
-            app.buttons["ProductViewSettingsButton"].tap()
+        if (userIsLogged) {
+            app.buttons["ProductViewSettingsTrackingButton"].tap()
+            if (app.buttons["ProductViewSettingsButton"].exists){
+                app.buttons["ProductViewSettingsButton"].tap()
+            }
+            let text = app.scrollViews.staticTexts["UpdateTrackingViewNotificationText"]
+            XCTAssertTrue(text.exists)
         }
-        let text = app.scrollViews.staticTexts["UpdateTrackingViewNotificationText"]
-        XCTAssertTrue(text.exists)
     }
     
     func test_ProductView_TrackingSettingsOptionsButton_OpenSettingsAndExits() {
-        app.buttons["ProductViewSettingsTrackingButton"].tap()
-        if (app.buttons["ProductViewSettingsButton"].exists){
-            app.buttons["ProductViewSettingsButton"].tap()
+        if (userIsLogged) {
+            app.buttons["ProductViewSettingsTrackingButton"].tap()
+            if (app.buttons["ProductViewSettingsButton"].exists){
+                app.buttons["ProductViewSettingsButton"].tap()
+            }
+            let text = app.scrollViews.staticTexts["UpdateTrackingViewNotificationText"]
+            XCTAssertTrue(text.exists)
+            
+            //Close the settings
+            let topOffset = CGVector(dx: 0.5, dy: 0.95)
+            let bottomOffset = CGVector(dx: 0.5, dy: 0.15)
+
+            let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+            let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
+
+            // drag from right to left to delete
+            cellFarLeftCoordinate.press(forDuration: 0.1, thenDragTo: cellFarRightCoordinate)
+                    
+            sleep(5)
+            
+            let openSettingsButton = app.buttons["ProductViewSettingsTrackingButton"]
+            XCTAssertTrue(openSettingsButton.isHittable)
         }
-        let text = app.scrollViews.staticTexts["UpdateTrackingViewNotificationText"]
-        XCTAssertTrue(text.exists)
-        
-        //Close the settings
-        let topOffset = CGVector(dx: 0.5, dy: 0.95)
-        let bottomOffset = CGVector(dx: 0.5, dy: 0.15)
-
-        let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
-        let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
-
-        // drag from right to left to delete
-        cellFarLeftCoordinate.press(forDuration: 0.1, thenDragTo: cellFarRightCoordinate)
-                
-        sleep(5)
-        
-        let openSettingsButton = app.buttons["ProductViewSettingsTrackingButton"]
-        XCTAssertTrue(openSettingsButton.exists)
     }
     
     func test_ProductView_TrackingSettings_NeverTab() {
-        app.buttons["ProductViewSettingsTrackingButton"].tap()
-        if (app.buttons["ProductViewSettingsButton"].exists){
-            app.buttons["ProductViewSettingsButton"].tap()
+        if (userIsLogged) {
+            app.buttons["ProductViewSettingsTrackingButton"].tap()
+            if (app.buttons["ProductViewSettingsButton"].exists){
+                app.buttons["ProductViewSettingsButton"].tap()
+            }
+            let neverButton = app.scrollViews.buttons["UpdateTrackingViewNeverButton"]
+            XCTAssertTrue(neverButton.exists)
+            
+            neverButton.tap()
+            
+            let neverText = app.scrollViews.staticTexts["UpdateTrackingViewNeverNotificationText"]
+            
+            XCTAssertTrue(neverText.exists)
         }
-        let neverButton = app.scrollViews.buttons["UpdateTrackingViewNeverButton"]
-        XCTAssertTrue(neverButton.exists)
-        
-        neverButton.tap()
-        
-        let neverText = app.scrollViews.staticTexts["UpdateTrackingViewNeverNotificationText"]
-        
-        XCTAssertTrue(neverText.exists)
     }
     
     func test_ProductView_TrackingSettings_PercentageTab() {
-        app.buttons["ProductViewSettingsTrackingButton"].tap()
-        if (app.buttons["ProductViewSettingsButton"].exists){
-            app.buttons["ProductViewSettingsButton"].tap()
+        if (userIsLogged) {
+            app.buttons["ProductViewSettingsTrackingButton"].tap()
+            if (app.buttons["ProductViewSettingsButton"].exists){
+                app.buttons["ProductViewSettingsButton"].tap()
+            }
+            let percentageButton = app.scrollViews.buttons["UpdateTrackingViewPercentageButton"]
+            XCTAssertTrue(percentageButton.exists)
+            
+            percentageButton.tap()
+            
+            let percentageText = app.scrollViews.staticTexts["UpdateTrackingViewPercentageNotificationText"]
+            
+            XCTAssertTrue(percentageText.exists)
         }
-        let percentageButton = app.scrollViews.buttons["UpdateTrackingViewPercentageButton"]
-        XCTAssertTrue(percentageButton.exists)
-        
-        percentageButton.tap()
-        
-        let percentageText = app.scrollViews.staticTexts["UpdateTrackingViewPercentageNotificationText"]
-        
-        XCTAssertTrue(percentageText.exists)
     }
     
     func test_ProductView_TrackingSettings_ValueTab() {
-        app.buttons["ProductViewSettingsTrackingButton"].tap()
-        if (app.buttons["ProductViewSettingsButton"].exists){
-            app.buttons["ProductViewSettingsButton"].tap()
+        if (userIsLogged) {
+            app.buttons["ProductViewSettingsTrackingButton"].tap()
+            if (app.buttons["ProductViewSettingsButton"].exists){
+                app.buttons["ProductViewSettingsButton"].tap()
+            }
+            let valueButton = app.scrollViews.buttons["UpdateTrackingViewValueButton"]
+            XCTAssertTrue(valueButton.exists)
+            
+            valueButton.tap()
+            
+            let valueText = app.scrollViews.staticTexts["UpdateTrackingViewValueNotificationText"]
+            
+            XCTAssertTrue(valueText.exists)
         }
-        let valueButton = app.scrollViews.buttons["UpdateTrackingViewValueButton"]
-        XCTAssertTrue(valueButton.exists)
-        
-        valueButton.tap()
-        
-        let valueText = app.scrollViews.staticTexts["UpdateTrackingViewValueNotificationText"]
-        
-        XCTAssertTrue(valueText.exists)
     }
     
     func test_ProductView_TrackingSettings_AlwaysTab() {
-        app.buttons["ProductViewSettingsTrackingButton"].tap()
-        if (app.buttons["ProductViewSettingsButton"].exists){
-            app.buttons["ProductViewSettingsButton"].tap()
+        if (userIsLogged) {
+            app.buttons["ProductViewSettingsTrackingButton"].tap()
+            if (app.buttons["ProductViewSettingsButton"].exists){
+                app.buttons["ProductViewSettingsButton"].tap()
+            }
+            let alwaysButton = app.scrollViews.buttons["UpdateTrackingViewAlwaysButton"]
+            XCTAssertTrue(alwaysButton.exists)
+            
+            alwaysButton.tap()
+            
+            let alwaysText = app.scrollViews.staticTexts["UpdateTrackingViewAlwaysNotificationText"]
+            
+            XCTAssertTrue(alwaysText.exists)
         }
-        let alwaysButton = app.scrollViews.buttons["UpdateTrackingViewAlwaysButton"]
-        XCTAssertTrue(alwaysButton.exists)
-        
-        alwaysButton.tap()
-        
-        let alwaysText = app.scrollViews.staticTexts["UpdateTrackingViewAlwaysNotificationText"]
-        
-        XCTAssertTrue(alwaysText.exists)
     }
     
     func test_ProductView_TrackingSettingsOptionsButton_UserStopTrackingOrStartTrackingButton() {
-        app.buttons["ProductViewSettingsTrackingButton"].tap()
-        if (app.buttons["ProductViewSettingsButton"].exists){
-            let stopTrackProduct = app.buttons["ProductViewStopTrackProduct"]
-            XCTAssertTrue(stopTrackProduct.exists)
-        } else {
-            let startTrackProduct = app.buttons["ProductViewStartTrackProduct"]
-            XCTAssertTrue(startTrackProduct.exists)
+        if (userIsLogged) {
+            app.buttons["ProductViewSettingsTrackingButton"].tap()
+            if (app.buttons["ProductViewSettingsButton"].exists){
+                let stopTrackProduct = app.buttons["ProductViewStopTrackProduct"]
+                XCTAssertTrue(stopTrackProduct.exists)
+            } else {
+                let startTrackProduct = app.buttons["ProductViewStartTrackProduct"]
+                XCTAssertTrue(startTrackProduct.exists)
+            }
         }
     }
 }
