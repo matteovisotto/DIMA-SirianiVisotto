@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class ProductViewModel: ObservableObject {
-    let menuItems:[MenuBarItem] = [MenuBarItem(tag: "price", title: "Price", icon: Image(systemName: "creditcard.fill")), MenuBarItem(tag: "detail", title: "Detail", icon: Image(systemName: "text.justify")), MenuBarItem(tag: "comment", title: "Comments", icon: Image(systemName: "message.fill"))]
+    var menuItems:[MenuBarItem]
     
     @Published var selectedTab: String = "price"
     @Published var product: Product
@@ -26,8 +26,10 @@ class ProductViewModel: ObservableObject {
     @Published var displayImageView: Bool = false
     @Published var currentImage: Int = 0
     
-    init(product: Product){
+    init(product: Product, menuItems: [MenuBarItem] = [MenuBarItem(tag: "price", title: "Price", icon: Image(systemName: "creditcard.fill")), MenuBarItem(tag: "detail", title: "Detail", icon: Image(systemName: "text.justify")), MenuBarItem(tag: "comment", title: "Comments", icon: Image(systemName: "message.fill"))], defaultSelection: String = "price"){
         self.product = product
+        self.selectedTab = defaultSelection
+        self.menuItems = menuItems
         if let ps = product.prices {
             self.product.price = ps.last?.price
         }
@@ -316,5 +318,11 @@ class ProductViewModel: ObservableObject {
                     AppState.shared.riseError(title: NSLocalizedString("Error", comment: "Error"), message: content ?? NSLocalizedString("Unexpected error occurred", comment: "Unexpected error occurred"))
                 }
             }
+    }
+}
+
+class iPadProductViewModel: ProductViewModel {
+    init(product: Product, menuItems: [MenuBarItem] = [MenuBarItem(tag: "detail", title: "Detail", icon: Image(systemName: "text.justify")), MenuBarItem(tag: "comment", title: "Comments", icon: Image(systemName: "message.fill"))]){
+        super.init(product: product, menuItems: menuItems, defaultSelection: "detail")
     }
 }
