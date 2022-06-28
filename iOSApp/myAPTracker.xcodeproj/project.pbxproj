@@ -56,6 +56,8 @@
 		6609293E286B67A000878F32 /* iPadSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609293D286B67A000878F32 /* iPadSettingView.swift */; };
 		66092940286B8AA900878F32 /* iPadUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609293F286B8AA900878F32 /* iPadUserProfileView.swift */; };
 		66092942286B8AFF00878F32 /* iPadTrackingSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66092941286B8AFF00878F32 /* iPadTrackingSettingView.swift */; };
+		66092945286B97C200878F32 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66092943286B97C200878F32 /* Localizable.strings */; };
+		66092948286B97C200878F32 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 66092946286B97C200878F32 /* Localizable.strings */; };
 		660BABD6284F29A900DA5F87 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660BABD5284F29A900DA5F87 /* FilterView.swift */; };
 		660BABD8284F81C800DA5F87 /* FilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660BABD7284F81C800DA5F87 /* FilterCellView.swift */; };
 		660BABDA284F825400DA5F87 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660BABD9284F825400DA5F87 /* FilterViewModel.swift */; };
@@ -269,6 +271,8 @@
 		6609293D286B67A000878F32 /* iPadSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadSettingView.swift; sourceTree = "<group>"; };
 		6609293F286B8AA900878F32 /* iPadUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadUserProfileView.swift; sourceTree = "<group>"; };
 		66092941286B8AFF00878F32 /* iPadTrackingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadTrackingSettingView.swift; sourceTree = "<group>"; };
+		66092944286B97C200878F32 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		66092947286B97C200878F32 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		660BABD5284F29A900DA5F87 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		660BABD7284F81C800DA5F87 /* FilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellView.swift; sourceTree = "<group>"; };
 		660BABD9284F825400DA5F87 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
@@ -651,6 +655,7 @@
 				66A514512827B8EB004388C7 /* Widgets.intentdefinition */,
 				66A514522827B8EF004388C7 /* Assets.xcassets */,
 				66A514542827B8EF004388C7 /* Info.plist */,
+				66092946286B97C200878F32 /* Localizable.strings */,
 			);
 			path = Widgets;
 			sourceTree = "<group>";
@@ -763,6 +768,7 @@
 			children = (
 				66D13CF427FB1E68004B2077 /* LoginView */,
 				66A264D1284FA80A000C863E /* Info.plist */,
+				66092943286B97C200878F32 /* Localizable.strings */,
 				6638176B28366EAC005D1182 /* SeeAllView */,
 				66A5143F2827ADC3004388C7 /* ImageViewer */,
 				66C3C5D1281E808A006393E4 /* ExploreView */,
@@ -1027,6 +1033,7 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
 			);
 			mainGroup = 66D13CB427FAFD88004B2077;
 			packageReferences = (
@@ -1068,6 +1075,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66A514532827B8EF004388C7 /* Assets.xcassets in Resources */,
+				66092948286B97C200878F32 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,6 +1083,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66092945286B97C200878F32 /* Localizable.strings in Resources */,
 				66C552E827FC41BF00F5715E /* Launch Screen.storyboard in Resources */,
 				66797191281BC3540054E6A1 /* GoogleService-Info.plist in Resources */,
 				66D13CC827FAFD95004B2077 /* Preview Assets.xcassets in Resources */,
@@ -1298,6 +1307,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		66092943286B97C200878F32 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66092944286B97C200878F32 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		66092946286B97C200878F32 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66092947286B97C200878F32 /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		12168C5828645CD20087CC50 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1340,7 +1368,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
@@ -1368,7 +1396,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = PushNotification/PushNotification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PushNotification/Info.plist;
@@ -1398,7 +1426,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgets/Info.plist;
@@ -1428,7 +1456,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = WidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Widgets/Info.plist;
@@ -1573,7 +1601,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;
@@ -1609,7 +1637,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = myAPTracker/myAPTracker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"myAPTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = 2FE7MP24X8;
 				ENABLE_PREVIEWS = YES;

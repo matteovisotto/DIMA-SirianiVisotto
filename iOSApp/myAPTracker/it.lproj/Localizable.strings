@@ -1,0 +1,318 @@
+/* No comment provided by engineer. */
+"Accept terms and condition" = "Accetta termini e condizioni";
+
+/* No comment provided by engineer. */
+"Add new comment" = "Nuovo commento";
+
+/* No comment provided by engineer. */
+"Add product" = "Aggiungi prodotto";
+
+/* No comment provided by engineer. */
+"Alternatively" = "Alternativamente";
+
+/* No comment provided by engineer. */
+"Always" = "Sempre";
+
+/* Biggest percentual drop */
+"Biggest percentual drop" = "Maggior sconto percentuale";
+
+/* Biggest range drop */
+"Biggest range drop" = "Maggior sconto assoluto";
+
+/* No comment provided by engineer. */
+"Cell %lld" = "Cella %lld";
+
+/* No comment provided by engineer. */
+"Change" = "Modifica";
+
+/* No comment provided by engineer. */
+"Change password" = "Cambia password";
+
+/* No comment provided by engineer. */
+"Clear filters" = "Pulisci filtri";
+
+/* No comment provided by engineer. */
+"Comments" = "Commenti";
+
+/* No comment provided by engineer. */
+"Confirm password" = "Conferma password";
+
+/* No comment provided by engineer. */
+"Delete" = "Elimina";
+
+/* No comment provided by engineer. */
+"Detail" = "Dettaglio";
+
+/* No comment provided by engineer. */
+"Details" = "Dettagli";
+
+/* Dismiss */
+"Dismiss" = "Chiudi";
+
+/* No comment provided by engineer. */
+"Do you know how many thing you can do with an account?" = "Sai quante cose puoi fare con un account?";
+
+/* No comment provided by engineer. */
+"Done" = "Fatto";
+
+/* No comment provided by engineer. */
+"Edit" = "Modifica";
+
+/* Edit comment */
+"Edit comment" = "Modifica commento";
+
+/* Error */
+"Error" = "Errore";
+
+/* Explore */
+"Explore" = "Esplora";
+
+/* You have canceled the authentication process */
+"facebookAuthCancel" = "Operazione annullata";
+
+/* An error occurred in google authentication */
+"googleAuthError" = "Si è verificato un errore";
+
+/* An error occurred in google authentication */
+"googleTokenError" = "Si è verificato un errore";
+
+/* No comment provided by engineer. */
+"If you have created your account using socials, you need to reset your password to enable APTracker local login" = "Se hai creato il tuo account tramite social, devi resettare la password per abilitare il login locale";
+
+/* Invalid URL */
+"Invalid URL" = "Inidirizzo invalido";
+
+/* invalid value */
+"Invalid value" = "Valore non valido";
+
+/* No comment provided by engineer. */
+"Login" = "Accedi";
+
+/* No comment provided by engineer. */
+"Login Now" = "Accedi ora";
+
+/* No comment provided by engineer. */
+"Login or create your account" = "Accedi o crea un account";
+
+/* No comment provided by engineer. */
+"Logout" = "Esci";
+
+/* Most tracked */
+"Most tracked" = "Più tracciati";
+
+/* Most Tracked */
+"Most Tracked" = "Più tracciati";
+
+/* No comment provided by engineer. */
+"Name" = "Nome";
+
+/* No comment provided by engineer. */
+"Never" = "Mai";
+
+/* New password confirmation doesn't match */
+"New password confirmation doesn't match" = "Le due password non corrispondono";
+
+/* No comment provided by engineer. */
+"No comments available" = "Nessun commento disponibile";
+
+/* No comment provided by engineer. */
+"No results" = "Nessun risultato";
+
+/* No comment provided by engineer. */
+"No tracked product" = "Nessun prodotto tracciato";
+
+/* No comment provided by engineer. */
+"Not enough data to display the graph" = "Dati insufficienti per mostrare il grafico";
+
+/* No comment provided by engineer. */
+"Notification" = "Notifiche";
+
+/* No comment provided by engineer. */
+"Notification are disabled" = "Notifiche disabilitate";
+
+/* No comment provided by engineer. */
+"Notification are enabled" = "Notifiche abilitate";
+
+/* No comment provided by engineer. */
+"Old Password" = "Vecchia password";
+
+/* No comment provided by engineer. */
+"Open in Amazon" = "Apri in Amazon";
+
+/* No comment provided by engineer. */
+"Open notification settings" = "Apri impostazioni notifiche";
+
+/* No comment provided by engineer. */
+"OR" = "O";
+
+/* No comment provided by engineer. */
+"Percentage" = "Percentuale";
+
+/* No comment provided by engineer. */
+"Price" = "Prezzo";
+
+/* No comment provided by engineer. */
+"Price drop" = "Sconto";
+
+/* No comment provided by engineer. */
+"Prices" = "Prezzi";
+
+/* No comment provided by engineer. */
+"Product notification" = "Notifiche prodotti";
+
+/* No comment provided by engineer. */
+"Profile" = "Profilo";
+
+/* No comment provided by engineer. */
+"Prova" = "Prova";
+
+/* No comment provided by engineer. */
+"Register" = "Registrati";
+
+/* No comment provided by engineer. */
+"Register Here" = "Registrati qui";
+
+/* Unable to find root view controller */
+"rootVCNotFound" = "Si è verificato un errore";
+
+/* Save */
+"Save" = "Salva";
+
+/* No comment provided by engineer. */
+"Search" = "Cerca";
+
+/* No comment provided by engineer. */
+"See All" = "Mostra tutto";
+
+/* No comment provided by engineer. */
+"Select one or more categories to visualize" = "Seleziona una o più categoria da visualizzare";
+
+/* Settings */
+"Settings" = "Impostazioni";
+
+/* No comment provided by engineer. */
+"Sign in with Google" = "Accedi con google";
+
+/* No comment provided by engineer. */
+"Skip" = "Salta";
+
+/* No comment provided by engineer. */
+"Start tracking" = "Traccia";
+
+/* No comment provided by engineer. */
+"Stop tracking" = "Smetti di tracciare";
+
+/* Success */
+"Success" = "OK";
+
+/* No comment provided by engineer. */
+"Surname" = "Cognome";
+
+/* No comment provided by engineer. */
+"This setting can be overridden for each product you track by opening the product page" = "Questa impostazione può essere sovrascritta per ogni prodotto tracciato dalle impostazioni di tracciamento del prodotto";
+
+/* No comment provided by engineer. */
+"Track product" = "Traccia";
+
+/* Tracked */
+"Tracked" = "Tracciati";
+
+/* No comment provided by engineer. */
+"Tracking" = "Tracciati";
+
+/* Unable to find access token locally */
+"Unable to find access token locally" = "Impossibile trovale il token personale";
+
+/* Unable to find Apple Credential */
+"Unable to find Apple Credential" = "Impossibile trovare credenziali Apple";
+
+/* Unable to find Apple Token */
+"Unable to find Apple Token" = "Impossibile trovare credenziali Apple";
+
+/* Unable to find refresh token */
+"Unable to find refresh token" = "Impossibile trovare token di aggiornamento";
+
+/* Unable to get data */
+"Unable to get data" = "Impossibile scaricare i dati";
+
+/* Unable to convert data */
+"Unable to parse the received content" = "Impossibile leggere il contenuto ricevito";
+
+/* Unable to perform remote logout */
+"Unable to perform remote logout" = "Impossibile disconnettersi dal server";
+
+/* unable to register for remote notification */
+"unable to register for remote notification" = "Impossibile registrarsi per le notifiche";
+
+/* Unable to register the device for notification */
+"Unable to register the device for notification" = "Impossibile registrare il dispositivo per le notifiche";
+
+/* Unexpected error occurred */
+"Unexpected error occurred" = "Errore inaspettato";
+
+/* Unknown error */
+"Unknown error" = "Errore sconosciuto";
+
+/* Unknown network error */
+"Unknown network error" = "Errore di rete sconosciuto";
+
+/* No comment provided by engineer. */
+"Username" = "Nome Utente";
+
+/* No comment provided by engineer. */
+"Value" = "Valore";
+
+/* We cannot refresh your key, please login again */
+"We cannot refresh your key, please login again" = "Errore. Accedi nuovamente";
+
+/* No comment provided by engineer. */
+"With disabled notification you cannot receive any updated about your tracked product and also general information. Click above to change your notification settings." = "Con le notifiche disabilitate non sarai in grado di ricevere aggiornamenti sui tuoi prodotti tracciati. Clicca qui sopra per cambiare le impostazioni.";
+
+/* No comment provided by engineer. */
+"With this option you don't receive notification for your tracked product" = "Con questa opzione  non ricevi notifiche per i prodotti tracciati";
+
+/* No comment provided by engineer. */
+"With this option you'll receive a notification every time the price falls" = "Con questa opzione riceverai una notifica ogni volta che il prezzo del prodotto scende";
+
+/* No comment provided by engineer. */
+"With this option you'll receive a notification when a price falls by the defined percentage" = "Con questa impostazione riceverai una notifica quando il prezzo del prodotto scende della percentuale indicata";
+
+/* No comment provided by engineer. */
+"With this option you'll receive a notification when the price falls below the defined import" = "Con questa impostazione riceverai una notifica quando il prezzo del prodotto scende al di sotto del valore indicato";
+
+/* No comment provided by engineer. */
+"With this option you'll receive a notification when the price falls by the defined value" = "Con questa impostazione riceverai una notifica quando il prezzo del prodotto scende al di sotto del valore indicato";
+
+/* No comment provided by engineer. */
+"You can choose if receive or not notification about comments on this product." = "Puoi decidere se ricevere notifiche relative ai commenti su questo prodotto";
+
+/* No comment provided by engineer. */
+"You can choose the default settings to receive notifications about comments in your tracked products." = "Puoi scegliere l'impostazione di default per ricevere notifiche sui commenti relativi ai prodotti tracciati";
+
+/* No comment provided by engineer. */
+"You can choose the default settings to receive notifications about your tracked products when the price drops." = "Puoi scegliere l'impostazione di default per ricevere notifiche sui prodotti tracciati";
+
+/* No comment provided by engineer. */
+"You can choose the settings to receive notifications about this product when the price drops." = "Puoi scegliere l'impostazione di default per ricevere notifiche sui commenti relativi al prodotto in questione";
+
+/* No comment provided by engineer. */
+"You have to be logged in to display this page" = "Devi aver effettuato l'accesso per vedere questa pagina";
+
+/* No comment provided by engineer. */
+"Your last added products" = "Ultimi aggiunti";
+
+"Welcome in" = "Benvenuto in";
+
+"Keep track of your favourite Amazon product" = "Tieni traccia dei tuoi prodotti Amazon preferiti";
+
+"Stay update" = "Rimani aggiornato";
+
+"Create your account" = "Crea il tuo account";
+
+"Create an account or sign in via socials" = "Crea un account o accedi dai social";
+
+"Get notified" = "Notifiche";
+
+"Track every product" = "Traccia ogni prodotto";
+
+"Get notified whenever your tracked product has a lower price" = "Ricevi una notifica ogni volta che un prezzo tracciato scende";
