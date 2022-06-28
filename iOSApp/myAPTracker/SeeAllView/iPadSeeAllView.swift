@@ -20,37 +20,37 @@ struct iPadSeeAllView: View {
         ZStack{
             Color("BackgroundColor").ignoresSafeArea(.all)
                 GeometryReader{ geometry in
-                    VStack{
-                        Text(viewModel.categoryFilters.joined(separator: ", ")).font(.caption).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("SeeAllViewCategoryFilterText")
-                        
-                        if(viewModel.categoryFilters.count > 0){
-                            InfiniteList(data: $viewModel.filteredProducts, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
-                                NavigationLink{
-                                    ProductView(product: viewModel.filteredProducts[contentIndex])
-                                } label: {
-                                    VStack{
-                                        SingleProductView(viewModel.filteredProducts[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
-                                        Divider().padding(.leading, 10)
+                        VStack{
+                            Text(viewModel.categoryFilters.joined(separator: ", ")).font(.caption).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("SeeAllViewCategoryFilterText")
+                            
+                            if(viewModel.categoryFilters.count > 0){
+                                DoubleInfiniteList(data: $viewModel.filteredProducts, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
+                                    NavigationLink{
+                                        iPadProductView(product: viewModel.filteredProducts[contentIndex])
+                                    } label: {
+                                        VStack{
+                                            SingleProductView(viewModel.filteredProducts[contentIndex]).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                            Divider().padding(.leading, 10)
+                                        }
+                                    }
+                                }
+                            } else {
+                               
+                                DoubleInfiniteList(data: $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
+                                    NavigationLink{
+                                        iPadProductView(product: viewModel.products[contentIndex])
+                                    } label: {
+                                        VStack{
+                                            SingleProductView(viewModel.products[contentIndex]).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                            Divider().padding(.leading, 10)
+                                        }
                                     }
                                 }
                             }
-                        } else {
-                           
-                            InfiniteList(data: $viewModel.products, isLoading: $viewModel.isLoading, loadMore: viewModel.loadMore ){contentIndex in
-                                NavigationLink{
-                                    ProductView(product: viewModel.products[contentIndex])
-                                } label: {
-                                    VStack{
-                                        SingleProductView(viewModel.products[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
-                                        Divider().padding(.leading, 10)
-                                    }
-                                }
-                            }
+                            
                         }
-                        
-                    }
-                    .padding(.horizontal,15)
-                        .padding(.vertical, 10)
+                        .padding(.horizontal,15)
+                            .padding(.vertical, 10)
                     
             }
             if(viewModel.isLoading){

@@ -10,7 +10,6 @@ import SwiftUI
 struct iPadMainView: View {
     @EnvironmentObject var appState: AppState
     @ObservedObject var viewModel: MainViewModel = MainViewModel()
-    @Environment(\.presentationMode) var presentationMode
     
     init(){
         UITableView.appearance().backgroundColor = UIColor(named: "BackgroundColor")?.withAlphaComponent(0.6) // background color of list
@@ -55,28 +54,33 @@ struct iPadMainView: View {
                         }.listStyle(.sidebar).foregroundColor(Color("PrimaryLabel"))
                         Spacer()
                         Button{
-                            
+                            viewModel.showAddProduct.toggle()
                         } label: {
                             HStack{
                                 Image(systemName: "plus")
                                 Text("Add product")
-                            }
-                        }
+                            }.font(.body.bold())
+                        }.frame(maxWidth: .infinity).padding(.horizontal).padding(.vertical, 5).background(Color("Primary")).foregroundColor(Color.white).cornerRadius(10).padding()
                     }
                 
-                }.navigationTitle("myAPTracker")
+                }.navigationTitle("Menu")
                    
                 ZStack{
                     Color("BackgroundColor").ignoresSafeArea()
                     iPadHomeView(mainViewModel: viewModel).navigationTitle(MainViewModel.tabs[0].tabName)
                 }
                 }
-        }.sheet(isPresented: $viewModel.showLogin) {
+        }
+        .sheet(isPresented: $viewModel.showAddProduct, content: {
+            AddProductView(isShown: $viewModel.showAddProduct)
+        })
+        .sheet(isPresented: $viewModel.showLogin) {
             ZStack{
                 Color("BackgroundColor").ignoresSafeArea()
                 LoginView($viewModel.showLogin).padding()
             }
         }
+        
     }
 }
 

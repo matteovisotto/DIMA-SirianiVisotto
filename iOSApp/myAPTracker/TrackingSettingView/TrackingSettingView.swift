@@ -33,7 +33,7 @@ struct TrackingSettingView: View {
                         }
                         Spacer().frame(height: 8)
                         HStack{
-                            Text("Tracking").font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
+                            Text("Product notification").font(.largeTitle.bold()).foregroundColor(Color("PrimaryLabel"))
                             Spacer()
                         }
                         ScrollView(.vertical, showsIndicators: false){

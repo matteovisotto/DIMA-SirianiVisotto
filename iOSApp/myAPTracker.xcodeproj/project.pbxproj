@@ -54,6 +54,8 @@
 		6609293A286B585300878F32 /* iPadProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66092939286B585300878F32 /* iPadProductView.swift */; };
 		6609293C286B621300878F32 /* iPadSeeAllView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609293B286B621300878F32 /* iPadSeeAllView.swift */; };
 		6609293E286B67A000878F32 /* iPadSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609293D286B67A000878F32 /* iPadSettingView.swift */; };
+		66092940286B8AA900878F32 /* iPadUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609293F286B8AA900878F32 /* iPadUserProfileView.swift */; };
+		66092942286B8AFF00878F32 /* iPadTrackingSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66092941286B8AFF00878F32 /* iPadTrackingSettingView.swift */; };
 		660BABD6284F29A900DA5F87 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660BABD5284F29A900DA5F87 /* FilterView.swift */; };
 		660BABD8284F81C800DA5F87 /* FilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660BABD7284F81C800DA5F87 /* FilterCellView.swift */; };
 		660BABDA284F825400DA5F87 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660BABD9284F825400DA5F87 /* FilterViewModel.swift */; };
@@ -265,6 +267,8 @@
 		66092939286B585300878F32 /* iPadProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadProductView.swift; sourceTree = "<group>"; };
 		6609293B286B621300878F32 /* iPadSeeAllView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadSeeAllView.swift; sourceTree = "<group>"; };
 		6609293D286B67A000878F32 /* iPadSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadSettingView.swift; sourceTree = "<group>"; };
+		6609293F286B8AA900878F32 /* iPadUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadUserProfileView.swift; sourceTree = "<group>"; };
+		66092941286B8AFF00878F32 /* iPadTrackingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadTrackingSettingView.swift; sourceTree = "<group>"; };
 		660BABD5284F29A900DA5F87 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		660BABD7284F81C800DA5F87 /* FilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellView.swift; sourceTree = "<group>"; };
 		660BABD9284F825400DA5F87 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
@@ -572,6 +576,7 @@
 			children = (
 				668518E128001C1F00A91A6F /* UserProfileView.swift */,
 				66A06763281D1A54002C479C /* UserProfileViewModel.swift */,
+				6609293F286B8AA900878F32 /* iPadUserProfileView.swift */,
 			);
 			path = UserProfileView;
 			sourceTree = "<group>";
@@ -604,6 +609,7 @@
 				12AF1EEE282A86E000A7FE58 /* CircularSlider.swift */,
 				66140D6B282AFBDE002D2F74 /* SemicurcularSlider.swift */,
 				12A790E8282D439000F2959D /* PickerView.swift */,
+				66092941286B8AFF00878F32 /* iPadTrackingSettingView.swift */,
 			);
 			path = TrackingSettingView;
 			sourceTree = "<group>";
@@ -1210,6 +1216,7 @@
 				66092938286B52D800878F32 /* iPadTrackedView.swift in Sources */,
 				66C3C5CF281E7DBD006393E4 /* TrackedViewModel.swift in Sources */,
 				66C3C5D9281E812C006393E4 /* TrackedProductView.swift in Sources */,
+				66092942286B8AFF00878F32 /* iPadTrackingSettingView.swift in Sources */,
 				6638176D28366EE6005D1182 /* SeeAllView.swift in Sources */,
 				66A06764281D1A55002C479C /* UserProfileViewModel.swift in Sources */,
 				6638176A28361893005D1182 /* LineGraph.swift in Sources */,
@@ -1230,6 +1237,7 @@
 				6631E97827FF6FD9005E3A41 /* AppTabBar.swift in Sources */,
 				66CC9C072801FB79005935F0 /* TutorialView.swift in Sources */,
 				6608CBB3283A3C5400F8C986 /* GroupPreferenceManager.swift in Sources */,
+				66092940286B8AA900878F32 /* iPadUserProfileView.swift in Sources */,
 				664AF2812808B48B008C7B50 /* Price.swift in Sources */,
 				66A0676B281D319F002C479C /* TrackingSettingViewModel.swift in Sources */,
 				12F1FE7A280ABB17000BF1B1 /* ChangePageView.swift in Sources */,

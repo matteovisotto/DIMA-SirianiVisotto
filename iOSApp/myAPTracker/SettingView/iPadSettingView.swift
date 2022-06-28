@@ -24,7 +24,7 @@ struct iPadSettingView: View {
                 Section{
                     if(appState.isUserLoggedIn){
                         NavigationLink {
-                            UserProfileView()
+                            iPadUserProfileView()
                         } label: {
                             UserCell(userIdentity: appState.userIdentity)
                         }.accessibilityIdentifier("UserProfileNavigationLink")
@@ -41,7 +41,7 @@ struct iPadSettingView: View {
                 if(appState.isUserLoggedIn){
                     Section(header: Text("Tracking")){
                         NavigationLink {
-                            TrackingSettingView()
+                            iPadTrackingSettingView()
                         } label: {
                             Text("Product notification")
                         }.accessibilityIdentifier("ProductNotification")

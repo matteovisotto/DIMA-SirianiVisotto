@@ -64,6 +64,10 @@ class UserProfileViewModel: ObservableObject {
                         }
                         if let _ = e["success"] as? String {
                             DispatchQueue.main.async{
+                                if let currentIdentity = PreferenceManager.shared.getUserIdentity() {
+                                    PreferenceManager.shared.setUserIdentity(UserIdentity(id: currentIdentity.id, name: self.name, surname: self.surname, email: currentIdentity.email, username: self.username, createdAt: currentIdentity.createdAt))
+                                    AppState.shared.reloadState()
+                                }
                                 FeedbackAlert.present(text: NSLocalizedString("Success", comment: "Success"), icon: UIImage(systemName: "checkmark")!){
                                 }
                             }
