@@ -199,7 +199,14 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             while let presentedViewController = topController.presentedViewController {
                 topController = presentedViewController
             }
-            let productViewController = UIHostingController(rootView: ProductView(product: product).environmentObject(AppState.shared))
+            var productViewController: UIViewController
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                productViewController = UIHostingController(rootView: ProductView(product: product).environmentObject(AppState.shared))
+            } else {
+                productViewController = UIHostingController(rootView: FullScreenDismissableContainerView(content: {
+                    iPadProductView(product: product).environmentObject(AppState.shared)
+                }, title: product.shortName))
+            }
             productViewController.modalPresentationStyle = .overFullScreen
             topController.present(productViewController, animated: true, completion: nil)
         }

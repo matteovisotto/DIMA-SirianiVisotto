@@ -101,6 +101,7 @@
 		668518E228001C1F00A91A6F /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668518E128001C1F00A91A6F /* UserProfileView.swift */; };
 		6689A62A27FCDA9C00260538 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6689A62927FCDA9C00260538 /* AlertViewController.swift */; };
 		6689A62C27FCDAB300260538 /* ErrorAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6689A62B27FCDAB300260538 /* ErrorAlertViewController.swift */; };
+		668F3E8B286C860000274640 /* FullScreenDismissableContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668F3E8A286C85FF00274640 /* FullScreenDismissableContainerView.swift */; };
 		669251AF285BBCE50011EF72 /* UserWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669251AE285BBCE50011EF72 /* UserWebImage.swift */; };
 		66934AF827FB793B004DC396 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AF727FB793B004DC396 /* TaskManager.swift */; };
 		66934AFA27FB7F82004DC396 /* LocalAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66934AF927FB7F82004DC396 /* LocalAuth.swift */; };
@@ -311,6 +312,7 @@
 		668518E128001C1F00A91A6F /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		6689A62927FCDA9C00260538 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		6689A62B27FCDAB300260538 /* ErrorAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertViewController.swift; sourceTree = "<group>"; };
+		668F3E8A286C85FF00274640 /* FullScreenDismissableContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenDismissableContainerView.swift; sourceTree = "<group>"; };
 		669251AE285BBCE50011EF72 /* UserWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWebImage.swift; sourceTree = "<group>"; };
 		66934AF727FB793B004DC396 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		66934AF927FB7F82004DC396 /* LocalAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAuth.swift; sourceTree = "<group>"; };
@@ -856,6 +858,7 @@
 				6684F80B283A1B8E00B8F2FA /* ProductImage.swift */,
 				12A50D7C283AC118005CB21A /* InfiniteList.swift */,
 				669251AE285BBCE50011EF72 /* UserWebImage.swift */,
+				668F3E8A286C85FF00274640 /* FullScreenDismissableContainerView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -1154,6 +1157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668F3E8B286C860000274640 /* FullScreenDismissableContainerView.swift in Sources */,
 				66A514432827AE25004388C7 /* ImageViewerViewModel.swift in Sources */,
 				66D13CEF27FAFE7D004B2077 /* AppDelegate.swift in Sources */,
 				667BF40427FB8B2A0000B7EB /* MainView.swift in Sources */,
