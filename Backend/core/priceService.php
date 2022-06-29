@@ -1,6 +1,6 @@
 <?php
 function getProductPricesByProductId($productId){
-	$sql = "SELECT * FROM price WHERE productId=?";
+	$sql = "SELECT * FROM price WHERE productId=?"; //ORDER BY updatedAt DESC LIMIT 60
 	$db = getDatabaseConnection();
 	$stmt = $db->prepare($sql);
 	$stmt->bind_param("i", $productId);
