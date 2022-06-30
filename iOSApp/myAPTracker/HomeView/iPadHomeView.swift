@@ -12,13 +12,13 @@ import SwiftfulLoadingIndicators
 struct iPadHomeView: View {
     @EnvironmentObject var appState: AppState
     @ObservedObject var mainModel: MainViewModel
-    @ObservedObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel: iPadHomeViewModel
    
     @State var trackedDisplayIndex: Int = 0
 
     init(mainViewModel: MainViewModel) {
         self.mainModel = mainViewModel
-        self.viewModel = HomeViewModel()
+        self.viewModel = iPadHomeViewModel()
     }
     
 
@@ -43,6 +43,23 @@ struct iPadHomeView: View {
                                 Divider()
                             }
                             HStack{
+                                Text("Categories").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("HomeViewCategoriesText")
+                                Spacer()
+                            }.padding(.horizontal)
+                            VStack(spacing: 10) {
+                                HGrid(numberOfRows: 2, numberOfItems: viewModel.categories.count, elemPerRow: 3) { contentIndex in
+                                    NavigationLink{
+                                        iPadSeeAllView(apiUrl: AppConstant.getMostTrackedPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Most tracked", comment: "Most tracked"), appliedFilter: [viewModel.categories[contentIndex]])
+                                    } label: {
+                                            ZStack{
+                                                Color.red
+                                                Text(viewModel.categories[contentIndex]).foregroundColor(Color.white).font(.title3.bold())
+                                            }.cornerRadius(10)
+                                    
+                                    }.highPriorityGesture(DragGesture())
+                                }.frame(width: geometry.size.width, height: 190)
+                            }
+                            HStack{
                                 Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("HomeViewMostTrackedText")
                                 Spacer()
                                 NavigationLink {
@@ -52,17 +69,17 @@ struct iPadHomeView: View {
                                 }.accessibilityIdentifier("HomeViewSeeAllButton")
                             }.padding(.horizontal)
                             VStack(spacing: 10) {
-                                HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count) { contentIndex in
+                                HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count, elemPerRow: 2) { contentIndex in
                                     NavigationLink{
                                         iPadProductView(product: viewModel.mostTracked[contentIndex])
                                     } label: {
                                         VStack{
-                                            SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
-                                            Divider().padding(.leading, 10)
+                                            SingleProductView(viewModel.mostTracked[contentIndex]).foregroundColor(Color("PrimaryLabel"))
+                                            Divider()
                                         }
-                                    }
+                                    }.highPriorityGesture(DragGesture())
                                     
-                                }
+                                }.frame(width: geometry.size.width, height: 330)
                             }
                         }
                         

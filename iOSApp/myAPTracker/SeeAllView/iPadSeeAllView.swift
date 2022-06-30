@@ -11,9 +11,10 @@ import SwiftfulLoadingIndicators
 struct iPadSeeAllView: View {
     @ObservedObject var viewModel: SeeAllViewModel
     
-    init(apiUrl: String, viewTitle: String){
+    init(apiUrl: String, viewTitle: String, appliedFilter: [String] = []){
         UITableView.appearance().backgroundColor = .clear
         viewModel = SeeAllViewModel(apiUrl: apiUrl, viewTitle: viewTitle)
+        viewModel.categoryFilters = appliedFilter
     }
     
     var body: some View {

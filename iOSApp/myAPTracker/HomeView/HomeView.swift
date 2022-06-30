@@ -52,17 +52,17 @@ struct HomeView: View {
                                 }.accessibilityIdentifier("HomeViewSeeAllButton")
                             }.padding(.horizontal)
                             VStack(spacing: 10) {
-                                HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count) { contentIndex in
+                                HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count, elemPerRow: 1) { contentIndex in
                                     NavigationLink{
                                         ProductView(product: viewModel.mostTracked[contentIndex])
                                     } label: {
                                         VStack{
-                                            SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                            SingleProductView(viewModel.mostTracked[contentIndex]).foregroundColor(Color("PrimaryLabel"))
                                             Divider().padding(.leading, 10)
                                         }
-                                    }
+                                    }.highPriorityGesture(DragGesture())
                                     
-                                }
+                                }.frame(width: geometry.size.width, height: 330)
                             }
                         }
                         

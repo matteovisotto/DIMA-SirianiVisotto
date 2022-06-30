@@ -26,27 +26,17 @@ struct iPadExploreView: View {
 
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
-                            HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count) { contentIndex in
+                            HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count, elemPerRow: 2) { contentIndex in
                                 NavigationLink{
                                     iPadProductView(product: viewModel.mostTracked[contentIndex])
                                 } label: {
                                     VStack{
-                                        SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                        SingleProductView(viewModel.mostTracked[contentIndex]).foregroundColor(Color("PrimaryLabel"))
                                         //Divider().padding(.leading, 10)
                                     }
-                                }
-                            }.accessibilityIdentifier("ExploreViewFirstProduct")
-                            /*ForEach(0 ..< viewModel.mostTracked.count, id: \.self){ contentIndex in
-                                NavigationLink{
-                                    ProductView(product: viewModel.mostTracked[contentIndex])
-                                } label: {
-                                    VStack{
-                                        SingleProductView(viewModel.mostTracked[contentIndex]).frame(width: ((geometry.size.width)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
-                                        Divider().padding(.leading, 10)
-                                    }
-                                }
-                                
-                            }*/
+                                }.highPriorityGesture(DragGesture())
+                            }.frame(width: geometry.size.width-20, height: 330).accessibilityIdentifier("ExploreViewFirstProduct")
+                            
                         }.padding(.horizontal, 10)
                         Divider().padding(.leading, 10)
                         HStack{
@@ -59,15 +49,15 @@ struct iPadExploreView: View {
                             }.accessibilityIdentifier("ExploreViewSecondSeeAll")
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
-                            HGrid(numberOfRows: 3, numberOfItems: viewModel.biggestPercentageDrop.count) { contentIndex in
+                            HGrid(numberOfRows: 3, numberOfItems: viewModel.biggestPercentageDrop.count, elemPerRow: 2) { contentIndex in
                                 NavigationLink{
                                     iPadProductView(product: Product.fromPriceDrop(viewModel.biggestPercentageDrop[contentIndex]))
                                 } label: {
                                     VStack{
-                                        SingleProductView(Product.fromPriceDrop(viewModel.biggestPercentageDrop[contentIndex])).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                        SingleProductView(Product.fromPriceDrop(viewModel.biggestPercentageDrop[contentIndex])).foregroundColor(Color("PrimaryLabel"))
                                     }
-                                }
-                            }
+                                }.highPriorityGesture(DragGesture())
+                            }.frame(width: geometry.size.width-20, height: 330)
                         }.padding(.horizontal, 10)
                         Divider().padding(.leading, 10)
                         HStack{
@@ -80,15 +70,15 @@ struct iPadExploreView: View {
                             }.accessibilityIdentifier("ExploreViewThirdSeeAll")
                         }.padding(.horizontal)
                         VStack(spacing: 10) {
-                            HGrid(numberOfRows: 3, numberOfItems: viewModel.biggestRangeDrop.count) { contentIndex in
+                            HGrid(numberOfRows: 3, numberOfItems: viewModel.biggestRangeDrop.count, elemPerRow: 2) { contentIndex in
                                 NavigationLink{
                                     iPadProductView(product: Product.fromPriceDrop(viewModel.biggestRangeDrop[contentIndex]))
                                 } label: {
                                     VStack{
-                                        SingleProductView(Product.fromPriceDrop(viewModel.biggestRangeDrop[contentIndex])).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.leading, 10).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
+                                        SingleProductView(Product.fromPriceDrop(viewModel.biggestRangeDrop[contentIndex])).foregroundColor(Color("PrimaryLabel"))
                                     }
-                                }
-                            }
+                                }.highPriorityGesture(DragGesture())
+                            }.frame(width: geometry.size.width-20, height: 330)
                         }.padding(.horizontal, 10)
                     }.onAppear(perform: viewModel.loadData)
             }

@@ -125,6 +125,7 @@
 		66A514612827BD09004388C7 /* WidgetSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A5145E2827BBC1004388C7 /* WidgetSmall.swift */; };
 		66A514662827BF54004388C7 /* WidgetMedium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514622827BF19004388C7 /* WidgetMedium.swift */; };
 		66A514672827BF57004388C7 /* WidgetLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A514642827BF2C004388C7 /* WidgetLarge.swift */; };
+		66AD120D286E296D006BB066 /* iPadHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD120C286E296D006BB066 /* iPadHomeViewModel.swift */; };
 		66BE657E28000BD40077777B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657D28000BD40077777B /* SettingView.swift */; };
 		66BE658028000E8B0077777B /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BE657F28000E8B0077777B /* SettingViewModel.swift */; };
 		66C3C5C7281E715F006393E4 /* TrackingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C3C5C6281E715F006393E4 /* TrackingStatus.swift */; };
@@ -339,6 +340,7 @@
 		66A5145E2827BBC1004388C7 /* WidgetSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSmall.swift; sourceTree = "<group>"; };
 		66A514622827BF19004388C7 /* WidgetMedium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetMedium.swift; sourceTree = "<group>"; };
 		66A514642827BF2C004388C7 /* WidgetLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetLarge.swift; sourceTree = "<group>"; };
+		66AD120C286E296D006BB066 /* iPadHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadHomeViewModel.swift; sourceTree = "<group>"; };
 		66BE657D28000BD40077777B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		66BE657F28000E8B0077777B /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		66C3C5C6281E715F006393E4 /* TrackingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingStatus.swift; sourceTree = "<group>"; };
@@ -510,6 +512,7 @@
 				66479306280030DD0068AE91 /* HomeView.swift */,
 				129A1A3D28086F1000F2C870 /* HomeViewModel.swift */,
 				66092931286B410B00878F32 /* iPadHomeView.swift */,
+				66AD120C286E296D006BB066 /* iPadHomeViewModel.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -1241,6 +1244,7 @@
 				12D7D87027FF7EDF00178DAE /* PreferenceManager.swift in Sources */,
 				66092932286B410B00878F32 /* iPadHomeView.swift in Sources */,
 				660BABDC284F849B00DA5F87 /* Categories.swift in Sources */,
+				66AD120D286E296D006BB066 /* iPadHomeViewModel.swift in Sources */,
 				668518E228001C1F00A91A6F /* UserProfileView.swift in Sources */,
 				66D13CFD27FB280E004B2077 /* LoginDelegate.swift in Sources */,
 				66DA7E60281D9E9100B04036 /* PriceServerResponse.swift in Sources */,
