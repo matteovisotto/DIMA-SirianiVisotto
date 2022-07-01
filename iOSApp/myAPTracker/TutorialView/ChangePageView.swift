@@ -92,7 +92,7 @@ struct ChangePageView: View {
                         .resizable()
                         .frame(width: 18, height: 18)
                         //.foregroundColor(Color("BackgroundColorInverse"))
-                        .foregroundColor(Color(currentIndex.wrappedValue == 1 ? "BackgroundColor" : "BackgroundColorInverse"))
+                        .foregroundColor(Color(currentIndex.wrappedValue == 0 ? "BackgroundColor" : "BackgroundColorInverse"))
                         .opacity(dotRotation == -180 ? 0 : 1)
                         .animation(.easeInOut,
                                    value: dotRotation)
