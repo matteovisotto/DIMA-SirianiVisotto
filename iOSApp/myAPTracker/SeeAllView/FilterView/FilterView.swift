@@ -33,7 +33,7 @@ struct FilterView: View {
                 List{
                     Section{
                         ForEach(self.viewModel.categories, id: \.self) { category in
-                            FilterCellView(title: category, isSelected: self.viewModel.selected.contains(category)) {
+                            FilterCellView(title: category.capitalizingFirstLetter(), isSelected: self.viewModel.selected.contains(category)) {
                                 if self.viewModel.selected.contains(category) {
                                     self.viewModel.selected.removeAll(where: {$0 == category})
                                 } else {

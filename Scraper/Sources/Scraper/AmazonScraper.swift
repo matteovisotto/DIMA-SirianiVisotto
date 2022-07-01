@@ -37,7 +37,7 @@ class AmazonHTMLParser {
             var imgArray: [String] = []
             var urlImage = ""
             for image in images {
-                urlImage = try image.select("img").attr("src").replacingOccurrences(of: "US40", with: "SR320,320").replacingOccurrences(of: "SR38,50", with: "SR320,320").replacingOccurrences(of: "US200", with: "SR320,320")
+                urlImage = try image.select("img").attr("src").replacingOccurrences(of: "US40", with: "SR320,320").replacingOccurrences(of: "SR38,50", with: "SR320,320").replacingOccurrences(of: "US200", with: "SR320,320").replacingOccurrences(of: "_SX38_SY50_CR,0,0,38,50_", with: "SR320,320")
                 if(!urlImage.contains("play-icon-overlay")){
                     imgArray.append(urlImage)
                 }

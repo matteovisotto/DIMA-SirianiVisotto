@@ -53,7 +53,7 @@ struct iPadHomeView: View {
                                     } label: {
                                             ZStack{
                                                 Color.red
-                                                Text(viewModel.categories[contentIndex]).foregroundColor(Color.white).font(.title3.bold())
+                                                Text(viewModel.categories[contentIndex].capitalizingFirstLetter()).foregroundColor(Color.white).font(.title3.bold())
                                             }.cornerRadius(10)
                                     
                                     }.highPriorityGesture(DragGesture())

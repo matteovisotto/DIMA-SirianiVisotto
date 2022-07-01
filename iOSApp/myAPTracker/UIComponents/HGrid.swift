@@ -22,22 +22,19 @@ struct HGrid<Content: View>: View {
     @State var index = 0
         
     init(numberOfRows: Int, numberOfItems: Int, elemPerRow: Int = 1, @ViewBuilder contentBuilder: @escaping (_ contentIndex: Int) -> Content){
-            self.numberOfRows = numberOfRows
-            self.numberOfItems = numberOfItems
-            self.content = contentBuilder
-            self.fakeNumber = numberOfItems + (numberOfRows - (numberOfItems % numberOfRows))
-            self.elemPerRow = elemPerRow
-            self.maxIndex = self.fakeNumber/(numberOfRows*elemPerRow) - 1
-        print(numberOfItems)
-        print(fakeNumber)
-        print(maxIndex)
+        self.numberOfRows = numberOfRows
+        self.numberOfItems = numberOfItems
+        self.content = contentBuilder
+        self.fakeNumber = (numberOfItems%numberOfRows==0) ? numberOfItems : (numberOfItems + (numberOfRows - (numberOfItems % numberOfRows)))
+        self.elemPerRow = elemPerRow
+        self.maxIndex = self.fakeNumber/(numberOfRows*elemPerRow) - 1
     }
     
     var body: some View {
         
         
                 GeometryReader{ geometry in
-                    VStack(spacing: 0) {
+                    VStack(alignment: .leading, spacing: 0) {
                     ScrollView(.horizontal, showsIndicators: false) {
                         ForEach(0 ..< numberOfRows, id: \.self) {  row in
                             HStack(spacing: 0)  {
