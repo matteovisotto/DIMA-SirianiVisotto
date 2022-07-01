@@ -20,6 +20,11 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         UIApplication.shared.applicationIconBadgeNumber = 0
         AppDelegate.shared = self
+        
+        if !WatchSessionManager.shared.isSuported() {
+            print("WCSession not supported (f.e. on iPad).")
+        }
+        
         ApplicationDelegate.shared.application(
                    application,
                    didFinishLaunchingWithOptions: launchOptions
