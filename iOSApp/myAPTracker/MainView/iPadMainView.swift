@@ -24,33 +24,42 @@ struct iPadMainView: View {
             NavigationView{
                 ZStack{
                     Color("BackgroundColor").ignoresSafeArea()
+                    NavigationLink(isActive: .constant(true)) {
+                        ZStack{
+                            Color("BackgroundColor").ignoresSafeArea()
+                            switch viewModel.selectedTab {
+                            case 0:
+                                iPadHomeView(mainViewModel: viewModel).navigationTitle(MainViewModel.tabs[0].tabName)
+                            case 1:
+                                iPadTrackedView(showLogin: $viewModel.showLogin).navigationTitle(MainViewModel.tabs[1].tabName)
+                            case 2:
+                                iPadExploreView().navigationTitle(MainViewModel.tabs[2].tabName)
+                            case 3:
+                                iPadSettingView(showLogin: $viewModel.showLogin).navigationTitle(MainViewModel.tabs[3].tabName)
+                            default:
+                                EmptyView()
+                            }
+                        }
+                    } label: {
+                        EmptyView()
+                    }
+
+
                     VStack{
                         List{
+                            Group{
                             ForEach(0 ..< MainViewModel.tabs.count, id:\.self) { index in
-                                NavigationLink{
-                                    ZStack{
-                                        Color("BackgroundColor").ignoresSafeArea()
-                                        switch MainViewModel.tabs[index].tag {
-                                        case 0:
-                                            iPadHomeView(mainViewModel: viewModel).navigationTitle(MainViewModel.tabs[index].tabName)
-                                        case 1:
-                                            iPadTrackedView(showLogin: $viewModel.showLogin).navigationTitle(MainViewModel.tabs[index].tabName)
-                                        case 2:
-                                            iPadExploreView().navigationTitle(MainViewModel.tabs[index].tabName)
-                                        case 3:
-                                            iPadSettingView(showLogin: $viewModel.showLogin).navigationTitle(MainViewModel.tabs[index].tabName)
-                                        default:
-                                            EmptyView()
-                                        }
-                                    }
+                                Button{
+                                    viewModel.selectedTab = MainViewModel.tabs[index].tag
                                 } label: {
                                     HStack{
                                         Image(systemName: MainViewModel.tabs[index].iconSystemName)
                                         Text(MainViewModel.tabs[index].tabName)
-                                    }
+                                    }.foregroundColor(viewModel.selectedTab == MainViewModel.tabs[index].tag ? Color("Primary") : Color("PrimaryLabel"))
                                     
                                 }
                             }
+                            }.listRowBackground(Color.clear)
                         }.listStyle(.sidebar).foregroundColor(Color("PrimaryLabel"))
                         Spacer()
                         Button{
@@ -64,11 +73,6 @@ struct iPadMainView: View {
                     }
                 
                 }.navigationTitle("Menu")
-                   
-                ZStack{
-                    Color("BackgroundColor").ignoresSafeArea()
-                    iPadHomeView(mainViewModel: viewModel).navigationTitle(MainViewModel.tabs[0].tabName)
-                }
                 }
         }
         .sheet(isPresented: $viewModel.showAddProduct, content: {

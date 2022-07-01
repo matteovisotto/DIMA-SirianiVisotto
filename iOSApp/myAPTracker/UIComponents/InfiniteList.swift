@@ -34,10 +34,10 @@ struct InfiniteList<Content>: View where Content: View {
                         }
                     }
             }
-            if isLoading {
+            /*if isLoading {
                 ProgressView()
                     .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
-            }
+            }*/
             
         }.listRowBackground(Color.clear)
     }.listStyle(.plain).onAppear(perform: loadMore)
@@ -76,10 +76,10 @@ struct DoubleInfiniteList<Content>: View where Content: View {
                         }
                     }
             }
-            if isLoading {
+            /*if isLoading {
                 ProgressView()
                     .frame(idealWidth: .infinity, maxWidth: .infinity, alignment: .center)
-            }
+            }*/
             
           }
     }.onAppear(perform: loadMore)
