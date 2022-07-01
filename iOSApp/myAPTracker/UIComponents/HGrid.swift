@@ -27,7 +27,12 @@ struct HGrid<Content: View>: View {
         self.content = contentBuilder
         self.fakeNumber = (numberOfItems%numberOfRows==0) ? numberOfItems : (numberOfItems + (numberOfRows - (numberOfItems % numberOfRows)))
         self.elemPerRow = elemPerRow
-        self.maxIndex = self.fakeNumber/(numberOfRows*elemPerRow) - 1
+        let r = (Float(self.fakeNumber)/Float((numberOfRows*elemPerRow)) - 1).truncatingRemainder(dividingBy: 1)
+        if(r == 0.0){
+            self.maxIndex = self.fakeNumber/(numberOfRows*elemPerRow) - 1
+        } else {
+            self.maxIndex = self.fakeNumber/(numberOfRows*elemPerRow)
+        }
     }
     
     var body: some View {

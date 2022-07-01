@@ -49,7 +49,7 @@ struct iPadHomeView: View {
                             VStack(spacing: 10) {
                                 HGrid(numberOfRows: 2, numberOfItems: viewModel.categories.count, elemPerRow: 3) { contentIndex in
                                     NavigationLink{
-                                        iPadSeeAllView(apiUrl: AppConstant.getMostTrackedPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Filtered", comment: "Filtered"), appliedFilter: [viewModel.categories[contentIndex]])
+                                        iPadSeeAllView(apiUrl: AppConstant.getAllPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Filtered", comment: "Filtered"), appliedFilter: [viewModel.categories[contentIndex]])
                                     } label: {
                                             ZStack{
                                                 Color.red
