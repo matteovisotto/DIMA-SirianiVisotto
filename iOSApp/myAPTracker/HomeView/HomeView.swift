@@ -61,6 +61,7 @@ struct HomeView: View {
                                             Divider().padding(.leading, 10)
                                         }
                                     }.highPriorityGesture(DragGesture())
+                                        .accessibilityIdentifier("HomeViewMostrTrackedButton\(contentIndex)")
                                     
                                 }.frame(width: geometry.size.width, height: 330)
                             }

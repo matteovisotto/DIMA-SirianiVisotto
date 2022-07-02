@@ -57,7 +57,7 @@ struct iPadMainView: View {
                                         Text(MainViewModel.tabs[index].tabName)
                                     }.foregroundColor(viewModel.selectedTab == MainViewModel.tabs[index].tag ? Color("Primary") : Color("PrimaryLabel"))
                                     
-                                }
+                                }.accessibilityIdentifier("iPadMainButton\(index)")
                             }
                             }.listRowBackground(Color.clear)
                         }.listStyle(.sidebar).foregroundColor(Color("PrimaryLabel"))
@@ -70,6 +70,7 @@ struct iPadMainView: View {
                                 Text("Add product")
                             }.font(.body.bold())
                         }.frame(maxWidth: .infinity).padding(.horizontal).padding(.vertical, 5).background(Color("Primary")).foregroundColor(Color.white).cornerRadius(10).padding()
+                            .accessibilityIdentifier("iPadMainViewAddProduct")
                     }
                 
                 }.navigationTitle("Menu")

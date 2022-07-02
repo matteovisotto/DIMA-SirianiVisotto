@@ -16,6 +16,7 @@ class HomeViewUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .phone, "Only test for iPhone")
         app.launch()
         app.buttons["HomeTabBar"].tap()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
@@ -73,7 +74,7 @@ class HomeViewUITest: XCTestCase {
     }
     
     func test_HomeView_ProductButton_AccessProductAndGoBack() {
-        app.scrollViews.otherElements.scrollViews.otherElements.buttons.element(boundBy: 0).tap()
+        app.scrollViews.buttons["HomeViewMostrTrackedButton0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
         
@@ -104,12 +105,12 @@ class HomeViewUITest: XCTestCase {
             XCTAssertFalse(product.isHittable)
             
             let productNew = app.scrollViews.buttons.element(boundBy: 1)
-            XCTAssertTrue(productNew.exists)
+            XCTAssertTrue(productNew.isHittable)
         }
     }
     
     func test_HomeView_MostTrackedProductButton_SwipeProducts() {
-        let product = app.scrollViews.otherElements.scrollViews.otherElements.buttons.element(boundBy: 0)
+        let product = app.scrollViews.buttons["HomeViewMostrTrackedButton0"]
         
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
         let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
@@ -124,7 +125,7 @@ class HomeViewUITest: XCTestCase {
         
         XCTAssertFalse(product.isHittable)
         
-        let productNew = app.scrollViews.otherElements.scrollViews.otherElements.buttons.element(boundBy: 3)
+        let productNew = app.scrollViews.buttons["HomeViewMostrTrackedButton2"]
         XCTAssertTrue(productNew.exists)
     }
 }

@@ -35,7 +35,7 @@ struct myAPTrackerApp: App {
                         }
                     }
             } else {
-                iPadContentView()
+                iPadContentView(tutorialToSee: tutorialToSee)
                     .environmentObject(AppState.shared)
                     .onAppear {
                     if let rootVC = UIApplication.shared.windows.first?.rootViewController {

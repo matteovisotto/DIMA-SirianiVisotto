@@ -14,25 +14,25 @@ struct HomeView: View {
         NavigationView{
             List{
                 if(appModel.isLoading){
-                    ProgressView()
+                    ProgressView().accessibilityIdentifier("HomeViewProgressWatch")
                 }
                 if(appModel.userStatus){
                     NavigationLink{
                         TrackedView().navigationTitle("Tracked")
                     } label: {
                         Text("Tracked")
-                    }
+                    }.accessibilityIdentifier("HomeViewTrackedWatch")
                 }
                 NavigationLink{
                     TopTenView().navigationTitle("Top 10")
                 } label: {
                     Text("Top 10")
-                }
+                }.accessibilityIdentifier("HomeViewTopTenWatch")
                 NavigationLink{
                     MostTrackedView().navigationTitle("Most tracked")
                 } label: {
                     Text("Most tracked")
-                }
+                }.accessibilityIdentifier("HomeViewMostTrackedWatch")
             }
         }
         .navigationTitle("Home")

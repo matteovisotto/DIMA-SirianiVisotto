@@ -16,6 +16,7 @@ class SeeAllViewUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .phone, "Only test for iPhone")
         app.launch()
         app.buttons["HomeTabBar"].tap()
         

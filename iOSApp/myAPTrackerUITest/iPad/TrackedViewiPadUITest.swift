@@ -1,13 +1,13 @@
 //
-//  TrackedViewUITest.swift
+//  TrackedViewiPadUITest.swift
 //  myAPTrackerUITest
 //
-//  Created by Tia on 23/06/22.
+//  Created by Tia on 02/07/22.
 //
 
 import XCTest
 
-class TrackedViewUITest: XCTestCase {
+class TrackedViewiPadUITest: XCTestCase {
 
     let app = XCUIApplication()
     
@@ -16,8 +16,20 @@ class TrackedViewUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
         app.launch()
-        app.buttons["TrackingTabBar"].tap()
+        app.buttons.firstMatch.tap()
+        app.otherElements.buttons["iPadMainButton1"].tap()
+        let topOffset = CGVector(dx: 0.95, dy: 0.5)
+        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+        let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+        let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
+        
+        // drag from right to left to delete
+        cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        
+        sleep(5)
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 

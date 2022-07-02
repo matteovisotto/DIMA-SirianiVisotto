@@ -78,6 +78,7 @@ struct iPadHomeView: View {
                                             Divider()
                                         }
                                     }.highPriorityGesture(DragGesture())
+                                        .accessibilityIdentifier("HomeViewMostrTrackedButton\(contentIndex)")
                                     
                                 }.frame(width: geometry.size.width, height: 330)
                             }

@@ -16,7 +16,7 @@ struct ProductView: View {
         ScrollView(.vertical, showsIndicators: true){
             VStack(alignment: .leading, spacing: 10){
                 
-                    Text(product.shortName).font(.caption.bold()).frame(maxWidth: .infinity)
+                Text(product.shortName).font(.caption.bold()).frame(maxWidth: .infinity).accessibilityIdentifier("ProductViewNameWatch")
                     Text(product.category.capitalizingFirstLetter()).font(.footnote)
                     HStack(alignment: .center, spacing: 5){
                         Text("Now:")

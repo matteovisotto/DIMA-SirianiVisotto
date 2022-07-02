@@ -14,13 +14,14 @@ class ProductViewUITest: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .phone, "Only test for iPhone")
         app.launch()
         app.buttons["HomeTabBar"].tap()
         sleep(5)
         if (app.staticTexts["HomeViewLastProductText"].exists) {
             userIsLogged = false
         }
-        app.scrollViews.otherElements.buttons.element(boundBy: 0).tap()
+        app.scrollViews.buttons["HomeViewMostrTrackedButton0"].tap()
     }
 
     override func tearDownWithError() throws {

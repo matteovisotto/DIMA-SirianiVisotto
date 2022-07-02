@@ -1,18 +1,19 @@
 //
-//  TutorialViewUITest.swift
+//  TutorialViewiPadUITest.swift
 //  myAPTrackerUITest
 //
-//  Created by Tia on 24/06/22.
+//  Created by Tia on 02/07/22.
 //
 
 import XCTest
 
-class TutorialViewUITest: XCTestCase {
+class TutorialViewiPadUITest: XCTestCase {
 
     let app = XCUIApplication()
     
     override func setUpWithError() throws {
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
         app.launchArguments = ["-UITest_TutorialToSee"]
         app.launch()
     }
@@ -22,11 +23,11 @@ class TutorialViewUITest: XCTestCase {
     }
 
     func test_TutorialView_ChangePageButton_UserChangePageAndEndsTutorial() {
-        app.images["Right"].tap()
+        app.images.allElementsBoundByIndex.last?.tap()
         
         sleep(10)
         
-        app.images["Right"].tap()
+        app.images.allElementsBoundByIndex.last?.tap()
         
         sleep(10)
         

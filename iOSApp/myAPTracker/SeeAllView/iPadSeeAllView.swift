@@ -64,6 +64,7 @@ struct iPadSeeAllView: View {
                 }  label: {
                     Image(systemName: "line.3.horizontal.decrease")
                 }.foregroundColor(Color("PrimaryLabel"))
+                    .accessibilityIdentifier("SeeAllViewCategoriesButton")
             })
             .sheet(isPresented: $viewModel.showFilterView) {
                 FilterView(isPresented: $viewModel.showFilterView, selectedCategories: $viewModel.categoryFilters)

@@ -16,7 +16,7 @@ struct TrackedView: View {
                 ProgressView()
             } else{
                 if(viewModel.errorString != nil){
-                    Text(viewModel.errorString!)
+                    Text(viewModel.errorString!).accessibilityIdentifier("TopTenViewTopTenWatch")
                 } else {
                     List{
                         ForEach(0..<viewModel.products.count, id: \.self){index in

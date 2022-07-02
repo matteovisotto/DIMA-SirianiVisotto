@@ -16,6 +16,7 @@ class ExploreViewUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .phone, "Only test for iPhone")
         app.launch()
         app.buttons["ExploreTabBar"].tap()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
@@ -54,14 +55,9 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    func test_test() {
-        app.buttons["ExploreTabBar"].tap()
-        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0).tap()
-                
-    }
-    
     func test_ExploreView_FirstSeeAllCategories_AccessProductsAndGoBack() {
-        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 0).tap()
+        //app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 0).tap()
+        app.scrollViews.buttons["ExploreViewFirstProduct0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
         
@@ -75,10 +71,10 @@ class ExploreViewUITest: XCTestCase {
     }
     
     func test_ExploreView_FirstSeeAllCategories_SwipeProducts() {
-        let product = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 0)
+        let product = app.scrollViews.buttons["ExploreViewFirstProduct0"]
         XCTAssertTrue(product.isHittable)
         
-        let product2 = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 2)
+        let product2 = app.scrollViews.buttons["ExploreViewFirstProduct2"]
         XCTAssertFalse(product2.isHittable)
         
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
@@ -92,7 +88,7 @@ class ExploreViewUITest: XCTestCase {
         
         sleep(5)
         
-        let productNewHit = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 2)
+        let productNewHit = app.scrollViews.buttons["ExploreViewFirstProduct2"]
         
         sleep(2)
         XCTAssertFalse(product.isHittable)
@@ -129,7 +125,7 @@ class ExploreViewUITest: XCTestCase {
     }
     
     func test_ExploreView_SecondSeeAllCategories_AccessProductsAndGoBack() {
-        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0).tap()
+        app.scrollViews.buttons["ExploreViewSecondProduct0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
         
@@ -143,10 +139,10 @@ class ExploreViewUITest: XCTestCase {
     }
     
     func test_ExploreView_SecondSeeAllCategories_SwipeProducts() {
-        let product = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 0)
+        let product = app.scrollViews.buttons["ExploreViewSecondProduct0"]
         XCTAssertTrue(product.isHittable)
         
-        let product2 = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 2)
+        let product2 = app.scrollViews.buttons["ExploreViewSecondProduct2"]
         XCTAssertFalse(product2.isHittable)
         
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
@@ -160,7 +156,7 @@ class ExploreViewUITest: XCTestCase {
         
         sleep(5)
         
-        let productNewHit = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 1).buttons.element(boundBy: 2)
+        let productNewHit = app.scrollViews.buttons["ExploreViewSecondProduct2"]
         
         XCTAssertFalse(product.isHittable)
         XCTAssertTrue(productNewHit.isHittable)
@@ -196,7 +192,7 @@ class ExploreViewUITest: XCTestCase {
     }
     
     func test_ExploreView_ThirdSeeAllCategories_AccessProductsAndGoBack() {
-        app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 0).tap()
+        app.scrollViews.buttons["ExploreViewThirdProduct0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
         
@@ -221,10 +217,10 @@ class ExploreViewUITest: XCTestCase {
                 
         sleep(5)
         
-        let product = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 0)
+        let product = app.scrollViews.buttons["ExploreViewThirdProduct0"]
         XCTAssertTrue(product.isHittable)
         
-        let product2 = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 2)
+        let product2 = app.scrollViews.buttons["ExploreViewThirdProduct2"]
         XCTAssertFalse(product2.isHittable)
         
         let topOffset2 = CGVector(dx: 0.95, dy: 0.5)
@@ -238,7 +234,7 @@ class ExploreViewUITest: XCTestCase {
         
         sleep(5)
         
-        let productNewHit = app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 2).buttons.element(boundBy: 2)
+        let productNewHit = app.scrollViews.buttons["ExploreViewThirdProduct2"]
         
         XCTAssertFalse(product.isHittable)
         XCTAssertTrue(productNewHit.isHittable)

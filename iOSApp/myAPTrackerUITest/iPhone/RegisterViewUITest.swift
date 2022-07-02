@@ -14,6 +14,7 @@ class RegisterViewUITest: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .phone, "Only test for iPhone")
         app.launch()
         app.buttons["TrackingTabBar"].tap()
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {

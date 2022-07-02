@@ -17,6 +17,7 @@ class AddProductViewUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .phone, "Only test for iPhone")
         app.launch()
         sleep(5)
         if (app.staticTexts["HomeViewLastProductText"].exists) {

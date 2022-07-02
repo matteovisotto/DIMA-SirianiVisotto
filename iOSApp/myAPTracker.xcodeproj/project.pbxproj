@@ -10,6 +10,20 @@
 		12168C5228645CD20087CC50 /* myAPTrackerUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12168C5128645CD20087CC50 /* myAPTrackerUITest.swift */; };
 		12168C5428645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */; };
 		12168C5B28645D500087CC50 /* SettingsViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12168C5A28645D500087CC50 /* SettingsViewUITest.swift */; };
+		122218462870E62A00AE8F62 /* HomeViewWatchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218452870E62A00AE8F62 /* HomeViewWatchUITest.swift */; };
+		122218482870EB6B00AE8F62 /* MostTrackedViewWatchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218472870EB6B00AE8F62 /* MostTrackedViewWatchUITest.swift */; };
+		1222184A2870ED2400AE8F62 /* TopTenWatchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218492870ED2400AE8F62 /* TopTenWatchUITest.swift */; };
+		1222184C2870ED9B00AE8F62 /* TrackedViewWatchUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222184B2870ED9B00AE8F62 /* TrackedViewWatchUITest.swift */; };
+		122218532870F20900AE8F62 /* AddProductViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218522870F20900AE8F62 /* AddProductViewiPadUITest.swift */; };
+		122218552870F26D00AE8F62 /* LoginViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218542870F26D00AE8F62 /* LoginViewiPadUITest.swift */; };
+		122218572870F28600AE8F62 /* RegisterViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218562870F28600AE8F62 /* RegisterViewiPadUITest.swift */; };
+		122218592870F29E00AE8F62 /* TutorialViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218582870F29E00AE8F62 /* TutorialViewiPadUITest.swift */; };
+		1222185B2870F2B900AE8F62 /* ExploreViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222185A2870F2B900AE8F62 /* ExploreViewiPadUITest.swift */; };
+		1222185D2870F2E300AE8F62 /* TrackedViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222185C2870F2E300AE8F62 /* TrackedViewiPadUITest.swift */; };
+		1222185F2870F30100AE8F62 /* SeeAllViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222185E2870F30000AE8F62 /* SeeAllViewiPadUITest.swift */; };
+		122218612870F32800AE8F62 /* HomeViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218602870F32800AE8F62 /* HomeViewiPadUITest.swift */; };
+		122218632870F34500AE8F62 /* SettingsViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218622870F34500AE8F62 /* SettingsViewiPadUITest.swift */; };
+		122218652870F35E00AE8F62 /* ProductViewiPadUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 122218642870F35E00AE8F62 /* ProductViewiPadUITest.swift */; };
 		1237CC9C286604DC00A1895E /* TutorialViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1237CC9B286604DC00A1895E /* TutorialViewUITest.swift */; };
 		1250E1EF28630C71009A4A88 /* SeeAllViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */; };
 		1250E1F1286312DC009A4A88 /* TrackingSettingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */; };
@@ -311,6 +325,20 @@
 		12168C5128645CD20087CC50 /* myAPTrackerUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAPTrackerUITest.swift; sourceTree = "<group>"; };
 		12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAPTrackerUITestLaunchTests.swift; sourceTree = "<group>"; };
 		12168C5A28645D500087CC50 /* SettingsViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewUITest.swift; sourceTree = "<group>"; };
+		122218452870E62A00AE8F62 /* HomeViewWatchUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewWatchUITest.swift; sourceTree = "<group>"; };
+		122218472870EB6B00AE8F62 /* MostTrackedViewWatchUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostTrackedViewWatchUITest.swift; sourceTree = "<group>"; };
+		122218492870ED2400AE8F62 /* TopTenWatchUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenWatchUITest.swift; sourceTree = "<group>"; };
+		1222184B2870ED9B00AE8F62 /* TrackedViewWatchUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedViewWatchUITest.swift; sourceTree = "<group>"; };
+		122218522870F20900AE8F62 /* AddProductViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewiPadUITest.swift; sourceTree = "<group>"; };
+		122218542870F26D00AE8F62 /* LoginViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewiPadUITest.swift; sourceTree = "<group>"; };
+		122218562870F28600AE8F62 /* RegisterViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewiPadUITest.swift; sourceTree = "<group>"; };
+		122218582870F29E00AE8F62 /* TutorialViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewiPadUITest.swift; sourceTree = "<group>"; };
+		1222185A2870F2B900AE8F62 /* ExploreViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewiPadUITest.swift; sourceTree = "<group>"; };
+		1222185C2870F2E300AE8F62 /* TrackedViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackedViewiPadUITest.swift; sourceTree = "<group>"; };
+		1222185E2870F30000AE8F62 /* SeeAllViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewiPadUITest.swift; sourceTree = "<group>"; };
+		122218602870F32800AE8F62 /* HomeViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewiPadUITest.swift; sourceTree = "<group>"; };
+		122218622870F34500AE8F62 /* SettingsViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewiPadUITest.swift; sourceTree = "<group>"; };
+		122218642870F35E00AE8F62 /* ProductViewiPadUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewiPadUITest.swift; sourceTree = "<group>"; };
 		1237CC9B286604DC00A1895E /* TutorialViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewUITest.swift; sourceTree = "<group>"; };
 		1250E1EE28630C71009A4A88 /* SeeAllViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllViewModelTest.swift; sourceTree = "<group>"; };
 		1250E1F0286312DC009A4A88 /* TrackingSettingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingSettingViewModelTest.swift; sourceTree = "<group>"; };
@@ -566,20 +594,46 @@
 		12168C5028645CD20087CC50 /* myAPTrackerUITest */ = {
 			isa = PBXGroup;
 			children = (
+				122218502870EFE500AE8F62 /* iPad */,
+				1222184F2870EFD600AE8F62 /* iPhone */,
 				12168C5128645CD20087CC50 /* myAPTrackerUITest.swift */,
+				12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */,
+			);
+			path = myAPTrackerUITest;
+			sourceTree = "<group>";
+		};
+		1222184F2870EFD600AE8F62 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				12A19A8A2865D8AC00EBB2E2 /* AddProductViewUITest.swift */,
+				12A19A862865C72C00EBB2E2 /* LoginViewUITest.swift */,
+				12A19A882865D0BC00EBB2E2 /* RegisterViewUITest.swift */,
+				1237CC9B286604DC00A1895E /* TutorialViewUITest.swift */,
 				12A19A82286511B100EBB2E2 /* ExploreViewUITest.swift */,
 				12A19A8028650BD400EBB2E2 /* TrackedViewUITest.swift */,
 				12A19A7C286505F000EBB2E2 /* SeeAllViewUITest.swift */,
 				12A19A7A286505B700EBB2E2 /* HomeViewUITest.swift */,
 				12168C5A28645D500087CC50 /* SettingsViewUITest.swift */,
-				12168C5328645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift */,
 				12A19A842865BA9C00EBB2E2 /* ProductViewUITest.swift */,
-				12A19A862865C72C00EBB2E2 /* LoginViewUITest.swift */,
-				12A19A882865D0BC00EBB2E2 /* RegisterViewUITest.swift */,
-				12A19A8A2865D8AC00EBB2E2 /* AddProductViewUITest.swift */,
-				1237CC9B286604DC00A1895E /* TutorialViewUITest.swift */,
 			);
-			path = myAPTrackerUITest;
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		122218502870EFE500AE8F62 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				122218522870F20900AE8F62 /* AddProductViewiPadUITest.swift */,
+				122218542870F26D00AE8F62 /* LoginViewiPadUITest.swift */,
+				122218562870F28600AE8F62 /* RegisterViewiPadUITest.swift */,
+				122218582870F29E00AE8F62 /* TutorialViewiPadUITest.swift */,
+				1222185A2870F2B900AE8F62 /* ExploreViewiPadUITest.swift */,
+				1222185C2870F2E300AE8F62 /* TrackedViewiPadUITest.swift */,
+				1222185E2870F30000AE8F62 /* SeeAllViewiPadUITest.swift */,
+				122218602870F32800AE8F62 /* HomeViewiPadUITest.swift */,
+				122218622870F34500AE8F62 /* SettingsViewiPadUITest.swift */,
+				122218642870F35E00AE8F62 /* ProductViewiPadUITest.swift */,
+			);
+			path = iPad;
 			sourceTree = "<group>";
 		};
 		6602F7A32870751400660791 /* UIElement */ = {
@@ -729,6 +783,10 @@
 			children = (
 				666DAAC428701D8900455C52 /* WatchAppUITests.swift */,
 				666DAAC628701D8900455C52 /* WatchAppUITestsLaunchTests.swift */,
+				122218452870E62A00AE8F62 /* HomeViewWatchUITest.swift */,
+				122218472870EB6B00AE8F62 /* MostTrackedViewWatchUITest.swift */,
+				122218492870ED2400AE8F62 /* TopTenWatchUITest.swift */,
+				1222184B2870ED9B00AE8F62 /* TrackedViewWatchUITest.swift */,
 			);
 			path = WatchAppUITests;
 			sourceTree = "<group>";
@@ -1460,15 +1518,25 @@
 			files = (
 				1237CC9C286604DC00A1895E /* TutorialViewUITest.swift in Sources */,
 				12168C5428645CD20087CC50 /* myAPTrackerUITestLaunchTests.swift in Sources */,
+				122218592870F29E00AE8F62 /* TutorialViewiPadUITest.swift in Sources */,
 				12A19A7B286505B700EBB2E2 /* HomeViewUITest.swift in Sources */,
+				122218652870F35E00AE8F62 /* ProductViewiPadUITest.swift in Sources */,
 				12168C5B28645D500087CC50 /* SettingsViewUITest.swift in Sources */,
+				1222185F2870F30100AE8F62 /* SeeAllViewiPadUITest.swift in Sources */,
+				1222185B2870F2B900AE8F62 /* ExploreViewiPadUITest.swift in Sources */,
 				12A19A7D286505F000EBB2E2 /* SeeAllViewUITest.swift in Sources */,
 				12A19A872865C72C00EBB2E2 /* LoginViewUITest.swift in Sources */,
 				12A19A852865BA9C00EBB2E2 /* ProductViewUITest.swift in Sources */,
+				1222185D2870F2E300AE8F62 /* TrackedViewiPadUITest.swift in Sources */,
+				122218612870F32800AE8F62 /* HomeViewiPadUITest.swift in Sources */,
 				12168C5228645CD20087CC50 /* myAPTrackerUITest.swift in Sources */,
+				122218552870F26D00AE8F62 /* LoginViewiPadUITest.swift in Sources */,
 				12A19A83286511B100EBB2E2 /* ExploreViewUITest.swift in Sources */,
 				12A19A8128650BD400EBB2E2 /* TrackedViewUITest.swift in Sources */,
 				12A19A892865D0BC00EBB2E2 /* RegisterViewUITest.swift in Sources */,
+				122218632870F34500AE8F62 /* SettingsViewiPadUITest.swift in Sources */,
+				122218572870F28600AE8F62 /* RegisterViewiPadUITest.swift in Sources */,
+				122218532870F20900AE8F62 /* AddProductViewiPadUITest.swift in Sources */,
 				12A19A8B2865D8AC00EBB2E2 /* AddProductViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1504,7 +1572,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				666DAAC728701D8900455C52 /* WatchAppUITestsLaunchTests.swift in Sources */,
+				122218482870EB6B00AE8F62 /* MostTrackedViewWatchUITest.swift in Sources */,
+				1222184A2870ED2400AE8F62 /* TopTenWatchUITest.swift in Sources */,
 				666DAAC528701D8900455C52 /* WatchAppUITests.swift in Sources */,
+				122218462870E62A00AE8F62 /* HomeViewWatchUITest.swift in Sources */,
+				1222184C2870ED9B00AE8F62 /* TrackedViewWatchUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

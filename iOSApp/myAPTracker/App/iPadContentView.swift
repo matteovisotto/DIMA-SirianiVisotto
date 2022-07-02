@@ -11,7 +11,15 @@ import FacebookLogin
 import GoogleSignIn
 
 struct iPadContentView: View {
-    @State var tutorialAlreadySeen: Bool = PreferenceManager.shared.getTutorialAlreadySeen();
+    @State var tutorialAlreadySeen: Bool
+    
+    init(tutorialToSee: Bool) {
+        if (!tutorialToSee) {
+            self.tutorialAlreadySeen = PreferenceManager.shared.getTutorialAlreadySeen();
+        } else {
+            self.tutorialAlreadySeen = !tutorialToSee
+        }
+    }
     
     var body: some View {
         if (tutorialAlreadySeen) {
@@ -24,7 +32,7 @@ struct iPadContentView: View {
 
 struct iPadContentView_Previews: PreviewProvider {
     static var previews: some View {
-        iPadContentView().environmentObject(AppState.shared)
+        iPadContentView(tutorialToSee: false).environmentObject(AppState.shared)
     }
 }
 
