@@ -52,8 +52,8 @@ struct iPadHomeView: View {
                                         iPadSeeAllView(apiUrl: AppConstant.getAllPaging + "?limit=20&page=0", viewTitle: NSLocalizedString("Filtered", comment: "Filtered"), appliedFilter: [viewModel.categories[contentIndex]])
                                     } label: {
                                             ZStack{
-                                                Color.red
-                                                Text(viewModel.categories[contentIndex].capitalizingFirstLetter()).foregroundColor(Color.white).font(.title3.bold())
+                                                Color("CategoryColor")
+                                                Text(viewModel.categories[contentIndex].capitalizingFirstLetter()).foregroundColor(Color("BackgroundColor")).font(.title3.bold())
                                             }.cornerRadius(10)
                                     
                                     }.highPriorityGesture(DragGesture())

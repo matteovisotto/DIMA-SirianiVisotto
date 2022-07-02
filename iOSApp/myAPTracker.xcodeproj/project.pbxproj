@@ -98,7 +98,6 @@
 		666DAAAB28701D8700455C52 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DAAAA28701D8700455C52 /* ComplicationController.swift */; };
 		666DAAAD28701D8900455C52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666DAAAC28701D8900455C52 /* Assets.xcassets */; };
 		666DAAB028701D8900455C52 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666DAAAF28701D8900455C52 /* Preview Assets.xcassets */; };
-		666DAABB28701D8900455C52 /* WatchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DAABA28701D8900455C52 /* WatchAppTests.swift */; };
 		666DAAC528701D8900455C52 /* WatchAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DAAC428701D8900455C52 /* WatchAppUITests.swift */; };
 		666DAAC728701D8900455C52 /* WatchAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DAAC628701D8900455C52 /* WatchAppUITestsLaunchTests.swift */; };
 		666DAACA28701D8900455C52 /* myAPTracker.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 666DAA9928701D8300455C52 /* myAPTracker.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -217,13 +216,6 @@
 			remoteInfo = myAPTracker;
 		};
 		666DAAA328701D8700455C52 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 66D13CB527FAFD88004B2077 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 666DAAA028701D8700455C52;
-			remoteInfo = "WatchApp WatchKit Extension";
-		};
-		666DAAB728701D8900455C52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 66D13CB527FAFD88004B2077 /* Project object */;
 			proxyType = 1;
@@ -403,8 +395,6 @@
 		666DAAAA28701D8700455C52 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		666DAAAC28701D8900455C52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		666DAAAF28701D8900455C52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		666DAAB628701D8900455C52 /* WatchAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		666DAABA28701D8900455C52 /* WatchAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppTests.swift; sourceTree = "<group>"; };
 		666DAAC028701D8900455C52 /* WatchAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		666DAAC428701D8900455C52 /* WatchAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppUITests.swift; sourceTree = "<group>"; };
 		666DAAC628701D8900455C52 /* WatchAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -521,13 +511,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		666DAA9E28701D8700455C52 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		666DAAB328701D8900455C52 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -739,14 +722,6 @@
 				666DAAAF28701D8900455C52 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		666DAAB928701D8900455C52 /* WatchAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				666DAABA28701D8900455C52 /* WatchAppTests.swift */,
-			);
-			path = WatchAppTests;
 			sourceTree = "<group>";
 		};
 		666DAAC328701D8900455C52 /* WatchAppUITests */ = {
@@ -1026,7 +1001,6 @@
 				12168C5028645CD20087CC50 /* myAPTrackerUITest */,
 				666DAA9A28701D8300455C52 /* WatchApp */,
 				666DAAA528701D8700455C52 /* WatchApp WatchKit Extension */,
-				666DAAB928701D8900455C52 /* WatchAppTests */,
 				666DAAC328701D8900455C52 /* WatchAppUITests */,
 				66A514492827B8EA004388C7 /* Frameworks */,
 				66D13CBE27FAFD88004B2077 /* Products */,
@@ -1043,7 +1017,6 @@
 				12168C4F28645CD20087CC50 /* myAPTrackerUITest.xctest */,
 				666DAA9928701D8300455C52 /* myAPTracker.app */,
 				666DAAA128701D8700455C52 /* WatchApp WatchKit Extension.appex */,
-				666DAAB628701D8900455C52 /* WatchAppTests.xctest */,
 				666DAAC028701D8900455C52 /* WatchAppUITests.xctest */,
 			);
 			name = Products;
@@ -1239,24 +1212,6 @@
 			productReference = 666DAAA128701D8700455C52 /* WatchApp WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		666DAAB528701D8900455C52 /* WatchAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 666DAAD228701D8900455C52 /* Build configuration list for PBXNativeTarget "WatchAppTests" */;
-			buildPhases = (
-				666DAAB228701D8900455C52 /* Sources */,
-				666DAAB328701D8900455C52 /* Frameworks */,
-				666DAAB428701D8900455C52 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				666DAAB828701D8900455C52 /* PBXTargetDependency */,
-			);
-			name = WatchAppTests;
-			productName = WatchAppTests;
-			productReference = 666DAAB628701D8900455C52 /* WatchAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		666DAABF28701D8900455C52 /* WatchAppUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 666DAAD528701D8900455C52 /* Build configuration list for PBXNativeTarget "WatchAppUITests" */;
@@ -1377,10 +1332,6 @@
 					666DAAA028701D8700455C52 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
-					666DAAB528701D8900455C52 = {
-						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = 666DAAA028701D8700455C52;
-					};
 					666DAABF28701D8900455C52 = {
 						CreatedOnToolsVersion = 13.4.1;
 						TestTargetID = 666DAA9828701D8300455C52;
@@ -1427,7 +1378,6 @@
 				12168C4E28645CD20087CC50 /* myAPTrackerUITest */,
 				666DAA9828701D8300455C52 /* WatchApp */,
 				666DAAA028701D8700455C52 /* WatchApp WatchKit Extension */,
-				666DAAB528701D8900455C52 /* WatchAppTests */,
 				666DAABF28701D8900455C52 /* WatchAppUITests */,
 			);
 		};
@@ -1456,13 +1406,6 @@
 				666DAAB028701D8900455C52 /* Preview Assets.xcassets in Resources */,
 				66565BA2287025FA000F1705 /* Localizable.strings in Resources */,
 				666DAAAD28701D8900455C52 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		666DAAB428701D8900455C52 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1553,14 +1496,6 @@
 				666DAAE12870208E00455C52 /* TopTenViewModel.swift in Sources */,
 				666DAAAB28701D8700455C52 /* ComplicationController.swift in Sources */,
 				666DAADC28701E7B00455C52 /* HomeView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		666DAAB228701D8900455C52 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				666DAABB28701D8900455C52 /* WatchAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1749,11 +1684,6 @@
 			isa = PBXTargetDependency;
 			target = 666DAAA028701D8700455C52 /* WatchApp WatchKit Extension */;
 			targetProxy = 666DAAA328701D8700455C52 /* PBXContainerItemProxy */;
-		};
-		666DAAB828701D8900455C52 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 666DAAA028701D8700455C52 /* WatchApp WatchKit Extension */;
-			targetProxy = 666DAAB728701D8900455C52 /* PBXContainerItemProxy */;
 		};
 		666DAAC228701D8900455C52 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1957,48 +1887,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.0;
-			};
-			name = Release;
-		};
-		666DAAD328701D8900455C52 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2FE7MP24X8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.WatchAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchApp WatchKit Extension.appex/WatchApp WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Debug;
-		};
-		666DAAD428701D8900455C52 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2FE7MP24X8;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = it.matteovisotto.aptracker.WatchAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WatchApp WatchKit Extension.appex/WatchApp WatchKit Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
 			};
 			name = Release;
 		};
@@ -2408,15 +2296,6 @@
 			buildConfigurations = (
 				666DAAD028701D8900455C52 /* Debug */,
 				666DAAD128701D8900455C52 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		666DAAD228701D8900455C52 /* Build configuration list for PBXNativeTarget "WatchAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				666DAAD328701D8900455C52 /* Debug */,
-				666DAAD428701D8900455C52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

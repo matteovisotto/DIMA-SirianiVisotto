@@ -69,8 +69,8 @@ struct TrackedProductView: View {
                             }*/
                             ZStack (alignment: .center){
                                 Text(product.shortName).lineLimit(2).font(.system(size: 16).bold()).multilineTextAlignment(.leading).foregroundColor(.black).padding(.bottom, geometry.size.height / 2).padding(.leading,(10 * geometry.size.width/27)).accessibilityIdentifier("HomeViewProductLastProductAdded")
-                                PriceCard().fill(Color("Primary").opacity(0.6)).frame(width: geometry.size.width/3, height: 50).padding(.top, geometry.size.height / 3).padding(.leading,60)
-                                Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color("PrimaryLabel")).font(.system(size: 16).bold()).padding(.leading, 70).padding(.top, geometry.size.height / 3)
+                                PriceCard().fill(Color("PriceTagColor")).frame(width: geometry.size.width/3, height: 50).padding(.top, geometry.size.height / 3).padding(.leading,60)
+                                Text("\(product.price ?? 0, specifier: "%.2f") €").foregroundColor(Color.white).font(.system(size: 16).bold()).padding(.leading, 70).padding(.top, geometry.size.height / 3)
                                 if (product.prices?.count ?? 0 < 2){
                                     Image(systemName: "minus").foregroundColor(.orange).scaleEffect(2.5).padding(.leading, 8 * geometry.size.width / 11).padding(.top, 2 * geometry.size.height / 9)
                                     Text("\(percentage, specifier: "%.2f") %").font(.system(size: 16).bold()).foregroundColor(.orange).padding(.leading, 33 * geometry.size.width / 44).padding(.top, 9 * geometry.size.height / 16)
