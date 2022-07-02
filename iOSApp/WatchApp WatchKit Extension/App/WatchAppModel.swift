@@ -30,6 +30,8 @@ class WatchAppModel: NSObject, ObservableObject, WCSessionDelegate {
     
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if(!session.isReachable){return}
+        
         session.sendMessage(["get":"userCredential"]) { response in
             guard let us = response["isLogged"] as? Bool else {return}
             if(us){

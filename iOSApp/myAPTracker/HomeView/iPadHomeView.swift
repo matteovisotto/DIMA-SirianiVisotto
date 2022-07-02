@@ -27,7 +27,7 @@ struct iPadHomeView: View {
                 GeometryReader{ geometry in
                     ScrollView(.vertical, showsIndicators: false){
                         VStack(spacing: 10){
-                            if(appState.isUserLoggedIn && viewModel.trackingObjects.count > 0){
+                            if(AppState.shared.isUserLoggedIn && viewModel.trackingObjects.count > 0){
                                 Text("Your last added products").font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).frame(maxWidth: .infinity, alignment: .leading).padding(.leading).padding(.bottom, 5).accessibilityIdentifier("HomeViewLastProductText")
                                 DoublePagingView(index: $trackedDisplayIndex.animation(), maxIndex: (viewModel.trackingObjects.count - 1)/2) {
                                     ForEach((0..<viewModel.trackingObjects.count).reversed(), id: \.self){ index in

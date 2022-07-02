@@ -108,6 +108,8 @@
 		666DAAE3287020F700455C52 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666524D227FB3BF8005C73F3 /* AppConstant.swift */; };
 		666DAAE5287021DC00455C52 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DAAE4287021DC00455C52 /* Product.swift */; };
 		666DAAE7287022FC00455C52 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DAAE6287022FC00455C52 /* TaskManager.swift */; };
+		666F0BFC2870D5B80031E68B /* MostTrackedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666F0BFB2870D5B80031E68B /* MostTrackedViewModel.swift */; };
+		666F0BFE2870D5C20031E68B /* MostTrackedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666F0BFD2870D5C20031E68B /* MostTrackedView.swift */; };
 		667389CB2821D0EF001845FA /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667389CA2821D0EF001845FA /* PagingView.swift */; };
 		66742C6927FCAA3A0093EE24 /* IconTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6827FCAA3A0093EE24 /* IconTextField.swift */; };
 		66742C6B27FCAD450093EE24 /* IconSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */; };
@@ -412,6 +414,8 @@
 		666DAAE4287021DC00455C52 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		666DAAE6287022FC00455C52 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		666DAAE92870247900455C52 /* WatchAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppModel.swift; sourceTree = "<group>"; };
+		666F0BFB2870D5B80031E68B /* MostTrackedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostTrackedViewModel.swift; sourceTree = "<group>"; };
+		666F0BFD2870D5C20031E68B /* MostTrackedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostTrackedView.swift; sourceTree = "<group>"; };
 		667389CA2821D0EF001845FA /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		66742C6827FCAA3A0093EE24 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 		66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSecureTextField.swift; sourceTree = "<group>"; };
@@ -713,6 +717,7 @@
 		666DAAA528701D8700455C52 /* WatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				666F0BFA2870D5A40031E68B /* MostTrackedView */,
 				6602F7AD2870815F00660791 /* TrackedView */,
 				6602F7A62870793400660791 /* ProductView */,
 				6602F7A32870751400660791 /* UIElement */,
@@ -795,6 +800,15 @@
 				666DAAE6287022FC00455C52 /* TaskManager.swift */,
 			);
 			path = "Network+Utils";
+			sourceTree = "<group>";
+		};
+		666F0BFA2870D5A40031E68B /* MostTrackedView */ = {
+			isa = PBXGroup;
+			children = (
+				666F0BFB2870D5B80031E68B /* MostTrackedViewModel.swift */,
+				666F0BFD2870D5C20031E68B /* MostTrackedView.swift */,
+			);
+			path = MostTrackedView;
 			sourceTree = "<group>";
 		};
 		667BF40227FB8B200000B7EB /* MainView */ = {
@@ -1520,7 +1534,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666F0BFC2870D5B80031E68B /* MostTrackedViewModel.swift in Sources */,
 				666DAAE3287020F700455C52 /* AppConstant.swift in Sources */,
+				666F0BFE2870D5C20031E68B /* MostTrackedView.swift in Sources */,
 				6602F7AA28707A9D00660791 /* HLPriceView.swift in Sources */,
 				6602F7AC28707E4500660791 /* ProductImage.swift in Sources */,
 				666DAAA728701D8700455C52 /* ContentView.swift in Sources */,

@@ -13,11 +13,6 @@ struct HomeView: View {
     var body: some View {
         NavigationView{
             List{
-                NavigationLink{
-                    TopTenView().navigationTitle("Top 10")
-                } label: {
-                    Text("Top 10")
-                }
                 if(appModel.isLoading){
                     ProgressView()
                 }
@@ -27,6 +22,16 @@ struct HomeView: View {
                     } label: {
                         Text("Tracked")
                     }
+                }
+                NavigationLink{
+                    TopTenView().navigationTitle("Top 10")
+                } label: {
+                    Text("Top 10")
+                }
+                NavigationLink{
+                    MostTrackedView().navigationTitle("Most tracked")
+                } label: {
+                    Text("Most tracked")
                 }
             }
         }

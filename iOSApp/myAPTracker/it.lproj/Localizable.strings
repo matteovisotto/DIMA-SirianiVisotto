@@ -236,7 +236,7 @@
 "Unable to get data" = "Impossibile scaricare i dati";
 
 /* Unable to convert data */
-"Unable to parse the received content" = "Impossibile leggere il contenuto ricevito";
+"Unable to parse the received content" = "Impossibile leggere il contenuto ricevuto";
 
 /* Unable to perform remote logout */
 "Unable to perform remote logout" = "Impossibile disconnettersi dal server";
