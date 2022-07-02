@@ -1,8 +1,8 @@
 //
 //  ComplicationController.swift
-//  watchapp WatchKit Extension
+//  WatchApp WatchKit Extension
 //
-//  Created by Matteo Visotto on 01/07/22.
+//  Created by Matteo Visotto on 02/07/22.
 //
 
 import ClockKit

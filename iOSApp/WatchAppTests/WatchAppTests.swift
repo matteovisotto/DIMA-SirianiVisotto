@@ -1,14 +1,14 @@
 //
-//  watchappTests.swift
-//  watchappTests
+//  WatchAppTests.swift
+//  WatchAppTests
 //
-//  Created by Matteo Visotto on 01/07/22.
+//  Created by Matteo Visotto on 02/07/22.
 //
 
 import XCTest
-@testable import watchapp_WatchKit_Extension
+@testable import WatchApp_WatchKit_Extension
 
-class watchappTests: XCTestCase {
+class WatchAppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

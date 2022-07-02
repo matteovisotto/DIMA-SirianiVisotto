@@ -24,8 +24,6 @@ class WatchSessionManager : NSObject, WCSessionDelegate {
             session.delegate = self
             session.activate()
         }
-        
-        print("isPaired?: \(session.isPaired), isWatchAppInstalled?: \(session.isWatchAppInstalled)")
     }
     
     func isSuported() -> Bool {
@@ -66,8 +64,14 @@ class WatchSessionManager : NSObject, WCSessionDelegate {
     ///   - message: message received
     ///   - replyHandler: response handler
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        if message["status"] as? String == "status" {
-            replyHandler(["isLogged" : AppState.shared.isUserLoggedIn])
+        if message["get"] as? String == "userCredential" {
+            if(AppState.shared.isUserLoggedIn){
+                if let aToken = AppState.shared.userCredential?.accessToken {
+                    replyHandler(["isLogged" : true, "aToken": aToken])
+                    return
+                }
+            }
+            replyHandler(["isLogged" : false])
         }
     }
     

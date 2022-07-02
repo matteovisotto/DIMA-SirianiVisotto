@@ -1,13 +1,13 @@
 //
-//  watchappUITestsLaunchTests.swift
-//  watchappUITests
+//  WatchAppUITestsLaunchTests.swift
+//  WatchAppUITests
 //
-//  Created by Matteo Visotto on 01/07/22.
+//  Created by Matteo Visotto on 02/07/22.
 //
 
 import XCTest
 
-class watchappUITestsLaunchTests: XCTestCase {
+class WatchAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
