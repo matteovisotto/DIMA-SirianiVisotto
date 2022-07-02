@@ -20,7 +20,7 @@ class ProductViewUITest: XCTestCase {
         if (app.staticTexts["HomeViewLastProductText"].exists) {
             userIsLogged = false
         }
-        app.scrollViews.otherElements.scrollViews.otherElements.buttons.element(boundBy: 1).tap()
+        app.scrollViews.otherElements.buttons.element(boundBy: 0).tap()
     }
 
     override func tearDownWithError() throws {
@@ -28,6 +28,7 @@ class ProductViewUITest: XCTestCase {
     }
     
     func test_ProductView_MaxAndMinTexts_CheckThatMaximumPriceIsHigherThanMinimum() {
+        
         let elementsQuery = app.otherElements
         let priceButton = elementsQuery.buttons.element(boundBy: 1)
         priceButton.tap()
