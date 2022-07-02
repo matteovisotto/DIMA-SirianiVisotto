@@ -1,5 +1,5 @@
 //
-//  TopTenView.swift
+//  TrackedView.swift
 //  WatchApp WatchKit Extension
 //
 //  Created by Matteo Visotto on 02/07/22.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct TopTenView: View {
-    @ObservedObject var viewModel: TopTenViewModel = TopTenViewModel()
+struct TrackedView: View {
+    @ObservedObject var viewModel: TrackedViewModel = TrackedViewModel()
     
     var body: some View {
         ZStack{
@@ -33,8 +33,8 @@ struct TopTenView: View {
     }
 }
 
-struct TopTenView_Previews: PreviewProvider {
+struct TrackedView_Previews: PreviewProvider {
     static var previews: some View {
-        TopTenView()
+        TrackedView()
     }
 }

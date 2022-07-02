@@ -14,7 +14,7 @@ struct HomeView: View {
         NavigationView{
             List{
                 NavigationLink{
-                    TopTenView()
+                    TopTenView().navigationTitle("Top 10")
                 } label: {
                     Text("Top 10")
                 }
@@ -23,7 +23,7 @@ struct HomeView: View {
                 }
                 if(appModel.userStatus){
                     NavigationLink{
-                        Text(appModel.accessToken)
+                        TrackedView().navigationTitle("Tracked")
                     } label: {
                         Text("Tracked")
                     }

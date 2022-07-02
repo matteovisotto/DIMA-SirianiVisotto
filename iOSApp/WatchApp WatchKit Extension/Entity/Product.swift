@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct DropPriceProduct: Codable {
+struct Product: Codable {
     var id: Int
     var name: String
     var shortName: String

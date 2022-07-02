@@ -1,5 +1,5 @@
 //
-//  TopTenViewModel.swift
+//  TrackedViewModel.swift
 //  WatchApp WatchKit Extension
 //
 //  Created by Matteo Visotto on 02/07/22.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class TopTenViewModel: ObservableObject {
+class TrackedViewModel: ObservableObject{
     @Published var isLoading: Bool = false
     @Published var errorString: String? = nil
     @Published var products: [Product] = []
@@ -19,12 +19,12 @@ class TopTenViewModel: ObservableObject {
     
     private func loadData() -> Void {
         self.isLoading = true
-        loadAllProductLastPriceDropPercentage()
+        loadMyTracking()
     }
     
-    private func loadAllProductLastPriceDropPercentage() -> Void {
-        let task = TaskManager(urlString: AppConstant.getLastPriceDropPercentage+"?limit=10", method: .GET)
-        task.execute { result, content, data in
+    private func loadMyTracking() {
+        let task = TaskManager(urlString: AppConstant.getMyTrackingURL+"?lastPriceOnly", method: .GET)
+        task.executeWithAccessToken(accessToken: WatchAppModel.shared.accessToken) { result, content, data in
             DispatchQueue.main.async {
                 self.isLoading = false
             }
@@ -46,7 +46,7 @@ class TopTenViewModel: ObservableObject {
                         }
                     } catch {}
                     DispatchQueue.main.async {
-                        self.errorString = errorStr
+                        self.errorString  = errorStr
                     }
                     
                 }
