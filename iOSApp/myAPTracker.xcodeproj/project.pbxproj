@@ -389,6 +389,7 @@
 		666DAAE02870208E00455C52 /* TopTenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTenViewModel.swift; sourceTree = "<group>"; };
 		666DAAE4287021DC00455C52 /* DropPriceProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropPriceProduct.swift; sourceTree = "<group>"; };
 		666DAAE6287022FC00455C52 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		666DAAE92870247900455C52 /* WatchAppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppModel.swift; sourceTree = "<group>"; };
 		667389CA2821D0EF001845FA /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		66742C6827FCAA3A0093EE24 /* IconTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconTextField.swift; sourceTree = "<group>"; };
 		66742C6A27FCAD450093EE24 /* IconSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconSecureTextField.swift; sourceTree = "<group>"; };
@@ -664,17 +665,15 @@
 		666DAAA528701D8700455C52 /* WatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				666DAAEB2870249200455C52 /* Network+Utils */,
+				666DAAEA2870248700455C52 /* Entity */,
+				666DAAE82870246D00455C52 /* App */,
 				666DAADD2870206A00455C52 /* TopTenView */,
 				666DAADA28701E6A00455C52 /* HomeView */,
 				666DAAD828701E4500455C52 /* WatchAppModel.swift */,
-				666DAAA628701D8700455C52 /* ContentView.swift */,
-				666DAAA828701D8700455C52 /* myAPTrackerApp.swift */,
-				666DAAAA28701D8700455C52 /* ComplicationController.swift */,
 				666DAAAC28701D8900455C52 /* Assets.xcassets */,
 				666DAAB128701D8900455C52 /* Info.plist */,
 				666DAAAE28701D8900455C52 /* Preview Content */,
-				666DAAE4287021DC00455C52 /* DropPriceProduct.swift */,
-				666DAAE6287022FC00455C52 /* TaskManager.swift */,
 			);
 			path = "WatchApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -719,6 +718,33 @@
 				666DAAE02870208E00455C52 /* TopTenViewModel.swift */,
 			);
 			path = TopTenView;
+			sourceTree = "<group>";
+		};
+		666DAAE82870246D00455C52 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				666DAAE92870247900455C52 /* WatchAppModel.swift */,
+				666DAAA628701D8700455C52 /* ContentView.swift */,
+				666DAAA828701D8700455C52 /* myAPTrackerApp.swift */,
+				666DAAAA28701D8700455C52 /* ComplicationController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		666DAAEA2870248700455C52 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				666DAAE4287021DC00455C52 /* DropPriceProduct.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		666DAAEB2870249200455C52 /* Network+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				666DAAE6287022FC00455C52 /* TaskManager.swift */,
+			);
+			path = "Network+Utils";
 			sourceTree = "<group>";
 		};
 		667BF40227FB8B200000B7EB /* MainView */ = {
