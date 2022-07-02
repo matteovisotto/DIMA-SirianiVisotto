@@ -18,7 +18,9 @@ struct HomeView: View {
                 } label: {
                     Text("Top 10")
                 }
-                
+                if(appModel.isLoading){
+                    ProgressView()
+                }
                 if(appModel.userStatus){
                     NavigationLink{
                         Text(appModel.accessToken)
@@ -26,8 +28,10 @@ struct HomeView: View {
                         Text("Tracked")
                     }
                 }
-            }.navigationTitle("Home")
+            }
         }
+        .navigationTitle("Home")
+        
     }
 }
 

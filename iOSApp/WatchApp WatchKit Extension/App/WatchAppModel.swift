@@ -14,6 +14,7 @@ class WatchAppModel: NSObject, ObservableObject, WCSessionDelegate {
     public static let shared: WatchAppModel = WatchAppModel()
     
     @Published var userStatus: Bool = false
+    @Published var isLoading: Bool = false
     
     var accessToken: String = ""
     
@@ -21,6 +22,7 @@ class WatchAppModel: NSObject, ObservableObject, WCSessionDelegate {
     
     init(session: WCSession = .default){
         super.init()
+        self.isLoading = true
         self.session = session
         session.delegate = self
         session.activate()
@@ -35,9 +37,13 @@ class WatchAppModel: NSObject, ObservableObject, WCSessionDelegate {
                 self.accessToken = aToken
             }
             DispatchQueue.main.async{
+                self.isLoading = false
                 self.userStatus = us
             }
         } errorHandler: { e in
+            DispatchQueue.main.async {
+                self.isLoading = false
+            }
             print(e.localizedDescription)
         }
         
