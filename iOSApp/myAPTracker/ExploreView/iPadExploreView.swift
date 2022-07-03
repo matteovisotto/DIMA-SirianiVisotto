@@ -35,7 +35,8 @@ struct iPadExploreView: View {
                                         //Divider().padding(.leading, 10)
                                     }
                                 }.highPriorityGesture(DragGesture())
-                            }.frame(width: geometry.size.width-20, height: 330).accessibilityIdentifier("ExploreViewFirstProduct")
+                                    .accessibilityIdentifier("ExploreViewFirstProduct\(contentIndex)")
+                            }.frame(width: geometry.size.width-20, height: 330)
                             
                         }.padding(.horizontal, 10)
                         Divider().padding(.leading, 10)
@@ -57,6 +58,7 @@ struct iPadExploreView: View {
                                         SingleProductView(Product.fromPriceDrop(viewModel.biggestPercentageDrop[contentIndex])).foregroundColor(Color("PrimaryLabel"))
                                     }
                                 }.highPriorityGesture(DragGesture())
+                                    .accessibilityIdentifier("ExploreViewSecondProduct\(contentIndex)")
                             }.frame(width: geometry.size.width-20, height: 330)
                         }.padding(.horizontal, 10)
                         Divider().padding(.leading, 10)
@@ -78,6 +80,7 @@ struct iPadExploreView: View {
                                         SingleProductView(Product.fromPriceDrop(viewModel.biggestRangeDrop[contentIndex])).foregroundColor(Color("PrimaryLabel"))
                                     }
                                 }.highPriorityGesture(DragGesture())
+                                    .accessibilityIdentifier("ExploreViewThirdProduct\(contentIndex)")
                             }.frame(width: geometry.size.width-20, height: 330)
                         }.padding(.horizontal, 10)
                     }.onAppear(perform: viewModel.loadData)

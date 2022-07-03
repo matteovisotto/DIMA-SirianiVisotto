@@ -19,6 +19,8 @@ class HomeViewUITest: XCTestCase {
         try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .phone, "Only test for iPhone")
         app.launch()
         app.buttons["HomeTabBar"].tap()
+        let homeViewSeeAllButton = app.scrollViews.otherElements.buttons["HomeViewSeeAllButton"].waitForExistence(timeout: 10)
+        XCTAssertTrue(homeViewSeeAllButton)
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
@@ -26,7 +28,7 @@ class HomeViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func test_HomeView_LastProductAdded_OpenProductAndGoBackToHome() {
+    func test_iPhone_HomeView_LastProductAdded_OpenProductAndGoBackToHome() {
         if (app.staticTexts["HomeViewLastProductText"].waitForExistence(timeout: 2)) {
             app.scrollViews.otherElements.buttons.element(boundBy: 0).tap()
             //app.buttons["doc.badge.gearshape"].tap()
@@ -43,10 +45,10 @@ class HomeViewUITest: XCTestCase {
         }
     }
     
-    func test_HomeView_SeeAllButton_CheckThatWeReachSeeAllViewAndReturnBack() {
+    func test_iPhone_HomeView_SeeAllButton_CheckThatWeReachSeeAllViewAndReturnBack() {
         app.scrollViews.otherElements.buttons["HomeViewSeeAllButton"].tap()
         
-        let seeAllName = app.staticTexts["SeeAllViewTitle"].waitForExistence(timeout: 5)
+        let seeAllName = app.staticTexts["SeeAllViewTitle"].waitForExistence(timeout: 10)
         
         XCTAssertTrue(seeAllName)
         
@@ -58,7 +60,7 @@ class HomeViewUITest: XCTestCase {
         XCTAssertTrue(tabTitle.exists)
     }
     
-    func test_HomeView_SeeAllButton_CheckThatTheTitlesAreTheSame() {
+    func test_iPhone_HomeView_SeeAllButton_CheckThatTheTitlesAreTheSame() {
         let mostTracked = app.staticTexts["HomeViewMostTrackedText"]
         let mostTrackedText = mostTracked.label
         
@@ -73,7 +75,7 @@ class HomeViewUITest: XCTestCase {
         XCTAssertEqual(seeAllName.label.lowercased(), mostTrackedText.lowercased())
     }
     
-    func test_HomeView_ProductButton_AccessProductAndGoBack() {
+    func test_iPhone_HomeView_ProductButton_AccessProductAndGoBack() {
         app.scrollViews.buttons["HomeViewMostrTrackedButton0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
@@ -87,7 +89,7 @@ class HomeViewUITest: XCTestCase {
         XCTAssertTrue(tabTitle.exists)
     }
     
-    func test_HomeView_LastAddedProductButton_SwipeProducts() {
+    func test_iPhone_HomeView_LastAddedProductButton_SwipeProducts() {
         if (app.staticTexts["HomeViewLastProductText"].waitForExistence(timeout: 2)) {
             let product = app.scrollViews.buttons.element(boundBy: 0)
             
@@ -109,7 +111,7 @@ class HomeViewUITest: XCTestCase {
         }
     }
     
-    func test_HomeView_MostTrackedProductButton_SwipeProducts() {
+    func test_iPhone_HomeView_MostTrackedProductButton_SwipeProducts() {
         let product = app.scrollViews.buttons["HomeViewMostrTrackedButton0"]
         
         let topOffset = CGVector(dx: 0.95, dy: 0.5)

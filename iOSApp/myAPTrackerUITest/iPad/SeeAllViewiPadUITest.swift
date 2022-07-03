@@ -16,7 +16,7 @@ class SeeAllViewiPadUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         
         let seeAllButton = app.scrollViews.otherElements.buttons["HomeViewSeeAllButton"].waitForExistence(timeout: 5)
@@ -31,7 +31,7 @@ class SeeAllViewiPadUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_SeeAllView_OpenCategories () {
+    func test_iPad_SeeAllView_OpenCategories () {
         let seeAllButtonCategories = app.buttons["SeeAllViewCategoriesButton"]
         
         XCTAssertTrue(seeAllButtonCategories.exists)
@@ -43,7 +43,7 @@ class SeeAllViewiPadUITest: XCTestCase {
         XCTAssertTrue(categories)
     }
     
-    func test_SeeAllView_OpenCategoriesAndCloseIt() {
+    func test_iPad_SeeAllView_OpenCategoriesAndCloseIt() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -52,12 +52,16 @@ class SeeAllViewiPadUITest: XCTestCase {
         
         app.buttons["FilterViewCloseCategories"].tap()
         
-        let seeAllName = app.staticTexts["SeeAllViewTitle"]
+        let seeAllNameApp = app.buttons["SeeAllViewiPadItem0"].waitForExistence(timeout: 5)
+                
+        XCTAssertTrue(seeAllNameApp)
         
+        let seeAllName = app.buttons["SeeAllViewiPadItem0"]
+                
         XCTAssertTrue(seeAllName.isHittable)
     }
     
-    func test_SeeAllView_Categories_ChooseCategories() {
+    func test_iPad_SeeAllView_Categories_ChooseCategories() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -80,7 +84,7 @@ class SeeAllViewiPadUITest: XCTestCase {
         XCTAssertTrue(seeAllCategory.label.lowercased() == categoryText.lowercased())
     }
     
-    func test_SeeAllView_CategoriesButton_CloseCategories() {
+    func test_iPad_SeeAllView_CategoriesButton_CloseCategories() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -103,10 +107,10 @@ class SeeAllViewiPadUITest: XCTestCase {
         XCTAssertTrue(seeAllName.isHittable)
     }
     
-    /*func test_SeeAllView_OpenProductAndCloseIt() {
-        app.tables.buttons.element(boundBy: 0).tap()
+    func test_iPad_SeeAllView_OpenProductAndCloseIt() {
+        app.buttons["SeeAllViewiPadItem0"].tap()
         
-        let product = app.staticTexts["ProductViewHomeName"]
+        let product = app.staticTexts["ProductViewiPadProductPrice"]
         
         XCTAssertTrue(product.exists)
         
@@ -115,5 +119,5 @@ class SeeAllViewiPadUITest: XCTestCase {
         let seeAllName = app.buttons["SeeAllViewCategoriesButton"]
         
         XCTAssertTrue(seeAllName.exists)
-    }*/
+    }
 }

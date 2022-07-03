@@ -13,7 +13,7 @@ class TutorialViewiPadUITest: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
-        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launchArguments = ["-UITest_TutorialToSee"]
         app.launch()
     }
@@ -22,7 +22,7 @@ class TutorialViewiPadUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_TutorialView_ChangePageButton_UserChangePageAndEndsTutorial() {
+    func test_iPad_TutorialView_ChangePageButton_UserChangePageAndEndsTutorial() {
         app.images.allElementsBoundByIndex.last?.tap()
         
         sleep(10)
@@ -44,7 +44,7 @@ class TutorialViewiPadUITest: XCTestCase {
         XCTAssertTrue(app.staticTexts["HomeViewMostTrackedText"].exists)
     }
     
-    func test_TutorialView_SkipButton_UserEndsTutorialThroughSkip() {
+    func test_iPad_TutorialView_SkipButton_UserEndsTutorialThroughSkip() {
         app.buttons["TutorialViewSkipButton"].tap()
         
         sleep(10)

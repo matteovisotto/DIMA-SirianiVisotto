@@ -28,7 +28,7 @@ class LoginViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_LoginView_RegisterButton_AccessRegisterView() {
+    func test_iPhone_LoginView_RegisterButton_AccessRegisterView() {
         if (userIsNotLogged) {
             app.buttons["LoginViewRegisterButton"].tap()
             let registerText = app.staticTexts["RegisterViewRegisterText"]
@@ -42,7 +42,7 @@ class LoginViewUITest: XCTestCase {
         }
     }
     
-    func test_LoginView_LoginButton_EmailInvalidAndTheButtonIsDisabled() {
+    func test_iPhone_LoginView_LoginButton_EmailInvalidAndTheButtonIsDisabled() {
         if (userIsNotLogged) {
             let email = app.textFields["LoginViewEmailTextField"]
             
@@ -61,7 +61,7 @@ class LoginViewUITest: XCTestCase {
         }
     }
     
-    func test_LoginView_LoginButton_PasswordNotInsertedAndTheButtonIsDisabled() {
+    func test_iPhone_LoginView_LoginButton_PasswordNotInsertedAndTheButtonIsDisabled() {
         if (userIsNotLogged) {
             let email = app.textFields["LoginViewEmailTextField"]
             
@@ -75,7 +75,7 @@ class LoginViewUITest: XCTestCase {
         }
     }
     
-    func test_LoginView_LoginButton_ButtonIsEnabled() {
+    func test_iPhone_LoginView_LoginButton_ButtonIsEnabled() {
         if (userIsNotLogged) {
             let email = app.textFields["LoginViewEmailTextField"]
             

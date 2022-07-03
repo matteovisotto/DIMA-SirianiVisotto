@@ -33,7 +33,7 @@ struct iPadSeeAllView: View {
                                             SingleProductView(viewModel.filteredProducts[contentIndex]).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
                                             Divider().padding(.leading, 10)
                                         }
-                                    }
+                                    }.accessibilityIdentifier("SeeAllViewiPadItemCategory\(contentIndex)")
                                 }
                             } else {
                                
@@ -45,7 +45,7 @@ struct iPadSeeAllView: View {
                                             SingleProductView(viewModel.products[contentIndex]).frame(width: ((geometry.size.width/2)-40), height: 100).padding(.bottom, 10).foregroundColor(Color("PrimaryLabel"))
                                             Divider().padding(.leading, 10)
                                         }
-                                    }
+                                    }.accessibilityIdentifier("SeeAllViewiPadItem\(contentIndex)")
                                 }
                             }
                             

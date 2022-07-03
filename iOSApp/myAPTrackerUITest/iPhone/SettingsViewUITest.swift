@@ -26,7 +26,7 @@ class SettingsViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_SettingsView_UserLoginRegister_UserIsLogged() {
+    func test_iPhone_SettingsView_UserLoginRegister_UserIsLogged() {
         if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
             XCTAssertFalse(loginButton.exists)
@@ -36,7 +36,7 @@ class SettingsViewUITest: XCTestCase {
         }
     }
     
-    func test_SettingsView_UserLoginRegister_UserIsNotLoggedAndGoToLoginPageAndReturnToPreviousPage() {
+    func test_iPhone_SettingsView_UserLoginRegister_UserIsNotLoggedAndGoToLoginPageAndReturnToPreviousPage() {
         if (app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             let loginButton = app.tables.buttons["LoginOrCreateAnAccountButton"]
             XCTAssertTrue(loginButton.exists)
@@ -55,7 +55,7 @@ class SettingsViewUITest: XCTestCase {
         }
     }
     
-    func test_SettingsView_UserProfileInformation_UserShowInfo() {
+    func test_iPhone_SettingsView_UserProfileInformation_UserShowInfo() {
         if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["UserProfileNavigationLink"].tap()
                     
@@ -65,20 +65,22 @@ class SettingsViewUITest: XCTestCase {
         }
     }
     
-    func test_SettingsView_UserProfileInformation_UserShowInfoAndGoBack() {
+    func test_iPhone_SettingsView_UserProfileInformation_UserShowInfoAndGoBack() {
         if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
-            app.tables/*@START_MENU_TOKEN@*/.buttons["UserProfileNavigationLink"]/*[[".cells[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"Mattia Siriani, tototia98@gmail.com\"]",".buttons[\"UserProfileNavigationLink\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+            app.tables.buttons["UserProfileNavigationLink"].tap()
             
             let elementsQuery = app.scrollViews.otherElements
-            elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["ProfileText"]/*[[".staticTexts[\"Profile\"]",".staticTexts[\"ProfileText\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-            elementsQuery.buttons["Left"].tap()
+            
+            XCTAssertTrue(elementsQuery.staticTexts["ProfileText"].exists)
+            
+            app.buttons.firstMatch.tap()
             let settingsText = app.staticTexts["SelectedTabTitleName"]
             
             XCTAssertTrue(settingsText.exists)
         }
     }
     
-    func test_SettingsView_UserTrackingInformation_UserModifyToNeverTrackingNotificationAndGoBack() {
+    func test_iPhone_SettingsView_UserTrackingInformation_UserModifyToNeverTrackingNotificationAndGoBack() {
         if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             
@@ -90,15 +92,15 @@ class SettingsViewUITest: XCTestCase {
             
             elementsQuery.children(matching: .segmentedControl).element(boundBy: 1).buttons["NeverCommentButton"].tap()
             elementsQuery.buttons["ChangeSettingsTrackingButton"].tap()
-            app.buttons["Left"].tap()
-            
+            app.buttons.firstMatch.tap()
+
             let settingsText = app.staticTexts["SelectedTabTitleName"]
             
             XCTAssertTrue(settingsText.exists)
         }
     }
     
-    func test_SettingsView_UserTrackingInformation_UserModifyToAlwaysTrackingNotificationAndGoBack() {
+    func test_iPhone_SettingsView_UserTrackingInformation_UserModifyToAlwaysTrackingNotificationAndGoBack() {
         if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             
@@ -120,7 +122,7 @@ class SettingsViewUITest: XCTestCase {
         }
     }
     
-    func test_SettingsView_UserTrackingInformation_UserAccessPercentageTrackingNotificationAndGoBack() {
+    func test_iPhone_SettingsView_UserTrackingInformation_UserAccessPercentageTrackingNotificationAndGoBack() {
         if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             
@@ -142,7 +144,7 @@ class SettingsViewUITest: XCTestCase {
         }
     }
     
-    func test_SettingsView_UserTrackingInformation_UserAccessValueTrackingNotificationAndGoBack() {
+    func test_iPhone_SettingsView_UserTrackingInformation_UserAccessValueTrackingNotificationAndGoBack() {
         if (!app.tables.buttons["LoginOrCreateAnAccountButton"].waitForExistence(timeout: 2)) {
             app.tables.buttons["ProductNotification"].tap()
             

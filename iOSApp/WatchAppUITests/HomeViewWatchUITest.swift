@@ -23,7 +23,7 @@ class HomeViewWatchUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_HomeView_MostTracked_AccessAndGoBack() throws {
+    func test_Watch_HomeView_MostTracked_AccessAndGoBack() throws {
         let tracked = app.buttons["HomeViewMostTrackedWatch"]
         XCTAssertTrue(tracked.exists)
         let trackedText = tracked.label
@@ -36,7 +36,7 @@ class HomeViewWatchUITest: XCTestCase {
         XCTAssertTrue(trackedNew.exists)
     }
     
-    func test_HomeView_TopTen_AccessAndGoBack() throws {
+    func test_Watch_HomeView_TopTen_AccessAndGoBack() throws {
         let top = app.buttons["HomeViewTopTenWatch"]
         XCTAssertTrue(top.exists)
         let topText = top.label
@@ -49,7 +49,7 @@ class HomeViewWatchUITest: XCTestCase {
         XCTAssertTrue(topNew.exists)
     }
     
-    func test_HomeView_Tracked_AccessAndGoBack() throws {
+    func test_Watch_HomeView_Tracked_AccessAndGoBack() throws {
         let tracked = app.buttons["HomeViewTrackedWatch"].waitForExistence(timeout: 10)
         
         if (tracked) {

@@ -16,7 +16,7 @@ class TrackedViewiPadUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         
         app.buttons.firstMatch.tap()
@@ -38,7 +38,7 @@ class TrackedViewiPadUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_TrackedView_TextField_NoResult() {
+    func test_iPad_TrackedView_TextField_NoResult() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             let textField = app.textFields["TrackedViewSearchTextField"]
             
@@ -52,7 +52,7 @@ class TrackedViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_TextField_Result() {
+    func test_iPad_TrackedView_TextField_Result() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             let textField = app.textFields["TrackedViewSearchTextField"]
             
@@ -66,11 +66,11 @@ class TrackedViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_ProductButton_AccessAPrdouct() {
+    func test_iPad_TrackedView_ProductButton_AccessAPrdouct() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             if (!app.staticTexts["TrackedViewNoResult"].exists) {
                 app.scrollViews.otherElements.buttons.firstMatch.tap()
-                let productName = app.staticTexts["ProductViewHomeName"]
+                let productName = app.staticTexts["ProductViewiPadProductPrice"]
                 XCTAssertTrue(productName.exists)
             } else {
                 XCTAssertTrue(app.staticTexts["TrackedViewNoResult"].exists)
@@ -78,11 +78,11 @@ class TrackedViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_ProductButton_AccessAPrdouctAndGoBack() {
+    func test_iPad_TrackedView_ProductButton_AccessAPrdouctAndGoBack() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             if (!app.staticTexts["TrackedViewNoResult"].exists) {
                 app.scrollViews.otherElements.buttons.firstMatch.tap()
-                let productName = app.staticTexts["ProductViewHomeName"]
+                let productName = app.staticTexts["ProductViewiPadProductPrice"]
                 XCTAssertTrue(productName.exists)
                 
                 //It shouldn't exist a button before
@@ -96,7 +96,7 @@ class TrackedViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_LoginButton_AccessLogin() {
+    func test_iPad_TrackedView_LoginButton_AccessLogin() {
         if (app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             app.buttons["TrackedViewLoginButton"].tap()
             
@@ -104,8 +104,11 @@ class TrackedViewiPadUITest: XCTestCase {
             
             XCTAssertTrue(loginText.exists)
             
-            //It shouldn't exist a button before
-            app.buttons.firstMatch.tap()
+            let topOffset = CGVector(dx: 0.5, dy: 1.1)
+
+            let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+            
+            cellFarRightCoordinate.press(forDuration: 1)
             
             let loginButtonNew = app.buttons["TrackedViewLoginButton"]
             XCTAssertTrue(loginButtonNew.exists)

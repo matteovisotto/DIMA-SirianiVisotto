@@ -37,6 +37,7 @@ struct iPadHomeView: View {
                                                 TrackedProductView(viewModel.trackingObjects[index]).padding(.horizontal, 10)
                                                 
                                             }.highPriorityGesture(DragGesture())
+                                            .accessibilityIdentifier("HomeViewLastTrackedButton\(index)")
                                     }
                                 }.frame(width: geometry.size.width, height: 150).accessibilityIdentifier("HomeViewPagingView")
                                 
@@ -57,6 +58,7 @@ struct iPadHomeView: View {
                                             }.cornerRadius(10)
                                     
                                     }.highPriorityGesture(DragGesture())
+                                        .accessibilityIdentifier("HomeViewCategoryButton\(contentIndex)")
                                 }.frame(width: geometry.size.width, height: 190)
                             }
                             HStack{

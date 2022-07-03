@@ -31,7 +31,7 @@ class AddProductViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_AddProductView_AmazonView_CloseAmazonView() throws {
+    func test_iPhone_AddProductView_AmazonView_CloseAmazonView() throws {
         let textField = app.textFields["AddProductViewAmazonTextField"].waitForExistence(timeout: 2)
         
         XCTAssertTrue(textField)
@@ -52,21 +52,21 @@ class AddProductViewUITest: XCTestCase {
         XCTAssertTrue(mostTrackedText.isHittable)
     }
     
-    func test_AddProductView_AddButton_Disabled() throws {
+    func test_iPhone_AddProductView_AddButton_Disabled() throws {
         if (!userIsLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
         }
     }
     
-    func test_TrackProductView_TrackButton_Disabled() throws {
+    func test_iPhone_TrackProductView_TrackButton_Disabled() throws {
         if (userIsLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
         }
     }
     
-    func test_AddProductView_AddButton_Enabled() throws {
+    func test_iPhone_AddProductView_AddButton_Enabled() throws {
         if (!userIsLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
@@ -89,7 +89,7 @@ class AddProductViewUITest: XCTestCase {
         }
     }
     
-    func test_AddProductView_TrackButton_Enabled() throws {
+    func test_iPhone_AddProductView_TrackButton_Enabled() throws {
         if (userIsLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
@@ -112,7 +112,7 @@ class AddProductViewUITest: XCTestCase {
         }
     }
     
-    func test_AddProductView_GoBackAndForwardButton_UserNavigate() throws {
+    func test_iPhone_AddProductView_GoBackAndForwardButton_UserNavigate() throws {
         let backButton = app.buttons["AddProductViewGoBackButton"]
         XCTAssertFalse(backButton.isEnabled)
     

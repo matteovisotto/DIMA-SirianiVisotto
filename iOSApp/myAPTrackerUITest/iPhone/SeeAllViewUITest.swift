@@ -32,7 +32,7 @@ class SeeAllViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_SeeAllView_OpenCategories () {
+    func test_iPhone_SeeAllView_OpenCategories () {
         let seeAllButtonCategories = app.buttons["SeeAllViewCategoriesButton"]
         
         XCTAssertTrue(seeAllButtonCategories.exists)
@@ -44,7 +44,7 @@ class SeeAllViewUITest: XCTestCase {
         XCTAssertTrue(categories)
     }
     
-    func test_SeeAllView_OpenCategoriesAndCloseIt() {
+    func test_iPhone_SeeAllView_OpenCategoriesAndCloseIt() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -58,7 +58,7 @@ class SeeAllViewUITest: XCTestCase {
         XCTAssertTrue(seeAllName.isHittable)
     }
     
-    func test_SeeAllView_Categories_ChooseCategories() {
+    func test_iPhone_SeeAllView_Categories_ChooseCategories() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -81,7 +81,7 @@ class SeeAllViewUITest: XCTestCase {
         XCTAssertTrue(seeAllCategory.label.lowercased() == categoryText.lowercased())
     }
     
-    func test_SeeAllView_CategoriesButton_CloseCategories() {
+    func test_iPhone_SeeAllView_CategoriesButton_CloseCategories() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -104,7 +104,7 @@ class SeeAllViewUITest: XCTestCase {
         XCTAssertTrue(seeAllName.isHittable)
     }
     
-    func test_SeeAllView_OpenProductAndCloseIt() {
+    func test_iPhone_SeeAllView_OpenProductAndCloseIt() {
         app.tables.buttons.element(boundBy: 0).tap()
         
         let product = app.staticTexts["ProductViewHomeName"]

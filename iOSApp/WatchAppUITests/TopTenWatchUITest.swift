@@ -23,7 +23,7 @@ class TopTenWatchUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_TopTen_ProductButton_AccessAndGoBack() throws {
+    func test_Watch_TopTen_ProductButton_AccessAndGoBack() throws {
         let tracked = app.buttons["HomeViewTopTenWatch"]
         XCTAssertTrue(tracked.exists)
         let trackedText = tracked.label

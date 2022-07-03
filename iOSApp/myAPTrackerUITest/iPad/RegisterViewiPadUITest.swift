@@ -14,7 +14,7 @@ class RegisterViewiPadUITest: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
-        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         
         app.buttons.firstMatch.tap()
@@ -42,7 +42,7 @@ class RegisterViewiPadUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_RegisterView_RegisterButton_ButtonIsEnable() {
+    func test_iPad_RegisterView_RegisterButton_ButtonIsEnable() {
         if (userIsNotLogged) {
             let registerName = app.textFields["RegisterViewNameTextField"]
             XCTAssertTrue(registerName.exists)
@@ -94,7 +94,7 @@ class RegisterViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_RegisterView_RegisterButton_NoNameInsertedButtonDisabled() {
+    func test_iPad_RegisterView_RegisterButton_NoNameInsertedButtonDisabled() {
         if (userIsNotLogged) {
             let registerName = app.textFields["RegisterViewNameTextField"]
             XCTAssertTrue(registerName.exists)
@@ -144,7 +144,7 @@ class RegisterViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_RegisterView_RegisterButton_NoSurnameInsertedButtonDisabled() {
+    func test_iPad_RegisterView_RegisterButton_NoSurnameInsertedButtonDisabled() {
         if (userIsNotLogged) {
             let registerName = app.textFields["RegisterViewNameTextField"]
             XCTAssertTrue(registerName.exists)
@@ -192,7 +192,7 @@ class RegisterViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_RegisterView_RegisterButton_InvalidEmailInsertedButtonDisabled() {
+    func test_iPad_RegisterView_RegisterButton_InvalidEmailInsertedButtonDisabled() {
         if (userIsNotLogged) {
             let registerName = app.textFields["RegisterViewNameTextField"]
             XCTAssertTrue(registerName.exists)
@@ -244,7 +244,7 @@ class RegisterViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_RegisterView_RegisterButton_PasswordsNotMatchingInsertedButtonDisabled() {
+    func test_iPad_RegisterView_RegisterButton_PasswordsNotMatchingInsertedButtonDisabled() {
         if (userIsNotLogged) {
             let registerName = app.textFields["RegisterViewNameTextField"]
             XCTAssertTrue(registerName.exists)
@@ -296,7 +296,7 @@ class RegisterViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_RegisterView_RegisterButton_TermsNotToggledButtonDisabled() {
+    func test_iPad_RegisterView_RegisterButton_TermsNotToggledButtonDisabled() {
         if (userIsNotLogged) {
             let registerName = app.textFields["RegisterViewNameTextField"]
             XCTAssertTrue(registerName.exists)

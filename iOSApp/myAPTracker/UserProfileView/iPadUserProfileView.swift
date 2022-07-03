@@ -76,6 +76,7 @@ struct iPadUserProfileView: View {
                                     .cornerRadius(15)
                                     .disabled(!viewModel.validatePassword())
                                     .opacity(!viewModel.validatePassword() ? 0.5 : 1)
+                                    .accessibilityIdentifier("UserProfileViewiPadChange")
                                     }
                                     .padding(.top)
                                 }

@@ -22,7 +22,7 @@ class TutorialViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_TutorialView_ChangePageButton_UserChangePageAndEndsTutorial() {
+    func test_iPhone_TutorialView_ChangePageButton_UserChangePageAndEndsTutorial() {
         app.images.allElementsBoundByIndex.last?.tap()
 
         sleep(10)
@@ -44,7 +44,7 @@ class TutorialViewUITest: XCTestCase {
         XCTAssertTrue(app.staticTexts["HomeViewMostTrackedText"].exists)
     }
     
-    func test_TutorialView_SkipButton_UserEndsTutorialThroughSkip() {
+    func test_iPhone_TutorialView_SkipButton_UserEndsTutorialThroughSkip() {
         app.buttons["TutorialViewSkipButton"].tap()
         
         sleep(10)

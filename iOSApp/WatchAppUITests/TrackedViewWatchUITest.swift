@@ -23,7 +23,7 @@ class TrackedViewWatchUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_TrackedView_ProductButton_AccessAndGoBack() throws {
+    func test_Watch_TrackedView_ProductButton_AccessAndGoBack() throws {
         let tracked = app.buttons["HomeViewTrackedWatch"].waitForExistence(timeout: 10)
         
         if (tracked) {

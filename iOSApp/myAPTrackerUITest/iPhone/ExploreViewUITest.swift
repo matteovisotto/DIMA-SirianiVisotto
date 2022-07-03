@@ -26,7 +26,7 @@ class ExploreViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_ExploreView_FirstSeeAllButton_CheckWorking() {
+    func test_iPhone_ExploreView_FirstSeeAllButton_CheckWorking() {
         app.buttons["ExploreViewFirstSeeAll"].tap()
         
         let titleSeeAllView = app.staticTexts["SeeAllViewTitle"]
@@ -40,7 +40,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(seeAllName.exists)
     }
     
-    func test_ExploreView_FirstSeeAllButton_CheckSameTitle() {
+    func test_iPhone_ExploreView_FirstSeeAllButton_CheckSameTitle() {
         let seeAllName = app.staticTexts["ExploreViewFirstTitle"]
         let seeAllNameText = seeAllName.label
         
@@ -55,7 +55,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    func test_ExploreView_FirstSeeAllCategories_AccessProductsAndGoBack() {
+    func test_iPhone_ExploreView_FirstSeeAllCategories_AccessProductsAndGoBack() {
         //app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 0).tap()
         app.scrollViews.buttons["ExploreViewFirstProduct0"].tap()
         
@@ -70,7 +70,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(tabTitle.exists)
     }
     
-    func test_ExploreView_FirstSeeAllCategories_SwipeProducts() {
+    func test_iPhone_ExploreView_FirstSeeAllCategories_SwipeProducts() {
         let product = app.scrollViews.buttons["ExploreViewFirstProduct0"]
         XCTAssertTrue(product.isHittable)
         
@@ -95,7 +95,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(productNewHit.isHittable)
     }
     
-    func test_ExploreView_SecondSeeAllButton_CheckWorking() {
+    func test_iPhone_ExploreView_SecondSeeAllButton_CheckWorking() {
         app.buttons["ExploreViewSecondSeeAll"].tap()
         
         let titleSeeAllView = app.staticTexts["SeeAllViewTitle"]
@@ -109,7 +109,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(seeAllName.exists)
     }
     
-    func test_ExploreView_SecondSeeAllButton_CheckSameTitle() {
+    func test_iPhone_ExploreView_SecondSeeAllButton_CheckSameTitle() {
         let seeAllName = app.staticTexts["ExploreViewSecondTitle"]
         let seeAllNameText = seeAllName.label
         
@@ -124,7 +124,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    func test_ExploreView_SecondSeeAllCategories_AccessProductsAndGoBack() {
+    func test_iPhone_ExploreView_SecondSeeAllCategories_AccessProductsAndGoBack() {
         app.scrollViews.buttons["ExploreViewSecondProduct0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
@@ -138,7 +138,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(tabTitle.exists)
     }
     
-    func test_ExploreView_SecondSeeAllCategories_SwipeProducts() {
+    func test_iPhone_ExploreView_SecondSeeAllCategories_SwipeProducts() {
         let product = app.scrollViews.buttons["ExploreViewSecondProduct0"]
         XCTAssertTrue(product.isHittable)
         
@@ -162,7 +162,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(productNewHit.isHittable)
     }
     
-    func test_ExploreView_ThirdSeeAllButton_CheckWorking() {
+    func test_iPhone_ExploreView_ThirdSeeAllButton_CheckWorking() {
         app.buttons["ExploreViewThirdSeeAll"].tap()
         
         let titleSeeAllView = app.staticTexts["SeeAllViewTitle"]
@@ -176,7 +176,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(seeAllName.exists)
     }
     
-    func test_ExploreView_ThirdSeeAllButton_CheckSameTitle() {
+    func test_iPhone_ExploreView_ThirdSeeAllButton_CheckSameTitle() {
         let seeAllName = app.staticTexts["ExploreViewThirdTitle"]
         let seeAllNameText = seeAllName.label
         
@@ -191,7 +191,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertEqual(seeAllNameText.lowercased(), titleSeeAllView.label.lowercased())
     }
     
-    func test_ExploreView_ThirdSeeAllCategories_AccessProductsAndGoBack() {
+    func test_iPhone_ExploreView_ThirdSeeAllCategories_AccessProductsAndGoBack() {
         app.scrollViews.buttons["ExploreViewThirdProduct0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
@@ -205,7 +205,7 @@ class ExploreViewUITest: XCTestCase {
         XCTAssertTrue(tabTitle.exists)
     }
     
-    func test_ExploreView_ThirdSeeAllCategories_SwipeProducts() {
+    func test_iPhone_ExploreView_ThirdSeeAllCategories_SwipeProducts() {
         let topOffset = CGVector(dx: 0.5, dy: 0.5)
         let bottomOffset = CGVector(dx: 0.5, dy: 0.15)
 

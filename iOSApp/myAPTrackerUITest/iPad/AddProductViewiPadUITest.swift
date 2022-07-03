@@ -17,7 +17,7 @@ class AddProductViewiPadUITest: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         sleep(5)
         if (app.staticTexts["HomeViewLastProductText"].exists) {
@@ -32,21 +32,50 @@ class AddProductViewiPadUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func test_AddProductView_AddButton_Disabled() throws {
+    func test_iPad_AddProductView_AmazonView_CloseAmazonView() throws {
+        let textField = app.textFields["AddProductViewAmazonTextField"].waitForExistence(timeout: 2)
+        
+        XCTAssertTrue(textField)
+        
+        let topOffset = CGVector(dx: 0.5, dy: 1.1)
+
+        let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+
+        cellFarRightCoordinate.press(forDuration: 1)
+                
+        sleep(5)
+        
+        let topOffset2 = CGVector(dx: 0.95, dy: 0.5)
+        let bottomOffset2 = CGVector(dx: 0.05, dy: 0.5)
+
+        let cellFarRightCoordinate2 = app.coordinate(withNormalizedOffset: topOffset2)
+        let cellFarLeftCoordinate2 = app.coordinate(withNormalizedOffset: bottomOffset2)
+        
+        // drag from right to left to delete
+        cellFarRightCoordinate2.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate2)
+        
+        sleep(5)
+        
+        let mostTrackedText = app.staticTexts["HomeViewMostTrackedText"]
+        
+        XCTAssertTrue(mostTrackedText.isHittable)
+    }
+    
+    func test_iPad_AddProductView_AddButton_Disabled() throws {
         if (!userIsLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
         }
     }
     
-    func test_TrackProductView_TrackButton_Disabled() throws {
+    func test_iPad_TrackProductView_TrackButton_Disabled() throws {
         if (userIsLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
         }
     }
     
-    func test_AddProductView_AddButton_Enabled() throws {
+    func test_iPad_AddProductView_AddButton_Enabled() throws {
         if (!userIsLogged) {
             let addButton = app.buttons["AddProductViewAddButton"]
             XCTAssertFalse(addButton.isEnabled)
@@ -55,7 +84,7 @@ class AddProductViewiPadUITest: XCTestCase {
             
             textField.tap()
                         
-            sleep(5)
+            sleep(10)
             
             textField.typeText("/dp/B084DWG2VQ/\n")
             
@@ -63,13 +92,13 @@ class AddProductViewiPadUITest: XCTestCase {
             
             let addButtonNew = app.buttons["AddProductViewAddButton"]
             
-            sleep(5)
+            sleep(10)
             
             XCTAssertTrue(addButtonNew.isEnabled)
         }
     }
     
-    func test_AddProductView_TrackButton_Enabled() throws {
+    func test_iPad_AddProductView_TrackButton_Enabled() throws {
         if (userIsLogged) {
             let trackButton = app.buttons["AddProductViewTrackButton"]
             XCTAssertFalse(trackButton.isEnabled)
@@ -78,7 +107,7 @@ class AddProductViewiPadUITest: XCTestCase {
             
             textField.tap()
             
-            sleep(5)
+            sleep(10)
             
             textField.typeText("/dp/B084DWG2VQ/\n")
             
@@ -86,13 +115,13 @@ class AddProductViewiPadUITest: XCTestCase {
             
             let addButtonNew = app.buttons["AddProductViewTrackButton"]
             
-            sleep(5)
+            sleep(10)
             
             XCTAssertTrue(addButtonNew.isEnabled)
         }
     }
     
-    func test_AddProductView_GoBackAndForwardButton_UserNavigate() throws {
+    func test_iPad_AddProductView_GoBackAndForwardButton_UserNavigate() throws {
         let backButton = app.buttons["AddProductViewGoBackButton"]
         XCTAssertFalse(backButton.isEnabled)
     
@@ -103,7 +132,7 @@ class AddProductViewiPadUITest: XCTestCase {
         
         textField.tap()
         
-        sleep(5)
+        sleep(10)
                 
         textField.typeText("/dp/B084DWG2VQ/\n")
         

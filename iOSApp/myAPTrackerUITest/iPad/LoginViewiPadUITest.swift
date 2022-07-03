@@ -14,7 +14,7 @@ class LoginViewiPadUITest: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
-        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
+        try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         
         app.buttons.firstMatch.tap()
@@ -41,21 +41,16 @@ class LoginViewiPadUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_LoginView_RegisterButton_AccessRegisterView() {
+    func test_iPad_LoginView_RegisterButton_AccessRegisterView() {
         if (userIsNotLogged) {
             app.buttons["LoginViewRegisterButton"].tap()
             let registerText = app.staticTexts["RegisterViewRegisterText"]
             
             XCTAssertTrue(registerText.exists)
-            
-            app.buttons.firstMatch.tap()
-            
-            let loginText = app.staticTexts["LoginViewLoginText"]
-            XCTAssertTrue(loginText.exists)
         }
     }
     
-    func test_LoginView_LoginButton_EmailInvalidAndTheButtonIsDisabled() {
+    func test_iPad_LoginView_LoginButton_EmailInvalidAndTheButtonIsDisabled() {
         if (userIsNotLogged) {
             let email = app.textFields["LoginViewEmailTextField"]
             
@@ -74,7 +69,7 @@ class LoginViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_LoginView_LoginButton_PasswordNotInsertedAndTheButtonIsDisabled() {
+    func test_iPad_LoginView_LoginButton_PasswordNotInsertedAndTheButtonIsDisabled() {
         if (userIsNotLogged) {
             let email = app.textFields["LoginViewEmailTextField"]
             
@@ -88,7 +83,7 @@ class LoginViewiPadUITest: XCTestCase {
         }
     }
     
-    func test_LoginView_LoginButton_ButtonIsEnabled() {
+    func test_iPad_LoginView_LoginButton_ButtonIsEnabled() {
         if (userIsNotLogged) {
             let email = app.textFields["LoginViewEmailTextField"]
             

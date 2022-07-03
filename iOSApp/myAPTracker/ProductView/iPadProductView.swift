@@ -39,7 +39,7 @@ struct iPadProductView: View {
                     
                     Spacer()
                     HStack{
-                        Text("\(viewModel.product.price!, specifier: "%.2f") €").padding(.leading).font(.title3.bold()).foregroundColor(Color("PrimaryLabel"))
+                        Text("\(viewModel.product.price!, specifier: "%.2f") €").padding(.leading).font(.title3.bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("ProductViewiPadProductPrice")
                         Spacer()
                         Button{
                             if let url = URL(string: viewModel.product.link) {

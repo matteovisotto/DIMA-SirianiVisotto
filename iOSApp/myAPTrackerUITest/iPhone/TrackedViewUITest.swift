@@ -26,7 +26,7 @@ class TrackedViewUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_TrackedView_TextField_NoResult() {
+    func test_iPhone_TrackedView_TextField_NoResult() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             let textField = app.textFields["TrackedViewSearchTextField"]
             
@@ -40,7 +40,7 @@ class TrackedViewUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_TextField_Result() {
+    func test_iPhone_TrackedView_TextField_Result() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             let textField = app.textFields["TrackedViewSearchTextField"]
             
@@ -54,7 +54,7 @@ class TrackedViewUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_ProductButton_AccessAPrdouct() {
+    func test_iPhone_TrackedView_ProductButton_AccessAPrdouct() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             if (!app.staticTexts["TrackedViewNoResult"].exists) {
                 app.scrollViews.otherElements.buttons.firstMatch.tap()
@@ -66,7 +66,7 @@ class TrackedViewUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_ProductButton_AccessAPrdouctAndGoBack() {
+    func test_iPhone_TrackedView_ProductButton_AccessAPrdouctAndGoBack() {
         if (!app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             if (!app.staticTexts["TrackedViewNoResult"].exists) {
                 app.scrollViews.otherElements.buttons.firstMatch.tap()
@@ -84,7 +84,7 @@ class TrackedViewUITest: XCTestCase {
         }
     }
     
-    func test_TrackedView_LoginButton_AccessLogin() {
+    func test_iPhone_TrackedView_LoginButton_AccessLogin() {
         if (app.buttons["TrackedViewLoginButton"].waitForExistence(timeout: 2)) {
             app.buttons["TrackedViewLoginButton"].tap()
             
