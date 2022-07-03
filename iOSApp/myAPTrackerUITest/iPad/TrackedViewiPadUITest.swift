@@ -18,6 +18,7 @@ class TrackedViewiPadUITest: XCTestCase {
         continueAfterFailure = false
         try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPhone")
         app.launch()
+        
         app.buttons.firstMatch.tap()
         app.otherElements.buttons["iPadMainButton1"].tap()
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
