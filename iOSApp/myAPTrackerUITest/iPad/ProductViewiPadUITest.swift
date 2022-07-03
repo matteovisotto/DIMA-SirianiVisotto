@@ -59,7 +59,7 @@ class ProductViewiPadUITest: XCTestCase {
     func test_iPad_ProductView_CommentButton_CorrectlyMoveToCommentPageAndCheckIfTextFieldIsVisble() {
         if (userIsLogged) {
             let elementsQuery = app.otherElements
-            let commentButton = elementsQuery.buttons.element(boundBy: 2)
+            let commentButton = elementsQuery.buttons.element(boundBy: 4)
             commentButton.tap()
             
             XCTAssertTrue(commentButton.exists)
@@ -72,7 +72,7 @@ class ProductViewiPadUITest: XCTestCase {
     func test_iPad_ProductView_CommentButton_CorrectlyMoveToCommentPageAndCheckThatTextFieldIsNotVisible() {
         if (!userIsLogged) {
             let elementsQuery = app.otherElements
-            let commentButton = elementsQuery.buttons.element(boundBy: 2)
+            let commentButton = elementsQuery.buttons.element(boundBy: 4)
             commentButton.tap()
             
             XCTAssertTrue(commentButton.exists)
@@ -95,9 +95,6 @@ class ProductViewiPadUITest: XCTestCase {
                 cellFarRightCoordinate.press(forDuration: 1)
                 
                 XCTAssertTrue(app.buttons["ProductViewSettingsTrackingButton"].isHittable)
-                
-                let text = app.scrollViews.staticTexts["UpdateTrackingViewNotificationText"]
-                XCTAssertTrue(text.exists)
             }
         }
     }
@@ -124,7 +121,6 @@ class ProductViewiPadUITest: XCTestCase {
                 XCTAssertTrue(neverButton)
                 
                 elementsQuery.buttons["UpdateTrackingViewNeverButton"].tap()
-                app.buttons.element(boundBy: 0).tap()
                 
                 let neverText = app.scrollViews.staticTexts["UpdateTrackingViewNeverNotificationText"]
                 

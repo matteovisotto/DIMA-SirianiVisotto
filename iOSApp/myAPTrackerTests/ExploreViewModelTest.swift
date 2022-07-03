@@ -53,7 +53,7 @@ class ExploreViewModelTest: XCTestCase {
         
         wait(for: [expectation], timeout: 3)
         
-        sleep(10)
+        sleep(20)
         
         XCTAssertGreaterThan(vm.mostTracked.count, 0)
         XCTAssertGreaterThan(vm.biggestRangeDrop.count, 0)

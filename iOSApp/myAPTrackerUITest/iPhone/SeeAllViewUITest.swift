@@ -52,8 +52,8 @@ class SeeAllViewUITest: XCTestCase {
         XCTAssertTrue(categories)
         
         app.buttons["FilterViewCloseCategories"].tap()
-        
-        let seeAllName = app.staticTexts["SeeAllViewTitle"]
+        XCTAssertTrue(app.buttons["SeeAllViewCategoriesButton"].waitForExistence(timeout: 5))
+        let seeAllName = app.buttons["SeeAllViewCategoriesButton"]
         
         XCTAssertTrue(seeAllName.isHittable)
     }
