@@ -20,6 +20,9 @@
 "Biggest range drop" = "Maggior sconto assoluto";
 
 /* No comment provided by engineer. */
+"Categories" = "Categorie";
+
+/* No comment provided by engineer. */
 "Cell %lld" = "Cella %lld";
 
 /* No comment provided by engineer. */
@@ -36,6 +39,12 @@
 
 /* No comment provided by engineer. */
 "Confirm password" = "Conferma password";
+
+/* Create an account or sign in via socials */
+"Create an account or sign in via socials" = "Crea un account o accedi dai social";
+
+/* Create your account */
+"Create your account" = "Crea il tuo account";
 
 /* No comment provided by engineer. */
 "Delete" = "Elimina";
@@ -70,6 +79,15 @@
 /* You have canceled the authentication process */
 "facebookAuthCancel" = "Operazione annullata";
 
+/* Filtered */
+"Filtered" = "Filtrati";
+
+/* Get notified */
+"Get notified" = "Notifiche";
+
+/* Get notified whenever your tracked product has a lower price */
+"Get notified whenever your tracked product has a lower price" = "Ricevi una notifica ogni volta che un prezzo tracciato scende";
+
 /* An error occurred in google authentication */
 "googleAuthError" = "Si è verificato un errore";
 
@@ -84,6 +102,9 @@
 
 /* invalid value */
 "Invalid value" = "Valore non valido";
+
+/* Keep track of your favourite Amazon product */
+"Keep track of your favourite Amazon product" = "Tieni traccia dei tuoi prodotti Amazon preferiti";
 
 /* No comment provided by engineer. */
 "Login" = "Accedi";
@@ -199,6 +220,9 @@
 /* No comment provided by engineer. */
 "Start tracking" = "Traccia";
 
+/* Stay update */
+"Stay update" = "Rimani aggiornato";
+
 /* No comment provided by engineer. */
 "Stop tracking" = "Smetti di tracciare";
 
@@ -210,6 +234,9 @@
 
 /* No comment provided by engineer. */
 "This setting can be overridden for each product you track by opening the product page" = "Questa impostazione può essere sovrascritta per ogni prodotto tracciato dalle impostazioni di tracciamento del prodotto";
+
+/* Track every product */
+"Track every product" = "Traccia ogni prodotto";
 
 /* No comment provided by engineer. */
 "Track product" = "Traccia";
@@ -265,6 +292,9 @@
 /* We cannot refresh your key, please login again */
 "We cannot refresh your key, please login again" = "Errore. Accedi nuovamente";
 
+/* Welcome in */
+"Welcome in" = "Benvenuto in";
+
 /* No comment provided by engineer. */
 "With disabled notification you cannot receive any updated about your tracked product and also general information. Click above to change your notification settings." = "Con le notifiche disabilitate non sarai in grado di ricevere aggiornamenti sui tuoi prodotti tracciati. Clicca qui sopra per cambiare le impostazioni.";
 
@@ -301,27 +331,3 @@
 /* No comment provided by engineer. */
 "Your last added products" = "Ultimi aggiunti";
 
-"Welcome in" = "Benvenuto in";
-
-"Keep track of your favourite Amazon product" = "Tieni traccia dei tuoi prodotti Amazon preferiti";
-
-"Stay update" = "Rimani aggiornato";
-
-"Create your account" = "Crea il tuo account";
-
-"Create an account or sign in via socials" = "Crea un account o accedi dai social";
-
-"Get notified" = "Notifiche";
-
-"Track every product" = "Traccia ogni prodotto";
-
-"Get notified whenever your tracked product has a lower price" = "Ricevi una notifica ogni volta che un prezzo tracciato scende";
-
-"Categories" = "Categories";
-
-"Filtered" = "Filtrati";
-
-"Top 10" = "Migliori 10";
-
-
-"Now:" = "Ora:";
