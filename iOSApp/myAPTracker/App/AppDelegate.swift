@@ -20,7 +20,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         UIApplication.shared.applicationIconBadgeNumber = 0
         AppDelegate.shared = self
-        AppState.shared.reloadState() //Tells the delegate to reload application state just after finish launching
         if !WatchSessionManager.shared.isSuported() {
             print("WCSession not supported (f.e. on iPad).")
         }

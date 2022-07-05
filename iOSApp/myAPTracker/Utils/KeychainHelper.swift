@@ -48,7 +48,7 @@ final class KeychainHelper {
             kSecAttrAccount: account,
             kSecClass: kSecClassGenericPassword,
             kSecReturnData: true,
-            //kSecAttrAccessible: kSecAttrAccessibleAfterFirstUnlock
+            kSecAttrAccessible: kSecAttrAccessibleAfterFirstUnlock
         ] as CFDictionary
         
         var result: AnyObject?
@@ -63,6 +63,7 @@ final class KeychainHelper {
             kSecAttrService: service,
             kSecAttrAccount: account,
             kSecClass: kSecClassGenericPassword,
+            kSecAttrAccessible: kSecAttrAccessibleAfterFirstUnlock
             ] as CFDictionary
         
         // Delete item from keychain
