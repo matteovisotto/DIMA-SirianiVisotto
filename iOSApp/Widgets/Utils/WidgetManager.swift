@@ -11,7 +11,7 @@ import Foundation
 class WidgetManager {
     
     static func getFakeData() -> [WidgetProduct]{
-        return []
+        return [WidgetProduct(id: 0, name: "This beautiful first product", shortName: "First product", highestPrice: 1025.99, lowestPrice: 350.96, images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEYU7gR32xChbBPeVKPBMu2Rsfs0593Lf0Gw&usqp=CAU"], prices: [Price(updatedAt: "", price: 1025.99), Price(updatedAt: "", price: 1025.99), Price(updatedAt: "", price: 350.96), Price(updatedAt: "", price: 350.96)], price: 350.96), WidgetProduct(id: 1, name: "This beautiful second product", shortName: "Second product", highestPrice: 502.10, lowestPrice: 499.99, images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEYU7gR32xChbBPeVKPBMu2Rsfs0593Lf0Gw&usqp=CAU"], prices: [Price(updatedAt: "", price: 499.99), Price(updatedAt: "", price: 502.10), Price(updatedAt: "", price: 502.10), Price(updatedAt: "", price: 499.99)], price: 499.99), WidgetProduct(id: 2, name: "This beautiful third product", shortName: "Third product", highestPrice: 25.49, lowestPrice: 10.0, images: ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEYU7gR32xChbBPeVKPBMu2Rsfs0593Lf0Gw&usqp=CAU"], prices: [Price(updatedAt: "", price: 18), Price(updatedAt: "", price: 25.49), Price(updatedAt: "", price: 10), Price(updatedAt: "", price: 15.25)], price: 15.25)]
     }
     
     static func getWidgetType() -> Int {

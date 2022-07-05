@@ -10,4 +10,10 @@ import Foundation
 class Price: Codable {
     var updatedAt: String
     var price: Double
+    
+    init(updatedAt: String, price: Double){
+        self.updatedAt = updatedAt
+        self.price = price
+    }
+    
 }
