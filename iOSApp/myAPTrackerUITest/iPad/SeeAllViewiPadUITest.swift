@@ -114,7 +114,12 @@ class SeeAllViewiPadUITest: XCTestCase {
         
         XCTAssertTrue(product.exists)
         
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let seeAllName = app.buttons["SeeAllViewCategoriesButton"]
         

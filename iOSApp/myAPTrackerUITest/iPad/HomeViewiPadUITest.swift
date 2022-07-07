@@ -34,7 +34,13 @@ class HomeViewiPadUITest: XCTestCase {
             XCTAssertTrue(productName.exists)
             
             //It shouldn't exist a button before
-            app.buttons.firstMatch.tap()
+            if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+                app.buttons.firstMatch.tap()
+            } else {
+                app.buttons.firstMatch.tap()
+                app.buttons.firstMatch.tap()
+            }
+            
             let tabTitle = app.staticTexts["HomeViewLastProductText"]
             
             XCTAssertTrue(tabTitle.exists)
@@ -49,7 +55,13 @@ class HomeViewiPadUITest: XCTestCase {
         XCTAssertTrue(productName.exists)
         
         //It shouldn't exist a button before
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
+        
         let tabTitle = app.staticTexts["HomeViewMostTrackedText"]
         
         XCTAssertTrue(tabTitle.exists)
@@ -62,7 +74,12 @@ class HomeViewiPadUITest: XCTestCase {
         
         XCTAssertTrue(product.exists)
         
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let tabTitle = app.staticTexts["HomeViewMostTrackedText"]
         
@@ -77,7 +94,12 @@ class HomeViewiPadUITest: XCTestCase {
         XCTAssertTrue(seeAllName)
         
         //It shouldn't exist a button before
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let tabTitle = app.staticTexts["HomeViewMostTrackedText"]
         
@@ -91,7 +113,12 @@ class HomeViewiPadUITest: XCTestCase {
         
         XCTAssertTrue(product.exists)
         
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let tabTitle = app.staticTexts["HomeViewMostTrackedText"]
         

@@ -17,7 +17,10 @@ class LoginViewiPadUITest: XCTestCase {
         try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        }
+        
         app.otherElements.buttons["iPadMainButton1"].tap()
         let topOffset = CGVector(dx: 0.95, dy: 0.5)
         let bottomOffset = CGVector(dx: 0.05, dy: 0.5)

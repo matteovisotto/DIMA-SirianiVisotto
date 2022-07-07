@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Foundation
 
 class AddProductViewiPadUITest: XCTestCase {
 
@@ -23,7 +24,9 @@ class AddProductViewiPadUITest: XCTestCase {
         if (app.staticTexts["HomeViewLastProductText"].exists) {
             userIsLogged = true
         }
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        }
         app.buttons["iPadMainViewAddProduct"].tap()
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }

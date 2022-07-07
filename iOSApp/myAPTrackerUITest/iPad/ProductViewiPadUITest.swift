@@ -30,7 +30,6 @@ class ProductViewiPadUITest: XCTestCase {
     func test_iPad_ProductView_MaxAndMinTexts_CheckThatMaximumPriceIsHigherThanMinimum() {
         let elementsQuery = app.otherElements
         let priceButton = elementsQuery.buttons.element(boundBy: 1)
-        priceButton.tap()
         
         XCTAssertTrue(priceButton.exists)
         
@@ -59,11 +58,16 @@ class ProductViewiPadUITest: XCTestCase {
     func test_iPad_ProductView_CommentButton_CorrectlyMoveToCommentPageAndCheckIfTextFieldIsVisble() {
         if (userIsLogged) {
             let elementsQuery = app.otherElements
-            let commentButton = elementsQuery.buttons.element(boundBy: 4)
+            var commentButton: XCUIElement
+            if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+                commentButton = elementsQuery.buttons.element(boundBy: 4)
+            } else {
+                commentButton = elementsQuery.buttons.element(boundBy: 7)
+            }
             commentButton.tap()
             
             XCTAssertTrue(commentButton.exists)
-            
+                        
             let commentTextField = app.otherElements.textFields["CommentViewCommentTextField"]
             XCTAssertTrue(commentTextField.exists)
         }
@@ -72,8 +76,12 @@ class ProductViewiPadUITest: XCTestCase {
     func test_iPad_ProductView_CommentButton_CorrectlyMoveToCommentPageAndCheckThatTextFieldIsNotVisible() {
         if (!userIsLogged) {
             let elementsQuery = app.otherElements
-            let commentButton = elementsQuery.buttons.element(boundBy: 4)
-            commentButton.tap()
+            var commentButton: XCUIElement
+            if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+                commentButton = elementsQuery.buttons.element(boundBy: 4)
+            } else {
+                commentButton = elementsQuery.buttons.element(boundBy: 7)
+            }
             
             XCTAssertTrue(commentButton.exists)
             
@@ -117,7 +125,7 @@ class ProductViewiPadUITest: XCTestCase {
             if (app.buttons["ProductViewSettingsButton"].exists){
                 app.buttons["ProductViewSettingsButton"].tap()
                 let elementsQuery = app.scrollViews.otherElements
-                let neverButton = elementsQuery.buttons["UpdateTrackingViewNeverButton"].waitForExistence(timeout: 5)
+                let neverButton = elementsQuery.buttons["UpdateTrackingViewNeverButton"].waitForExistence(timeout: 10)
                 XCTAssertTrue(neverButton)
                 
                 elementsQuery.buttons["UpdateTrackingViewNeverButton"].tap()
@@ -135,7 +143,7 @@ class ProductViewiPadUITest: XCTestCase {
             if (app.buttons["ProductViewSettingsButton"].exists){
                 app.buttons["ProductViewSettingsButton"].tap()
                 let elementsQuery = app.scrollViews.otherElements
-                let neverButton = elementsQuery.buttons["UpdateTrackingViewPercentageButton"].waitForExistence(timeout: 5)
+                let neverButton = elementsQuery.buttons["UpdateTrackingViewPercentageButton"].waitForExistence(timeout: 10)
                 XCTAssertTrue(neverButton)
                 
                 elementsQuery.buttons["UpdateTrackingViewPercentageButton"].tap()
@@ -154,7 +162,7 @@ class ProductViewiPadUITest: XCTestCase {
                 app.buttons["ProductViewSettingsButton"].tap()
                 
                 let elementsQuery = app.scrollViews.otherElements
-                let neverButton = elementsQuery.buttons["UpdateTrackingViewValueButton"].waitForExistence(timeout: 5)
+                let neverButton = elementsQuery.buttons["UpdateTrackingViewValueButton"].waitForExistence(timeout: 10)
                 XCTAssertTrue(neverButton)
                 
                 elementsQuery.buttons["UpdateTrackingViewValueButton"].tap()
@@ -173,7 +181,7 @@ class ProductViewiPadUITest: XCTestCase {
                 app.buttons["ProductViewSettingsButton"].tap()
                 
                 let elementsQuery = app.scrollViews.otherElements
-                let neverButton = elementsQuery.buttons["UpdateTrackingViewAlwaysButton"].waitForExistence(timeout: 5)
+                let neverButton = elementsQuery.buttons["UpdateTrackingViewAlwaysButton"].waitForExistence(timeout: 10)
                 XCTAssertTrue(neverButton)
                 
                 elementsQuery.buttons["UpdateTrackingViewAlwaysButton"].tap()

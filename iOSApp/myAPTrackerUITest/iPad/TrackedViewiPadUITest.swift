@@ -19,16 +19,22 @@ class TrackedViewiPadUITest: XCTestCase {
         try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         
-        app.buttons.firstMatch.tap()
-        app.otherElements.buttons["iPadMainButton1"].tap()
-        let topOffset = CGVector(dx: 0.95, dy: 0.5)
-        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
-
-        let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
-        let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        }
         
-        // drag from right to left to delete
-        cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        app.otherElements.buttons["iPadMainButton1"].tap()
+        
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            let topOffset = CGVector(dx: 0.95, dy: 0.5)
+            let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+            let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+            let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
+            
+            // drag from right to left to delete
+            cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        }
         
         sleep(5)
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
@@ -86,7 +92,12 @@ class TrackedViewiPadUITest: XCTestCase {
                 XCTAssertTrue(productName.exists)
                 
                 //It shouldn't exist a button before
-                app.buttons.firstMatch.tap()
+                if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+                    app.buttons.firstMatch.tap()
+                } else {
+                    app.buttons.firstMatch.tap()
+                    app.buttons.firstMatch.tap()
+                }
                 
                 let textField = app.textFields["TrackedViewSearchTextField"]
                 XCTAssertTrue(textField.exists)

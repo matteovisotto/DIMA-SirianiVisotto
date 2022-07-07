@@ -19,16 +19,22 @@ class ExploreViewiPadUITest: XCTestCase {
         try XCTSkipIf(UIDevice.current.userInterfaceIdiom != .pad, "Only test for iPad")
         app.launch()
         
-        app.buttons.firstMatch.tap()
-        app.otherElements.buttons["iPadMainButton2"].tap()
-        let topOffset = CGVector(dx: 0.95, dy: 0.5)
-        let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
-
-        let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
-        let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        }
         
-        // drag from right to left to delete
-        cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        app.otherElements.buttons["iPadMainButton2"].tap()
+        
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            let topOffset = CGVector(dx: 0.95, dy: 0.5)
+            let bottomOffset = CGVector(dx: 0.05, dy: 0.5)
+
+            let cellFarRightCoordinate = app.coordinate(withNormalizedOffset: topOffset)
+            let cellFarLeftCoordinate = app.coordinate(withNormalizedOffset: bottomOffset)
+            
+            // drag from right to left to delete
+            cellFarRightCoordinate.press(forDuration: 0.1, thenDragTo: cellFarLeftCoordinate)
+        }
         
         sleep(5)
         
@@ -47,7 +53,12 @@ class ExploreViewiPadUITest: XCTestCase {
         XCTAssertTrue(titleSeeAllView.exists)
         
         //It shouldn't exist a button before
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let seeAllName = app.staticTexts["ExploreViewFirstTitle"]
         XCTAssertTrue(seeAllName.exists)
@@ -60,7 +71,12 @@ class ExploreViewiPadUITest: XCTestCase {
         
         XCTAssertTrue(product.exists)
         
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let tabTitle = app.staticTexts["ExploreViewFirstTitle"]
 
@@ -100,7 +116,12 @@ class ExploreViewiPadUITest: XCTestCase {
         XCTAssertTrue(titleSeeAllView.exists)
         
         //It shouldn't exist a button before
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let seeAllName = app.staticTexts["ExploreViewSecondTitle"]
         XCTAssertTrue(seeAllName.exists)
@@ -113,7 +134,12 @@ class ExploreViewiPadUITest: XCTestCase {
         
         XCTAssertTrue(product.exists)
         
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let tabTitle = app.staticTexts["ExploreViewSecondTitle"]
 
@@ -152,7 +178,12 @@ class ExploreViewiPadUITest: XCTestCase {
         XCTAssertTrue(titleSeeAllView.exists)
         
         //It shouldn't exist a button before
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let seeAllName = app.staticTexts["ExploreViewThirdTitle"]
         XCTAssertTrue(seeAllName.exists)
@@ -165,7 +196,12 @@ class ExploreViewiPadUITest: XCTestCase {
         
         XCTAssertTrue(product.exists)
         
-        app.buttons.firstMatch.tap()
+        if (UIScreen.main.bounds.width < UIScreen.main.bounds.height) {
+            app.buttons.firstMatch.tap()
+        } else {
+            app.buttons.firstMatch.tap()
+            app.buttons.firstMatch.tap()
+        }
         
         let tabTitle = app.staticTexts["ExploreViewThirdTitle"]
 
