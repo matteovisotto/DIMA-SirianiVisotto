@@ -44,7 +44,7 @@ class SeeAllViewUITest: XCTestCase {
         XCTAssertTrue(categories)
     }
     
-    func test_iPhone_SeeAllView_OpenCategoriesAndCloseIt() {
+    func test_iPhone_SeeAllView_FilterCategoriesButton_OpenCategoriesAndCloseIt() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -104,7 +104,7 @@ class SeeAllViewUITest: XCTestCase {
         XCTAssertTrue(seeAllName.isHittable)
     }
     
-    func test_iPhone_SeeAllView_OpenProductAndCloseIt() {
+    func test_iPhone_SeeAllView_FilterCategoriesButton_OpenProductAndCloseIt() {
         app.tables.buttons.element(boundBy: 0).tap()
         
         let product = app.staticTexts["ProductViewHomeName"]

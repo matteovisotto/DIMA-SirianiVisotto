@@ -31,7 +31,7 @@ class SeeAllViewiPadUITest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func test_iPad_SeeAllView_OpenCategories () {
+    func test_iPad_SeeAllView_FilterCategoriesButton_OpenCategories () {
         let seeAllButtonCategories = app.buttons["SeeAllViewCategoriesButton"]
         
         XCTAssertTrue(seeAllButtonCategories.exists)
@@ -43,7 +43,7 @@ class SeeAllViewiPadUITest: XCTestCase {
         XCTAssertTrue(categories)
     }
     
-    func test_iPad_SeeAllView_OpenCategoriesAndCloseIt() {
+    func test_iPad_SeeAllView_FilterCategoriesButton_OpenCategoriesAndCloseIt() {
         app.buttons["SeeAllViewCategoriesButton"].tap()
         
         let categories = app.staticTexts["FilterViewSelectMoreCategories"].waitForExistence(timeout: 5)
@@ -107,7 +107,7 @@ class SeeAllViewiPadUITest: XCTestCase {
         XCTAssertTrue(seeAllName.isHittable)
     }
     
-    func test_iPad_SeeAllView_OpenProductAndCloseIt() {
+    func test_iPad_SeeAllView_ProductButton_OpenProductAndCloseIt() {
         app.buttons["SeeAllViewiPadItem0"].tap()
         
         let product = app.staticTexts["ProductViewiPadProductPrice"]

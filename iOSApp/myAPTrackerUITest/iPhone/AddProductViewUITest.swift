@@ -142,24 +142,3 @@ class AddProductViewUITest: XCTestCase {
         XCTAssertTrue(forwardButtonNew.isEnabled)
     }
 }
-
-
-/*extension XCUIElement {
-    
-    func clearText() {
-        guard let stringValue = self.value as? String else {
-            return
-        }
-
-        if let placeholderString = self.placeholderValue, placeholderString == stringValue {
-            return
-        }
-        
-        var deleteString = String()
-        for _ in stringValue {
-            deleteString += XCUIKeyboardKey.delete.rawValue
-        }
-        self.typeText(deleteString)
-    }
-
-}*/

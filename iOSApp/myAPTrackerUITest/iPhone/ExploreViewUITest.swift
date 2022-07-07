@@ -56,7 +56,6 @@ class ExploreViewUITest: XCTestCase {
     }
     
     func test_iPhone_ExploreView_FirstSeeAllCategories_AccessProductsAndGoBack() {
-        //app.scrollViews.otherElements.scrollViews.otherElements.element(boundBy: 0).buttons.element(boundBy: 0).tap()
         app.scrollViews.buttons["ExploreViewFirstProduct0"].tap()
         
         let product = app.staticTexts["ProductViewHomeName"]
