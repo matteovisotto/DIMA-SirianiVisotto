@@ -25,6 +25,7 @@ struct ExploreView: View {
                             }.accessibilityIdentifier("ExploreViewFirstSeeAll")
 
                         }.padding(.horizontal)
+                        ZStack{
                         VStack(spacing: 10) {
                             HGrid(numberOfRows: 2, numberOfItems: viewModel.mostTracked.count, elemPerRow: 1) { contentIndex in
                                 NavigationLink{
@@ -38,6 +39,10 @@ struct ExploreView: View {
                                     .accessibilityIdentifier("ExploreViewFirstProduct\(contentIndex)")
                             }.frame(width: geometry.size.width-20, height: 220)
                         }.padding(.horizontal, 10)
+                            if(viewModel.loading1){
+                                LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                            }
+                        }
                         Divider().padding(.leading, 10)
                         HStack{
                             Text("Biggest percentual drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("ExploreViewSecondTitle")
@@ -48,6 +53,7 @@ struct ExploreView: View {
                                 Text("See All")
                             }.accessibilityIdentifier("ExploreViewSecondSeeAll")
                         }.padding(.horizontal)
+                        ZStack{
                         VStack(spacing: 10) {
                             HGrid(numberOfRows: 2, numberOfItems: viewModel.biggestPercentageDrop.count) { contentIndex in
                                 NavigationLink{
@@ -60,6 +66,10 @@ struct ExploreView: View {
                                     .accessibilityIdentifier("ExploreViewSecondProduct\(contentIndex)")
                             }.frame(width: geometry.size.width-20, height: 220)
                         }.padding(.horizontal, 10)
+                            if(viewModel.loading2){
+                                LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                            }
+                        }
                         Divider().padding(.leading, 10)
                         HStack{
                             Text("Biggest range drop").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("ExploreViewThirdTitle")
@@ -70,6 +80,7 @@ struct ExploreView: View {
                                 Text("See All")
                             }.accessibilityIdentifier("ExploreViewThirdSeeAll")
                         }.padding(.horizontal)
+                        ZStack{
                         VStack(spacing: 10) {
                             HGrid(numberOfRows: 2, numberOfItems: viewModel.biggestRangeDrop.count) { contentIndex in
                                 NavigationLink{
@@ -82,10 +93,11 @@ struct ExploreView: View {
                                     .accessibilityIdentifier("ExploreViewThirdProduct\(contentIndex)")
                             }.frame(width: geometry.size.width-20, height: 220)
                         }.padding(.horizontal, 10)
+                            if(viewModel.loading3){
+                                LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                            }
+                        }
                     }.onAppear(perform: viewModel.loadData)
-            }
-            if(viewModel.isLoading){
-                LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
             }
         }
     }

@@ -12,7 +12,9 @@ class ExploreViewModel: ObservableObject {
     @Published var mostTracked: [Product] = []
     @Published var biggestPercentageDrop: [DropPriceProduct] = []
     @Published var biggestRangeDrop: [DropPriceProduct] = []
-    @Published var isLoading: Bool = false
+    @Published var loading1: Bool = false
+    @Published var loading2: Bool = false
+    @Published var loading3: Bool = false
     
     init(){
         loadData()
@@ -22,7 +24,7 @@ class ExploreViewModel: ObservableObject {
         let task = TaskManager(urlString: AppConstant.getMostTracked+"?limit=10", method: .GET, parameters: nil)
         task.execute { result, content, data in
             DispatchQueue.main.async {
-                self.isLoading = false
+                self.loading1 = false
             }
             if result {
                 do {
@@ -59,7 +61,7 @@ class ExploreViewModel: ObservableObject {
         let task = TaskManager(urlString: AppConstant.getLastPriceDropPercentage+"?limit=10", method: .GET, parameters: nil)
         task.execute { result, content, data in
             DispatchQueue.main.async {
-                self.isLoading = false
+                self.loading2 = false
             }
             if result {
                 do {
@@ -96,7 +98,7 @@ class ExploreViewModel: ObservableObject {
         let task = TaskManager(urlString: AppConstant.getPriceDrop+"?limit=10", method: .GET, parameters: nil)
         task.execute { result, content, data in
             DispatchQueue.main.async {
-                self.isLoading = false
+                self.loading3 = false
             }
             if result {
                 do {
@@ -130,7 +132,9 @@ class ExploreViewModel: ObservableObject {
     }
     
     func loadData() {
-        self.isLoading = true
+        self.loading1 = true
+        self.loading2 = true
+        self.loading3 = true
         self.loadAllProduct()
         self.loadAllProductLastPriceDropPercentage()
         self.loadAllPriceDrop()

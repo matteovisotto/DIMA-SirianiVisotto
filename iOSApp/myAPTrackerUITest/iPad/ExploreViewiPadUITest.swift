@@ -49,7 +49,7 @@ class ExploreViewiPadUITest: XCTestCase {
         app.buttons["ExploreViewFirstSeeAll"].tap()
         
         let titleSeeAllView = app.buttons["SeeAllViewiPadItem0"]
-        
+        sleep(5)
         XCTAssertTrue(titleSeeAllView.exists)
         
         //It shouldn't exist a button before
@@ -174,7 +174,7 @@ class ExploreViewiPadUITest: XCTestCase {
         app.buttons["ExploreViewThirdSeeAll"].tap()
         
         let titleSeeAllView = app.buttons["SeeAllViewiPadItem0"]
-        
+        sleep(10)
         XCTAssertTrue(titleSeeAllView.exists)
         
         //It shouldn't exist a button before

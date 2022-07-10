@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     @Published var trackingObjects: [TrackedProduct] = []
     @Published var mostTracked: [Product] = []
     @Published var isLoading: Bool = false
+    @Published var trackingLoading: Bool = false
     
     init() {
         loadData()
@@ -20,6 +21,9 @@ class HomeViewModel: ObservableObject {
     private func loadMyTracking() {
         let task = TaskManager(urlString: AppConstant.getMyTrackingURL+"?lastPriceOnly", method: .GET, parameters: nil)
         task.executeWithAccessToken { result, content, data in
+            DispatchQueue.main.async {
+                self.trackingLoading = false
+            }
             if result {
                 do {
                     let decoder = JSONDecoder()
@@ -91,6 +95,7 @@ class HomeViewModel: ObservableObject {
     func loadData() {
         self.isLoading = true
         if(AppState.shared.isUserLoggedIn){
+            self.trackingLoading = true
             self.loadMyTracking()
         }
         self.loadMostTracked()

@@ -33,7 +33,7 @@ class WebViewCoordinator: NSObject, WKNavigationDelegate {
         parent.viewModel.isWebViewLoading = false
         guard let urlString = webView.url?.absoluteString else {return}
         self.parent.viewModel.currentUrl = urlString
-        if urlString.range(of: #"(http(s)?\:\/\/)?(www\.)?amazon(\.([a-z]+))+\/([A-Za-z0-9\-\/]*)dp\/([A-Z0-9]+)([\/]?)"#, options: .regularExpression) != nil {
+        if urlString.range(of: #"(http(s)?\:\/\/)?(www\.)?amazon(\.([a-z]+))+\/([A-Za-z0-9\-\/\%]*)dp\/([A-Z0-9]+)([\/]?)"#, options: .regularExpression) != nil {
             self.parent.viewModel.isAProduct = true
         }
     }

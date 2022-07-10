@@ -27,6 +27,11 @@ struct iPadHomeView: View {
                 GeometryReader{ geometry in
                     ScrollView(.vertical, showsIndicators: false){
                         VStack(spacing: 10){
+                            if(AppState.shared.isUserLoggedIn && viewModel.trackingLoading){
+                                Text("Your last added products").font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).frame(maxWidth: .infinity, alignment: .leading).padding(.leading).padding(.bottom, 5).accessibilityIdentifier("HomeViewLastProductText")
+                                    LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                                
+                            }
                             if(AppState.shared.isUserLoggedIn && viewModel.trackingObjects.count > 0){
                                 Text("Your last added products").font(.system(size: 20).bold()).multilineTextAlignment(.leading).foregroundColor(Color("PrimaryLabel")).frame(maxWidth: .infinity, alignment: .leading).padding(.leading).padding(.bottom, 5).accessibilityIdentifier("HomeViewLastProductText")
                                 DoublePagingView(index: $trackedDisplayIndex.animation(), maxIndex: (viewModel.trackingObjects.count - 1)/2) {
@@ -40,13 +45,13 @@ struct iPadHomeView: View {
                                             .accessibilityIdentifier("HomeViewLastTrackedButton\(index)")
                                     }
                                 }.frame(width: geometry.size.width, height: 150).accessibilityIdentifier("HomeViewPagingView")
-                                
                                 Divider()
                             }
                             HStack{
                                 Text("Categories").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("HomeViewCategoriesText")
                                 Spacer()
                             }.padding(.horizontal)
+                            ZStack{
                             VStack(spacing: 10) {
                                 HGrid(numberOfRows: 2, numberOfItems: viewModel.categories.count, elemPerRow: 3) { contentIndex in
                                     NavigationLink{
@@ -61,6 +66,10 @@ struct iPadHomeView: View {
                                         .accessibilityIdentifier("HomeViewCategoryButton\(contentIndex)")
                                 }.frame(width: geometry.size.width, height: 190)
                             }
+                                if(viewModel.categoryLoading){
+                                    LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                                }
+                            }
                             HStack{
                                 Text("Most tracked").font(Font.system(size: 20).bold()).foregroundColor(Color("PrimaryLabel")).accessibilityIdentifier("HomeViewMostTrackedText")
                                 Spacer()
@@ -70,6 +79,7 @@ struct iPadHomeView: View {
                                     Text("See All")
                                 }.accessibilityIdentifier("HomeViewSeeAllButton")
                             }.padding(.horizontal)
+                            ZStack{
                             VStack(spacing: 10) {
                                 HGrid(numberOfRows: 3, numberOfItems: viewModel.mostTracked.count, elemPerRow: 2) { contentIndex in
                                     NavigationLink{
@@ -84,13 +94,15 @@ struct iPadHomeView: View {
                                     
                                 }.frame(width: geometry.size.width, height: 330)
                             }
+                                if(viewModel.isLoading){
+                                    LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                                }
+                        }
                         }
                         
                     }.onAppear(perform: viewModel.loadData)
             }
-            if(viewModel.isLoading){
-                LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
-            }
+            
         }
     
 }
