@@ -6,53 +6,63 @@
 //
 
 import SwiftUI
+import SwiftfulLoadingIndicators
 
 struct CommentView: View {
     @EnvironmentObject var appState: AppState
     @ObservedObject var viewModel: ProductViewModel
     
     var body: some View {
-        VStack{
-            ScrollView(.vertical, showsIndicators: false){
-                if((viewModel.comments?.numberOfComments ?? 0) == 0){
-                    Text("No comments available")
-                } else {
-                    ForEach(0..<(viewModel.comments?.numberOfComments ?? 0), id: \.self){ index in
-                        if(index == 0){
-                            CommentCell(comment: viewModel.comments!.comments[index], isFirst: true) {
-                                EditCommentAlertViewController.present(comment: viewModel.comments!.comments[index].comment) { comment in
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                        viewModel.updateComment(cId: viewModel.comments!.comments[index].id, text: comment)
+        ZStack{
+            VStack{
+                ScrollView(.vertical, showsIndicators: false){
+                    if((viewModel.comments?.numberOfComments ?? 0) == 0 && !viewModel.commentLoading){
+                        Text("No comments available")
+                    } else {
+                        
+                        ForEach(0..<(viewModel.comments?.numberOfComments ?? 0), id: \.self){ index in
+                            if(index == 0){
+                                CommentCell(comment: viewModel.comments!.comments[index], isFirst: true) {
+                                    EditCommentAlertViewController.present(comment: viewModel.comments!.comments[index].comment) { comment in
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                            viewModel.updateComment(cId: viewModel.comments!.comments[index].id, text: comment)
+                                        }
                                     }
+                                    
+                                } onDelete: {
+                                    viewModel.deleteComment(cId: viewModel.comments!.comments[index].id)
                                 }
-                                
-                            } onDelete: {
-                                viewModel.deleteComment(cId: viewModel.comments!.comments[index].id)
-                            }
-                        } else {
-                            CommentCell(comment: viewModel.comments!.comments[index]){
-                                EditCommentAlertViewController.present(comment: viewModel.comments!.comments[index].comment) { comment in
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                                        viewModel.updateComment(cId: viewModel.comments!.comments[index].id, text: comment)
+                            } else {
+                                CommentCell(comment: viewModel.comments!.comments[index]){
+                                    EditCommentAlertViewController.present(comment: viewModel.comments!.comments[index].comment) { comment in
+                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                            viewModel.updateComment(cId: viewModel.comments!.comments[index].id, text: comment)
+                                        }
                                     }
+                                } onDelete: {
+                                    viewModel.deleteComment(cId: viewModel.comments!.comments[index].id)
                                 }
-                            } onDelete: {
-                                viewModel.deleteComment(cId: viewModel.comments!.comments[index].id)
                             }
+                            
                         }
                         
                     }
                 }
-            }
-            if(appState.isUserLoggedIn){
-                HStack{
-                    IconTextField(titleKey: "Add new comment", text: $viewModel.newCommentText, icon: nil, foregroundColor: Color("PrimaryLabel"), showValidator: false).accessibilityIdentifier("CommentViewCommentTextField")
-                    Button{
-                        viewModel.createComment()
-                    } label: {
-                        Image(systemName: "paperplane").foregroundColor(Color("PrimaryLabel"))
+                if(appState.isUserLoggedIn){
+                    HStack{
+                        IconTextField(titleKey: "Add new comment", text: $viewModel.newCommentText, icon: nil, foregroundColor: Color("PrimaryLabel"), showValidator: false).accessibilityIdentifier("CommentViewCommentTextField")
+                        Button{
+                            viewModel.createComment()
+                        } label: {
+                            Image(systemName: "paperplane").foregroundColor(Color("PrimaryLabel"))
+                        }
                     }
                 }
+            }
+            if(viewModel.commentLoading){
+                VStack{
+                    LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }
     }
@@ -76,13 +86,12 @@ struct CommentCell: View{
                     if(AppState.shared.isUserLoggedIn && comment.userId == AppState.shared.userIdentity?.id){
                         Spacer()
                         Menu {
-                            
                             Button {
-                                  onEdit()
+                                onEdit()
                             } label: {
                                 Label("Edit", systemImage: "pencil")
                             }
-                                
+                            
                             Button {
                                 onDelete()
                             } label: {
@@ -92,8 +101,8 @@ struct CommentCell: View{
                         } label: {
                             Image(systemName: "ellipsis").foregroundColor(Color("PrimaryLabel"))
                         }
-
-                            
+                        
+                        
                     }
                 }.padding(.bottom, 5)
                 Text(comment.comment).font(Font.body).foregroundColor(Color("PrimaryLabel"))

@@ -19,7 +19,9 @@ class ProductViewModel: ObservableObject {
     
     @Published var newCommentText: String = ""
     
-    @Published var isLoading: Bool = false
+    @Published var priceLoading: Bool = false
+    @Published var commentLoading: Bool = false
+    @Published var statusLoading: Bool = true
     
     @Published var openSetting: Bool = false
     
@@ -37,9 +39,12 @@ class ProductViewModel: ObservableObject {
     }
     
     func loadData() {
+        self.priceLoading = true
+        self.commentLoading = true
         loadPrices()
         loadComments()
         if(AppState.shared.isUserLoggedIn){
+            self.statusLoading = true
             getTrackedStatus()
         }
     }
@@ -47,6 +52,9 @@ class ProductViewModel: ObservableObject {
     private func getTrackedStatus(){
         let taskManager = TaskManager(urlString: AppConstant.getTrackingStatusURL+"?productId=\(product.id)", method: .GET, parameters: nil)
         taskManager.executeWithAccessToken { result, content, data in
+            DispatchQueue.main.async {
+                self.statusLoading = false
+            }
             if(result){
                 do {
                     let decoder = JSONDecoder()
@@ -75,6 +83,9 @@ class ProductViewModel: ObservableObject {
     private func loadPrices() {
         let taskManager = TaskManager(urlString: AppConstant.getPriceURL+"?productId=\(product.id)", method: .GET, parameters: nil)
         taskManager.execute { result, content, data in
+            DispatchQueue.main.async {
+                self.priceLoading = false
+            }
             if(result){
                 do {
                     let decoder = JSONDecoder()
@@ -112,6 +123,9 @@ class ProductViewModel: ObservableObject {
     private func loadComments() {
         let taskManager = TaskManager(urlString: AppConstant.getCommentURL+"?productId=\(product.id)", method: .GET, parameters: nil)
         taskManager.execute { result, content, data in
+            DispatchQueue.main.async {
+                self.commentLoading = false
+            }
             if(result){
                 do {
                     let decoder = JSONDecoder()

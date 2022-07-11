@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftfulLoadingIndicators
 
 
 struct PriceView: View {
@@ -17,9 +18,11 @@ struct PriceView: View {
     }
     
     var body: some View {
+        ZStack{
         VStack{
             HLPriceView(lowestPrice: viewModel.product.lowestPrice, highestPrice: viewModel.product.highestPrice).padding(.horizontal)
-            if (viewModel.productPrices.count < 2){
+            
+            if (viewModel.productPrices.count < 2 && !viewModel.priceLoading){
                 Text("Not enough data to display the graph").font(.system(size: 20).bold()).multilineTextAlignment(.center).foregroundColor(Color("PrimaryLabel")).frame(maxWidth: .infinity, alignment: .center).padding()
             } else {
                 LineGraph(data: viewModel.productPrices, lineWidth: 2, lineColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: true, pricesCount: viewModel.productPrices.count), fillGradientColors: correctColor(prices: viewModel.product.prices ?? [], isLineColor: false, pricesCount: viewModel.productPrices.count)).frame(height: 200).padding(.top, 10)
@@ -35,6 +38,11 @@ struct PriceView: View {
                     }
                 }.frame(maxWidth: .infinity)
             }.frame(maxWidth: .infinity)
+                
+        }
+            if(viewModel.priceLoading){
+                LoadingIndicator(animation: .threeBallsBouncing, color: Color("Primary"), size: .medium, speed: .normal)
+            }
         }
     }
     

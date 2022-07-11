@@ -13,7 +13,6 @@ final class KeychainHelper {
     private init() {}
     
     func save(_ data: Data, service: String, account: String) {
-
         let query = [
             kSecValueData: data,
             kSecAttrService: service,
@@ -24,7 +23,6 @@ final class KeychainHelper {
 
         // Add data in query to keychain
         let status = SecItemAdd(query, nil)
-
         if status == errSecDuplicateItem {
             // Item already exist, thus update it.
             let query = [
@@ -42,7 +40,6 @@ final class KeychainHelper {
     }
     
     func read(service: String, account: String) -> Data? {
-        
         let query = [
             kSecAttrService: service,
             kSecAttrAccount: account,
