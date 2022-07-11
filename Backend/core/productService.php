@@ -144,6 +144,29 @@ function getAllProducts() {
 	return $r;
 }
 
+function getAllProductsPaging($page, $limit) {
+	$sql = "SELECT p.id, p.name, p.shortName, p.category, p.link, p.description, a.price, p.highestPrice, p.lowestPrice, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId WHERE a.updatedAt = (SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId) ORDER BY p.name ASC LIMIT ?,?";
+	$db = getDatabaseConnection();
+	$stmt = $db->prepare($sql);
+	$lower_bound = $limit * $page;
+    $higher_bound = $limit * ($page + 1);
+	$stmt->bind_param("ii", $lower_bound, $higher_bound);
+	$stmt->execute();
+	$result = $stmt->get_result();
+	$stmt->close();
+
+	$r = array();
+	while($row = $result->fetch_assoc()){
+    	$row['images'] = getProductImagesByProductId($row['id']);
+    	$row['id'] = intval($row['id']);
+    	$row['price'] = doubleval($row['price']);
+    	$row['lowestPrice'] = doubleval($row['lowestPrice']);
+    	$row['highestPrice'] = doubleval($row['highestPrice']);
+    	$r[] = $row;
+    }
+	return $r;
+}
+
 function getAllProductsLastPrice() {
 	//$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId GROUP BY a.productId";
 	$sql="SELECT p.id, p.name, p.shortName, p.category, p.link, p.description, a.price, p.highestPrice, p.lowestPrice, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId WHERE a.updatedAt = (SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId)";
@@ -163,7 +186,7 @@ function getAllProductsLastPrice() {
 
 function getMostTracked($limit){
 	//$sql="SELECT p.id, p.name, p.link, p.description, a.price, MAX(a.updatedAt) AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id GROUP BY a.productId ORDER BY n.nTrackers DESC LIMIT ?";
-	$sql="SELECT p.id, p.name, p.shortName, p.category, p.link, p.description, a.price, p.highestPrice, p.lowestPrice, a.updatedAt AS lastUpdate FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id WHERE a.updatedAt=(SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId) ORDER BY n.nTrackers DESC LIMIT ?";
+	$sql="SELECT p.id, p.name, p.shortName, p.category, p.link, p.description, a.price, p.highestPrice, p.lowestPrice, a.updatedAt AS lastUpdate, l.priceDrop, l.priceDropPercentage FROM product AS p JOIN price AS a ON p.id = a.productId JOIN numberOfTrackers AS n ON n.productId=p.id JOIN lastPriceDrop AS l ON l.productId = p.id WHERE a.updatedAt=(SELECT MAX(p2.updatedAt) FROM price AS p2 WHERE a.productId = p2.productId) ORDER BY n.nTrackers DESC LIMIT ?";
 	$db = getDatabaseConnection();
 	$stmt = $db->prepare($sql);
 	$stmt->bind_param("i", $limit);
@@ -364,7 +387,7 @@ function getByPriceDrop($orderByPercentage=false){
 }
 
 function getCategories(){
-	$sql = "SELECT DISTINCT category FROM product";
+	$sql = "SELECT DISTINCT category FROM product ORDER BY category ASC";
 	$db = getDatabaseConnection();
 	$stmt = $db->prepare($sql);
 	$stmt->execute();
