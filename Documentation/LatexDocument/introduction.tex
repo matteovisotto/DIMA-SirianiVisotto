@@ -1,0 +1,87 @@
+\section{Introduction}
+
+
+\subsection{Purpose}
+
+This document is meant to provide a detailed explanation about the technical details about the implementation of myAPTracker application. In particular, the implementation will be presented alongside the interfaces that will compose the application (and the needed back-end). \\
+Moreover, the functionalities offered by the application will be shown through the run-time view, highlighting the interaction and the view hierarchy available to the user.
+
+\subsection{Scope}
+
+The scope of the application is to create an app that let users to trace the ongoing price of Amazon products.
+In the app for each product the price peaks, the current price and a graph of how the price changed over time will be visualized. The user can browse the application without register or login but in order to track a product and to receive personalized notification an account is required.
+In the application it's also present an explore section in which the user can see the most tracked products or the products with the biggest current price drop.
+A logged user can choose for each tracked product different options to be notified on a price change.
+
+
+\subsection{Definition, acronyms, abbreviations}
+\subsubsection{Definition}
+\begin{itemize}
+    \item \textbf{RESTful:} it's a software architectural style that defines a set of constraints to be used for creating Web services.
+    \item \textbf{Tier:} In general, a tier is a row or layer in a series of similarly arranged objects. In computer programming, the parts of a program can be distributed among several tiers, each located in a different computer in a network.
+    \item \textbf{OAuth:} It's an open standard for access delegation, commonly used as a way for internet users to grant websites or applications access to their information on other websites but without giving them the passwords.
+    \item \textbf{Back-end:} Server side part of the system that provides API for an application.
+    \item \textbf{Scraper:} It is a type of software used to copy content from a website.
+    \item \textbf{Command-line tools:} They are scripts, programs, and libraries that have been created with a unique purpose, typically to solve a problem that the creator of that particular tool had himself.
+    \item \textbf{Package:} A package consists of Swift source files and a manifest file. The manifest file, called Package.swift, defines the package’s name and its contents using the PackageDescription module. A package has one or more targets. Each target specifies a product and may declare one or more dependencies.
+    \item \textbf{Product:} A product is something that is purchasable from Amazon.
+    \item \textbf{Paging:} It refers to dividing the request done to the API, by requesting a limited amount of data per time.
+\end{itemize}
+
+\subsubsection{Acronyms}
+\begin{itemize}
+    \item \textbf{API:} Application Programming Interface.
+    \item \textbf{HTTPS:} Hyper Text Transfer Protocol over SSL.
+    \item \textbf{DD:} Design Document.
+    \item \textbf{ER:} Entity-Relationship.
+    \item \textbf{TLS:} Transport Layer Security.
+    \item \textbf{SSL:} Secure Socket Layer.
+    \item \textbf{DBMS:} DataBase Management System.
+    \item \textbf{IdP:} Identity Provider.
+    \item \textbf{OAuth:} Open Authorization.
+    \item \textbf{UI:} User Interface.
+    \item \textbf{FCM:} Firebase Cloud Messaging
+    \item \textbf{APN:} Apple Push Notification
+\end{itemize}
+
+\subsection{Reference documents}
+\begin{itemize}
+    \item Project specification by BendingSpoons.
+    \item Apple developer documentation \href{https://developer.apple.com/documentation/}{https://developer.apple.com/documentation/}.
+    \item Swift documentation \href{https://www.swift.org/documentation/}{https://www.swift.org/documentation/}.
+    \item Slide of Design and implementation of mobile application.
+    \item myAPTracker API documentation \href{https://aptracker.matmacsystem.it/docs}{https://aptracker.matmacsystem.it/docs}/
+\end{itemize}
+
+\subsection{Packages used - Application}
+\begin{itemize}
+    \item SwiftUILoadingIndicators \href{https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators}{https://github.com/SwiftfulThinking/SwiftfulLoadingIndicators}.
+    \item FacebookLogin \href{https://github.com/facebook/facebook-ios-sdk}{https://github.com/facebook/facebook-ios-sdk}.
+    \item GoogleSignIn \href{https://github.com/google/GoogleSignIn-iOS}{https://github.com/google/GoogleSignIn-iOS}.
+    \item FirebaseMessaging \href{https://github.com/firebase/firebase-ios-sdk}{https://github.com/firebase/firebase-ios-sdk}.
+    \item FirebaseAnalytics \href{https://github.com/firebase/firebase-ios-sdk}{https://github.com/firebase/firebase-ios-sdk}.
+\end{itemize}
+
+\subsection{Packages used - Scraper}
+\begin{itemize}
+    \item SwiftSoup \href{https://github.com/scinfu/SwiftSoup}{https://github.com/scinfu/SwiftSoup}.
+    \item SwiftArgumentParser \href{https://github.com/apple/swift-argument-parser}{https://github.com/apple/swift-argument-parser}.
+\end{itemize}
+
+\subsection{Document structure}
+\begin{itemize}
+    \item \textbf{Section 1: Introduction}\\
+    This section offers a brief description of the specification and required functionalities, also providing definition and acronyms that can be found in this document.\\
+    It also provides the main structure of the document itself.
+    
+    \item \textbf{Section 2: Architectural Design}\\
+    This section is addressed to the developer offering a detailed description of the architecture and its components. The first part describes the chosen paradigm and the division of the system in its layers. Then a better description of the application is given including the general flow for each main function that the app provides.
+    
+    \item \textbf{Section 3: User Interface Design}\\
+    This section contains several mockups of the user interfaces and refers to the client side experience. Mockups are provided by means of diagrams in order to describe the general application flow.
+    
+    
+    \item \textbf{Section 5: Implementation, Integration and Test Plan}\\
+    The last section describes the procedures for the implementation phase followed by testing and integration. It provides a detailed description of the core functionalities with a complete report about how to implement and test them.
+    
+\end{itemize}
